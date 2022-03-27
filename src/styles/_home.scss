@@ -1,0 +1,117 @@
+@import "./helpers/theme";
+
+.mainBanner {
+  min-height: 100vh;
+  @include background-img("../asset/bg1.jpeg");
+  color: #fff;
+  text-shadow: rgb(0, 0, 0) 1px 10px 10px;
+  h1 {
+    font-family: $primary-font;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: 0.5rem;
+    color: #fff;
+  }
+}
+
+.intro-section {
+  .container {
+    .row {
+      height: 100vh;
+
+      .col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        button {
+          padding: 0.5rem;
+          border-radius: 2rem;
+          border: 1px solid black;
+          background: none;
+          align-self: end;
+          color: $title-font-color;
+        }
+      }
+    }
+  }
+}
+
+.valeur-section {
+  min-height: 100vh;
+  @include background-img("../asset/bg2.png");
+
+  .container {
+    h2 {
+      padding: 2rem;
+    }
+    .row {
+      .col {
+        margin: 1rem;
+        background-color: rgba(255, 255, 255, 0.9);
+        height: auto;
+        @include card-style;
+        h3 {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+        &:hover {
+          transform: scale(1.1);
+          background-color: rgba(255, 255, 255, 0.95);
+          transition: 0.3s ease all;
+        }
+      }
+    }
+  }
+}
+
+.productCard-section {
+  min-height: 100vh;
+  @include background-img("../asset/bg2.png");
+  .row {
+    .col {
+      margin: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      height: auto;
+      @include card-style;
+      h3 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      .img-container {
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        img: {
+          object-fit: contain;
+        }
+        &:hover {
+          transform: scale(1.3);
+          transition: 0.3s ease all;
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+      &:hover {
+        @include havoer-shaow(#727272);
+      }
+    }
+  }
+}
+
+.contact-section {
+  min-height: 100vh;
+  .container {
+    .row {
+      margin: 5rem 5rem 10rem 5rem;
+    }
+  }
+}

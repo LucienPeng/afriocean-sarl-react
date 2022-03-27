@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "all.scss",
+        "node_modules/bootstrap/scss/_functions.scss"
+    ],
+    "names": [],
+    "file": "all.css"
+}

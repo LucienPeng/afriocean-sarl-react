@@ -1,0 +1,9 @@
+.footer {
+  height: 30vh;
+  @include background-img(
+    "../asset/bg3.avif",
+    $position: bottom,
+    $attachment: local,
+    $opacity: 0.8
+  );
+}

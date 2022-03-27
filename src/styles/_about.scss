@@ -1,0 +1,70 @@
+img {
+  opacity: 0.9;
+}
+
+.banner {
+  @include background-img("../asset/bg4.jpeg");
+  height: 50vh;
+  h2 {
+    font-weight: 500;
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
+.presentation-section,
+.history-section {
+  min-height: 100vh;
+
+  p {
+    line-height: 2rem;
+  }
+
+  img {
+    @include card-style;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.equipment-section {
+  min-height: 100vh;
+  background-color: #2f383c;
+  h2 {
+    text-shadow: none;
+  }
+
+  .row {
+    .col {
+      padding: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      width: 22rem;
+      border-radius: 0.5rem;
+      box-shadow: 4px 3px 5px $content-font-color;
+
+      h3 {
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+      }
+
+      .img-container {
+        overflow: hidden;
+        img: {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        img:hover {
+          transform: scale(1.3);
+          transition: 0.3s ease all;
+          opacity: 0.8;
+          cursor: pointer;
+        }
+      }
+      &:hover {
+        @include havoer-shaow;
+      }
+    }
+  }
+}
