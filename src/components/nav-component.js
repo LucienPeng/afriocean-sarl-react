@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../asset/logo.png";
 
-const NavComponent = () => {
+const NavComponent = (props) => {
+  let { banner, setBanner } = props;
+  const bannerHandle = (e) => {
+    setBanner(e.target.innerHTML);
+  };
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-dark">
@@ -35,18 +40,20 @@ const NavComponent = () => {
                     Home
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={bannerHandle}>
                   <Link className="nav-link" to="/about">
                     About
                   </Link>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" onClick={bannerHandle}>
                   <Link className="nav-link" to="/product">
                     Products
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link disabled">Disabled</a>
+                <li className="nav-item" onClick={bannerHandle}>
+                  <Link className="nav-link" to="/contact">
+                    Contacts
+                  </Link>
                 </li>
               </ul>
             </div>

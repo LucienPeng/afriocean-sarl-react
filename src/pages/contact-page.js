@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import BannerComponent from "../components/banner-component";
-import ProductComponent from "../components/product-component";
+import ContactComponent from "../components/contact-component";
 
-const productPage = (props) => {
+const contactPage = (props) => {
   let { banner, setBanner } = props;
 
   return (
     <div>
       <BannerComponent banner={banner} setBanner={setBanner} />
-      <ProductComponent />
+      <ContactComponent />
     </div>
   );
 };
 
-export default productPage;
+export default contactPage;

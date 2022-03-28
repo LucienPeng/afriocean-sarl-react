@@ -4,7 +4,7 @@ import FishComponent from "./fish-component";
 
 const productComponent = () => {
   return (
-    <div className="product-section container">
+    <div className="product-section container-fluid">
       <div className="row d-flex justify-content-center align-items-center flex-wrap">
         {productList.map((fish) => {
           return <FishComponent key={fish.id} data={fish} />;

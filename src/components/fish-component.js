@@ -3,7 +3,7 @@ import "animate.css";
 
 const fishComponent = (source) => {
   return (
-    <div className="col col-md-4 col-sm-6 g-5 col-12 d-flex flex-column align-items-center fish">
+    <div className="col col-md-3 col-sm-6 mx-5 col-12 d-flex flex-column align-items-center fish">
       <div className="img-container">
         <img
           data-bs-toggle="modal"
@@ -34,12 +34,20 @@ const fishComponent = (source) => {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body">
+            <div className="modal-body d-flex justify-content-center align-items-center flex-column">
               <img className="img-fluid" src={source.data.url} alt="" />
-              <h3 className="modal-title" id="staticBackdropLabel">
-                {source.data.id}
-              </h3>
-              <p>{source.data.intro}</p>
+              <div className="modal-text col-9">
+                <h3 className="modal-title" id="staticBackdropLabel">
+                  {source.data.id}
+                </h3>
+                <h5>{source.data.scientificName}</h5>
+                <p>
+                  En: {source.data.En}
+                  <br />
+                  Sn: {source.data.Sn}
+                </p>
+                <p>{source.data.intro}</p>
+              </div>
             </div>
           </div>
         </div>
