@@ -6,6 +6,7 @@ import AboutPage from "./pages/about-page";
 import ProductPage from "./pages/product-page";
 import FooterComponent from "./components/footer-component";
 import ContactPage from "./pages/contact-page";
+import NotFoundComponent from "./components/notFound-component";
 
 const App = () => {
   let [banner, setBanner] = useState("");
@@ -26,6 +27,7 @@ const App = () => {
           path="/afriocean-sarl-react/contact"
           element={<ContactPage banner={banner} setBanner={setBanner} />}
         />
+        <Route path="*" element={<NotFoundComponent />} />
       </Routes>
       <FooterComponent />
     </div>

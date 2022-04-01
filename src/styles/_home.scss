@@ -2,7 +2,7 @@
 
 .mainBanner {
   min-height: 100vh;
-  @include background-img("../asset/bg1.jpeg");
+  @include background-img("https://i.imgur.com/SEcJryW.jpg");
   color: #fff;
   text-shadow: rgb(0, 0, 0) 1px 10px 10px;
   h1 {
@@ -50,7 +50,7 @@
 
 .valeur-section {
   min-height: 100vh;
-  @include background-img("../asset/bg2.png");
+  @include background-img("https://i.imgur.com/wUg8bq2.png");
 
   .container {
     h2 {
@@ -79,7 +79,7 @@
 
 .productCard-section {
   min-height: 100vh;
-  @include background-img("../asset/bg2.png");
+  @include background-img("https://i.imgur.com/wUg8bq2.png");
   .row {
     .col {
       margin: 0.5rem;

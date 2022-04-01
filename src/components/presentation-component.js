@@ -1,6 +1,4 @@
 import React from "react";
-import worker from "../asset/worker.jpeg";
-import worker2 from "../asset/worker2.jpeg";
 
 const PresentationComponent = () => {
   return (
@@ -11,7 +9,7 @@ const PresentationComponent = () => {
             className="col col-10 col-md-5 img-container"
             data-aos="zoom-out-up"
           >
-            <img src={worker2} alt="" />
+            <img src="https://i.imgur.com/Az2F9Hj.jpg" alt="" />
           </div>
           <div className="col col-10 col-md-6">
             <h3 className="text-center mb-5 mt-5">Qui Sommes-Nous ?</h3>
@@ -72,7 +70,7 @@ const PresentationComponent = () => {
             data-aos="zoom-out-up"
             className="col col-10 col-md-4 img-container"
           >
-            <img src={worker} alt="" />
+            <img src="https://i.imgur.com/a2usFiI.jpg" alt="" />
           </div>
         </div>
       </div>

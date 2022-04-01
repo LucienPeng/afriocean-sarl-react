@@ -1,7 +1,4 @@
 import React from "react";
-import equipment1 from "../asset/equipment1.jpeg";
-import equipment2 from "../asset/equipment2.jpeg";
-import equipment5 from "../asset/equipment5.jpeg";
 
 const EquipmentComponent = () => {
   return (
@@ -20,11 +17,15 @@ const EquipmentComponent = () => {
 
         <div
           className="row d-flex justify-content-around align-itens-center g-5 mt-5 pb-5"
-          data-aos="fade-up"
+          data-aos="zoom-in-up"
         >
           <div className="col col-10  d-flex flex-column align-items-center justify-content-start">
             <div className="img-container">
-              <img className="img-fluid" src={equipment1} alt="" />
+              <img
+                className="img-fluid"
+                src="https://i.imgur.com/ZibFR4x.jpg"
+                alt=""
+              />
             </div>
             <div>
               <h3>Équipements Frigorifiques</h3>
@@ -46,7 +47,11 @@ const EquipmentComponent = () => {
           </div>
           <div className="col col-10  d-flex flex-column align-items-center justify-content-start">
             <div className="img-container">
-              <img className="img-fluid" src={equipment2} alt="" />
+              <img
+                className="img-fluid"
+                src="https://i.imgur.com/S0e3u4Z.jpg"
+                alt=""
+              />
             </div>
             <div>
               <h3>Locaux Productions</h3>
@@ -67,7 +72,11 @@ const EquipmentComponent = () => {
           </div>
           <div className="col col-10  d-flex flex-column align-items-center justify-content-start">
             <div className="img-container">
-              <img className="img-fluid" src={equipment5} alt="" />
+              <img
+                className="img-fluid"
+                src="https://i.imgur.com/LJ7Juz7.jpg"
+                alt=""
+              />
             </div>
             <div>
               <h3>Avantages Compétitifs</h3>

@@ -1,6 +1,9 @@
-import React from "react";
-
-const introComponent = () => {
+import { useNavigate } from "react-router-dom";
+const IntroComponent = () => {
+  const navigate = useNavigate();
+  const redirectHandle = () => {
+    navigate("/afriocean-sarl-react/about");
+  };
   return (
     <div className="intro-section">
       <div className="container">
@@ -12,7 +15,11 @@ const introComponent = () => {
               halieutiques a été créé en 2013. Afin d’entrer dans la politique
               économique dans laquelle est lancé le SENEGAL.
             </p>
-            <button type="submit" className="btn btn-dark button">
+            <button
+              onClick={redirectHandle}
+              type="submit"
+              className="btn btn-dark button"
+            >
               En savoir plus
             </button>
           </div>
@@ -22,4 +29,4 @@ const introComponent = () => {
   );
 };
 
-export default introComponent;
+export default IntroComponent;

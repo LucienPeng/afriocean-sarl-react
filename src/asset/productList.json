@@ -1,7 +1,7 @@
 [
     {
         "id":"Liche",
-        "url": "https://i.imgur.com/HoH7Rg9.png",
+        "url": "https://i.imgur.com/VOtkI8c.png",
         "scientificName":"(Lichia amia)",
         "intro":"Le terme de Liche désigne plusieurs espèces de poissons marins de bonne qualité gustative, appréciés également pour la pêche sportive, de la famille des Carangidae, fréquentant notamment les côtes françaises et méditerranéennes ; le mot vient du provençal lico, liche ou leiche. Ces poissons sont appelés leccia en Italie.",
         "En" : "Leerfish",
@@ -9,7 +9,7 @@
     },
     {
         "id":"Thon-Ravil",
-        "url": "https://i.imgur.com/nZ5K8Lw.png",
+        "url": "https://i.imgur.com/dWb6yO9.png",
         "scientificName":"(Euthynnus allettaratus)",
         "intro":"Ce poisson mesure entre 60 et 122 cm de long, pour une moyenne de 80 centimètres. Le poids maximal est de 16,5 kg. Le dos (quart arrière-supérieur) porte des bandes obliques sombres sur un fond métallisé. Entre les nageoires pelvienne et anale, on compte également 3 à 7 taches sombres",
         "En" : "Little tunny",
@@ -17,7 +17,7 @@
     },
     {
         "id":"Chinchard-Blanc",
-        "url": "https://i.imgur.com/oiK10g3.png",
+        "url": "https://i.imgur.com/o4Nuq9P.png",
         "scientificName":"(Trachurus trachurus)",
         "intro":"Le Chinchard est une espèce de poissons de la famille des Carangidae qui se rencontre dans l'Atlantique est et en Méditerranée et qui mesure jusqu'à 70 cm pour un poids maximal publié de 2 kg1. Son corps est fusiforme et de couleur verdâtre sur le dos.",
         "En" : "Horse mackerel",
@@ -25,7 +25,7 @@
     },
     {
         "id":"Cafang",
-        "url": "https://i.imgur.com/gQZ41Nt.png",
+        "url": "https://i.imgur.com/Lm8oJR3.png",
         "scientificName":"(Caranx crysos)",
         "intro":"La Carangue coubali, Caranx crysos, est un poisson de la famille des Carangidés.",
         "En" : "Blue runner",
@@ -33,7 +33,7 @@
     },
     {
         "id":"Lagna-Lagna",
-        "url": "https://i.imgur.com/cnrjV69.png",
+        "url": "https://i.imgur.com/ihjCNkE.png",
         "scientificName":"(Chloroscombrus chrysurus)",
         "intro":"Dans l'ouest de l'Atlantique, le pare-chocs de l'Atlantique se trouve du Massachusetts, au sud de la Floride. On sait qu'ils se trouvent au large des Bermudes, dans les Caraïbes et dans le golfe du Mexique. Leur aire de répartition continue vers le sud jusqu'à la côte de l'Uruguay. Dans l'Atlantique oriental, les pare-chocs atlantiques sont connus de la côte mauritanienne à l'Angola. On ne les trouve pas dans le Pacifique oriental, bien qu'une espèce visuellement similaire, Chloroscombrus orqueta, ou le pare-chocs du Pacifique, soit répertoriée pour cette zone. On sait peu de choses sur la façon dont ces deux espèces sont liées l'une à l'autre, et elles peuvent ne représenter qu'une seule espèce.",
         "En" : "Atlantic bumper",
@@ -41,7 +41,7 @@
     },
     {
         "id": "Sole-Langue",
-        "url": "https://i.imgur.com/11aQi11.png",
+        "url": "https://i.imgur.com/v0Hnsvb.png",
         "scientificName":"(Cynoglossus senegalensis)",
         "intro": "La sole d'être un des plus fin poissons qui soit, à la chair délicate, blanche et ferme. C'est une espèce très littorale, particulièrement abondante sur les fonds sableux et sablo-vaseux, car contrainte à se cacher pour se protéger elle peut passer totalement inaperçue. Chaque femelle pond plusieurs dizaines de milliers à plus d'un million d'œufs selon sa taille. Pêchées en abondance de février à fin avril et de septembre à fin novembre, elles ont une durée de vie courte.",
         "En" : "Tonguesole",
@@ -50,7 +50,7 @@
     }, 
     {
         "id":"Dorade",
-        "url": "https://i.imgur.com/NJwTsaa.png",
+        "url": "https://i.imgur.com/HXw2NiI.png",
         "scientificName":"(Pagrus caeruleostictus)",
         "intro":" C'est une espèce que l'on rencontre depuis la côte (20 m de profondeur) jusqu'au rebord du plateau continental (200m), sur les fonds sablo-vaseux ou rocheux. L'espèce est commune du Portugal à l'Angola et existe en Méditerranée. Cette espèce vit préférentiellement dans les eaux froides. L'essentiel des captures est effectuée par la flottille de pêche artisanale, à la ligne à la main.",
         "En" : "Kibaruu-naar",
@@ -58,7 +58,7 @@
     }, 
     {
         "id":"Pelon",
-        "url": "https://i.imgur.com/s1vhCrj.png",
+        "url": "https://i.imgur.com/pC0JcS9.png",
         "scientificName":"(Brachydeuterus auritus)",
         "intro":"C'est une espèce semi-pélagique, qui se tient près dufond le jour et remonte en surface la nuit. Elle se capture au filet tournant et au chalut, principalement sur les fonds de 30 à 50 m. Elle figure parmi les toutes premières espèces débarquées en Côte d'Ivoire. Sa chair, fragile et 232 altérable rapidement, lui confère une valeur marchande faible. EUe est par ailleurs très commune du Sénégal à l'Angola.",
         "En" : "Grunt",
@@ -67,7 +67,7 @@
  
     {
         "id":"Ombrine",
-        "url": "https://i.imgur.com/45c9Y0f.png",
+        "url": "https://i.imgur.com/xT5zBuw.png",
         "scientificName":"(Umbrina canariensis)",
         "intro":"Les ombrines (Umbrina) forment un genre de poissons osseux, de l'ordre des perciformes, qui vit dans la mer Méditerranée et dans l'océan Atlantique et qui est représenté par différentes espèces. Les ombrines sont comestibles et leur chair est appréciée.",
         "En" : "Drum",
@@ -75,7 +75,7 @@
     }, 
     {
         "id":"Maquereau",
-        "url": "https://i.imgur.com/DyP51LC.png",
+        "url": "https://i.imgur.com/688uiZK.png",
         "scientificName":"(Scomber japonicus)",
         "intro":"Le maquereau espagnol (Scomber japonicus) est une espèce de poissons marins de la famille des Scombridae. Il est également appelé maquereau blanc ou billard.",
         "En" : "Mackerel",
@@ -83,7 +83,7 @@
     }, 
     {
         "id":"Sardinelle",
-        "url": "https://i.imgur.com/u6qQf3U.png",
+        "url": "https://i.imgur.com/qGQq2ks.png",
         "scientificName":"(Sardinella aurita / Sardinella maderensis)",
         "intro":"Fréquente les zones d'upwelling (eaux froides salées. Durant l'hivernage, les bancs se trouvent jusqu'à 300 m.",
         "En" : "Round Sardine",
@@ -91,7 +91,7 @@
     }, 
     {
         "id":"Safar",
-        "url": "https://i.imgur.com/dkfNxKO.png",
+        "url": "https://i.imgur.com/8MQx539.png",
         "scientificName":"(Caranx senegalus)",
         "intro":"Caranx senegallus est une espèce de poisson de la famille des carangidés.",
         "En" : "Kingfish",
@@ -100,7 +100,7 @@
     
     {
         "id":"Brama",
-        "url": "https://i.imgur.com/A3rsn1U.png",
+        "url": "https://i.imgur.com/r5NWNQs.png",
         "scientificName":"(Brama brama)",
         "intro":"Les Bramidae sont une famille de poissons téléostéens de l'ordre des Perciformes.",
         "En" : "Pomfret",
@@ -108,7 +108,7 @@
     }, 
     {
         "id":"Sompatt",
-        "url": "https://i.imgur.com/Qpc02Na.png",
+        "url": "https://i.imgur.com/Rf0553g.png",
         "scientificName":"(Pomadasys jubelini)",
         "intro":"Pomadasys est un genre de poissons de la famille des Haemulidae.40 cm. Fréquente les eaux côtières et les estuaires. Se rencontre sur les fonds vaseux et sablo-vaseux jusqu'à 60m.",
         "En" : "Grunt",
@@ -116,7 +116,7 @@
     }, 
     {
         "id":"Capitaine",
-        "url": "https://i.imgur.com/gQZ41Nt.png",
+        "url": "https://i.imgur.com/UAweEBW.png",
         "scientificName":"(Galeoides decadactylus)",
         "intro":"Le thiekem est une espèce de la famille des polynemidés quiappartient à la communauté côtière des Sciaenidés. On le trouve préférentiellement à une profondeur comprise entre 10 et 20 m, mais il est présent jusque 60 m. Des migrations perpendiculaires à la côte sont notées pour fuir des eaux où le taux d'oxygène est trop faible. Le thiekem est une espèce d'affinité guinéenne, aussi ces captures sont plus importantes en saison chaude au Sénégal. On considère ici un seul stock au Sénégal. Les individus capturés ont une taille moyenne entre 12 et 40 cm.",
         "En" : "Giant African threadfin",
@@ -124,7 +124,7 @@
     },
     {
         "id":"Ceinture",
-        "url": "https://i.imgur.com/uk7ZCPx.png",
+        "url": "https://i.imgur.com/ZuLYQcX.png",
         "scientificName":"(Trichiurus lepturus)",
         "intro":"Trichiurus lepturus est une espèce à forte valeur commerciale, très importante dans la pêcherie démersale côtière du Sénégal autant pour des raisons biologiques que socio-économiques. Dans le cadre de cette étude, nous avons ainsi recueilli plusieurs types de données relatives aux mensurations, aux habitats, à l'effort de pêche et autres paramètres bioécologiques lors des débarquements de chaque engin (senne tournante, palangre et ligne simple).",
         "En" : "Ribbon Fish / Hairtail Fish",
@@ -132,7 +132,7 @@
     },
     {
         "id":"Mademoiselle",
-        "url": "https://i.imgur.com/knKNLSR.png",
+        "url": "https://i.imgur.com/g5FR7hQ.png",
         "scientificName":"(Stromateus fiatola)",
         "intro":"C'est une espèce ouest-africaine qui atteint le Golfe de Gascogne et la Méditerranée au nord, le Cap de Bonne Espérance au sud. Pélagique côtière, elle se prend à la senne et au chalut sur les fonds de 12 à 50 m. Sa chair est excellente et appréciée. Le stromaté fiatole atteint 50 cm de long.",
         "En" : "Blue butterfish",

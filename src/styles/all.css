@@ -12008,10 +12008,10 @@ fieldset:disabled .btn {
 
 .mainBanner {
   min-height: 100vh;
-  background-image: url("../asset/bg1.jpeg");
+  background-image: url("https://i.imgur.com/SEcJryW.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
   opacity: 0.8;
   color: #fff;
@@ -12073,10 +12073,10 @@ fieldset:disabled .btn {
 
 .valeur-section {
   min-height: 100vh;
-  background-image: url("../asset/bg2.png");
+  background-image: url("https://i.imgur.com/wUg8bq2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
   opacity: 0.8;
 }
@@ -12110,10 +12110,10 @@ fieldset:disabled .btn {
 
 .productCard-section {
   min-height: 100vh;
-  background-image: url("../asset/bg2.png");
+  background-image: url("https://i.imgur.com/wUg8bq2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
   opacity: 0.8;
 }
@@ -12223,7 +12223,7 @@ nav .container .toggler:hover {
 }
 
 nav .container div .navbar-nav .nav-item {
-  margin: 0 3rem;
+  margin: 0 3.5rem;
 }
 
 nav .container div .navbar-nav .nav-item .nav-link {
@@ -12241,7 +12241,7 @@ nav .container div .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:
 
 .footer {
   height: 30vh;
-  background-image: url("../asset/bg3.avif");
+  background-image: url("https://i.imgur.com/zzYfmT4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -12254,10 +12254,10 @@ img {
 }
 
 .banner {
-  background-image: url("../asset/bg4.jpeg");
+  background-image: url("https://i.imgur.com/W9FyHAY.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
   opacity: 0.8;
   height: 50vh;

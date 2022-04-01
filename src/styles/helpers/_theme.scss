@@ -24,12 +24,7 @@ $content-font-color: #777777;
   }
 }
 
-@mixin background-img(
-  $url,
-  $position: center,
-  $attachment: fixed,
-  $opacity: 0.8
-) {
+@mixin background-img($url, $position: top, $attachment: fixed, $opacity: 0.8) {
   background-image: url($url);
   background-size: cover;
   background-repeat: no-repeat;

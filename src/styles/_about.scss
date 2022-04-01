@@ -3,7 +3,7 @@ img {
 }
 
 .banner {
-  @include background-img("../asset/bg4.jpeg");
+  @include background-img("https://i.imgur.com/W9FyHAY.jpg");
   height: 50vh;
   h2 {
     font-weight: 500;

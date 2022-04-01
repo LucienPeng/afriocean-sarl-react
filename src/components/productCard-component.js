@@ -8,7 +8,7 @@ const productCardComponent = () => {
       <div className="container">
         <div
           className="row d-flex justify-content-around"
-          data-aos="fade-up"
+          data-aos="zoom-in-up"
           data-aos-anchor-placement="center-bottom"
         >
           <div className="col col-10  col-md-3 d-flex flex-column align-items-center justify-content-center">
