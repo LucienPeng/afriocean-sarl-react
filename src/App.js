@@ -13,17 +13,17 @@ const App = () => {
     <div className="App">
       <NavComponent banner={banner} setBanner={setBanner} />
       <Routes>
-        <Route path="https://lucienpeng.github.io/afriocean-sarl-react/" element={<HomePage />} />
+        <Route path="/afriocean-sarl-react/" element={<HomePage />} />
         <Route
-          path="https://lucienpeng.github.io/afriocean-sarl-react/about"
+          path="/afriocean-sarl-react/about"
           element={<AboutPage banner={banner} setBanner={setBanner} />}
         />
         <Route
-          path="https://lucienpeng.github.io/afriocean-sarl-react/product"
+          path="/afriocean-sarl-react/product"
           element={<ProductPage banner={banner} setBanner={setBanner} />}
         />
         <Route
-          path="https://lucienpeng.github.io/afriocean-sarl-react/contact"
+          path="/afriocean-sarl-react/contact"
           element={<ContactPage banner={banner} setBanner={setBanner} />}
         />
       </Routes>
