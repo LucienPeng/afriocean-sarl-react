@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -12010,7 +12011,7 @@ fieldset:disabled .btn {
   background-image: url("../asset/bg1.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: solid;
+  background-position: center;
   background-attachment: fixed;
   opacity: 0.8;
   color: #fff;
@@ -12063,12 +12064,19 @@ fieldset:disabled .btn {
   color: #444444;
 }
 
+.intro-section .container .row .col button:hover {
+  background-color: #444444;
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 5px 3px #777777;
+          box-shadow: 0px 0px 5px 3px #777777;
+}
+
 .valeur-section {
   min-height: 100vh;
   background-image: url("../asset/bg2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: solid;
+  background-position: center;
   background-attachment: fixed;
   opacity: 0.8;
 }
@@ -12093,11 +12101,11 @@ fieldset:disabled .btn {
 }
 
 .valeur-section .container .row .col:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: rotate(-5deg) scale(1.2);
+          transform: rotate(-5deg) scale(1.2);
   background-color: rgba(255, 255, 255, 0.95);
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
 }
 
 .productCard-section {
@@ -12105,7 +12113,7 @@ fieldset:disabled .btn {
   background-image: url("../asset/bg2.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: solid;
+  background-position: center;
   background-attachment: fixed;
   opacity: 0.8;
 }
@@ -12142,8 +12150,12 @@ fieldset:disabled .btn {
 }
 
 .productCard-section .row .col:hover {
-  -webkit-box-shadow: 0px 2px 30px 10px #727272;
-          box-shadow: 0px 2px 30px 10px #727272;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 3px 5px 5px 3px #777777;
+          box-shadow: 3px 5px 5px 3px #777777;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
 }
 
 .contact-section {
@@ -12179,18 +12191,39 @@ fieldset:disabled .btn {
 }
 
 nav .container {
-  text-align: right;
+  font-family: "Copperplate", "normal";
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
 }
 
-nav .container .col {
-  height: 8vh;
+nav .container #logo {
+  height: 3.5rem;
+  width: 6.5rem;
 }
 
-nav .container .col img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+nav .container #logo-toggler {
+  height: 3.5rem;
+  width: 6.5rem;
+}
+
+nav .container .toggler:hover {
+  opacity: 0.9;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s all ease-out;
+  transition: 0.3s all ease-out;
+  cursor: pointer;
+}
+
+nav .container div .navbar-nav .nav-item {
+  margin: 0 3rem;
 }
 
 nav .container div .navbar-nav .nav-item .nav-link {
@@ -12224,7 +12257,7 @@ img {
   background-image: url("../asset/bg4.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: solid;
+  background-position: center;
   background-attachment: fixed;
   opacity: 0.8;
   height: 50vh;
@@ -12335,7 +12368,7 @@ img {
 .product-section .col.fish:hover {
   background-color: #dee5ebb3;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 2px 30px 10px #dee5eb;
-          box-shadow: 0px 2px 30px 10px #dee5eb;
+  -webkit-box-shadow: 0px 0px 15px 30px #dee5ebb3;
+          box-shadow: 0px 0px 15px 30px #dee5ebb3;
 }
 /*# sourceMappingURL=all.css.map */

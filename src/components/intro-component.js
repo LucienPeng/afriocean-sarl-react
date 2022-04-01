@@ -5,7 +5,7 @@ const introComponent = () => {
     <div className="intro-section">
       <div className="container">
         <div className="row d-flex justify-content-center align-items-center">
-          <div className="col col-6">
+          <div data-aos="zoom-out-down" className="col col-6">
             <h2 className="text-center">A propos de Nous</h2>
             <p>
               AFRIOCEAN, une entreprise franche d’exportation de produits

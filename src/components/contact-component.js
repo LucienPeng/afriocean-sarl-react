@@ -1,11 +1,12 @@
-import React from "react";
-
-const contactComponent = () => {
+const ContactComponent = () => {
   return (
     <div className="contact-section text-center mt-5 mb-5">
       <h2 className="mb-5">Nos Contacts</h2>
       <div className="container">
-        <div className="row g-5 mb-5 d-flex justify-content-between">
+        <div
+          className="row g-5 mb-5 d-flex justify-content-between"
+          data-aos="zoom-in-down"
+        >
           <div className="col col-12 col-sm-6 col-md-3">
             <h4>Horaire</h4>
             <p>
@@ -36,7 +37,10 @@ const contactComponent = () => {
           </div>
         </div>
 
-        <div className="row mt-5 g-5 d-flex justify-content-around align-items-stretch ">
+        <div
+          className="row mt-5 g-5 d-flex justify-content-around align-items-stretch"
+          data-aos="zoom-in-down"
+        >
           <div className="col col-10  col-md-5">
             <form>
               <div className="form-group text-start mb-3">
@@ -96,4 +100,4 @@ const contactComponent = () => {
   );
 };
 
-export default contactComponent;
+export default ContactComponent;

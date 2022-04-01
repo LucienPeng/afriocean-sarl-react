@@ -2,25 +2,37 @@
 
 nav {
   .container {
-    text-align: right;
-    .col {
-      height: 8vh;
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-      }
+    font-family: $primary-font;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    #logo {
+      height: 3.5rem;
+      width: 6.5rem;
     }
-    div .navbar-nav .nav-item {
-      .nav-link {
-        padding: 1rem;
-        color: #fff;
-        &:hover {
-          opacity: 0.8;
+    #logo-toggler {
+      height: 3.5rem;
+      width: 6.5rem;
+    }
+    .toggler:hover {
+      opacity: 0.9;
+      transform: scale(1.1);
+      transition: 0.3s all ease-out;
+      cursor: pointer;
+    }
+    div .navbar-nav {
+      .nav-item {
+        margin: 0 3rem;
+        .nav-link {
+          padding: 1rem;
+          color: #fff;
+          &:hover {
+            opacity: 0.8;
+          }
         }
-      }
-      &.dropdown .dropdown-menu .dropdown-item:active {
-        background-color: red;
+        &.dropdown .dropdown-menu .dropdown-item:active {
+          background-color: red;
+        }
       }
     }
   }

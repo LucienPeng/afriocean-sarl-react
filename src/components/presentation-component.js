@@ -2,12 +2,15 @@ import React from "react";
 import worker from "../asset/worker.jpeg";
 import worker2 from "../asset/worker2.jpeg";
 
-const presentationComponent = () => {
+const PresentationComponent = () => {
   return (
     <div>
       <div className="container presentation-section mb-5 mt-5">
         <div className="row d-flex flex-column flex-nowrap flex-md-row  align-items-center justify-content-around ">
-          <div className="col col-10 col-md-5 img-container">
+          <div
+            className="col col-10 col-md-5 img-container"
+            data-aos="zoom-out-up"
+          >
             <img src={worker2} alt="" />
           </div>
           <div className="col col-10 col-md-6">
@@ -65,7 +68,10 @@ const presentationComponent = () => {
               qui évoluent dans ce secteur d’activité.
             </p>
           </div>
-          <div className="col col-10 col-md-4 img-container">
+          <div
+            data-aos="zoom-out-up"
+            className="col col-10 col-md-4 img-container"
+          >
             <img src={worker} alt="" />
           </div>
         </div>
@@ -74,4 +80,4 @@ const presentationComponent = () => {
   );
 };
 
-export default presentationComponent;
+export default PresentationComponent;

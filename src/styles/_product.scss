@@ -29,7 +29,13 @@
     &:hover {
       background-color: #dee5ebb3;
       border-radius: 50%;
-      @include hover-shadow(#dee5eb);
+      @include hover-shadow(
+        $x: 0px,
+        $y: 0px,
+        $z: 15px,
+        $scale: 30px,
+        $color: #dee5ebb3
+      );
     }
   }
 }

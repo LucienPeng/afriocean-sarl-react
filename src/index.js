@@ -1,6 +1,7 @@
 import "normalize.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles/all.css";
+import "animate.css";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";

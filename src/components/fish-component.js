@@ -1,10 +1,9 @@
 import React from "react";
-import "animate.css";
 
-const fishComponent = (source) => {
+const FishComponent = (source) => {
   return (
     <div className="col col-md-3 col-sm-6 mx-5 col-12 d-flex flex-column align-items-center fish">
-      <div className="img-container">
+      <div className="img-container" data-aos="fade-up-left">
         <img
           data-bs-toggle="modal"
           data-bs-target={"#" + source.data.id}
@@ -35,7 +34,11 @@ const fishComponent = (source) => {
               ></button>
             </div>
             <div className="modal-body d-flex justify-content-center align-items-center flex-column">
-              <img className="img-fluid" src={source.data.url} alt="" />
+              <img
+                className="img-fluid animate__animated animate__rubberBand"
+                src={source.data.url}
+                alt=""
+              />
               <div className="modal-text col-9">
                 <h3 className="modal-title" id="staticBackdropLabel">
                   {source.data.id}
@@ -56,4 +59,4 @@ const fishComponent = (source) => {
   );
 };
 
-export default fishComponent;
+export default FishComponent;

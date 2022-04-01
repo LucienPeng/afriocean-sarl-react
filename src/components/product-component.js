@@ -2,7 +2,7 @@ import React from "react";
 import productList from "../asset/productList.json";
 import FishComponent from "./fish-component";
 
-const productComponent = () => {
+const ProductComponent = () => {
   return (
     <div className="product-section container-fluid">
       <div className="row d-flex justify-content-center align-items-center flex-wrap">
@@ -14,4 +14,4 @@ const productComponent = () => {
   );
 };
 
-export default productComponent;
+export default ProductComponent;

@@ -1,12 +1,12 @@
 import React from "react";
 
-const valeurComponent = () => {
+const ValeurComponent = () => {
   return (
     <div className="valeur-section ">
       <div className="container d-lg-flex ">
         <h2 className="text-center align-self-center mt-5">Nos Valeurs</h2>
         <div className="row d-flex align-items-stretch flex-wrap justify-content-center  mt-3">
-          <div className="col col-10 col-md-5">
+          <div className="col col-10 col-md-5" data-aos="zoom-in">
             <h3>Qualité</h3>
             <p>
               La qualité est essentielle aux yeux de AFRIOCEAN car évoluant dans
@@ -18,7 +18,7 @@ const valeurComponent = () => {
             </p>
           </div>
 
-          <div className="col col-10 col-md-5">
+          <div className="col col-10 col-md-5" data-aos="zoom-in">
             <h3>Fiabilité</h3>
             <p>
               Nous nous efforçons à respecter les règles de notre profession. La
@@ -29,7 +29,7 @@ const valeurComponent = () => {
               clients.
             </p>
           </div>
-          <div className="col col-10 col-md-5">
+          <div className="col col-10 col-md-5" data-aos="zoom-in">
             <h3>Professionalisme</h3>
             <p>
               Compétences, efficacité, réactivité sont une ligne de conduite
@@ -38,7 +38,7 @@ const valeurComponent = () => {
               particulièrement des clients.
             </p>
           </div>
-          <div className="col col-10 col-md-5">
+          <div className="col col-10 col-md-5" data-aos="zoom-in">
             <h3>Sens de l'écoute</h3>
             <p>
               Le client est la raison d’être de l’entreprise. AFRIOCEAN ainsi
@@ -54,4 +54,4 @@ const valeurComponent = () => {
   );
 };
 
-export default valeurComponent;
+export default ValeurComponent;

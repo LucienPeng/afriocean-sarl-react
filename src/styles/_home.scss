@@ -37,6 +37,11 @@
           background: none;
           align-self: end;
           color: $title-font-color;
+          &:hover {
+            background-color: $title-font-color;
+            color: #fff;
+            @include hover-shadow($x: 0px, $y: 0px, $z: 5px, $scale: 3px);
+          }
         }
       }
     }
@@ -63,9 +68,9 @@
           text-align: center;
         }
         &:hover {
-          transform: scale(1.1);
+          transform: rotate(-5deg) scale(1.2);
           background-color: rgba(255, 255, 255, 0.95);
-          transition: 0.3s ease all;
+          transition: 0.5s ease all;
         }
       }
     }
@@ -101,7 +106,9 @@
         }
       }
       &:hover {
-        @include hover-shadow(#727272);
+        transform: scale(1.1);
+        @include hover-shadow($x: 3px, $y: 5px, $z: 5px, $scale: 3px);
+        transition: 0.5s ease all;
       }
     }
   }

@@ -15,10 +15,10 @@ const BannerComponent = (props) => {
 
     if (banner === "About") {
       bannerBG.style.backgroundImage = "url('https://i.imgur.com/91HsHO9.png')";
-    } else if (banner === "Products") {
-      bannerBG.style.backgroundImage = "url('https://i.imgur.com/FmMl19C.png')";
-    } else if (banner === "Contacts") {
+    } else if (banner === "Produits") {
       bannerBG.style.backgroundImage = "url('https://i.imgur.com/TVwg40t.png')";
+    } else if (banner === "Contacts") {
+      bannerBG.style.backgroundImage = "url('https://i.imgur.com/FmMl19C.png')";
     }
   });
 

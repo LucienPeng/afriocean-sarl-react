@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BannerComponent from "../components/banner-component";
 import ProductComponent from "../components/product-component";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const productPage = (props) => {
+const ProductPage = (props) => {
   let { banner, setBanner } = props;
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   return (
     <div>
@@ -13,4 +19,4 @@ const productPage = (props) => {
   );
 };
 
-export default productPage;
+export default ProductPage;

@@ -3,7 +3,7 @@ import equipment1 from "../asset/equipment1.jpeg";
 import equipment2 from "../asset/equipment2.jpeg";
 import equipment5 from "../asset/equipment5.jpeg";
 
-const equipmentComponent = () => {
+const EquipmentComponent = () => {
   return (
     <div className="equipment-section">
       <div className="container">
@@ -18,7 +18,10 @@ const equipmentComponent = () => {
           cuisson des coquillages.
         </p>
 
-        <div className="row d-flex justify-content-around align-itens-center g-5 mt-5 pb-5">
+        <div
+          className="row d-flex justify-content-around align-itens-center g-5 mt-5 pb-5"
+          data-aos="fade-up"
+        >
           <div className="col col-10  d-flex flex-column align-items-center justify-content-start">
             <div className="img-container">
               <img className="img-fluid" src={equipment1} alt="" />
@@ -82,4 +85,4 @@ const equipmentComponent = () => {
   );
 };
 
-export default equipmentComponent;
+export default EquipmentComponent;

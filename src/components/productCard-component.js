@@ -6,7 +6,11 @@ const productCardComponent = () => {
     <div className="productCard-section">
       <h2 className="text-center mb-5">Nos Produits</h2>
       <div className="container">
-        <div className="row d-flex justify-content-around">
+        <div
+          className="row d-flex justify-content-around"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
           <div className="col col-10  col-md-3 d-flex flex-column align-items-center justify-content-center">
             <div className="img-container col-4">
               <img className="img-fluid" src={productList[9].url} alt="" />

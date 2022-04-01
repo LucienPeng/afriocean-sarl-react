@@ -4,8 +4,15 @@ import IntroComponent from "../components/intro-component";
 import ValeurComponent from "../components/valeur-component";
 import ProductCardComponent from "../components/productCard-component";
 import ContactComponent from "../components/contact-component";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
-const homePage = () => {
+const HomePage = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div className="homePage">
       <MainbannerComponent />
@@ -17,4 +24,4 @@ const homePage = () => {
   );
 };
 
-export default homePage;
+export default HomePage;
