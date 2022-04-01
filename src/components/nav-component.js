@@ -28,7 +28,7 @@ const NavComponent = (props) => {
               aria-label="Toggle navigation"
             />
             <i
-              class="bi bi-caret-down-fill d-lg-none text-white"
+              className="bi bi-caret-down-fill d-lg-none text-white"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"

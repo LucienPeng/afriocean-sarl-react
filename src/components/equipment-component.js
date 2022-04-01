@@ -1,6 +1,18 @@
-import React from "react";
+import equipmentPhotos from "../asset/equipmentPhoto.json";
+import EquipmentPhotosComponent from "./equipmentPhotos-component";
+import localPhotos from "../asset/localphotos.json";
+import { useState } from "react";
 
 const EquipmentComponent = () => {
+  let [carousel, setCarousel] = useState("");
+  const carouselHandle = (e) => {
+    console.log(e.target.getAttribute("data-set"));
+
+    setCarousel(e.target.getAttribute("data-set"));
+  };
+  let photoSource = [];
+  if (carousel === "frigo") photoSource = equipmentPhotos;
+  else if (carousel === "locaux") photoSource = localPhotos;
   return (
     <div className="equipment-section">
       <div className="container">
@@ -20,11 +32,17 @@ const EquipmentComponent = () => {
           data-aos="zoom-in-up"
         >
           <div className="col col-10  d-flex flex-column align-items-center justify-content-start">
-            <div className="img-container">
+            <div
+              className="img-container"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
               <img
                 className="img-fluid"
                 src="https://i.imgur.com/ZibFR4x.jpg"
                 alt=""
+                data-set="frigo"
+                onClick={carouselHandle}
               />
             </div>
             <div>
@@ -46,11 +64,17 @@ const EquipmentComponent = () => {
             </div>
           </div>
           <div className="col col-10  d-flex flex-column align-items-center justify-content-start">
-            <div className="img-container">
+            <div
+              className="img-container"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
               <img
                 className="img-fluid"
                 src="https://i.imgur.com/S0e3u4Z.jpg"
                 alt=""
+                data-set="locaux"
+                onClick={carouselHandle}
               />
             </div>
             <div>
@@ -71,11 +95,17 @@ const EquipmentComponent = () => {
             </div>
           </div>
           <div className="col col-10  d-flex flex-column align-items-center justify-content-start">
-            <div className="img-container">
+            <div
+              className="img-container"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
               <img
                 className="img-fluid"
                 src="https://i.imgur.com/LJ7Juz7.jpg"
                 alt=""
+                data-set="frigo?"
+                onClick={carouselHandle}
               />
             </div>
             <div>
@@ -86,6 +116,114 @@ const EquipmentComponent = () => {
                 <li>constante Emballage avec haute qualité </li>
                 <li>Bonne pratique du QHSE</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabIndex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered modal-lg">
+          <div className="modal-content">
+            <div className="d-flex justify-content-end">
+              <button
+                type="button"
+                className="btn-close mx-3 mt-3"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              <div
+                id="carouselExampleIndicators"
+                className="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div className="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    className="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="3"
+                    aria-label="Slide 4"
+                  ></button>
+                </div>
+                <div className="carousel-inner ">
+                  <div className="carousel-item active">
+                    {carousel === "frigo" && (
+                      <img
+                        src="https://i.imgur.com/ZibFR4x.jpg"
+                        className="d-block w-100"
+                        alt="..."
+                      />
+                    )}
+                    {carousel === "locaux" && (
+                      <img
+                        src="https://i.imgur.com/S0e3u4Z.jpg"
+                        className="d-block w-100"
+                        alt="..."
+                      />
+                    )}
+                  </div>
+                  {photoSource.map((photo) => {
+                    return (
+                      <div key={photo.id} className="carousel-item">
+                        <EquipmentPhotosComponent photo={photo} />
+                      </div>
+                    );
+                  })}
+                </div>
+                <button
+                  className="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button
+                  className="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next"
+                >
+                  <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
