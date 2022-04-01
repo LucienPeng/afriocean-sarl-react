@@ -1,22 +1,13 @@
 {
   "files": {
-    "main.css": "/afriocean-sarl-react/static/css/main.84d98a43.css",
-    "main.js": "/afriocean-sarl-react/static/js/main.8dbd78b3.js",
-    "static/media/bg2.png": "/afriocean-sarl-react/static/media/bg2.d6220b83134407d0e44b.png",
-    "static/media/equipment1.jpeg": "/afriocean-sarl-react/static/media/equipment1.b58d774269d27891fa60.jpeg",
-    "static/media/bg3.avif": "/afriocean-sarl-react/static/media/bg3.efb502688d4935b99eb3.avif",
-    "static/media/worker2.jpeg": "/afriocean-sarl-react/static/media/worker2.eeacc92a72d71a4ea872.jpeg",
-    "static/media/equipment2.jpeg": "/afriocean-sarl-react/static/media/equipment2.652eb1525d9a02f39331.jpeg",
-    "static/media/bg1.jpeg": "/afriocean-sarl-react/static/media/bg1.ac0b02ce1008ac8f2d50.jpeg",
-    "static/media/bg4.jpeg": "/afriocean-sarl-react/static/media/bg4.0095fe01f0f1bf0c0046.jpeg",
-    "static/media/worker.jpeg": "/afriocean-sarl-react/static/media/worker.28c10f09d57ea661d041.jpeg",
-    "static/media/equipment5.jpeg": "/afriocean-sarl-react/static/media/equipment5.06409603543edd299767.jpeg",
+    "main.css": "/afriocean-sarl-react/static/css/main.b07e5121.css",
+    "main.js": "/afriocean-sarl-react/static/js/main.d78dd73b.js",
     "index.html": "/afriocean-sarl-react/index.html",
-    "main.84d98a43.css.map": "/afriocean-sarl-react/static/css/main.84d98a43.css.map",
-    "main.8dbd78b3.js.map": "/afriocean-sarl-react/static/js/main.8dbd78b3.js.map"
+    "main.b07e5121.css.map": "/afriocean-sarl-react/static/css/main.b07e5121.css.map",
+    "main.d78dd73b.js.map": "/afriocean-sarl-react/static/js/main.d78dd73b.js.map"
   },
   "entrypoints": [
-    "static/css/main.84d98a43.css",
-    "static/js/main.8dbd78b3.js"
+    "static/css/main.b07e5121.css",
+    "static/js/main.d78dd73b.js"
   ]
 }
