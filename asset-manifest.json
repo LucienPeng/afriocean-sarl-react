@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/afriocean-sarl-react/static/css/main.84d98a43.css",
-    "main.js": "/afriocean-sarl-react/static/js/main.01fc151d.js",
+    "main.js": "/afriocean-sarl-react/static/js/main.8dbd78b3.js",
     "static/media/bg2.png": "/afriocean-sarl-react/static/media/bg2.d6220b83134407d0e44b.png",
     "static/media/equipment1.jpeg": "/afriocean-sarl-react/static/media/equipment1.b58d774269d27891fa60.jpeg",
     "static/media/bg3.avif": "/afriocean-sarl-react/static/media/bg3.efb502688d4935b99eb3.avif",
@@ -13,10 +13,10 @@
     "static/media/equipment5.jpeg": "/afriocean-sarl-react/static/media/equipment5.06409603543edd299767.jpeg",
     "index.html": "/afriocean-sarl-react/index.html",
     "main.84d98a43.css.map": "/afriocean-sarl-react/static/css/main.84d98a43.css.map",
-    "main.01fc151d.js.map": "/afriocean-sarl-react/static/js/main.01fc151d.js.map"
+    "main.8dbd78b3.js.map": "/afriocean-sarl-react/static/js/main.8dbd78b3.js.map"
   },
   "entrypoints": [
     "static/css/main.84d98a43.css",
-    "static/js/main.01fc151d.js"
+    "static/js/main.8dbd78b3.js"
   ]
 }
