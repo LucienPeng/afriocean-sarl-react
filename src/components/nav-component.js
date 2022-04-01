@@ -44,23 +44,35 @@ const NavComponent = (props) => {
                   onClick={bannerHandle}
                   className="nav-link active"
                   aria-current="page"
-                  to="/"
+                  to="/afriocean-sarl-react"
                 >
                   Acueil
                 </Link>
               </li>
               <li className="nav-item">
-                <Link onClick={bannerHandle} className="nav-link" to="/About">
+                <Link
+                  onClick={bannerHandle}
+                  className="nav-link"
+                  to="/afriocean-sarl-react/about"
+                >
                   Entreprise
                 </Link>
               </li>
               <li className="nav-item">
-                <Link onClick={bannerHandle} className="nav-link" to="/product">
+                <Link
+                  onClick={bannerHandle}
+                  className="nav-link"
+                  to="/afriocean-sarl-react/product"
+                >
                   Produits
                 </Link>
               </li>
               <li className="nav-item">
-                <Link onClick={bannerHandle} className="nav-link" to="/contact">
+                <Link
+                  onClick={bannerHandle}
+                  className="nav-link"
+                  to="/afriocean-sarl-react/contact"
+                >
                   Contacts
                 </Link>
               </li>

@@ -13,7 +13,7 @@ const App = () => {
     <div className="App">
       <NavComponent banner={banner} setBanner={setBanner} />
       <Routes>
-        <Route path="/afriocean-sarl-react/" element={<HomePage />} />
+        <Route path="/afriocean-sarl-react" element={<HomePage />} />
         <Route
           path="/afriocean-sarl-react/about"
           element={<AboutPage banner={banner} setBanner={setBanner} />}
