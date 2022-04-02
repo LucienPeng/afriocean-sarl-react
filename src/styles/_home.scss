@@ -5,6 +5,9 @@
   @include background-img("https://i.imgur.com/SEcJryW.jpg");
   color: #fff;
   text-shadow: rgb(0, 0, 0) 1px 10px 10px;
+  @include pad {
+    background-attachment: local;
+  }
   h1 {
     font-family: $primary-font;
     font-weight: 500;
@@ -51,16 +54,19 @@
 .valeur-section {
   min-height: 100vh;
   @include background-img("https://i.imgur.com/wUg8bq2.png");
-
+  @include pad {
+    background-attachment: local;
+    padding-bottom: 1rem;
+  }
   .container {
     h2 {
       padding: 2rem;
     }
     .row {
       .col {
-        margin: 1.5rem;
+        margin: 1rem;
         background-color: rgba(255, 255, 255, 0.9);
-        height: auto;
+        min-height: 18rem;
         @include card-style;
         h3 {
           margin-top: 1rem;
@@ -68,7 +74,7 @@
           text-align: center;
         }
         &:hover {
-          transform: rotate(-5deg) scale(1.1);
+          transform: rotate(-3deg) scale(1.1);
           background-color: rgba(255, 255, 255, 0.95);
           transition: 0.5s ease all;
         }
@@ -80,11 +86,19 @@
 .productCard-section {
   min-height: 100vh;
   @include background-img("https://i.imgur.com/wUg8bq2.png");
+  @include pad {
+    background: #2f383c;
+    padding: 2rem 0;
+    h2{
+      color: #fff;
+      text-shadow: none;
+    }
+  }
   .row {
     .col {
       margin: 0.5rem;
       background-color: rgba(255, 255, 255, 0.95);
-      height: auto;
+      min-height: 23rem;
       @include card-style;
       h3 {
         margin-top: 1rem;

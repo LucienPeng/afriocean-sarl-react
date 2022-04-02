@@ -2,7 +2,7 @@ const ContactComponent = () => {
   return (
     <div className="contact-section text-center mt-5 mb-5">
       <h2 className="mb-5">Nos Contacts</h2>
-      <div className="container">
+      <div className="container-fluid">
         <div
           className="row g-5 mb-5 d-flex justify-content-between"
           data-aos="zoom-in-down"
@@ -41,7 +41,7 @@ const ContactComponent = () => {
           className="row mt-5 g-5 d-flex justify-content-around"
           data-aos="zoom-in-down"
         >
-          <div className="col col-12  col-md-5">
+          <div className="col col-11  col-md-5">
             <form>
               <div className="form-group text-start mb-3">
                 <label htmlFor="name">
@@ -83,7 +83,7 @@ const ContactComponent = () => {
               </button>
             </form>
           </div>
-          <div className="col col-12  col-md-5">
+          <div className="col col-11  col-md-5">
             <div className="ratio ratio-1x1">
               <iframe
                 title="googleMap"

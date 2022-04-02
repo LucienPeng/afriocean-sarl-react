@@ -11998,6 +11998,12 @@ fieldset:disabled .btn {
   text-shadow: none;
 }
 
+@media (max-width: 768px) {
+  #banner {
+    background-attachment: local;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -12038,6 +12044,12 @@ fieldset:disabled .btn {
   text-shadow: none;
 }
 
+@media (max-width: 768px) {
+  #banner {
+    background-attachment: local;
+  }
+}
+
 .mainBanner {
   min-height: 100vh;
   background-image: url("https://i.imgur.com/SEcJryW.jpg");
@@ -12048,6 +12060,12 @@ fieldset:disabled .btn {
   opacity: 0.85;
   color: #fff;
   text-shadow: black 1px 10px 10px;
+}
+
+@media (max-width: 768px) {
+  .mainBanner {
+    background-attachment: local;
+  }
 }
 
 .mainBanner h1, .mainBanner .h1 {
@@ -12113,14 +12131,21 @@ fieldset:disabled .btn {
   opacity: 0.85;
 }
 
+@media (max-width: 768px) {
+  .valeur-section {
+    background-attachment: local;
+    padding-bottom: 1rem;
+  }
+}
+
 .valeur-section .container h2, .valeur-section .container .h2 {
   padding: 2rem;
 }
 
 .valeur-section .container .row .col {
-  margin: 1.5rem;
+  margin: 1rem;
   background-color: rgba(255, 255, 255, 0.9);
-  height: auto;
+  min-height: 18rem;
   -webkit-box-shadow: 5px 5px 8px #858585;
           box-shadow: 5px 5px 8px #858585;
   border-radius: 0.5rem;
@@ -12133,8 +12158,8 @@ fieldset:disabled .btn {
 }
 
 .valeur-section .container .row .col:hover {
-  -webkit-transform: rotate(-5deg) scale(1.1);
-          transform: rotate(-5deg) scale(1.1);
+  -webkit-transform: rotate(-3deg) scale(1.1);
+          transform: rotate(-3deg) scale(1.1);
   background-color: rgba(255, 255, 255, 0.95);
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
@@ -12150,10 +12175,21 @@ fieldset:disabled .btn {
   opacity: 0.85;
 }
 
+@media (max-width: 768px) {
+  .productCard-section {
+    background: #2f383c;
+    padding: 2rem 0;
+  }
+  .productCard-section h2, .productCard-section .h2 {
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
 .productCard-section .row .col {
   margin: 0.5rem;
   background-color: rgba(255, 255, 255, 0.95);
-  height: auto;
+  min-height: 23rem;
   -webkit-box-shadow: 5px 5px 8px #858585;
           box-shadow: 5px 5px 8px #858585;
   border-radius: 0.5rem;
@@ -12236,6 +12272,12 @@ fieldset:disabled .btn {
   font-weight: 500;
   color: #fff;
   text-shadow: none;
+}
+
+@media (max-width: 768px) {
+  #banner {
+    background-attachment: local;
+  }
 }
 
 nav .container {

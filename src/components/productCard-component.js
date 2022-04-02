@@ -13,14 +13,14 @@ const ProductCardComponent = (props) => {
 
   return (
     <div className="productCard-section">
-      <h2 className="text-center mb-5">Nos Produits</h2>
-      <div className="container">
-        <div
-          className="row d-flex justify-content-around"
-          data-aos="zoom-in-up"
-          data-aos-anchor-placement="center-bottom"
-        >
-          <div className="col col-10  col-md-3 d-flex flex-column align-items-center justify-content-center">
+      <h2 className="text-center p-5">Nos Produits</h2>
+      <div className="container-fluid mt-5">
+        <div className="row d-flex flex-md-nowrap gy-5 justify-content-around">
+          <div
+            className="col col-10 col-sm-4 col-md-3 d-flex flex-column align-items-center justify-content-start"
+            data-aos="zoom-in-up"
+            data-aos-anchor-placement="center-bottom"
+          >
             <div className="img-container col-4" onClick={redirectHandle}>
               <img className="img-fluid" src={productList[9].url} alt="" />
             </div>
@@ -31,7 +31,11 @@ const ProductCardComponent = (props) => {
               fourni une masse diversité d'espèces de poisson au Sénégal.
             </p>
           </div>
-          <div className="col col-10  col-md-3 d-flex flex-column align-items-center justify-content-center">
+          <div
+            className="col col-10 col-sm-4 col-md-3 d-flex flex-column align-items-center justify-content-start"
+            data-aos="zoom-in-up"
+            data-aos-anchor-placement="center-bottom"
+          >
             <div className="img-container col-4" onClick={redirectHandle}>
               <img className="img-fluid" src={productList[13].url} alt="" />
             </div>
@@ -42,7 +46,11 @@ const ProductCardComponent = (props) => {
               et élaborés en tant que des brochettes ou des filets du poisson.
             </p>
           </div>
-          <div className="col col-10  col-md-3 d-flex flex-column align-items-center justify-content-center">
+          <div
+            className="col col-10  col-sm-4 col-md-3 d-flex flex-column align-items-center justify-content-start"
+            data-aos="zoom-in-up"
+            data-aos-anchor-placement="center-bottom"
+          >
             <div className="img-container col-4" onClick={redirectHandle}>
               <img className="img-fluid" src={productList[15].url} alt="" />
             </div>

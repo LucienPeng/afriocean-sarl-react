@@ -34,6 +34,7 @@ $content-font-color: #777777;
   background-position: ($position);
   background-attachment: ($attachment);
   opacity: ($opacity);
+  
 }
 
 @mixin card-style {
@@ -72,5 +73,8 @@ $content-font-color: #777777;
     font-weight: 500;
     color: #fff;
     text-shadow: none;
+  }
+  @include pad {
+    background-attachment: local;
   }
 }
