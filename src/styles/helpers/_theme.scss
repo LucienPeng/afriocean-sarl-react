@@ -4,8 +4,7 @@ $content-font: "Kanit", sans-serif;
 $title-font-color: #444444;
 $content-font-color: #777777;
 
-html {
-  height: 100%; }
+
 
 * {
   padding: 0;
@@ -30,7 +29,7 @@ html {
 
 @mixin background-img($url, $position: top, $attachment: fixed, $opacity: 0.85) {
   background-image: url($url);
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: ($position);
   background-attachment: ($attachment);

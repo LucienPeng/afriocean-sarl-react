@@ -11958,10 +11958,6 @@ fieldset:disabled .btn {
   }
 }
 
-html {
-  height: 100%;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -11988,7 +11984,7 @@ html {
 
 #banner {
   background-image: url("https://i.imgur.com/QVGaSAa.png");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12002,10 +11998,6 @@ html {
   text-shadow: none;
 }
 
-html {
-  height: 100%;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -12032,7 +12024,7 @@ html {
 
 #banner {
   background-image: url("https://i.imgur.com/QVGaSAa.png");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12049,7 +12041,7 @@ html {
 .mainBanner {
   min-height: 100vh;
   background-image: url("https://i.imgur.com/SEcJryW.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12114,7 +12106,7 @@ html {
 .valeur-section {
   min-height: 100vh;
   background-image: url("https://i.imgur.com/wUg8bq2.png");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12151,7 +12143,7 @@ html {
 .productCard-section {
   min-height: 100vh;
   background-image: url("https://i.imgur.com/wUg8bq2.png");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12206,10 +12198,6 @@ html {
   margin: 5rem 5rem 10rem 5rem;
 }
 
-html {
-  height: 100%;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -12236,7 +12224,7 @@ html {
 
 #banner {
   background-image: url("https://i.imgur.com/QVGaSAa.png");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12302,7 +12290,7 @@ nav .container div .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:
 .footer {
   height: 30vh;
   background-image: url("https://i.imgur.com/zzYfmT4.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: local;
