@@ -37,3 +37,9 @@ nav {
     }
   }
 }
+
+.triangleActive{
+  display: inline-block;
+  transform: rotate(180deg);
+  transition: 0.6s all ease;
+}

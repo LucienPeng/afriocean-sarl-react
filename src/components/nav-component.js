@@ -7,6 +7,11 @@ const NavComponent = (props) => {
     setBanner(e.target.innerHTML);
   };
 
+  const togglerDown = document.querySelector("i");
+  const toggleHandle = () => {
+    togglerDown.classList.toggle("triangleActive");
+  };
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-dark">
@@ -19,7 +24,7 @@ const NavComponent = (props) => {
               className="d-lg-block d-none"
             />
           </Link>
-          <div className="toggler">
+          <div className="toggler" onClick={toggleHandle}>
             <img
               id="logo-toggler"
               className="d-lg-none"
