@@ -38,7 +38,7 @@ const ContactComponent = () => {
         </div>
 
         <div
-          className="row mt-5 g-5 d-flex justify-content-around"
+          className="row mt-5 g-5 d-flex justify-content-around align-items-center"
           data-aos="zoom-in-down"
         >
           <div className="col col-11  col-md-5">
@@ -67,9 +67,9 @@ const ContactComponent = () => {
                 ></input>
               </div>
 
-              <div className="form-group text-startD'après vos demandes et exiges, Afriocean est aussi capable de travailler les produits personnalisés et de les exporter à votre place. mb-3">
+              <div className="form-group text-start mb-3">
                 <label htmlFor="message">
-                  <p>Example textarea</p>
+                  <p>Commentaire</p>
                 </label>
                 <textarea
                   className="form-control"
