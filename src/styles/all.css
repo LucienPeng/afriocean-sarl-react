@@ -12084,7 +12084,7 @@ fieldset:disabled .btn {
 }
 
 .intro-section .container .row {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .intro-section .container .row .col {

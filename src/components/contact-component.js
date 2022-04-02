@@ -38,10 +38,10 @@ const ContactComponent = () => {
         </div>
 
         <div
-          className="row mt-5 g-5 d-flex justify-content-around align-items-center"
+          className="row mt-5 gy-5 d-flex justify-content-around align-items-center"
           data-aos="zoom-in-down"
         >
-          <div className="col col-11  col-md-5">
+          <div className="col col-11 mb-5  col-md-5">
             <form>
               <div className="form-group text-start mb-3">
                 <label htmlFor="name">

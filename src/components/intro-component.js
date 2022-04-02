@@ -24,7 +24,7 @@ const IntroComponent = (props) => {
             <button
               onClick={redirectHandle}
               type="submit"
-              className="btn btn-dark button"
+              className="btn btn-dark button text-center"
             >
               En savoir plus
             </button>
