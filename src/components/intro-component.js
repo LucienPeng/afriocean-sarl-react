@@ -1,7 +1,13 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const IntroComponent = () => {
+
+const IntroComponent = (props) => {
+  let { banner, setBanner } = props;
+
   const navigate = useNavigate();
+
   const redirectHandle = () => {
+    setBanner("A Propos De Nous");
     navigate("/afriocean-sarl-react/about");
   };
   return (

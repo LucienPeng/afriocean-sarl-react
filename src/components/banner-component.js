@@ -8,21 +8,31 @@ const BannerComponent = (props) => {
 
     if (banner === "Entreprise") {
       setBanner("A Propos De Nous");
-      bannerBG.style.backgroundImage = "url('https://i.imgur.com/f8srmMn.png')";
+      bannerBG.style.backgroundImage = "url('https://i.imgur.com/1kb3oIQ.jpg')";
+      bannerBG.style.backgroundPosition = "top";
     } else if (banner === "Produits") {
       setBanner("Produits de qualité");
-      bannerBG.style.backgroundImage = "url('https://i.imgur.com/QVGaSAa.png')";
+      bannerBG.style.backgroundImage = "url('https://i.imgur.com/W9FyHAY.jpg')";
+      bannerBG.style.backgroundPosition = "center";
     } else if (banner === "Contacts") {
       setBanner("Contactez-nous");
-      bannerBG.style.backgroundImage = "url('https://i.imgur.com/W9FyHAY.jpg')";
+      bannerBG.style.backgroundImage = "url('https://i.imgur.com/U8DauaI.jpg')";
     }
-  }, []);
+  });
 
   return (
-    <div className="banner d-flex justify-content-center align-items-center">
+    <div
+      id="banner"
+      className=" d-flex banner justify-content-center align-items-center"
+    >
       {banner && (
         <h2 className="display-4 animate__animated animate__zoomIn">
           {banner}
+        </h2>
+      )}
+      {!banner && (
+        <h2 className="display-4 animate__animated animate__zoomIn">
+          AFRIOCEAN SARL
         </h2>
       )}
     </div>

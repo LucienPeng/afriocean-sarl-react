@@ -4,21 +4,17 @@ import IntroComponent from "../components/intro-component";
 import ValeurComponent from "../components/valeur-component";
 import ProductCardComponent from "../components/productCard-component";
 import ContactComponent from "../components/contact-component";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useState } from "react";
 
-const HomePage = () => {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
+const HomePage = (props) => {
+  let { banner, setBanner } = props;
+
   return (
     <div className="homePage">
       <MainbannerComponent />
-      <IntroComponent />
+      <IntroComponent banner={banner} setBanner={setBanner} />
       <ValeurComponent />
-      <ProductCardComponent />
+      <ProductCardComponent banner={banner} setBanner={setBanner} />
       <ContactComponent />
     </div>
   );

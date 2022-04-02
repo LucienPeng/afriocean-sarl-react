@@ -1,11 +1,12 @@
 import React from "react";
 
 const ValeurComponent = () => {
+
   return (
     <div className="valeur-section ">
       <div className="container d-lg-flex ">
         <h2 className="text-center align-self-center mt-5">Nos Valeurs</h2>
-        <div className="row d-flex align-items-stretch flex-wrap justify-content-center  mt-3">
+        <div className="row g-5 d-flex align-items-stretch flex-wrap justify-content-center  mt-5">
           <div className="col col-10 col-md-5" data-aos="zoom-in">
             <h3>Qualité</h3>
             <p>

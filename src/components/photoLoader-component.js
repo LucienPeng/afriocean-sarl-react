@@ -1,4 +1,4 @@
-const EquipmentPhotosComponent = (source) => {
+const PhotoLoaderComponent = (source) => {
   return (
     <div>
       <img src={source.photo.url} className="d-block w-100" alt="..." />
@@ -6,4 +6,4 @@ const EquipmentPhotosComponent = (source) => {
   );
 };
 
-export default EquipmentPhotosComponent;
+export default PhotoLoaderComponent;

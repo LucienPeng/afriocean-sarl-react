@@ -24,7 +24,8 @@ $content-font-color: #777777;
   }
 }
 
-@mixin background-img($url, $position: top, $attachment: fixed, $opacity: 0.8) {
+
+@mixin background-img($url, $position: top, $attachment: fixed, $opacity: 0.85) {
   background-image: url($url);
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,5 +59,16 @@ $content-font-color: #777777;
 @mixin mobile {
   @media (max-width: 375px) {
     @content;
+  }
+}
+
+//
+#banner {
+  @include background-img("https://i.imgur.com/QVGaSAa.png");
+  height: 50vh;
+  h2 {
+    font-weight: 500;
+    color: #fff;
+    text-shadow: none;
   }
 }

@@ -11982,6 +11982,22 @@ fieldset:disabled .btn {
   color: #777777;
 }
 
+#banner {
+  background-image: url("https://i.imgur.com/QVGaSAa.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  opacity: 0.85;
+  height: 50vh;
+}
+
+#banner h2, #banner .h2 {
+  font-weight: 500;
+  color: #fff;
+  text-shadow: none;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -12006,6 +12022,22 @@ fieldset:disabled .btn {
   color: #777777;
 }
 
+#banner {
+  background-image: url("https://i.imgur.com/QVGaSAa.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  opacity: 0.85;
+  height: 50vh;
+}
+
+#banner h2, #banner .h2 {
+  font-weight: 500;
+  color: #fff;
+  text-shadow: none;
+}
+
 .mainBanner {
   min-height: 100vh;
   background-image: url("https://i.imgur.com/SEcJryW.jpg");
@@ -12013,7 +12045,7 @@ fieldset:disabled .btn {
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
-  opacity: 0.8;
+  opacity: 0.85;
   color: #fff;
   text-shadow: black 1px 10px 10px;
 }
@@ -12078,7 +12110,7 @@ fieldset:disabled .btn {
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .valeur-section .container h2, .valeur-section .container .h2 {
@@ -12086,7 +12118,7 @@ fieldset:disabled .btn {
 }
 
 .valeur-section .container .row .col {
-  margin: 1rem;
+  margin: 1.5rem;
   background-color: rgba(255, 255, 255, 0.9);
   height: auto;
   -webkit-box-shadow: 5px 5px 8px #858585;
@@ -12101,8 +12133,8 @@ fieldset:disabled .btn {
 }
 
 .valeur-section .container .row .col:hover {
-  -webkit-transform: rotate(-5deg) scale(1.2);
-          transform: rotate(-5deg) scale(1.2);
+  -webkit-transform: rotate(-5deg) scale(1.1);
+          transform: rotate(-5deg) scale(1.1);
   background-color: rgba(255, 255, 255, 0.95);
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
@@ -12115,7 +12147,7 @@ fieldset:disabled .btn {
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .productCard-section .row .col {
@@ -12145,7 +12177,7 @@ fieldset:disabled .btn {
           transform: scale(1.3);
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
-  opacity: 0.8;
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -12188,6 +12220,22 @@ fieldset:disabled .btn {
 * p {
   font-family: "Kanit", sans-serif;
   color: #777777;
+}
+
+#banner {
+  background-image: url("https://i.imgur.com/QVGaSAa.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  opacity: 0.85;
+  height: 50vh;
+}
+
+#banner h2, #banner .h2 {
+  font-weight: 500;
+  color: #fff;
+  text-shadow: none;
 }
 
 nav .container {
@@ -12251,22 +12299,6 @@ nav .container div .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:
 
 img {
   opacity: 0.9;
-}
-
-.banner {
-  background-image: url("https://i.imgur.com/W9FyHAY.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-attachment: fixed;
-  opacity: 0.8;
-  height: 50vh;
-}
-
-.banner h2, .banner .h2 {
-  font-weight: 500;
-  color: #fff;
-  text-shadow: none;
 }
 
 .presentation-section,

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../asset/logo.png";
 
 const NavComponent = (props) => {
   let { banner, setBanner } = props;
@@ -13,13 +12,18 @@ const NavComponent = (props) => {
       <nav className="navbar navbar-expand-lg navbar-light bg-dark">
         <div className="container">
           <Link className="navbar-brand" to="/afriocean-sarl-react">
-            <img id="logo" src={logo} alt="" className="d-lg-block d-none" />
+            <img
+              id="logo"
+              src="https://i.imgur.com/1UpdxEV.png"
+              alt=""
+              className="d-lg-block d-none"
+            />
           </Link>
           <div className="toggler">
             <img
               id="logo-toggler"
               className="d-lg-none"
-              src={logo}
+              src="https://i.imgur.com/1UpdxEV.png"
               alt=""
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"

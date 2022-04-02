@@ -2,16 +2,6 @@ img {
   opacity: 0.9;
 }
 
-.banner {
-  @include background-img("https://i.imgur.com/W9FyHAY.jpg");
-  height: 50vh;
-  h2 {
-    font-weight: 500;
-    color: #fff;
-    text-shadow: none;
-  }
-}
-
 .presentation-section,
 .history-section {
   min-height: 100vh;

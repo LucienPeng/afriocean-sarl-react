@@ -1,18 +1,20 @@
 import equipmentPhotos from "../asset/equipmentPhoto.json";
-import EquipmentPhotosComponent from "./equipmentPhotos-component";
-import localPhotos from "../asset/localphotos.json";
+import locauxPhotos from "../asset/locauxPhotos.json";
+import avantagesPhotos from "../asset/avantages.json";
+
+import PhotoLoaderComponent from "./photoLoader-component";
 import { useState } from "react";
 
 const EquipmentComponent = () => {
   let [carousel, setCarousel] = useState("");
   const carouselHandle = (e) => {
-    console.log(e.target.getAttribute("data-set"));
-
     setCarousel(e.target.getAttribute("data-set"));
   };
   let photoSource = [];
-  if (carousel === "frigo") photoSource = equipmentPhotos;
-  else if (carousel === "locaux") photoSource = localPhotos;
+  if (carousel === "equipement") photoSource = equipmentPhotos;
+  else if (carousel === "locaux") photoSource = locauxPhotos;
+  else if (carousel === "avantages") photoSource = avantagesPhotos;
+
   return (
     <div className="equipment-section">
       <div className="container">
@@ -41,7 +43,7 @@ const EquipmentComponent = () => {
                 className="img-fluid"
                 src="https://i.imgur.com/ZibFR4x.jpg"
                 alt=""
-                data-set="frigo"
+                data-set="equipement"
                 onClick={carouselHandle}
               />
             </div>
@@ -102,9 +104,9 @@ const EquipmentComponent = () => {
             >
               <img
                 className="img-fluid"
-                src="https://i.imgur.com/LJ7Juz7.jpg"
+                src="https://i.imgur.com/Skl1LXB.jpg"
                 alt=""
-                data-set="frigo?"
+                data-set="avantages"
                 onClick={carouselHandle}
               />
             </div>
@@ -176,7 +178,7 @@ const EquipmentComponent = () => {
                 </div>
                 <div className="carousel-inner ">
                   <div className="carousel-item active">
-                    {carousel === "frigo" && (
+                    {carousel === "equipement" && (
                       <img
                         src="https://i.imgur.com/ZibFR4x.jpg"
                         className="d-block w-100"
@@ -190,11 +192,18 @@ const EquipmentComponent = () => {
                         alt="..."
                       />
                     )}
+                    {carousel === "avantages" && (
+                      <img
+                        src="https://i.imgur.com/Skl1LXB.jpg"
+                        className="d-block w-100"
+                        alt="..."
+                      />
+                    )}
                   </div>
                   {photoSource.map((photo) => {
                     return (
                       <div key={photo.id} className="carousel-item">
-                        <EquipmentPhotosComponent photo={photo} />
+                        <PhotoLoaderComponent photo={photo} />
                       </div>
                     );
                   })}
