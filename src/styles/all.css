@@ -11984,7 +11984,7 @@ fieldset:disabled .btn {
 
 #banner {
   background-image: url("https://i.imgur.com/QVGaSAa.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12024,7 +12024,7 @@ fieldset:disabled .btn {
 
 #banner {
   background-image: url("https://i.imgur.com/QVGaSAa.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12041,7 +12041,7 @@ fieldset:disabled .btn {
 .mainBanner {
   min-height: 100vh;
   background-image: url("https://i.imgur.com/SEcJryW.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12106,7 +12106,7 @@ fieldset:disabled .btn {
 .valeur-section {
   min-height: 100vh;
   background-image: url("https://i.imgur.com/wUg8bq2.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12143,7 +12143,7 @@ fieldset:disabled .btn {
 .productCard-section {
   min-height: 100vh;
   background-image: url("https://i.imgur.com/wUg8bq2.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12224,7 +12224,7 @@ fieldset:disabled .btn {
 
 #banner {
   background-image: url("https://i.imgur.com/QVGaSAa.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
@@ -12290,7 +12290,7 @@ nav .container div .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:
 .footer {
   height: 30vh;
   background-image: url("https://i.imgur.com/zzYfmT4.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   background-attachment: local;
