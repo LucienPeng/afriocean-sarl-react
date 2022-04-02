@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/afriocean-sarl-react/static/css/main.b07e5121.css",
-    "main.js": "/afriocean-sarl-react/static/js/main.ed6c4c80.js",
+    "main.css": "/afriocean-sarl-react/static/css/main.ccf23eda.css",
+    "main.js": "/afriocean-sarl-react/static/js/main.2ecc7f4a.js",
     "index.html": "/afriocean-sarl-react/index.html",
-    "main.b07e5121.css.map": "/afriocean-sarl-react/static/css/main.b07e5121.css.map",
-    "main.ed6c4c80.js.map": "/afriocean-sarl-react/static/js/main.ed6c4c80.js.map"
+    "main.ccf23eda.css.map": "/afriocean-sarl-react/static/css/main.ccf23eda.css.map",
+    "main.2ecc7f4a.js.map": "/afriocean-sarl-react/static/js/main.2ecc7f4a.js.map"
   },
   "entrypoints": [
-    "static/css/main.b07e5121.css",
-    "static/js/main.ed6c4c80.js"
+    "static/css/main.ccf23eda.css",
+    "static/js/main.2ecc7f4a.js"
   ]
 }

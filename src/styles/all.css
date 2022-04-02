@@ -11958,6 +11958,10 @@ fieldset:disabled .btn {
   }
 }
 
+html {
+  height: 100%;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -11996,6 +12000,10 @@ fieldset:disabled .btn {
   font-weight: 500;
   color: #fff;
   text-shadow: none;
+}
+
+html {
+  height: 100%;
 }
 
 * {
@@ -12196,6 +12204,10 @@ fieldset:disabled .btn {
 
 .contact-section .container .row {
   margin: 5rem 5rem 10rem 5rem;
+}
+
+html {
+  height: 100%;
 }
 
 * {
