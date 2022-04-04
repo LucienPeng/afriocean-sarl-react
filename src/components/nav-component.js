@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const NavComponent = (props) => {
@@ -7,9 +7,16 @@ const NavComponent = (props) => {
     setBanner(e.target.innerHTML);
   };
 
-  const togglerDown = document.querySelector("i");
+  const togglerDown = useRef("");
   const toggleHandle = () => {
-    togglerDown.classList.toggle("triangleActive");
+    console.log(togglerDown.current.classList);
+    if (togglerDown.current.classList.contains("triangleActive")) {
+      togglerDown.current.classList.remove("triangleActive");
+      togglerDown.current.classList.add("triangleDisactive");
+    } else {
+      togglerDown.current.classList.add("triangleActive");
+      togglerDown.current.classList.remove("triangleDisactive");
+    }
   };
 
   return (
@@ -24,7 +31,7 @@ const NavComponent = (props) => {
               className="d-lg-block d-none"
             />
           </Link>
-          <div className="toggler" onClick={toggleHandle}>
+          <div className="toggler " onClick={toggleHandle}>
             <img
               id="logo-toggler"
               className="d-lg-none"
@@ -37,7 +44,8 @@ const NavComponent = (props) => {
               aria-label="Toggle navigation"
             />
             <i
-              className="bi bi-caret-down-fill d-lg-none text-white"
+              ref={togglerDown}
+              className="bi bi-caret-up-fill d-lg-none text-white"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
