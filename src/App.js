@@ -37,7 +37,7 @@ const App = () => {
           path="/afriocean-sarl-react/contact"
           element={<ContactPage banner={banner} setBanner={setBanner} />}
         />
-        <Route path="*" element={<NotFoundComponent />} />
+        <Route path="/*" element={<NotFoundComponent />} />
       </Routes>
       <FooterComponent />
     </div>

@@ -1,27 +1,50 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const NavComponent = (props) => {
   let { banner, setBanner } = props;
+
   const bannerHandle = (e) => {
     setBanner(e.target.innerHTML);
   };
 
   const togglerDown = useRef("");
+  const nav = useRef("");
+
   const toggleHandle = () => {
-    console.log(togglerDown.current.classList);
     if (togglerDown.current.classList.contains("triangleActive")) {
       togglerDown.current.classList.remove("triangleActive");
       togglerDown.current.classList.add("triangleDisactive");
+      nav.current.classList.remove("bg-dark");
     } else {
       togglerDown.current.classList.add("triangleActive");
       togglerDown.current.classList.remove("triangleDisactive");
+      nav.current.classList.add("bg-dark");
     }
   };
 
+  let [isScrolled, setScrolled] = useState(false);
+
+  const listenScrollEvent = () => {
+    if (window.scrollY > 10) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+  }, [isScrolled]);
+
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+      <nav
+        className={`navbar fixed-top ${
+          isScrolled ? "bg-dark" : ""
+        } navbar-expand-lg navbar-light`}
+        ref={nav}
+      >
         <div className="container">
           <Link className="navbar-brand" to="/afriocean-sarl-react">
             <img

@@ -12004,6 +12004,10 @@ fieldset:disabled .btn {
   }
 }
 
+#not-found {
+  min-height: 100vh;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -12048,6 +12052,10 @@ fieldset:disabled .btn {
   #banner {
     background-attachment: local;
   }
+}
+
+#not-found {
+  min-height: 100vh;
 }
 
 .mainBanner {
@@ -12280,6 +12288,15 @@ fieldset:disabled .btn {
   }
 }
 
+#not-found {
+  min-height: 100vh;
+}
+
+nav {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
 nav .container {
   font-family: "Copperplate", "normal";
   display: -webkit-box !important;
@@ -12322,11 +12339,10 @@ nav .container div .navbar-nav .nav-item .nav-link {
 }
 
 nav .container div .navbar-nav .nav-item .nav-link:hover {
-  opacity: 0.8;
-}
-
-nav .container div .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:active {
-  background-color: red;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .triangleActive {
