@@ -4,13 +4,13 @@ import { ABOUT_NAV_ITEMS, SERVICE_NAV_ITEMS, PRODUCTS_NAV_ITEMS, LANGUAGE_NAV_IT
 import { NavItems } from './NavItems';
 
 export const NavBar = (props) => {
-    const { aboutRef } = props;
+    const { homeRef, aboutRef, serviceRef, productRef, contactRef } = props;
 
     const NAV_ITEMS = [
         { title: '工廠介紹', url: '/about', subNavItems: ABOUT_NAV_ITEMS, ref: aboutRef },
-        { title: '服務介紹', url: '/service', subNavItems: SERVICE_NAV_ITEMS, ref: null },
-        { title: '產品介紹', url: '/products', subNavItems: PRODUCTS_NAV_ITEMS, ref: null },
-        { title: '聯絡我們', url: '/contact', ref: null },
+        { title: '服務介紹', url: '/service', subNavItems: SERVICE_NAV_ITEMS, ref: serviceRef },
+        { title: '產品介紹', url: '/products', subNavItems: PRODUCTS_NAV_ITEMS, ref: productRef },
+        { title: '聯絡我們', url: '/contact', ref: contactRef },
         { title: '語言', url: '#', subNavItems: LANGUAGE_NAV_ITEMS, ref: null },
     ];
 
@@ -59,12 +59,15 @@ export const NavBar = (props) => {
             className={`navbar fixed-top ${isScrolled ? 'bg-dark' : ''} navbar-expand-lg navbar-light`}
             ref={nav}
         >
-            <Stack component='div' direction='row' spacing={10} justifyContent='center' alignItems='center'>
+            <Stack ref={homeRef} component='div' direction='row' spacing={10} justifyContent='center' alignItems='center'>
 
-                <Box component='img'
+                <Box
+                    component='img'
                     src='https://i.imgur.com/1UpdxEV.png'
                     alt='logo'
                     height={50}
+                    onClick={(event) => scrollToHandle(event, homeRef)}
+                    sx={{ cursor: 'pointer' }}
                 />
 
                 <Box className='toggler ' onClick={toggleHandle}>

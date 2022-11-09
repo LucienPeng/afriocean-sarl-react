@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { useHomepageTranslation } from "../i18n/useTranslations";
+import { useHomepageTranslation } from "../../i18n/useTranslations";
 
 
 export const HeroBanner = () => {

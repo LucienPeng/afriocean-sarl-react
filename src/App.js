@@ -14,6 +14,10 @@ const App = () => {
     let [banner, setBanner] = useState("");
     const homeRef = useRef();
     const aboutRef = useRef();
+    const serviceRef = useRef();
+    const productRef = useRef();
+    const contactRef = useRef();
+
 
     useEffect(() => {
         AOS.init();
@@ -22,11 +26,22 @@ const App = () => {
 
     return (
         <>
-            <NavBar aboutRef={aboutRef} banner={banner} setBanner={setBanner} />
+            <NavBar
+                homeRef={homeRef}
+                aboutRef={aboutRef}
+                serviceRef={serviceRef}
+                productRef={productRef}
+                contactRef={contactRef} banner={banner} setBanner={setBanner} />
             <Routes>
                 <Route
                     path="/"
-                    element={<HomePage homeRef={homeRef} aboutRef={aboutRef} banner={banner} setBanner={setBanner} />}
+                    element={<HomePage
+                        homeRef={homeRef}
+                        aboutRef={aboutRef}
+                        serviceRef={serviceRef}
+                        productRef={productRef}
+                        contactRef={contactRef}
+                        banner={banner} setBanner={setBanner} />}
                 />
                 <Route
                     path="/about"

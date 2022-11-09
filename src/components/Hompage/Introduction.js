@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const IntroComponent = (props) => {
+export const Introduction = (props) => {
     let { banner, setBanner, aboutRef } = props;
 
     const navigate = useNavigate();
@@ -36,4 +36,4 @@ const IntroComponent = (props) => {
     );
 };
 
-export default IntroComponent;
+export default Introduction;
