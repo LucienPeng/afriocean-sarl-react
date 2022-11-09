@@ -7,6 +7,7 @@ nav {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+
     #logo {
       height: 3.5rem;
       width: 6.5rem;
@@ -28,15 +29,23 @@ nav {
           padding: 1rem;
           color: #fff;
           &:hover {
-            //color: $title-font-color;
             transform: scale(1.2);
             transition: all 0.3s ease-out;
           }
+          
+        }
+        .nav-link-activated{
+          padding: 1rem;
+          color: aquamarine;
+         
         }
       }
     }
   }
 }
+
+
+
 
 
 .triangleActive{

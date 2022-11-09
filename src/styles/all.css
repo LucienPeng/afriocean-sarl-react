@@ -12058,7 +12058,7 @@ fieldset:disabled .btn {
   min-height: 100vh;
 }
 
-.mainBanner {
+.heroBanner {
   min-height: 100vh;
   background-image: url("https://i.imgur.com/SEcJryW.jpg");
   background-size: cover;
@@ -12068,22 +12068,32 @@ fieldset:disabled .btn {
   opacity: 0.85;
   color: #fff;
   text-shadow: black 1px 10px 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 768px) {
-  .mainBanner {
+  .heroBanner {
     background-attachment: local;
   }
 }
 
-.mainBanner h1, .mainBanner .h1 {
+.heroBanner h1, .heroBanner .h1 {
   font-family: "Copperplate", "normal";
   font-weight: 500;
   margin: 0;
   padding: 0;
 }
 
-.mainBanner p {
+.heroBanner p {
   font-family: "Copperplate", "normal";
   font-weight: 400;
   font-size: 1.3rem;
@@ -12343,6 +12353,11 @@ nav .container div .navbar-nav .nav-item .nav-link:hover {
           transform: scale(1.2);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+
+nav .container div .navbar-nav .nav-item .nav-link-activated {
+  padding: 1rem;
+  color: aquamarine;
 }
 
 .triangleActive {
