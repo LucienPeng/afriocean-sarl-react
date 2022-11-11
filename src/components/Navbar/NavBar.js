@@ -1,10 +1,13 @@
-import { Box, Stack } from '@mui/material';
 import React, { useState, useRef, useEffect } from 'react';
+import { Box, Stack } from '@mui/material';
 import { ABOUT_NAV_ITEMS, SERVICE_NAV_ITEMS, PRODUCTS_NAV_ITEMS, LANGUAGE_NAV_ITEMS } from './NavConfigs';
 import { NavItems } from './NavItems';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const NavBar = (props) => {
     const { homeRef, aboutRef, serviceRef, productRef, contactRef } = props;
+    const { pathname } = useLocation();
+    const navigate = useNavigate();
 
     const NAV_ITEMS = [
         { title: '工廠介紹', url: '/about', subNavItems: ABOUT_NAV_ITEMS, ref: aboutRef },
@@ -40,12 +43,16 @@ export const NavBar = (props) => {
         }
     };
 
-    const scrollToHandle = (event, ref) => {
-        window.scrollTo({
-            top: ref.current.offsetTop,
-            behavior: 'smooth',
-        });
-        setActiveLink(ref);
+    const scrollToHandle = (event, ref, url) => {
+        if (pathname === '/') {
+            window.scrollTo({
+                top: ref.current.offsetTop,
+                behavior: 'smooth',
+            });
+            setActiveLink(ref);
+        } else {
+            navigate(url);
+        }
     };
 
     useEffect(() => {
@@ -66,11 +73,11 @@ export const NavBar = (props) => {
                     src='https://i.imgur.com/1UpdxEV.png'
                     alt='logo'
                     height={50}
-                    onClick={(event) => scrollToHandle(event, homeRef)}
+                    onClick={(event) => scrollToHandle(event, homeRef, '/')}
                     sx={{ cursor: 'pointer' }}
                 />
 
-                <Box className='toggler ' onClick={toggleHandle}>
+                {/* <Box className='toggler ' onClick={toggleHandle}>
                     <Box
                         component='img'
                         id='logo-toggler'
@@ -92,7 +99,7 @@ export const NavBar = (props) => {
                         aria-expanded='false'
                         aria-label='Toggle navigation'
                     ></i>
-                </Box>
+                </Box> */}
 
                 <Box className='collapse navbar-collapse' id='navbarSupportedContent'>
                     <Stack direction='row' spacing={20} width='100%' height='100%'>

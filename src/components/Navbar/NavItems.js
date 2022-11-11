@@ -12,9 +12,9 @@ export const NavItems = (props) => {
 
     const open = Boolean(anchorEl);
 
-    const handleClick = (event, ref) => {
+    const handleClick = (event, ref, url) => {
         setAnchorEl(event.currentTarget);
-        scrollToHandle(event, ref);
+        scrollToHandle(event, ref, url);
     };
 
     const handleClose = () => {
@@ -39,7 +39,7 @@ export const NavItems = (props) => {
             <Button
                 id={navItem.title}
                 variant='text'
-                onClick={(event) => handleClick(event, navItem.ref)}
+                onClick={(event) => handleClick(event, navItem.ref, navItem.url)}
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 sx={{ color: 'common.white' }}

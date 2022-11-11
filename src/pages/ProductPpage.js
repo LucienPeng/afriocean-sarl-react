@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BannerComponent from "../components/banner-component";
-import ProductComponent from "../components/Hompage/Product";
+import ProductComponent from "../components/Product";
 
 const ProductPage = (props) => {
     let { banner, setBanner } = props;

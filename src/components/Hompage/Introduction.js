@@ -1,38 +1,20 @@
-import { Box } from "@mui/material";
-import { useState } from "react";
+import { Stack, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useHomepageTranslation } from "../../i18n/useTranslations";
 
 export const Introduction = (props) => {
-    let { banner, setBanner, aboutRef } = props;
-
+    const { aboutRef } = props;
+    const { t } = useHomepageTranslation();
     const navigate = useNavigate();
+    const redirectHandle = () => navigate("/about");
 
-    const redirectHandle = () => {
-        setBanner("A Propos De Nous");
-        navigate("/about");
-    };
     return (
-        <Box ref={aboutRef} className="intro-section">
-            <div className="container">
-                <div className="row d-flex justify-content-center align-items-center">
-                    <div data-aos="zoom-out-down" className="col col-11 col-md-6">
-                        <h2 className="text-center">A propos de Nous</h2>
-                        <p>
-                            AFRIOCEAN, une entreprise franche d’exportation de produits
-                            halieutiques a été créé en 2013. Afin d’entrer dans la politique
-                            économique dans laquelle est lancé le SENEGAL.
-                        </p>
-                        <button
-                            onClick={redirectHandle}
-                            type="submit"
-                            className="btn btn-dark button text-center"
-                        >
-                            En savoir plus
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </Box>
+        <Stack component='div' ref={aboutRef} minHeight="100vh" justifyContent='center' alignItems='center'>
+            <Stack direction='column' alignItems='center'>
+                <Typography variant="h3" color="initial">{t('introduction')}</Typography>
+                <Button onClick={redirectHandle} variant="text" color="primary">了解更多</Button>
+            </Stack>
+        </Stack>
     );
 };
 

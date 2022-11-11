@@ -2,7 +2,7 @@ import React from "react";
 import { HeroBanner } from "../components/Hompage/HeroBanner";
 import { Introduction } from "../components/Hompage/Introduction";
 import { Service } from "../components/Hompage/Service";
-import { Product } from "../components/productCard-component";
+import { Product } from "../components/Hompage/Product";
 import { Contact } from "../components/Hompage/Contact";
 
 const HomePage = (props) => {
