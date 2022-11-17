@@ -1,29 +1,30 @@
-import { Stack, Card, CardHeader, CardContent, Typography } from "@mui/material";
+import { Stack, Card, Button, CardContent, Typography } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const SERVICES = [
-    { title: '冷凍水產品', description: '', url: '' },
-    { title: '冷凍及蒸煮食品加工', description: '', url: '' },
-    { title: '儲存服務', description: '', url: '' },
+    { title: 'SERVICE 1', description: '', url: 's1' },
+    { title: 'SERVICE 2', description: '', url: 's2' },
+    { title: 'SERVICE 3', description: '', url: 's3' },
 ];
 
 export const Service = (props) => {
     const { serviceRef } = props;
+    const navigate = useNavigate();
+    const redirectHandle = (url) => navigate(`/service/${url}`);
 
     return (
         <Stack component='div' ref={serviceRef} justifyContent='center' alignItems='center' minHeight='100vh' sx={{ bgcolor: 'secondary.light' }}>
-            <Stack direction='row' spacing={5}>
+            <Typography mb={5} variant="h3" color="initial">Service</Typography>
+
+            <Stack direction='row' spacing={20}>
                 {SERVICES.map((service, index) => (
                     <Card key={index} sx={{ maxWidth: 345 }}>
                         <CardContent>
                             <Typography variant="body1" color="text.secondary">
                                 {service.title}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                This impressive paella is a perfect party dish and a fun meal to cook
-                                together with your guests. Add 1 cup of frozen peas along with the mussels,
-                                if you like.
-                            </Typography>
+                            <Button onClick={redirectHandle.bind(this, service.url)} variant="text" color="primary">Go to {service.title}</Button>
                         </CardContent>
                     </Card>
                 ))}

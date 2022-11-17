@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import BannerComponent from "../components/banner-component";
 import ProductComponent from "../components/Product";
+import { Outlet } from "react-router-dom";
+
 
 const ProductPage = (props) => {
     let { banner, setBanner } = props;
@@ -11,7 +13,8 @@ const ProductPage = (props) => {
     return (
         <div>
             <BannerComponent banner={banner} setBanner={setBanner} />
-            <ProductComponent />
+            <Outlet />
+            {/* <ProductComponent /> */}
         </div>
     );
 };

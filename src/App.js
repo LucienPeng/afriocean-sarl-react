@@ -4,11 +4,21 @@ import { NavBar } from "./components/Navbar/NavBar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutUsPage";
 import ProductPage from "./pages/ProductPpage";
+import Service from './pages/Service'
 import FooterComponent from "./components/footer-component";
 import ContactPage from "./pages/ContactPage";
 import NotFoundComponent from "./components/notFound-component";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Box, Typography } from "@mui/material";
+
+const TempIntro = (props) => {
+    return (
+        <Box height='100vh'>
+            <Typography textAlign='center' mt={10} variant="h2" color="initial">{props.children}</Typography>
+        </Box>
+    );
+};
 
 const App = () => {
     let [banner, setBanner] = useState("");
@@ -43,14 +53,27 @@ const App = () => {
                         contactRef={contactRef}
                         banner={banner} setBanner={setBanner} />}
                 />
-                <Route
-                    path="/about"
-                    element={<AboutPage banner={banner} setBanner={setBanner} />}
-                />
-                <Route
-                    path="/product"
-                    element={<ProductPage banner={banner} setBanner={setBanner} />}
-                />
+                <Route path="/about" element={<AboutPage />}>
+                    <Route path="/about/i1" element={<TempIntro>Intro 1</TempIntro>} />
+                    <Route path="/about/i2" element={<TempIntro>Intro 2</TempIntro>} />
+                    <Route path="/about/i3" element={<TempIntro>Intro 3</TempIntro>} />
+                    <Route path="/about/i4" element={<TempIntro>Intro 4</TempIntro>} />
+                    <Route path="/about/i5" element={<TempIntro>Intro 5</TempIntro>} />
+                </Route>
+                <Route path="/service" element={<Service />}>
+                    <Route path="/service/s1" element={<TempIntro>Service 1</TempIntro>} />
+                    <Route path="/service/s2" element={<TempIntro>Service 2</TempIntro>} />
+                    <Route path="/service/s3" element={<TempIntro>Service 3</TempIntro>} />
+                </Route>
+                <Route path="/product" element={<ProductPage />}>
+                    <Route path="/product/p1" element={<TempIntro>Product 1</TempIntro>} />
+                    <Route path="/product/p2" element={<TempIntro>Product 2</TempIntro>} />
+                    <Route path="/product/p3" element={<TempIntro>Product 3</TempIntro>} />
+                    <Route path="/product/p4" element={<TempIntro>Product 4</TempIntro>} />
+                    <Route path="/product/p5" element={<TempIntro>Product 5</TempIntro>} />
+                </Route>
+
+
                 <Route
                     path="/contact"
                     element={<ContactPage banner={banner} setBanner={setBanner} />}
