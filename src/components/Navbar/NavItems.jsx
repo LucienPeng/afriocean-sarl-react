@@ -49,7 +49,7 @@ export const NavItems = (props) => {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 disableRipple
-                sx={{ color: { xs: 'primary.dark', md: isLinkActive ? 'primary.light' : 'common.white' } }}
+                sx={{ fontSize: '16px', color: { xs: 'primary.dark', md: isLinkActive ? 'primary.light' : 'common.white' } }}
             >
                 {navItem.title}
             </Button>
@@ -62,14 +62,15 @@ export const NavItems = (props) => {
                 >
                     {navItem.subNavItems.map((subNavItem) => (
                         !subNavItem.descNavItems ?
-                            <MenuItem key={subNavItem.title} onClick={() => menuHandler(subNavItem.lang)}>{subNavItem.title}</MenuItem>
+                            <MenuItem sx={{ fontSize: '16px' }} key={subNavItem.title} onClick={menuHandler.bind(this, subNavItem.lang)}>{subNavItem.title}</MenuItem>
                             : <NestedMenuItem
                                 key={subNavItem.title}
                                 label={subNavItem.title}
                                 parentMenuOpen={open}
+                                sx={{ fontSize: '16px' }}
                             >
                                 {subNavItem.descNavItems.map((descNavItem) => (
-                                    <MenuItem key={descNavItem.title} onClick={handleClose}>
+                                    <MenuItem sx={{ fontSize: '16px' }} key={descNavItem.title} onClick={handleClose}>
                                         {descNavItem.title}
                                     </MenuItem>
                                 ))}

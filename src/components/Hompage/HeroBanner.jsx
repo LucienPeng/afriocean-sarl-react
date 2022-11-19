@@ -63,8 +63,8 @@ export const HeroBanner = () => {
                             alignItems='center'
                             justifyContent='center'
                             sx={{
-                                minHeight: { md: '100vh' },
-                                height:'100%',
+                                minHeight: '100vh',
+                                height: '100%',
                                 backgroundImage: `url(${heroBanner.img})`,
                                 backgroundSize: { xs: 'cover', md: 'cover' },
                                 backgroundRepeated: false,
@@ -73,11 +73,11 @@ export const HeroBanner = () => {
                                 opacity: 0.85,
                                 animation: isActiveIndex === index ? `${zoomAnimation} 3000ms ${theme.transitions.easing.easeOut}` : ''
                             }}>
-                            <Typography color='common.white' variant="h1" className="animate__animated animate__zoomIn">
+                            <Typography fontSize={{ xs: '70px', md: '150px' }} color='common.white' variant="h1" className="animate__animated animate__zoomIn">
                                 {t('company')}
                             </Typography>
                             <Typography color='common.white' variant="h6" className="animate__animated animate__slideInUp">
-                                — Produits Halieutiques De La Qualité —
+                                {t('subIntro')}
                             </Typography>
                         </Box>
                     </SwiperSlide>

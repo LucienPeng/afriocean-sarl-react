@@ -14,10 +14,9 @@ export const Service = (props) => {
     const redirectHandle = (url) => navigate(`/service/${url}`);
 
     return (
-        <Stack component='div' ref={serviceRef} justifyContent='center' alignItems='center' minHeight='100vh' sx={{ bgcolor: 'secondary.light' }}>
-            <Typography mb={5} variant="h3" color="initial">Service</Typography>
-
-            <Stack direction='row' spacing={20}>
+        <Stack component='div' ref={serviceRef} justifyContent='center' alignItems='center' minHeight='100vh' sx={{ bgcolor: 'primary.dark' }}>
+            <Typography mb={5} variant="h3" color='common.white'>Service</Typography>
+            <Stack direction={{ xs: 'column', md: 'row' }} spacing={20}>
                 {SERVICES.map((service, index) => (
                     <Card key={index} sx={{ maxWidth: 345 }}>
                         <CardContent>

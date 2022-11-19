@@ -1,3 +1,11 @@
 {
-    "company": "Afriocean"
+    "company": "Afriocean",
+    "subIntro": "— Fresh seafood with quality —",
+    "nav": {
+        "intro": "Introduction",
+        "service": "Services",
+        "product": "Products",
+        "contact": "Contacts",
+        "language": "Languages"
+    }
 }

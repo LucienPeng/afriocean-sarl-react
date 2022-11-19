@@ -7,11 +7,6 @@ const PRODUCTS_SECTIONS = [
     { title: 'PRODUCT2', url: 'p2' },
     { title: 'PRODUCT3', url: 'p3' },
     { title: 'PRODUCT4', url: 'p4' },
-    { title: 'PRODUCT5', url: 'p5' },
-    { title: 'PRODUCT6', url: 'p6' },
-    { title: 'PRODUCT7', url: 'p7' },
-    { title: 'PRODUCT8', url: 'p8' },
-    { title: 'PRODUCT9', url: 'p9' },
 ];
 
 export const Product = (props) => {
@@ -25,7 +20,7 @@ export const Product = (props) => {
     return (
         <Stack component='div' ref={productRef} minHeight="100vh" justifyContent='center' alignItems='center'>
             <Typography mb={5} variant="h3" color="initial">Products</Typography>
-            <Stack flexShrink={0} justifyContent='center' alignItems='center' direction='row' spacing={10} >
+            <Stack flexShrink={0} justifyContent='center' alignItems='center' direction={{ xs: 'column', md: 'row' }} spacing={10} >
                 {PRODUCTS_SECTIONS.map((product, index) => (
                     <Stack key={index} direction='column' alignItems='center'>
                         <Typography variant="h3" color="initial">{product.title}</Typography>
@@ -82,6 +77,6 @@ export const Product = (props) => {
                     </div>
                 </div>
             </div> */}
-        </Stack>
+        </Stack >
     );
 };

@@ -20,7 +20,7 @@ export const Introduction = (props) => {
         <Stack component='div' ref={aboutRef} minHeight="100vh" justifyContent='center' alignItems='center'>
             <Typography mb={5} variant="h3" color="initial">Introduction</Typography>
 
-            <Stack direction='row' alignItems='center' spacing={15}>
+            <Stack direction={{ xs: 'column', md: 'row' }} alignItems='center' spacing={15}>
                 {INTRODUCTION_SECTIONS.map((intro, index) => (
                     <Stack key={index} direction='column' alignItems='center'>
                         <Typography variant="h3" color="initial">{intro.title}</Typography>

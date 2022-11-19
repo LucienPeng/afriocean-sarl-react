@@ -1,4 +1,11 @@
 {
     "company": "Afriocean Sarl",
-    "introduction": "Afriocean Sarl"
+    "subIntro": "— Produits Halieutiques De La Qualité —",
+    "nav": {
+        "intro": "Introduction",
+        "service": "Services",
+        "product": "Produits",
+        "contact": "Contacts",
+        "language": "Langues"
+    }
 }

@@ -4,9 +4,9 @@ import { useHomepageTranslation } from '../i18n/useTranslations';
 const BannerComponent = (props) => {
     let { banner, setBanner } = props;
     const { t } = useHomepageTranslation();
+    
     useEffect(() => {
         const bannerBG = document.querySelector(".banner");
-
         if (banner === "Entreprise") {
             setBanner("A Propos De Nous");
             bannerBG.style.backgroundImage = "url('https://i.imgur.com/1kb3oIQ.jpg')";

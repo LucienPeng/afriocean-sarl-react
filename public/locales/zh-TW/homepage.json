@@ -1,4 +1,11 @@
 {
     "company": "非洋水產",
-    "introduction": "關於我們"
+    "subIntro": "新鮮高品質水產品",
+    "nav": {
+        "intro": "關於我們",
+        "service": "服務介紹",
+        "product": "產品介紹",
+        "contact": "聯絡我們",
+        "language": "語言"
+    }
 }
