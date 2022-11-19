@@ -18,12 +18,10 @@ const HEROBANNERS = [
 
 const zoomAnimation = keyframes`
   0% {
-    opacity: 0.6;
-    transform: scale(1);
+    opacity: 0.5;
   }
   100% {
     opacity: 0.85;
-    transform: scale(1.05);
   }
 `;
 
@@ -39,10 +37,9 @@ export const HeroBanner = () => {
     return (
         <Swiper
             style={{ overflow: 'hidden', maxHeight: '100vh' }}
-            spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-                delay: 3000,
+                delay: 4000,
                 disableOnInteraction: false
             }}
             pagination={{
@@ -51,7 +48,7 @@ export const HeroBanner = () => {
             fadeEffect={{ crossFade: true }}
             effect={"fade"}
             modules={[Autoplay, Pagination, EffectFade, Zoom]}
-            grabCursor={true}
+            allowTouchMove={false}
             onActiveIndexChange={zoomHandler}
             onInit={zoomHandler}
             className="mySwiper"
@@ -66,14 +63,15 @@ export const HeroBanner = () => {
                             alignItems='center'
                             justifyContent='center'
                             sx={{
-                                minHeight: '100vh',
+                                minHeight: { md: '100vh' },
+                                height:'100%',
                                 backgroundImage: `url(${heroBanner.img})`,
-                                backgroundSize: 'cover',
+                                backgroundSize: { xs: 'cover', md: 'cover' },
                                 backgroundRepeated: false,
                                 backgroundPosition: 'top',
-                                backgroundAttachment: 'fixed',
+                                backgroundAttachment: { xs: 'local', md: 'fixed' },
                                 opacity: 0.85,
-                                animation: isActiveIndex === index ? `${zoomAnimation} 4000ms ${theme.transitions.easing.easeOut}` : ''
+                                animation: isActiveIndex === index ? `${zoomAnimation} 3000ms ${theme.transitions.easing.easeOut}` : ''
                             }}>
                             <Typography color='common.white' variant="h1" className="animate__animated animate__zoomIn">
                                 {t('company')}

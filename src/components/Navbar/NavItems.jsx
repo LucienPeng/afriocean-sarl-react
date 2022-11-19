@@ -1,20 +1,22 @@
 import { Box, Menu, Button, MenuItem } from '@mui/material';
 import { NestedMenuItem } from 'mui-nested-menu';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 
-export const NavItems = (props) => {
-    const { navItem, scrollToHandle } = props;
-    const { i18n } = useTranslation();
 
+export const NavItems = (props) => {
+    const { navItem, scrollToHandle, activeLink } = props;
+    const { i18n } = useTranslation();
+    const [isLinkActive, setLinkActive] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
 
     const open = Boolean(anchorEl);
 
+
     const handleClick = (event, ref, url) => {
         setAnchorEl(event.currentTarget);
-        scrollToHandle(event, ref, url);
+        if (ref) scrollToHandle(event, ref, url);
     };
 
     const handleClose = () => {
@@ -34,6 +36,10 @@ export const NavItems = (props) => {
         }
     };
 
+    useEffect(() => {
+        navItem.title === activeLink ? setLinkActive(true) : setLinkActive(false);
+    }, [activeLink, navItem.title]);
+
     return (
         <Box key={navItem.title}>
             <Button
@@ -42,7 +48,8 @@ export const NavItems = (props) => {
                 onClick={(event) => handleClick(event, navItem.ref, navItem.url)}
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
-                sx={{ color: 'common.white' }}
+                disableRipple
+                sx={{ color: { xs: 'primary.dark', md: isLinkActive ? 'primary.light' : 'common.white' } }}
             >
                 {navItem.title}
             </Button>

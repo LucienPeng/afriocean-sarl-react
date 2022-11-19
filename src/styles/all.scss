@@ -11,3 +11,8 @@
 @import "./footer";
 @import "./about";
 @import "./product";
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #FFFFFF;
+    opacity: 1;
+}

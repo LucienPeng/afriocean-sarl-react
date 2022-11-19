@@ -4,7 +4,7 @@ import { NavBar } from "./components/Navbar/NavBar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutUsPage";
 import ProductPage from "./pages/ProductPpage";
-import Service from './pages/Service'
+import Service from './pages/Service';
 import FooterComponent from "./components/footer-component";
 import ContactPage from "./pages/ContactPage";
 import NotFoundComponent from "./components/notFound-component";
@@ -41,7 +41,7 @@ const App = () => {
                 aboutRef={aboutRef}
                 serviceRef={serviceRef}
                 productRef={productRef}
-                contactRef={contactRef} banner={banner} setBanner={setBanner} />
+                contactRef={contactRef} />
             <Routes>
                 <Route
                     path="/"
@@ -51,7 +51,7 @@ const App = () => {
                         serviceRef={serviceRef}
                         productRef={productRef}
                         contactRef={contactRef}
-                        banner={banner} setBanner={setBanner} />}
+                    />}
                 />
                 <Route path="/about" element={<AboutPage />}>
                     <Route path="/about/i1" element={<TempIntro>Intro 1</TempIntro>} />

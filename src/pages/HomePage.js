@@ -5,8 +5,10 @@ import { Service } from "../components/Hompage/Service";
 import { Product } from "../components/Hompage/Product";
 import { Contact } from "../components/Hompage/Contact";
 
+
 const HomePage = (props) => {
-    let { banner, setBanner, aboutRef, serviceRef, productRef, contactRef } = props;
+    let { banner, homeRef, setBanner, aboutRef, serviceRef, productRef, contactRef } = props;
+
 
     return (
         <>

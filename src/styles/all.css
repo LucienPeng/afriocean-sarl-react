@@ -12492,4 +12492,9 @@ img {
   -webkit-box-shadow: 0px 0px 15px 30px #dee5ebb3;
           box-shadow: 0px 0px 15px 30px #dee5ebb3;
 }
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #FFFFFF;
+  opacity: 1;
+}
 /*# sourceMappingURL=all.css.map */
