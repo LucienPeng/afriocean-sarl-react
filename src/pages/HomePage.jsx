@@ -7,15 +7,14 @@ import { Contact } from "../components/Hompage/Contact";
 
 
 const HomePage = (props) => {
-    let { banner, homeRef, setBanner, aboutRef, serviceRef, productRef, contactRef } = props;
-
+    let { aboutRef, serviceRef, productRef, contactRef } = props;
 
     return (
         <>
             <HeroBanner />
-            <Introduction aboutRef={aboutRef} banner={banner} setBanner={setBanner} />
-            <Service serviceRef={serviceRef} />
-            <Product productRef={productRef} banner={banner} setBanner={setBanner} />
+            <Product productRef={productRef} />
+            {/* <Introduction aboutRef={aboutRef} />
+            <Service serviceRef={serviceRef} /> */}
             <Contact contactRef={contactRef} />
         </>
     );

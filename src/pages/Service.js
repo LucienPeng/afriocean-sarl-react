@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import BannerComponent from "../components/banner-component";
+import BannerComponent from "../components/Banner";
 import { Outlet } from "react-router-dom";
 
 const ServicePage = (props) => {

@@ -1,82 +1,59 @@
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography, Card, CardMedia, CardContent } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import Grid from '@mui/material/Grid';
 import productList from "../../asset/productList.json";
 
 const PRODUCTS_SECTIONS = [
-    { title: 'PRODUCT1', url: 'p1' },
-    { title: 'PRODUCT2', url: 'p2' },
-    { title: 'PRODUCT3', url: 'p3' },
-    { title: 'PRODUCT4', url: 'p4' },
+    {
+        espece: "Liche",
+        img: "https://i.imgur.com/VOtkI8c.png",
+        url: 'p1',
+        scientificName: "(Lichia amia)",
+        intro: "Le terme de Liche désigne plusieurs espèces de poissons marins de bonne qualité gustative, appréciés également pour la pêche sportive, de la famille des Carangidae, fréquentant notamment les côtes françaises et méditerranéennes ; le mot vient du provençal lico, liche ou leiche. Ces poissons sont appelés leccia en Italie.",
+    },
+    {
+        espece: "Thon-Ravil",
+        img: "https://i.imgur.com/dWb6yO9.png",
+        url: 'p2',
+        scientificName: "(Euthynnus allettaratus)",
+        intro: "Ce poisson mesure entre 60 et 122 cm de long, pour une moyenne de 80 centimètres. Le poids maximal est de 16,5 kg. Le dos (quart arrière-supérieur) porte des bandes obliques sombres sur un fond métallisé. Entre les nageoires pelvienne et anale, on compte également 3 à 7 taches sombres",
+    },
+    {
+        espece: "Chinchard-Blanc",
+        img: "https://i.imgur.com/o4Nuq9P.png",
+        url: 'p3',
+        scientificName: "(Trachurus trachurus)",
+        intro: "Le Chinchard est une espèce de poissons de la famille des Carangidae qui se rencontre dans l'Atlantique est et en Méditerranée et qui mesure jusqu'à 70 cm pour un poids maximal publié de 2 kg1. Son corps est fusiforme et de couleur verdâtre sur le dos.",
+    },
 ];
 
 export const Product = (props) => {
     const navigate = useNavigate();
-    let { setBanner, productRef } = props;
+    let { productRef } = props;
 
-    const redirectHandle = (url) => {
-        navigate(`/product/${url}`);
-    };
+    const redirectHandler = (url) => navigate(`/product/fresh/${url}`);
+    const redirectProductPageHandler = () => navigate(`/product`);
+
 
     return (
         <Stack component='div' ref={productRef} minHeight="100vh" justifyContent='center' alignItems='center'>
-            <Typography mb={5} variant="h3" color="initial">Products</Typography>
-            <Stack flexShrink={0} justifyContent='center' alignItems='center' direction={{ xs: 'column', md: 'row' }} spacing={10} >
+            <Typography mt={15} mb={10} variant="h3" color="initial">Products</Typography>
+            <Grid container spacing={2} justifyContent='center'>
                 {PRODUCTS_SECTIONS.map((product, index) => (
-                    <Stack key={index} direction='column' alignItems='center'>
-                        <Typography variant="h3" color="initial">{product.title}</Typography>
-                        <Button onClick={redirectHandle.bind(this, product.url)} variant="text" color="primary">Go to {product.title}</Button>
-                    </Stack>
+                    <Grid key={index} item xs={10} md={3}>
+                        <Card elevation={0} >
+                            <CardMedia component="img" image={product.img} sx={{
+                                cursor: 'pointer', "&:hover": { transform: 'scale(1.1)', transition: '0.5s all ease-out' }
+                            }}
+                                onClick={redirectHandler.bind(this, product.url)} />
+                            <Typography variant="h3" textAlign='center'>{product.espece}
+                                <Typography component='span' variant="h5" color="initial"> {product.scientificName}</Typography>
+                            </Typography>
+                        </Card>
+                    </Grid>
                 ))}
-            </Stack>
-            {/* <div className="container-fluid mt-5">
-                <div className="row d-flex flex-md-nowrap gy-5 justify-content-around">
-                    <div
-                        className="col col-10 col-sm-4 col-md-3 d-flex flex-column align-items-center justify-content-start"
-                        data-aos="zoom-in-up"
-                        data-aos-anchor-placement="center-bottom"
-                    >
-                        <div className="img-container col-4" onClick={redirectHandle}>
-                            <img className="img-fluid" src={productList[9].url} alt="" />
-                        </div>
-                        <h3>Produits Congelés</h3>
-                        <p>
-                            Produisant plus de 5.000 tonnes par an juste avec les mareyeurs
-                            locaux, Afriocean possède une grande capacité de production et
-                            fourni une masse diversité d'espèces de poisson au Sénégal.
-                        </p>
-                    </div>
-                    <div
-                        className="col col-10 col-sm-4 col-md-3 d-flex flex-column align-items-center justify-content-start"
-                        data-aos="zoom-in-up"
-                        data-aos-anchor-placement="center-bottom"
-                    >
-                        <div className="img-container col-4" onClick={redirectHandle}>
-                            <img className="img-fluid" src={productList[13].url} alt="" />
-                        </div>
-                        <h3>Produits Élaborés</h3>
-                        <p>
-                            Non seulement le poisson entier, Afriocean s'engage également à se
-                            développer ses techniques pour fourir les produits plus délicates
-                            et élaborés en tant que des brochettes ou des filets du poisson.
-                        </p>
-                    </div>
-                    <div
-                        className="col col-10  col-sm-4 col-md-3 d-flex flex-column align-items-center justify-content-start"
-                        data-aos="zoom-in-up"
-                        data-aos-anchor-placement="center-bottom"
-                    >
-                        <div className="img-container col-4" onClick={redirectHandle}>
-                            <img className="img-fluid" src={productList[15].url} alt="" />
-                        </div>
-                        <h3>Produits Personnalisés</h3>
-                        <p>
-                            D'après vos demandes et exiges, Afriocean est aussi capable de
-                            travailler les produits personnalisés et de les exporter à votre
-                            place.
-                        </p>
-                    </div>
-                </div>
-            </div> */}
+            </Grid>
+            <Button onClick={redirectProductPageHandler} sx={{ my: 15 }} variant="contained" color="primary">See more</Button>
         </Stack >
     );
 };

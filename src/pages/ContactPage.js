@@ -1,5 +1,5 @@
 import React from "react";
-import BannerComponent from "../components/banner-component";
+import BannerComponent from "../components/Banner";
 import { Contact } from "../components/Hompage/Contact";
 
 const contactPage = (props) => {

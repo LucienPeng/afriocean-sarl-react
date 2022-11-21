@@ -3,7 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/Navbar/NavBar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutUsPage";
-import ProductPage from "./pages/ProductPpage";
+import ProductPage from "./pages/ProductPage";
+import ProductPageLayout from "./pages/ProductPageLayout";
 import Service from './pages/Service';
 import FooterComponent from "./components/footer-component";
 import ContactPage from "./pages/ContactPage";
@@ -65,12 +66,13 @@ const App = () => {
                     <Route path="/service/s2" element={<TempIntro>Service 2</TempIntro>} />
                     <Route path="/service/s3" element={<TempIntro>Service 3</TempIntro>} />
                 </Route>
-                <Route path="/product" element={<ProductPage />}>
-                    <Route path="/product/p1" element={<TempIntro>Product 1</TempIntro>} />
-                    <Route path="/product/p2" element={<TempIntro>Product 2</TempIntro>} />
-                    <Route path="/product/p3" element={<TempIntro>Product 3</TempIntro>} />
-                    <Route path="/product/p4" element={<TempIntro>Product 4</TempIntro>} />
-                    <Route path="/product/p5" element={<TempIntro>Product 5</TempIntro>} />
+                <Route path="/product" element={<ProductPageLayout />}>
+                    <Route index element={<ProductPage />} />
+                    <Route path="/product/fresh" element={<ProductPageLayout />}>
+                        <Route path="/product/fresh/p1" element={<TempIntro>Product 1</TempIntro>} />
+                        <Route path="/product/fresh/p2" element={<TempIntro>Product 2</TempIntro>} />
+                        <Route path="/product/fresh/p3" element={<TempIntro>Product 3</TempIntro>} />
+                    </Route>
                 </Route>
 
 

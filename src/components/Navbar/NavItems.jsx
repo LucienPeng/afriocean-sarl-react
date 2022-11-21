@@ -1,4 +1,4 @@
-import { Box, Menu, Button, MenuItem } from '@mui/material';
+import { Box, Menu, Button, MenuItem, Typography } from '@mui/material';
 import { NestedMenuItem } from 'mui-nested-menu';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -19,9 +19,7 @@ export const NavItems = (props) => {
         if (ref) scrollToHandle(event, ref, url);
     };
 
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+    const handleClose = () => setAnchorEl(null);
 
     const menuHandler = (lngCode) => {
         switch (true) {
@@ -37,11 +35,11 @@ export const NavItems = (props) => {
     };
 
     useEffect(() => {
-        navItem.title === activeLink ? setLinkActive(true) : setLinkActive(false);
-    }, [activeLink, navItem.title]);
+        navItem.ref === activeLink ? setLinkActive(true) : setLinkActive(false);
+    }, [activeLink, navItem.ref]);
 
     return (
-        <Box key={navItem.title}>
+        <Box id={navItem.title} key={navItem.title}>
             <Button
                 id={navItem.title}
                 variant='text'
@@ -49,9 +47,13 @@ export const NavItems = (props) => {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 disableRipple
-                sx={{ fontSize: '16px', color: { xs: 'primary.dark', md: isLinkActive ? 'primary.light' : 'common.white' } }}
+
             >
-                {navItem.title}
+                <Typography variant="h1" fontSize={16} sx={{
+                    color: { xs: 'primary.dark', md: isLinkActive ? 'primary.light' : 'common.white' }
+                }}>
+                    {navItem.title}
+                </Typography>
             </Button>
             {
                 navItem.subNavItems &&

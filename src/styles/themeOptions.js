@@ -3,22 +3,22 @@ import { createTheme } from '@mui/material';
 export const theme = createTheme({
     palette: {
         primary: {
-            main: '#0f7ea0',
-            dark: '#005271',
-            light: '#55add1',
+            main: '#224267',
+            dark: '#001c3c',
+            light: '#5C93AA',
             contrastText: '#F2F2F2',
         },
         secondary: {
-            main: '#21a38f',
-            dark: '#007362',
-            light: '#60d5bf',
+            main: '#BEBAB7',
+            dark: '#D0CBC8',
+            light: '#85bdc8',
             contrastText: '#F2F2F2',
         },
         error: {
             main: '#D32F2F'
         },
         text: {
-            primary: '#444444',
+            primary: '#1c282e',
             secondary: '#777777', //Dark-blue
         },
         action: {
@@ -39,9 +39,6 @@ export const theme = createTheme({
         h1: {
             fontFamily: '\'Copperplate\',\'normal\', \'Roboto\'',
             fontSize: '120px',
-            textShadow: 'rgb(0, 0, 0) 1px 10px 10px'
-            //lineHeight: '120%',
-            //letterSpacing: 0,
         },
         h2: {
             fontSize: '1.6rem', //26px
@@ -62,7 +59,6 @@ export const theme = createTheme({
         h5: {
             fontSize: '1.26rem', //20px
             fontWeight: '700',
-            //lineHeight: '140%',
             letterSpacing: 0,
         },
         h6: {

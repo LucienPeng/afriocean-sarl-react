@@ -30,6 +30,7 @@ export const NavBar = (props) => {
 
     const [isScrolled, setScrolled] = useState(false);
     const [activeLink, setActiveLink] = useState();
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
 
     const scrollToHandle = (event, ref, url) => {
         if (pathname === '/') {
@@ -37,7 +38,7 @@ export const NavBar = (props) => {
                 top: ref.current.offsetTop,
                 behavior: 'smooth',
             });
-            setActiveLink(event.target.id);
+            setActiveLink(ref);
         } else {
             navigate(url);
         }
@@ -56,7 +57,6 @@ export const NavBar = (props) => {
         }
     }, [trigger]);
 
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
     const handleOpenNavMenu = (event) => setAnchorElNav(event.currentTarget);
     const handleCloseNavMenu = () => setAnchorElNav(null);
 
@@ -65,7 +65,7 @@ export const NavBar = (props) => {
     return (
         <>
             <AppBar ref={nav} component='nav' position="fixed"
-                sx={{ bgcolor: isScrolled ? 'primary.main' : 'primary.dark', transition: 'ease-out 0.3s all' }}>
+                sx={{ height: 80, bgcolor: isScrolled ? 'primary.dark' : 'primary.main', transition: 'ease-out 0.3s all', justifyContent: 'center' }}>
                 <Toolbar>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
