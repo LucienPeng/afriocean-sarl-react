@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useHomepageTranslation } from '../i18n/useTranslations';
 
 const BannerComponent = (props) => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import BannerComponent from "../components/Banner";
-import ProductComponent from "../components/Product";
+import { ProductList } from "../components/Product/ProductList";
 import { Box } from "@mui/material";
 
 
@@ -13,7 +13,7 @@ const ProductPage = () => {
     return (
         <Box>
             <BannerComponent />
-            <ProductComponent />
+            <ProductList />
         </Box>
     );
 };

@@ -1,17 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useParams } from "react-router-dom";
 import { NavBar } from "./components/Navbar/NavBar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutUsPage";
 import ProductPage from "./pages/ProductPage";
 import ProductPageLayout from "./pages/ProductPageLayout";
 import Service from './pages/Service';
-import FooterComponent from "./components/footer-component";
+import { Footer } from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
 import NotFoundComponent from "./components/notFound-component";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Box, Typography } from "@mui/material";
+import { ProductItem } from "./components/Product/Product";
+import itemList from './asset/productList.json';
 
 const TempIntro = (props) => {
     return (
@@ -28,6 +30,9 @@ const App = () => {
     const serviceRef = useRef();
     const productRef = useRef();
     const contactRef = useRef();
+
+    const { id } = useParams();
+    console.log(id);
 
 
     useEffect(() => {
@@ -68,13 +73,10 @@ const App = () => {
                 </Route>
                 <Route path="/product" element={<ProductPageLayout />}>
                     <Route index element={<ProductPage />} />
-                    <Route path="/product/fresh" element={<ProductPageLayout />}>
-                        <Route path="/product/fresh/p1" element={<TempIntro>Product 1</TempIntro>} />
-                        <Route path="/product/fresh/p2" element={<TempIntro>Product 2</TempIntro>} />
-                        <Route path="/product/fresh/p3" element={<TempIntro>Product 3</TempIntro>} />
-                    </Route>
+                    {itemList.map((item, index) => (
+                        <Route key={index} path={item.url} element={<ProductItem item={item} />} />
+                    ))}
                 </Route>
-
 
                 <Route
                     path="/contact"
@@ -82,7 +84,7 @@ const App = () => {
                 />
                 <Route path="/*" element={<NotFoundComponent />} />
             </Routes>
-            <FooterComponent />
+            <Footer />
         </>
     );
 };

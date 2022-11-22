@@ -21,7 +21,7 @@ export const NavBar = (props) => {
     const NAV_ITEMS = [
         { title: t('nav.intro'), url: '/about', subNavItems: ABOUT_NAV_ITEMS, ref: aboutRef },
         { title: t('nav.service'), url: '/service', subNavItems: SERVICE_NAV_ITEMS, ref: serviceRef },
-        { title: t('nav.product'), url: '/products', subNavItems: PRODUCTS_NAV_ITEMS, ref: productRef },
+        { title: t('nav.product'), url: '/product', subNavItems: PRODUCTS_NAV_ITEMS, ref: productRef },
         { title: t('nav.contact'), url: '/contact', ref: contactRef },
         { title: t('nav.language'), url: '#', subNavItems: LANGUAGE_NAV_ITEMS, ref: null },
     ];
@@ -65,7 +65,7 @@ export const NavBar = (props) => {
     return (
         <>
             <AppBar ref={nav} component='nav' position="fixed"
-                sx={{ height: 80, bgcolor: isScrolled ? 'primary.dark' : 'primary.main', transition: 'ease-out 0.3s all', justifyContent: 'center' }}>
+                sx={{ height: 80, bgcolor: isScrolled ? 'primary.dark' : 'transparent', boxShadow: isScrolled ? 'inset' : 'none', transition: 'ease-out 0.3s all', justifyContent: 'center' }}>
                 <Toolbar>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
