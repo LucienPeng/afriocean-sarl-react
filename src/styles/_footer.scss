@@ -1,9 +1,0 @@
-.footer {
-  height: 30vh;
-  @include background-img(
-    "https://i.imgur.com/zzYfmT4.jpg",
-    $position: bottom,
-    $attachment: local,
-    $opacity: 0.8
-  );
-}

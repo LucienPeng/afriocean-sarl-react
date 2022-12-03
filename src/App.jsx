@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Routes, Route, useParams } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/Navbar/NavBar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutUsPage";
@@ -31,15 +31,10 @@ const App = () => {
     const productRef = useRef();
     const contactRef = useRef();
 
-    const { id } = useParams();
-    console.log(id);
-
-
     useEffect(() => {
         AOS.init();
         AOS.refresh();
     }, []);
-
     return (
         <>
             <NavBar

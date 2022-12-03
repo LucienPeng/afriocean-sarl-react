@@ -1,4 +1,4 @@
-import HeroBanner1 from '../../asset/images/heroBanner1.png';
+import HeroBanner1 from '../../asset/images/heroBanner1.jpg';
 import HeroBanner2 from '../../asset/images/heroBanner2.jpg';
 import HeroBanner3 from '../../asset/images/heroBanner3.jpg';
 import React, { useState } from "react";

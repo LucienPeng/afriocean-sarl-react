@@ -1,7 +1,6 @@
 import { useHomepageTranslation } from "../../i18n/useTranslations";
 
 export const useNavConfig = () => {
-
     const { t } = useHomepageTranslation();
 
     const ABOUT_NAV_ITEMS = [
@@ -14,9 +13,9 @@ export const useNavConfig = () => {
     ];
 
     const LANGUAGE_NAV_ITEMS = [
-        { title: '中文', url: '/cattlefish', lang: 'zh-TW' },
-        { title: 'English', url: '/octupus', lang: 'en' },
-        { title: 'Français', url: '/shell', lang: 'fr' },
+        { title: '中文', lang: 'zh-TW' },
+        { title: 'English', lang: 'en' },
+        { title: 'Français', lang: 'fr' },
     ];
 
     const SERVICE_NAV_ITEMS = [
@@ -53,6 +52,14 @@ export const useNavConfig = () => {
         { title: '海鮮', url: '/seafood', descNavItems: SEAFOOD_NAV_ITEMS },
     ];
 
-    return { ABOUT_NAV_ITEMS, LANGUAGE_NAV_ITEMS, SERVICE_NAV_ITEMS, FISH_NAV_ITEMS, PRODUCTS_NAV_ITEMS };
+    const NAV_MENU = (aboutRef, serviceRef, productRef, contactRef) => [
+        { title: t('nav.intro'), url: '/about', subNavItems: ABOUT_NAV_ITEMS, ref: aboutRef },
+        { title: t('nav.service'), url: '/service', subNavItems: SERVICE_NAV_ITEMS, ref: serviceRef },
+        { title: t('nav.product'), url: '/product', subNavItems: PRODUCTS_NAV_ITEMS, ref: productRef },
+        { title: t('nav.contact'), url: '/contact', ref: contactRef },
+        { title: t('nav.language'), url: '#', subNavItems: LANGUAGE_NAV_ITEMS, ref: null },
+    ];
+
+    return { NAV_MENU, ABOUT_NAV_ITEMS, LANGUAGE_NAV_ITEMS, SERVICE_NAV_ITEMS, FISH_NAV_ITEMS, PRODUCTS_NAV_ITEMS };
 
 };
