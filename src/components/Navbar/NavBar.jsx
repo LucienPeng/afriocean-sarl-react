@@ -48,8 +48,8 @@ export const NavBar = (props) => {
     }, [trigger]);
 
     return (
-        <AppBar ref={nav} component='nav' position="fixed"
-            sx={{ height: 80, bgcolor: isScrolled ? 'primary.main' : 'transparent', boxShadow: isScrolled ? 'inset' : 'none', transition: 'ease-out 0.3s all', justifyContent: 'center' }}>
+        <AppBar ref={nav} component='nav' position="fixed" className='animate__animated animate__fadeInDown'
+            sx={{ height: 80, bgcolor: isScrolled ? 'rgba(34, 67, 103, 0.9)' : 'transparent', boxShadow: isScrolled ? 'inset' : 'none', transition: 'ease-out 0.3s all', justifyContent: 'center' }}>
             <Toolbar>
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                     <IconButton

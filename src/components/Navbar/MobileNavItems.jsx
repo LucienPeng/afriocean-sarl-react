@@ -5,7 +5,6 @@ import { ChevronRight } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-
 export const MobileNavItems = (props) => {
     const { index, item, subMenuHandler, toggleHandler } = props;
     const { i18n } = useTranslation();

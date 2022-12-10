@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.css";
 import "./styles/all.css";
 import "animate.css";
 import React, { Suspense } from 'react';

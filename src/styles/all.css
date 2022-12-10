@@ -1,49 +1,8 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
-* {
-  padding: 0;
+body {
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-* h2,
-* h3,
-* h4,
-* h5 {
-  font-family: "Copperplate", "normal";
-
-  color: #444444;
-}
-
-* p {
-  font-family: "Kanit", sans-serif;
-  color: #777777;
-}
-
-#banner {
-  background-image: url("https://i.imgur.com/QVGaSAa.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-attachment: fixed;
-  opacity: 0.85;
-  height: 50vh;
-}
-
-#banner h2 {
-  font-weight: 500;
-  color: #fff;
- 
-}
-
-@media (max-width: 768px) {
-  #banner {
-    background-attachment: local;
-  }
-}
-
-#not-found {
-  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {

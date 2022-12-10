@@ -42,19 +42,18 @@ export const NavItems = (props) => {
         <Box id={navItem.title} key={navItem.title}>
             <Button
                 id={navItem.title}
+                height='100%'
                 variant='text'
                 onClick={(event) => handleClick(event, navItem.ref, navItem.url)}
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 disableRipple
-
             >
-                <Typography variant="h1" fontSize={16} sx={{
-                    color: { xs: 'primary.dark', md: isLinkActive ? 'primary.light' : 'common.white' }
-                }}>
+                <Typography variant="h1" fontSize={18} sx={{ color: { xs: 'primary.dark', md: isLinkActive ? 'primary.light' : 'common.white' } }}>
                     {navItem.title}
                 </Typography>
             </Button>
+
             {
                 navItem.subNavItems &&
                 <Menu

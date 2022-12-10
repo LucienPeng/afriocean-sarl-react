@@ -18,7 +18,7 @@ export const theme = createTheme({
             main: '#D32F2F'
         },
         text: {
-            primary: '#1c282e',
+            primary: '#172E48',
             secondary: '#777777', //Dark-blue
         },
         action: {
@@ -36,43 +36,31 @@ export const theme = createTheme({
 
     },
     typography: {
+        fontFamily: '\'Oxygen\',\'Roboto\', \'normal\'',
         h1: {
-            fontFamily: '\'Copperplate\',\'normal\', \'Roboto\'',
+
+            fontFamily: '\'Copperplate\',\'Roboto\', \'normal\'',
             fontSize: '120px',
         },
         h2: {
-            fontSize: '1.6rem', //26px
-            //lineHeight: '140%',
-            //letterSpacing: 0,
+            fontFamily: '\'Copperplate\',\'Roboto\', \'normal\'',
+            fontSize: '26px',
+            letterSpacing: 3,
         },
         h3: {
-            fontSize: '1.42rem', //24px
-            //lineHeight: '140%',
-            //letterSpacing: 0,
+            fontSize: '24px',
         },
         h4: {
             fontSize: '22px',
-            fontWeight: '700',
-            //lineHeight: '140%',
-            letterSpacing: 0,
         },
         h5: {
-            fontSize: '1.26rem', //20px
-            fontWeight: '700',
-            letterSpacing: 0,
+            fontSize: '20px',
         },
         h6: {
-            fontFamily: '\'Lucida Grande\',\'normal\', \'Roboto\'',
-            fontSize: '1.12rem', //18px
-            fontWeight: '700',
-            //lineHeight: '140%',
-            letterSpacing: 10,
-            textShadow: 'rgb(0, 0, 0) 1px 10px 10px'
+            fontSize: '18px',
         },
         body1: {
-            fontSize: '1rem', //16px
-            //lineHeight: '140%',
-            letterSpacing: 0,
+            fontSize: '1rem',
         },
     },
 });

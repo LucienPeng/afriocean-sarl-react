@@ -1,4 +1,5 @@
-import { Button, Stack, Typography, Card, CardMedia, CardContent } from "@mui/material";
+import { Stack, Typography, Card, CardMedia, CardContent } from "@mui/material";
+import { StyledButton } from '../UI/StyledComponents';
 import { useNavigate } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 
@@ -36,23 +37,25 @@ export const Product = (props) => {
 
     return (
         <Stack component='div' ref={productRef} minHeight="100vh" justifyContent='center' alignItems='center'>
-            <Typography mt={15} mb={10} variant="h3" color="initial">Products</Typography>
-            <Grid container spacing={2} justifyContent='center'>
+            <Typography my={5} variant="h2" fontWeight={700} color="text.primary">Products</Typography>
+            <Grid container spacing={10} my={5} justifyContent='center'>
                 {PRODUCTS_SECTIONS.map((product, index) => (
                     <Grid key={index} item xs={10} md={3}>
-                        <Card elevation={0} >
-                            <CardMedia component="img" image={product.img} sx={{
-                                cursor: 'pointer', "&:hover": { transform: 'scale(1.1)', transition: '0.5s all ease-out' }
-                            }}
-                                onClick={redirectHandler.bind(this, product.url)} />
-                            <Typography variant="h3" textAlign='center'>{product.name}
-                                <Typography component='span' variant="h5" color="initial"> {product.scientificName}</Typography>
-                            </Typography>
+                        <Card component='div' elevation={0}
+>
+                            <CardContent data-aos="zoom-in-up">
+                                <CardMedia component="img" image={product.img}
+                                    sx={{ cursor: 'pointer', "&:hover": { transform: 'scale(1.1)', transition: '0.5s all ease-out' } }}
+                                    onClick={redirectHandler.bind(this, product.url)} />
+                                <Typography variant="h6" textAlign='center' fontWeight={700} color="text.primary">{product.name}
+                                    <Typography component='span' variant="h6" color="text.primary"> {product.scientificName}</Typography>
+                                </Typography>
+                            </CardContent>
                         </Card>
                     </Grid>
                 ))}
             </Grid>
-            <Button onClick={redirectProductPageHandler} sx={{ my: 15 }} variant="contained" color="primary">See more</Button>
+            <StyledButton onClick={redirectProductPageHandler} sx={{ my: 5 }} variant="contained" color="primary">See more</StyledButton>
         </Stack >
     );
 };

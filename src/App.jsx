@@ -1,4 +1,9 @@
+import "aos/dist/aos.css";
 import React, { useState, useEffect, useRef } from "react";
+import AOS from "aos";
+import { Box, Typography } from "@mui/material";
+import { ProductItem } from "./components/Product/Product";
+import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/Navbar/NavBar";
 import HomePage from "./pages/HomePage";
@@ -6,14 +11,10 @@ import AboutPage from "./pages/AboutUsPage";
 import ProductPage from "./pages/ProductPage";
 import ProductPageLayout from "./pages/ProductPageLayout";
 import Service from './pages/Service';
-import { Footer } from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
 import NotFoundComponent from "./components/notFound-component";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { Box, Typography } from "@mui/material";
-import { ProductItem } from "./components/Product/Product";
 import itemList from './asset/productList.json';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 const TempIntro = (props) => {
     return (
@@ -30,11 +31,13 @@ const App = () => {
     const serviceRef = useRef();
     const productRef = useRef();
     const contactRef = useRef();
+    const trigger = useScrollTrigger({ threshold: 300 });
 
     useEffect(() => {
         AOS.init();
         AOS.refresh();
-    }, []);
+    }, [trigger]);
+
     return (
         <>
             <NavBar
