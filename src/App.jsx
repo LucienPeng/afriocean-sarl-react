@@ -2,13 +2,13 @@ import "aos/dist/aos.css";
 import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import { Box, Typography } from "@mui/material";
-import { ProductItem } from "./components/Product/Product";
+import { ProductItem } from "./components/Product/ProductItem";
 import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/Navbar/NavBar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutUsPage";
-import ProductPage from "./pages/ProductPage";
+import ProductListPage from "./pages/ProductListPage";
 import ProductPageLayout from "./pages/ProductPageLayout";
 import Service from './pages/Service';
 import ContactPage from "./pages/ContactPage";
@@ -70,7 +70,7 @@ const App = () => {
                     <Route path="/service/s3" element={<TempIntro>Service 3</TempIntro>} />
                 </Route>
                 <Route path="/product" element={<ProductPageLayout />}>
-                    <Route index element={<ProductPage />} />
+                    <Route index element={<ProductListPage />} />
                     {itemList.map((item, index) => (
                         <Route key={index} path={item.url} element={<ProductItem item={item} />} />
                     ))}

@@ -14,6 +14,7 @@ export const NavBar = (props) => {
     const { pathname } = useLocation();
     const { isToggle, setIsToggle, toggleHandler } = useToggle();
     const { homeRef, aboutRef, serviceRef, productRef, contactRef } = props;
+    const isHomePage = pathname === '/';
     const NAV_ITEMS = NAV_MENU(aboutRef, serviceRef, productRef, contactRef);
     const navigate = useNavigate();
     const nav = useRef('');
@@ -22,8 +23,7 @@ export const NavBar = (props) => {
     const [activeLink, setActiveLink] = useState();
 
     const scrollToHandle = (event, ref, url) => {
-        console.log(ref);
-        if (pathname === '/') {
+        if (isHomePage) {
             window.scrollTo({
                 top: ref.current.offsetTop,
                 behavior: 'smooth',
@@ -49,7 +49,7 @@ export const NavBar = (props) => {
 
     return (
         <AppBar ref={nav} component='nav' position="fixed" className='animate__animated animate__fadeInDown'
-            sx={{ height: 80, bgcolor: isScrolled ? 'rgba(34, 67, 103, 0.9)' : 'transparent', boxShadow: isScrolled ? 'inset' : 'none', transition: 'ease-out 0.3s all', justifyContent: 'center' }}>
+            sx={{ height: 80, bgcolor: isHomePage ? isScrolled ? 'rgba(34, 67, 103, 0.9)' : 'transparent' : 'rgba(34, 67, 103, 0.9)', boxShadow: isScrolled ? 'inset' : 'none', transition: 'ease-out 0.3s all', justifyContent: 'center' }}>
             <Toolbar>
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                     <IconButton

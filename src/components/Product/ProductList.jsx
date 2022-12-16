@@ -1,16 +1,20 @@
 import { Box } from "@mui/material";
-import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import productList from "../../asset/productList.json";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { useNavigate } from "react-router-dom";
 
 export const ProductList = () => {
     const navigate = useNavigate();
     const redirect = (url) => navigate(`/product/${url}`);
+    const theme = useTheme();
+    const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
+
     return (
-        <Box className="product-section container-fluid">
-            <ImageList variant="woven" cols={3}  >
+        <Box>
+            <ImageList variant="woven" cols={isMobileView ? 1 : 3}  >
                 {productList.map((item, index) => (
                     <ImageListItem key={index}>
                         <Box
@@ -19,8 +23,9 @@ export const ProductList = () => {
                             component='img'
                             src={`${item.img}`}
                             srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                            alt={item.title}
+                            alt={item.en}
                             loading="lazy"
+                            sx={{ cursor: 'pointer' }}
                         />
                     </ImageListItem>
                 ))}

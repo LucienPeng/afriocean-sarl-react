@@ -2,6 +2,7 @@ import { Box, Menu, Button, MenuItem, Typography } from '@mui/material';
 import { NestedMenuItem } from 'mui-nested-menu';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -10,6 +11,7 @@ export const NavItems = (props) => {
     const { i18n } = useTranslation();
     const [isLinkActive, setLinkActive] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
+    const { pathname } = useLocation();
 
     const open = Boolean(anchorEl);
 
@@ -35,8 +37,12 @@ export const NavItems = (props) => {
     };
 
     useEffect(() => {
-        navItem.ref === activeLink ? setLinkActive(true) : setLinkActive(false);
-    }, [activeLink, navItem.ref]);
+        if (pathname === navItem.url || navItem.ref === activeLink) {
+            setLinkActive(true);
+        } else {
+            setLinkActive(false);
+        }
+    }, [activeLink, navItem, pathname]);
 
     return (
         <Box id={navItem.title} key={navItem.title}>
@@ -49,7 +55,7 @@ export const NavItems = (props) => {
                 aria-expanded={open ? 'true' : undefined}
                 disableRipple
             >
-                <Typography variant="h1" fontSize={18} sx={{ color: { xs: 'primary.dark', md: isLinkActive ? 'primary.light' : 'common.white' } }}>
+                <Typography variant="h1" fontSize={18} sx={{ color: { xs: 'primary.dark', md: isLinkActive ? 'secondary.light' : 'common.white' } }}>
                     {navItem.title}
                 </Typography>
             </Button>

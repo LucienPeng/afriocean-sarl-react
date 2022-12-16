@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from "react";
-import BannerComponent from "../components/Banner";
-import { Outlet } from "react-router-dom";
+import { Box } from "@mui/material";
 
 const ServicePage = (props) => {
 
-    // useEffect(() => {
-    //     window.scrollTo({ top: 0, behavior: "instant" });
-    // });
-
     return (
-        <div className="aboutPage">
-            <BannerComponent />
-            <Outlet />
-        </div>
+        <Box minHeight='100vh' display='flex' alignItems='center' justifyContent='center'>
+            SERVICE
+        </Box>
     );
 };
 

@@ -39,11 +39,11 @@ export const theme = createTheme({
         fontFamily: '\'Oxygen\',\'Roboto\', \'normal\'',
         h1: {
 
-            fontFamily: '\'Copperplate\',\'Roboto\', \'normal\'',
+            fontFamily: '\'Copperplate\',\'Vollkorn SC\', \'normal\'',
             fontSize: '120px',
         },
         h2: {
-            fontFamily: '\'Copperplate\',\'Roboto\', \'normal\'',
+            fontFamily: '\'Copperplate\',\'Vollkorn SC\', \'normal\'',
             fontSize: '26px',
             letterSpacing: 3,
         },
