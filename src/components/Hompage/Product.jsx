@@ -5,23 +5,23 @@ import Grid from '@mui/material/Grid';
 
 const PRODUCTS_SECTIONS = [
     {
-        name: "Liche",
-        img: "https://i.imgur.com/VOtkI8c.png",
-        url: 'Liche',
-        scientificName: "(Lichia amia)",
+        name: "Ceinture",
+        img: "https://i.imgur.com/ZuLYQcX.png",
+        url: 'ribbon-fish',
+        scientificName: "(Trichiurus Lepturus)",
         description: "Le terme de Liche désigne plusieurs espèces de poissons marins de bonne qualité gustative, appréciés également pour la pêche sportive, de la famille des Carangidae, fréquentant notamment les côtes françaises et méditerranéennes ; le mot vient du provençal lico, liche ou leiche. Ces poissons sont appelés leccia en Italie.",
     },
     {
         name: "Thon-Ravil",
         img: "https://i.imgur.com/dWb6yO9.png",
-        url: 'Thon-Ravil',
+        url: 'little-tunny',
         scientificName: "(Euthynnus allettaratus)",
         description: "Ce poisson mesure entre 60 et 122 cm de long, pour une moyenne de 80 centimètres. Le poids maximal est de 16,5 kg. Le dos (quart arrière-supérieur) porte des bandes obliques sombres sur un fond métallisé. Entre les nageoires pelvienne et anale, on compte également 3 à 7 taches sombres",
     },
     {
         name: "Chinchard-Blanc",
         img: "https://i.imgur.com/o4Nuq9P.png",
-        url: 'Chinchard-Blanc',
+        url: 'atlantic-horse-mackerel',
         scientificName: "(Trachurus trachurus)",
         description: "Le Chinchard est une espèce de poissons de la famille des Carangidae qui se rencontre dans l'Atlantique est et en Méditerranée et qui mesure jusqu'à 70 cm pour un poids maximal publié de 2 kg1. Son corps est fusiforme et de couleur verdâtre sur le dos.",
     },
