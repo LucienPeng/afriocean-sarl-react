@@ -23,18 +23,18 @@ export const NavItems = (props) => {
 
     const handleClose = () => setAnchorEl(null);
 
-    const menuHandler = (lngCode) => {
-        switch (true) {
-            case lngCode !== undefined: {
-                i18n.changeLanguage(lngCode);
-                break;
-            }
-            default: {
-                console.log(lngCode);
-                break;
-            }
-        }
-    };
+    // const menuHandler = (lngCode) => {
+    //     switch (true) {
+    //         case lngCode !== undefined: {
+    //             i18n.changeLanguage(lngCode);
+    //             break;
+    //         }
+    //         default: {
+    //             console.log(lngCode);
+    //             break;
+    //         }
+    //     }
+    // };
 
     useEffect(() => {
         if (pathname === navItem.url || navItem.ref === activeLink) {
@@ -55,7 +55,8 @@ export const NavItems = (props) => {
                 aria-expanded={open ? 'true' : undefined}
                 disableRipple
             >
-                <Typography variant="h1" fontSize={18} sx={{ color: { xs: 'primary.dark', md: isLinkActive ? 'secondary.light' : 'common.white' } }}>
+                <Typography variant="h1" fontSize={18}
+                    sx={{ fontWeight: isLinkActive ? 700 : 400, color: { xs: 'primary.dark', md: isLinkActive ? 'secondary.light' : 'common.white' } }}>
                     {navItem.title}
                 </Typography>
             </Button>
@@ -65,9 +66,9 @@ export const NavItems = (props) => {
                 <Menu
                     onClick={handleClose}
                     anchorEl={anchorEl}
-                    open={open}
+                //open={open}
                 >
-                    {navItem.subNavItems.map((subNavItem) => (
+                    {/* {navItem.subNavItems.map((subNavItem) => (
                         !subNavItem.descNavItems ?
                             <MenuItem sx={{ fontSize: '16px' }} key={subNavItem.title} onClick={menuHandler.bind(this, subNavItem.lang)}>{subNavItem.title}</MenuItem>
                             : <NestedMenuItem
@@ -82,7 +83,7 @@ export const NavItems = (props) => {
                                     </MenuItem>
                                 ))}
                             </NestedMenuItem>
-                    ))}
+                    ))} */}
                 </Menu >
             }
         </Box >

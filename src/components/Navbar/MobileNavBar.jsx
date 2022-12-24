@@ -1,8 +1,8 @@
-import { Drawer, List, ListItem, ListItemButton, ListItemText, Box } from '@mui/material';
-import { useState } from 'react';
+import { Drawer, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Box } from '@mui/material';
 import { MobileNavItems } from './MobileNavItems';
 import { useNavigate } from 'react-router-dom';
-import _ from 'lodash';
+import { useState } from 'react';
+import FirstPageIcon from '@mui/icons-material/FirstPage';
 
 export const MobileNavBar = (props) => {
     const { NAV_ITEMS, isToggle, setIsToggle } = props;
@@ -10,11 +10,11 @@ export const MobileNavBar = (props) => {
     const [navList, setNavList] = useState(NAV_ITEMS);
 
     const toggleHandler = () => {
-        setIsToggle(!isToggle);
         setNavList(NAV_ITEMS);
+        setIsToggle(!isToggle);
+
     };
 
-    const backHandler = () => _.isEqual(navList, NAV_ITEMS) ? toggleHandler() : setNavList(NAV_ITEMS);
     const subMenuHandler = (menu) => setNavList(menu);
 
     const toggleDrawer = (event) => {
@@ -50,14 +50,13 @@ export const MobileNavBar = (props) => {
                             toggleHandler={toggleHandler}
                         />
                     ))}
-                    <ListItem>
-                        <ListItemButton onClick={backHandler} >
-                            <ListItemText sx={{ textAlign: 'center', fontWeight: 700 }} primary={'Back'} />
-                        </ListItemButton>
-                    </ListItem>
+
                     <ListItem>
                         <ListItemButton onClick={backToMainPageHandler} >
-                            <ListItemText sx={{ textAlign: 'center', fontWeight: 700 }} primary={'Back to main page'} />
+                            <ListItemIcon>
+                                <FirstPageIcon />
+                            </ListItemIcon>
+                            <ListItemText sx={{ textAlign: 'center', fontWeight: 700 }} primary={'Back to homepage'} />
                         </ListItemButton>
                     </ListItem>
                 </List>

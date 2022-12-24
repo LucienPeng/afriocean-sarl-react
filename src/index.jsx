@@ -6,8 +6,10 @@ import i18n from './i18n/i18n';
 import { ThemeProvider } from '@emotion/react';
 import { I18nextProvider } from 'react-i18next';
 import { BrowserRouter } from "react-router-dom";
+import { ScrollToTop } from './utils/ScrollToTop';
 import { theme } from './styles/themeOptions';
 import App from "./App";
+
 
 ReactDOM.render(
     <React.StrictMode>
@@ -15,6 +17,7 @@ ReactDOM.render(
             <I18nextProvider i18n={i18n}>
                 <BrowserRouter>
                     <ThemeProvider theme={theme}>
+                        <ScrollToTop />
                         <App />
                     </ThemeProvider>
                 </BrowserRouter>

@@ -1,4 +1,9 @@
 import { useHomepageTranslation } from "../../i18n/useTranslations";
+import TranslateIcon from '@mui/icons-material/Translate';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import SetMealIcon from '@mui/icons-material/SetMeal';
+import PhishingIcon from '@mui/icons-material/Phishing';
+import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 
 export const useNavConfig = () => {
     const { t } = useHomepageTranslation();
@@ -53,11 +58,11 @@ export const useNavConfig = () => {
     ];
 
     const NAV_MENU = (aboutRef, serviceRef, productRef, contactRef) => [
-        { title: t('nav.intro'), url: '/about', subNavItems: ABOUT_NAV_ITEMS, ref: aboutRef },
-        { title: t('nav.service'), url: '/service', subNavItems: SERVICE_NAV_ITEMS, ref: serviceRef },
-        { title: t('nav.product'), url: '/product', subNavItems: PRODUCTS_NAV_ITEMS, ref: productRef },
-        { title: t('nav.contact'), url: '/contact', ref: contactRef },
-        { title: t('nav.language'), url: '#', subNavItems: LANGUAGE_NAV_ITEMS, ref: null },
+        { title: t('nav.intro'), url: '/about', subNavItems: ABOUT_NAV_ITEMS, ref: aboutRef, icon: <TipsAndUpdatesIcon /> },
+        { title: t('nav.service'), url: '/service', subNavItems: SERVICE_NAV_ITEMS, ref: serviceRef, icon: <PhishingIcon /> },
+        { title: t('nav.product'), url: '/product', subNavItems: PRODUCTS_NAV_ITEMS, ref: productRef, icon: <SetMealIcon /> },
+        { title: t('nav.contact'), url: '/contact', ref: contactRef, icon: <ContactMailIcon /> },
+        { title: t('nav.language'), url: '#', subNavItems: LANGUAGE_NAV_ITEMS, ref: null, icon: <TranslateIcon /> },
     ];
 
     return { NAV_MENU, ABOUT_NAV_ITEMS, LANGUAGE_NAV_ITEMS, SERVICE_NAV_ITEMS, FISH_NAV_ITEMS, PRODUCTS_NAV_ITEMS };

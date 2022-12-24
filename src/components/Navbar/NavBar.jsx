@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Box, Stack, AppBar, Toolbar, IconButton, Menu } from '@mui/material';
+import { Box, Stack, AppBar, Toolbar, IconButton } from '@mui/material';
 import { NavItems } from './NavItems';
 import { useNavConfig } from './NavConfigs';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -25,11 +25,12 @@ export const NavBar = (props) => {
     const scrollToHandle = (event, ref, url) => {
         if (isHomePage) {
             window.scrollTo({
-                top: ref.current.offsetTop,
+                top: ref.current.offsetTop - 100,
                 behavior: 'smooth',
             });
             setActiveLink(ref);
         } else {
+            setActiveLink();
             navigate(url);
         }
     };

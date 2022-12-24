@@ -52,7 +52,7 @@ export const Contact = (props) => {
                             title="googleMap"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7717.365070935294!2d-17.169175!3d14.730532!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd079694bf98a2ff6!2sAFRIOCEAN%20SARL!5e0!3m2!1szh-TW!2stw!4v1648269332225!5m2!1szh-TW!2stw"
                             allowFullScreen={true}
-                            loading={"lazy"}
+                            loading={'lazy'}
                             width='100%'
                             height='100%'
                             referrerPolicy={"no-referrer-when-downgrade"}>

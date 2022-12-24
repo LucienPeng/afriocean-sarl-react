@@ -7,7 +7,7 @@ export const Introduction = (props) => {
     const { aboutRef } = props;
     const { t } = useHomepageTranslation();
     const navigate = useNavigate();
-    const redirectHandle = (url) => navigate(`/about`);
+    const redirectHandle = () => navigate(`/about`);
 
     return (
         <Stack bgcolor='#4E6785' component='div' ref={aboutRef} minHeight="50vh" justifyContent='center' alignItems='center'>
@@ -27,10 +27,8 @@ export const Introduction = (props) => {
                         ”
                     </Typography>
                 </Box>
-                <StyledButton onClick={redirectHandle} sx={{ my: 1, alignSelf: 'flex-end' }} variant="contained" color="primary">Know about us</StyledButton>
+                <StyledButton data-aos="fade-right" onClick={redirectHandle} sx={{ my: 1, alignSelf: 'flex-end' }} variant="contained" color="primary">Know about us</StyledButton>
             </Stack>
         </Stack >
     );
 };
-
-export default Introduction;

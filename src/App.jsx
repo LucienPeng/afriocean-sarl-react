@@ -24,6 +24,7 @@ const TempIntro = (props) => {
     );
 };
 
+
 const App = () => {
     let [banner, setBanner] = useState("");
     const homeRef = useRef();
@@ -57,13 +58,7 @@ const App = () => {
                         contactRef={contactRef}
                     />}
                 />
-                <Route path="/about" element={<AboutPage />}>
-                    <Route path="/about/i1" element={<TempIntro>Intro 1</TempIntro>} />
-                    <Route path="/about/i2" element={<TempIntro>Intro 2</TempIntro>} />
-                    <Route path="/about/i3" element={<TempIntro>Intro 3</TempIntro>} />
-                    <Route path="/about/i4" element={<TempIntro>Intro 4</TempIntro>} />
-                    <Route path="/about/i5" element={<TempIntro>Intro 5</TempIntro>} />
-                </Route>
+                <Route path="/about" element={<AboutPage />} />
                 <Route path="/service" element={<Service />}>
                     <Route path="/service/s1" element={<TempIntro>Service 1</TempIntro>} />
                     <Route path="/service/s2" element={<TempIntro>Service 2</TempIntro>} />
@@ -75,7 +70,6 @@ const App = () => {
                         <Route key={index} path={item.url} element={<ProductItem item={item} />} />
                     ))}
                 </Route>
-
                 <Route
                     path="/contact"
                     element={<ContactPage banner={banner} setBanner={setBanner} />}

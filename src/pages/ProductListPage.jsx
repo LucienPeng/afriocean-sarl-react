@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 const ProductListPage = () => {
 
     return (
-        <Box minHeight='100vh'>
+        <Box>
             <ProductList />
         </Box>
     );
