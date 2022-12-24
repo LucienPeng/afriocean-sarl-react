@@ -4,9 +4,9 @@ import { Typography, Grid, Stack, Card, CardMedia } from "@mui/material";
 export const Introduction = () => {
     return (
         <Grid mb={10} container spacing={10} display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
-            <Grid mt={10} item xs={10} sm={8} md={10} data-aos="fade-up">
+            <Grid mt={10} item xs={11} sm={12} md={10} data-aos="fade-up">
                 <Grid container spacing={5} alignItems='center' justifyContent='center'>
-                    <Grid item xs={10} sm={6} md={5} justifyContent='center' alignItems='center'>
+                    <Grid item xs={12} sm={6} md={5} justifyContent='center' alignItems='center'>
                         <Card>
                             <CardMedia
                                 sx={{ height: 500, backgroundPosition: 'top' }}
@@ -37,7 +37,7 @@ export const Introduction = () => {
                     </Grid>
                 </Grid>
             </Grid >
-            <Grid item xs={10} sm={8} md={8} data-aos="fade-up" justifyContent='center' alignItems='center'>
+            <Grid item xs={11} sm={12} md={10} data-aos="fade-up" justifyContent='center' alignItems='center'>
                 <Stack justifyContent='center' alignItems='center' spacing={2}>
                     <Typography variant="boby1" color="text.dark">
                         Notre but est de fournir à nos clients des produits de la
@@ -57,9 +57,9 @@ export const Introduction = () => {
                 </Stack>
             </Grid>
 
-            <Grid mb={10} item xs={10} sm={8} md={11} data-aos="fade-up">
+            <Grid mb={10} item xs={11} sm={12} md={11} data-aos="fade-up">
                 <Grid container spacing={15} alignItems='center' justifyContent='center'>
-                    <Grid item xs={10} sm={6} md={5} justifyContent='center' alignItems='center'>
+                    <Grid item xs={11} sm={6} md={5} justifyContent='center' alignItems='center'>
                         <Stack spacing={2}>
                             <Typography variant="h2" letterSpacing={0} fontWeight={700} color="text.primary">Historie</Typography>
                             <Typography variant="boby1" color="text.primary">
@@ -78,7 +78,7 @@ export const Introduction = () => {
                             </Typography>
                         </Stack>
                     </Grid>
-                    <Grid item xs={10} sm={6} md={3}>
+                    <Grid item xs={12} sm={6} md={3}>
                         <Card>
                             <CardMedia
                                 sx={{ height: 500, backgroundPosition: 'top' }}

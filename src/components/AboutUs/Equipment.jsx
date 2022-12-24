@@ -18,9 +18,33 @@ export const Equipment = () => {
                 </Typography>
             </Stack>
 
-            <Grid container spacing={10} justifyContent='center' alignItems="stretch" >
-                <Grid item display="flex" xs={10} sm={8} md={3} data-aos="fade-up" >
-                    <Card display="flex" >
+            <Grid container spacing={{ xs: 0, sm: 10 }} justifyContent='center' alignItems="stretch" >
+                <Grid item display="flex" xs={12} sm={3} data-aos="fade-up" minWidth={345} maxWidth={500}>
+                    <Card display="flex" sx={{ width: '100%' }} >
+                        <CardMedia
+                            sx={{ minHeight: 400, backgroundPosition: 'top' }}
+                            image="https://i.imgur.com/Skl1LXB.jpg"
+                        />
+                        <CardContent>
+                            <Stack spacing={2} alignItems='center'>
+                                <Typography variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
+                                    Avantages Compétitifs
+                                </Typography>
+                                <Typography variant="boby1" color="text.dark">
+                                    <ul>
+                                        <li>Vitesse de la congélation (Arêtes des cristaux)</li>
+                                        <li>Température</li>
+                                        <li>constante Emballage avec haute qualité </li>
+                                        <li>Bonne pratique du QHSE</li>
+                                    </ul>
+                                </Typography>
+                            </Stack>
+                        </CardContent>
+                    </Card>
+                </Grid>
+
+                <Grid item display="flex" xs={12} sm={3} data-aos="fade-up" minWidth={345} maxWidth={500} >
+                    <Card display="flex" sx={{ width: '100%' }}>
                         <CardMedia
                             sx={{ minHeight: 400, backgroundPosition: 'top' }}
                             image="https://i.imgur.com/S0e3u4Z.jpg"
@@ -50,8 +74,8 @@ export const Equipment = () => {
                     </Card>
                 </Grid>
 
-                <Grid item display="flex" xs={10} sm={8} md={3} data-aos="fade-up" >
-                    <Card display="flex">
+                <Grid item display="flex" xs={12} sm={3} data-aos="fade-up" minWidth={345} maxWidth={500} >
+                    <Card display="flex" sx={{ width: '100%' }}>
                         <CardMedia
                             sx={{ minHeight: 400, backgroundPosition: 'top' }}
                             image="https://i.imgur.com/ZibFR4x.jpg"
@@ -75,30 +99,6 @@ export const Equipment = () => {
                                             1 chambre de SAS pour protéger les produits. BITZER
                                             compresseurs adaptés.
                                         </li>
-                                    </ul>
-                                </Typography>
-                            </Stack>
-                        </CardContent>
-                    </Card>
-                </Grid>
-
-                <Grid item display="flex" xs={10} sm={8} md={3} data-aos="fade-up">
-                    <Card display="flex">
-                        <CardMedia
-                            sx={{ minHeight: 400, backgroundPosition: 'top' }}
-                            image="https://i.imgur.com/Skl1LXB.jpg"
-                        />
-                        <CardContent>
-                            <Stack spacing={2} alignItems='center'>
-                                <Typography variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
-                                    Avantages Compétitifs
-                                </Typography>
-                                <Typography variant="boby1" color="text.dark">
-                                    <ul>
-                                        <li>Vitesse de la congélation (Arêtes des cristaux)</li>
-                                        <li>Température</li>
-                                        <li>constante Emballage avec haute qualité </li>
-                                        <li>Bonne pratique du QHSE</li>
                                     </ul>
                                 </Typography>
                             </Stack>
