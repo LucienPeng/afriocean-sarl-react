@@ -1,12 +1,15 @@
-import { Box, Typography, Stack, Grid, Table, TableRow, TableCell, TableBody } from '@mui/material';
+import { Box, Typography, Stack, Grid, Table, TableRow, TableCell, TableBody, Link } from '@mui/material';
+import { StyledButton } from '../UI/StyledComponents';
+import { useNavigate } from 'react-router-dom';
 import banner from '../../asset/images/banner.jpg';
 
 
 export const ProductItem = (props) => {
     const { item } = props;
-
+    const navigate = useNavigate();
+    const redirectHandler = () => navigate('/product');
     return (
-        <Stack minHeight='100vh' width='100%' direction='column'>
+        <Stack minHeight='100vh' width='100%' direction='column' justifyContent='center' alignItems='center'>
             <Box
                 sx={{
                     width: '100%',
@@ -204,20 +207,19 @@ export const ProductItem = (props) => {
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
-                                        <Typography align="left" variant="body1" color="text.primary">
-                                            {item.tag}
-                                        </Typography>
+                                        {item.tags.map((tag) => (
+                                            <Link onClick={() => navigate(`/product/?category=${tag}`)} key={tag} color='secondary' sx={{ '&:hover': { cursor: 'pointer' } }} align="left" variant="body1" mr={1}>
+                                                {tag}
+                                            </Link>
+                                        ))}
                                     </TableCell>
                                 </TableRow>
                             </TableBody>
                         </Table>
                     </Grid>
-
                 </Grid>
-
-
             </Stack >
+            <StyledButton onClick={redirectHandler} sx={{ mb: 3 }} alignself='center' variant="contained" color="secondary">Back To List</StyledButton>
         </Stack >
-
     );
 };

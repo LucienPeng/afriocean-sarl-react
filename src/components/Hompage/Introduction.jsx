@@ -1,16 +1,14 @@
 import { Stack, Typography, Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { useHomepageTranslation } from "../../i18n/useTranslations";
 import { StyledButton } from "../UI/StyledComponents";
 
 export const Introduction = (props) => {
     const { aboutRef } = props;
-    const { t } = useHomepageTranslation();
     const navigate = useNavigate();
     const redirectHandle = () => navigate(`/about`);
 
     return (
-        <Stack bgcolor='#4E6785' component='div' ref={aboutRef} minHeight="50vh" justifyContent='center' alignItems='center'>
+        <Stack bgcolor='#224267' component='div' ref={aboutRef} minHeight="30vh" justifyContent='center' alignItems='center'>
             <Stack my={5} direction='column' justifyContent='center' alignItems='center' width='75%'>
                 <Box data-aos="fade-right">
                     <Typography variant="h1" color="common.white" fontSize={100} textAlign='start' >
@@ -27,7 +25,7 @@ export const Introduction = (props) => {
                         ”
                     </Typography>
                 </Box>
-                <StyledButton data-aos="fade-right" onClick={redirectHandle} sx={{ my: 1, alignSelf: 'flex-end' }} variant="contained" color="primary">Know about us</StyledButton>
+                <StyledButton data-aos="fade-right" onClick={redirectHandle} sx={{ my: 1, alignself: 'flex-end' }} variant="contained" color="secondary">Know about us</StyledButton>
             </Stack>
         </Stack >
     );

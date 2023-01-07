@@ -1,20 +1,18 @@
-import { Card, CardContent, Typography, Stack, Grid, Box, Checkbox, FormControlLabel } from "@mui/material";
-import { StyledButton, StyledTextfield } from '../UI/StyledComponents';
+import { Card, CardContent, Typography, Stack, Grid, Box } from "@mui/material";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
+const CONTACT_INFO = [
+    { title: 'Business Hour', detail: 'Monday – Friday', surplusDetail: '09h-17h', icon: <AccessTimeIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
+    { title: 'Address', detail: 'KM 0.5 Route de Sébi Ponty,', surplusDetail: 'Diamniadio, Sénégal', icon: <LocationOnIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
+    { title: 'Telephone Number', detail: '+221 33 836 80 88', surplusDetail: '+221 76 223 24 05', icon: <LocalPhoneIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
+    { title: 'Email', detail: 'afriocean.sarl@gmail.com', surplusDetail: 'sales.afriocean@gmail.com', icon: <EmailIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
+];
+
 export const Contact = (props) => {
     const { contactRef } = props;
-
-    const CONTACT_INFO = [
-        { title: 'Business Hour', detail: 'Monday – Friday', surplusDetail: '09h-17h', icon: <AccessTimeIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
-        { title: 'Address', detail: 'KM 0.5 Route de Sébi Ponty,', surplusDetail: 'Diamniadio, Sénégal', icon: <LocationOnIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
-        { title: 'Telephone Number', detail: '+221 33 836 80 88', surplusDetail: '+221 76 223 24 05', icon: <LocalPhoneIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
-        { title: 'Email', detail: 'afriocean.sarl@gmail.com', surplusDetail: 'sales.afriocean@gmail.com', icon: <EmailIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
-    ];
-
     return (
         <Stack component='div' ref={contactRef} minHeight='70vh' sx={{ bgcolor: 'primary.dark' }}>
             <Box alignItems='center' display='flex' flexDirection='column' my={5}>
@@ -46,7 +44,6 @@ export const Contact = (props) => {
                             ))}
                         </Grid>
                     </Grid>
-
                     <Grid data-aos="zoom-in-down" item xs={11} md={5} justifyContent='center' height='40vh'>
                         <Box component='iframe'
                             title="googleMap"

@@ -1,4 +1,4 @@
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, Checkbox } from "@mui/material";
 import { styled } from '@mui/material/styles';
 
 export const StyledButton = styled(Button)({
@@ -15,3 +15,9 @@ export const StyledTextfield = styled(TextField)({
 
 });
 
+export const StyledCheckedBox = styled(Checkbox)({
+    color: 'white',
+    '&:hover': {
+        color: 'white',
+    }
+});

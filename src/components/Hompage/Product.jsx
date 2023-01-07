@@ -41,8 +41,7 @@ export const Product = (props) => {
             <Grid container spacing={10} my={5} justifyContent='center'>
                 {PRODUCTS_SECTIONS.map((product, index) => (
                     <Grid key={index} item xs={10} md={3}>
-                        <Card component='div' elevation={0}
->
+                        <Card component='div' elevation={0}>
                             <CardContent data-aos="zoom-in-up">
                                 <CardMedia component="img" image={product.img}
                                     sx={{ cursor: 'pointer', "&:hover": { transform: 'scale(1.1)', transition: '0.5s all ease-out' } }}
@@ -55,7 +54,7 @@ export const Product = (props) => {
                     </Grid>
                 ))}
             </Grid>
-            <StyledButton onClick={redirectProductPageHandler} sx={{ my: 5 }} variant="contained" color="primary">See more</StyledButton>
+            <StyledButton onClick={redirectProductPageHandler} sx={{ my: 5 }} variant="contained" color="secondary">See more</StyledButton>
         </Stack >
     );
 };

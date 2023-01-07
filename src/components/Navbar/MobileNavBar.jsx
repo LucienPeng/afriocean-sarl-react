@@ -9,12 +9,6 @@ export const MobileNavBar = (props) => {
     const navigate = useNavigate();
     const [navList, setNavList] = useState(NAV_ITEMS);
 
-    const toggleHandler = () => {
-        setNavList(NAV_ITEMS);
-        setIsToggle(!isToggle);
-
-    };
-
     const subMenuHandler = (menu) => setNavList(menu);
 
     const toggleDrawer = (event) => {
@@ -22,6 +16,11 @@ export const MobileNavBar = (props) => {
             return;
         }
         toggleHandler();
+    };
+
+    const toggleHandler = () => {
+        setNavList(NAV_ITEMS);
+        setIsToggle(!isToggle);
     };
 
     const backToMainPageHandler = () => {
@@ -51,12 +50,12 @@ export const MobileNavBar = (props) => {
                         />
                     ))}
 
-                    <ListItem>
+                    <ListItem sx={{ mt: '50%' }}>
                         <ListItemButton onClick={backToMainPageHandler} >
                             <ListItemIcon>
                                 <FirstPageIcon />
                             </ListItemIcon>
-                            <ListItemText sx={{ textAlign: 'center', fontWeight: 700 }} primary={'Back to homepage'} />
+                            <ListItemText primary={'Back to homepage'} />
                         </ListItemButton>
                     </ListItem>
                 </List>

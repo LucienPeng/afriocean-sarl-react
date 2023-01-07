@@ -13,9 +13,9 @@ export const NavBar = (props) => {
     const { NAV_MENU } = useNavConfig();
     const { pathname } = useLocation();
     const { isToggle, setIsToggle, toggleHandler } = useToggle();
-    const { homeRef, aboutRef, serviceRef, productRef, contactRef } = props;
+    const { homeRef, aboutRef, productRef, contactRef } = props;
     const isHomePage = pathname === '/';
-    const NAV_ITEMS = NAV_MENU(aboutRef, serviceRef, productRef, contactRef);
+    const NAV_ITEMS = NAV_MENU(aboutRef, productRef, contactRef);
     const navigate = useNavigate();
     const nav = useRef('');
 

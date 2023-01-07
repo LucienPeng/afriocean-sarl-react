@@ -14,7 +14,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Permanent,W/R",
+        "tags": [
+            "Permanent",
+            "W/R"
+        ],
         "calibrage": "G(300g+),M(180g-300g),P(170g-200g),PP(150g-170g)",
         "img": "",
         "url": "maeiran-ardinella"
@@ -34,7 +37,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Permanent,W/R",
+        "tags": [
+            "Permanent",
+            "W/R"
+        ],
         "calibrage": "G(280g+),M(180g-280g),P(160g-180g),PP(130g-160g)",
         "img": "https://i.imgur.com/qGQq2ks.png",
         "url": "round-sardinella"
@@ -54,7 +60,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Permanent,W/R",
+        "tags": [
+            "Permanent",
+            "W/R"
+        ],
         "calibrage": "GG(600g+),G(450g-600g),M(300g-450g),P(200g-300g),PP(100g-200g)",
         "img": "",
         "url": "cunene-horse-mackerel"
@@ -74,7 +83,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Seasonal,W/R",
+        "tags": [
+            "Seasonal",
+            "W/R"
+        ],
         "calibrage": "GG(500g+),G(400g-500g),M(300g-400g),P(200g-300g),PP(100g-200g)",
         "img": "https://i.imgur.com/o4Nuq9P.png",
         "url": "atlantic-horse-mackerel"
@@ -94,7 +106,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Seasonal,W/R",
+        "tags": [
+            "Seasonal",
+            "W/R"
+        ],
         "calibrage": "GG(800g+),G(600g-800g),M(400g-600g),P(200g-400g),PP(100g-200g)",
         "img": "https://i.imgur.com/688uiZK.png",
         "url": "mackerel"
@@ -114,7 +129,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Permanent,W/R",
+        "tags": [
+            "Permanent",
+            "W/R"
+        ],
         "calibrage": "One size : 70g+",
         "img": "https://i.imgur.com/ihjCNkE.png",
         "url": "atlantic-bumper"
@@ -134,7 +152,11 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Permanent,W/R,Elabore",
+        "tags": [
+            "Permanent",
+            "W/R",
+            "Elabore"
+        ],
         "calibrage": "One size : 70g+",
         "img": "https://i.imgur.com/pC0JcS9.png",
         "url": "big-eye-grunt"
@@ -154,7 +176,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Seasonal,W/R",
+        "tags": [
+            "Seasonal",
+            "W/R"
+        ],
         "calibrage": "One size : 150g+",
         "img": "",
         "url": "african -lookdown"
@@ -174,7 +199,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Seasonal, W/R",
+        "tags": [
+            "Seasonal",
+            "W/R"
+        ],
         "calibrage": "One size : 70g+",
         "img": "",
         "url": "flagfin-mojarra"
@@ -194,7 +222,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Seasonal,W/R",
+        "tags": [
+            "Seasonal",
+            "W/R"
+        ],
         "calibrage": "G,M,P,PP",
         "img": "",
         "url": "smoothmouth-sea-catfish"
@@ -214,7 +245,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Seasonal,W/R",
+        "tags": [
+            "Seasonal",
+            "W/R"
+        ],
         "calibrage": "GG,G,M,P,PP",
         "img": "https://i.imgur.com/xT5zBuw.png",
         "url": "cassava-croaker"
@@ -234,7 +268,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Seasonal,W/R",
+        "tags": [
+            "Seasonal",
+            "W/R"
+        ],
         "calibrage": "GG,G,M,P,PP",
         "img": "https://i.imgur.com/dWb6yO9.png",
         "url": "little-tunny"
@@ -254,7 +291,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Seasonal,W/R",
+        "tags": [
+            "Seasonal",
+            "W/R"
+        ],
         "calibrage": "TV",
         "img": "https://i.imgur.com/8MQx539.png",
         "url": "senegal-jack"
@@ -274,7 +314,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Seasonal,W/R",
+        "tags": [
+            "Seasonal",
+            "W/R"
+        ],
         "calibrage": "GG,G,M,P,PP",
         "img": "https://i.imgur.com/UAweEBW.png",
         "url": "lesser-african-threadfin"
@@ -294,7 +337,11 @@
         "glaze": "N/A",
         "packing": "IQF Bag,Bulk",
         "allergens": "Fish",
-        "tag": "Seasonal,W/R,Elabore",
+        "tags": [
+            "Seasonal",
+            "W/R",
+            "Elabore"
+        ],
         "calibrage": "100g-200g,200g-300g,300g-500g,500g-700g,700g-900g,900g+",
         "img": "https://i.imgur.com/ZuLYQcX.png",
         "url": "ribbon-fish"
@@ -314,7 +361,10 @@
         "glaze": "N/A",
         "packing": "Bulk",
         "allergens": "Fish",
-        "tag": "Seasonal,W/R",
+        "tags": [
+            "Seasonal",
+            "W/R"
+        ],
         "calibrage": "200g-300g,300g-400g,400g-500g,500g-600g,600g-700g,700g-800g,800g-900g,900g-1000g,1KG+",
         "img": "https://i.imgur.com/v0Hnsvb.png",
         "url": "senegalese-tonguesole"
