@@ -25,7 +25,7 @@ export const ProductList = () => {
                         <Stack>
                             <Box
                                 loading="lazy"
-                                className="animate__zoomIn"
+                                className="animate__animated animate__zoomIn"
                                 onClick={() => redirect(item.url)}
                                 width='100%'
                                 component='img'
