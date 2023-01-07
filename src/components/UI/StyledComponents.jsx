@@ -1,4 +1,4 @@
-import { Button, TextField, Checkbox } from "@mui/material";
+import { Button, TextField, Checkbox, Select } from "@mui/material";
 import { styled } from '@mui/material/styles';
 
 export const StyledButton = styled(Button)({
@@ -21,3 +21,18 @@ export const StyledCheckedBox = styled(Checkbox)({
         color: 'white',
     }
 });
+
+export const StyledSelect = styled(Select)(() => ({
+    width: 300,
+    "&.MuiOutlinedInput-root": {
+        "& fieldset": {
+            borderColor: "#172E48"
+        },
+        "&:hover fieldset": {
+            borderColor: "#3EB6B6"
+        },
+        "&.Mui-focused fieldset": {
+            borderColor: "#097272"
+        }
+    }
+}));

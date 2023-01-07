@@ -1,6 +1,6 @@
 
 import { Box, ImageList, ImageListItem, ImageListItemBar, Stack } from "@mui/material";
-import { Selector } from './Selector';
+import { Selector, MobileSelector } from './Selector';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from '@mui/material/styles';
@@ -16,14 +16,14 @@ export const ProductList = () => {
 
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-            <Selector setSelectedProductList={setSelectedProductList} />
-            <ImageList cols={isMobileView ? 1 : 3} sx={{ width: '80%' }}>
+            {isMobileView ? <MobileSelector setSelectedProductList={setSelectedProductList} /> : <Selector setSelectedProductList={setSelectedProductList} />}
+            <ImageList cols={isMobileView ? 1 : 3} sx={{ width: '90%' }}>
                 {selectedProductList.map((item, index) => (
                     item.img !== "" &&
                     <ImageListItem key={index}>
                         <Stack>
                             <Box
-                                className="animate__animated animate__bounce"
+                                className="animate__zoomIn"
                                 onClick={() => redirect(item.url)}
                                 width='100%'
                                 component='img'
