@@ -5,14 +5,15 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Products from "../../asset/productList.json";
+import { useProductList } from "../../asset/productList";
 
 export const ProductList = () => {
+    const { PRODUCTS } = useProductList();
     const navigate = useNavigate();
     const redirect = (url) => navigate(`/product/${url}`);
     const theme = useTheme();
     const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
-    const [selectedProductList, setSelectedProductList] = useState(Products);
+    const [selectedProductList, setSelectedProductList] = useState(PRODUCTS);
 
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
@@ -23,6 +24,7 @@ export const ProductList = () => {
                     <ImageListItem key={index}>
                         <Stack>
                             <Box
+                                loading="lazy"
                                 className="animate__zoomIn"
                                 onClick={() => redirect(item.url)}
                                 width='100%'

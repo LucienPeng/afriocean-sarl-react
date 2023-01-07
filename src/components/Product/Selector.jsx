@@ -3,8 +3,7 @@ import { StyledButton, StyledSelect } from '../UI/StyledComponents';
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
-import Products from "../../asset/productList.json";
-
+import { useProductList } from "../../asset/productList";
 
 const TAGS = [
     { category: 'All' },
@@ -16,6 +15,7 @@ const TAGS = [
 
 export const Selector = (props) => {
     const { setSelectedProductList } = props;
+    const { PRODUCTS } = useProductList();
     const [currentTag, setCurrentTag] = useState('All');
     const [searchParams, setSearchParams] = useSearchParams();
     const filteredCategory = searchParams.get('category');
@@ -24,14 +24,14 @@ export const Selector = (props) => {
     const tagSelectHandler = (tag) => {
         setCurrentTag(tag);
         if (tag !== 'All') {
-            setSelectedProductList(Products.filter((product) => {
+            setSelectedProductList(PRODUCTS.filter((product) => {
                 return product.tags.includes(tag) && product.img !== '';
             }));
             setSearchParams({
                 category: tag,
             });
         } else {
-            setSelectedProductList(Products);
+            setSelectedProductList(PRODUCTS);
             setSearchParams({
                 category: 'All',
             });
@@ -40,11 +40,11 @@ export const Selector = (props) => {
 
     useEffect(() => {
         if (!filteredCategory) {
-            setSelectedProductList(Products);
+            setSelectedProductList(PRODUCTS);
             setCurrentTag('All');
             setSearchParams({ category: 'All' });
         } else if (filteredCategory !== 'All') {
-            setSelectedProductList(Products.filter((product) => {
+            setSelectedProductList(PRODUCTS.filter((product) => {
                 return product.tags.includes(filteredCategory) && product.img !== '';
             }));
             setCurrentTag(filteredCategory);
@@ -65,9 +65,9 @@ export const Selector = (props) => {
     );
 };
 
-
 export const MobileSelector = (props) => {
     const { setSelectedProductList } = props;
+    const { PRODUCTS } = useProductList();
     const [currentTag, setCurrentTag] = useState('All');
     const [searchParams, setSearchParams] = useSearchParams();
     const filteredCategory = searchParams.get('category');
@@ -75,14 +75,14 @@ export const MobileSelector = (props) => {
     const tagSelectHandler = (event) => {
         setCurrentTag(event.target.value);
         if (event.target.value !== 'All') {
-            setSelectedProductList(Products.filter((product) => {
+            setSelectedProductList(PRODUCTS.filter((product) => {
                 return product.tags.includes(event.target.value) && product.img !== '';
             }));
             setSearchParams({
                 category: event.target.value,
             });
         } else {
-            setSelectedProductList(Products);
+            setSelectedProductList(PRODUCTS);
             setSearchParams({
                 category: 'All',
             });
@@ -91,11 +91,11 @@ export const MobileSelector = (props) => {
 
     useEffect(() => {
         if (!filteredCategory) {
-            setSelectedProductList(Products);
+            setSelectedProductList(PRODUCTS);
             setCurrentTag('All');
             setSearchParams({ category: 'All' });
         } else if (filteredCategory !== 'All') {
-            setSelectedProductList(Products.filter((product) => {
+            setSelectedProductList(PRODUCTS.filter((product) => {
                 return product.tags.includes(filteredCategory) && product.img !== '';
             }));
             setCurrentTag(filteredCategory);

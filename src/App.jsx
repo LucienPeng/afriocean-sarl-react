@@ -11,10 +11,11 @@ import ProductListPage from "./pages/ProductListPage";
 import ProductPageLayout from "./pages/ProductPageLayout";
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./components/NotFoundPage";
-import itemList from './asset/productList.json';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
+import { useProductList } from "./asset/productList";
 
 const App = () => {
+    const { PRODUCTS } = useProductList();
     let [banner, setBanner] = useState("");
     const homeRef = useRef();
     const aboutRef = useRef();
@@ -47,7 +48,7 @@ const App = () => {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/product" element={<ProductPageLayout />}>
                     <Route index element={<ProductListPage />} />
-                    {itemList.map((item, index) => (
+                    {PRODUCTS.map((item, index) => (
                         <Route key={index} path={item.url} element={<ProductItem item={item} />} />
                     ))}
                 </Route>

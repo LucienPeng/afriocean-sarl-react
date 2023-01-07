@@ -1,18 +1,29 @@
 {
   "files": {
     "main.css": "/static/css/main.671b9cba.css",
-    "main.js": "/static/js/main.44dec178.js",
+    "main.js": "/static/js/main.8f1fd9ef.js",
     "static/media/banner.jpg": "/static/media/banner.d1bc7236df770d642530.jpg",
     "static/media/heroBanner1.jpg": "/static/media/heroBanner1.e95c7d60a62bf0e2dfc0.jpg",
     "static/media/heroBanner2.jpg": "/static/media/heroBanner2.7722af0b8de4a4f08964.jpg",
     "static/media/heroBanner3.jpg": "/static/media/heroBanner3.540fa2c153aea681e1b8.jpg",
+    "static/media/ribbonFish.png": "/static/media/ribbonFish.a80f01f4bdc6d1ea3821.png",
+    "static/media/senegalJack.png": "/static/media/senegalJack.4de2cfa8345b97890f3e.png",
+    "static/media/bigEyeGrunt.png": "/static/media/bigEyeGrunt.4591eca73b9b06ce8130.png",
+    "static/media/atlantic-horse-mackerel.png": "/static/media/atlantic-horse-mackerel.8bc0017befdf9bc84fc7.png",
+    "static/media/lesserAfricanThreadfin.png": "/static/media/lesserAfricanThreadfin.cbd63102bdf732f8b2da.png",
+    "static/media/atlanticBumper.png": "/static/media/atlanticBumper.67b39fbb84a82e9ab623.png",
+    "static/media/commonMackerel.png": "/static/media/commonMackerel.46ac6cabd4ff03557e16.png",
+    "static/media/cassavaCroaker.png": "/static/media/cassavaCroaker.672994ba573522a125ad.png",
+    "static/media/littleTunny.png": "/static/media/littleTunny.7e4ec0c63723a182ebb6.png",
+    "static/media/round-sardinella.png": "/static/media/round-sardinella.3f110cd8b144b127af63.png",
+    "static/media/senegaleseTonguesole.png": "/static/media/senegaleseTonguesole.e3c5ecc382b0c43e73ae.png",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.671b9cba.css.map": "/static/css/main.671b9cba.css.map",
-    "main.44dec178.js.map": "/static/js/main.44dec178.js.map"
+    "main.8f1fd9ef.js.map": "/static/js/main.8f1fd9ef.js.map"
   },
   "entrypoints": [
     "static/css/main.671b9cba.css",
-    "static/js/main.44dec178.js"
+    "static/js/main.8f1fd9ef.js"
   ]
 }
