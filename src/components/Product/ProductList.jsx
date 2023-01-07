@@ -23,6 +23,7 @@ export const ProductList = () => {
                     <ImageListItem key={index}>
                         <Stack>
                             <Box
+                                className="animate__animated animate__bounce"
                                 onClick={() => redirect(item.url)}
                                 width='100%'
                                 component='img'

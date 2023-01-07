@@ -19,6 +19,7 @@ export const Selector = (props) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const filteredCategory = searchParams.get('category');
 
+
     const tagSelectHandler = (tag) => {
         setCurrentTag(tag);
         if (tag !== 'All') {
@@ -37,17 +38,15 @@ export const Selector = (props) => {
     };
 
     useEffect(() => {
-        if (filteredCategory !== 'All') {
+        if (!filteredCategory) {
+            setSelectedProductList(Products);
+            setCurrentTag('All');
+            setSearchParams({ category: 'All' });
+        } else if (filteredCategory !== 'All') {
             setSelectedProductList(Products.filter((product) => {
                 return product.tags.includes(filteredCategory) && product.img !== '';
             }));
             setCurrentTag(filteredCategory);
-        } else {
-            setSelectedProductList(Products);
-            setCurrentTag('All');
-            setSearchParams({
-                category: 'All',
-            });
         }
     }, [filteredCategory, setSearchParams, setSelectedProductList]);
 

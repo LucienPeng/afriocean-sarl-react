@@ -6,7 +6,7 @@ import { Banner } from '../components/UI/Banner';
 const ProductListPage = () => {
 
     return (
-        <Box>
+        <Box minHeight='100vh'>
             <Banner />
             <ProductList />
         </Box>
