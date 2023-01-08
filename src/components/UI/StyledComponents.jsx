@@ -26,13 +26,13 @@ export const StyledSelect = styled(Select)(() => ({
     width: 300,
     "&.MuiOutlinedInput-root": {
         "& fieldset": {
-            borderColor: "#172E48"
+            borderColor: "#097272"
         },
         "&:hover fieldset": {
             borderColor: "#3EB6B6"
         },
         "&.Mui-focused fieldset": {
-            borderColor: "#097272"
+            borderColor: "#3EB6B6"
         }
     }
 }));

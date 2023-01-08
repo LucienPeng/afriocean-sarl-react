@@ -10,10 +10,11 @@ import senegalJack from '../asset/images/fish/senegalJack.png';
 import ribbonFish from '../asset/images/fish/ribbonFish.png';
 import senegaleseTonguesole from '../asset/images/fish/senegaleseTonguesole.png';
 import lesserAfricanThreadfin from '../asset/images/fish/lesserAfricanThreadfin.png';
+import { useMemo } from 'react';
 
 export const useProductList = () => {
 
-    const PRODUCTS = [
+    const PRODUCTS = useMemo(() => [
         {
             en: "Maeiran Sardinella",
             fr: "Sardinelle Plate / Grande Allache",
@@ -384,7 +385,7 @@ export const useProductList = () => {
             img: senegaleseTonguesole,
             url: "senegalese-tonguesole"
         }
-    ];
+    ], []);
 
     return { PRODUCTS };
 };

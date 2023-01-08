@@ -21,7 +21,7 @@ const App = () => {
     const aboutRef = useRef();
     const productRef = useRef();
     const contactRef = useRef();
-    const trigger = useScrollTrigger({ threshold: 300 });
+    const trigger = useScrollTrigger({ threshold: 100 });
 
     useEffect(() => {
         AOS.init();
