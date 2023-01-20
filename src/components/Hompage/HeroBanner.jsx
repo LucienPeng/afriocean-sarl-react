@@ -67,7 +67,9 @@ export const HeroBanner = () => {
                             sx={{
                                 minHeight: '100vh',
                                 height: '100%',
+                                backgroundBlendMode: 'multiply',
                                 backgroundImage: `url(${heroBanner.img})`,
+                                backgroundColor: 'rgba(0, 0, 0, .2)',
                                 backgroundSize: { xs: 'cover', md: 'cover' },
                                 backgroundRepeated: false,
                                 backgroundPosition: 'top',

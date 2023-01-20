@@ -3,12 +3,15 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const CONTACT_INFO = [
     { title: 'Business Hour', detail: 'Monday – Friday', surplusDetail: '09h-17h', icon: <AccessTimeIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
     { title: 'Address', detail: 'KM 0.5 Route de Sébi Ponty,', surplusDetail: 'Diamniadio, Sénégal', icon: <LocationOnIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
-    { title: 'Telephone Number', detail: '+221 33 836 80 88', surplusDetail: '+221 76 223 24 05', icon: <LocalPhoneIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
-    { title: 'Email', detail: 'afriocean.sarl@gmail.com', surplusDetail: 'sales.afriocean@gmail.com', icon: <EmailIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
+    { title: 'Telephone Number', detail: '+221 33 836 8088', icon: <LocalPhoneIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
+    { title: 'Email', detail: 'afriocean.sarl@gmail.com', icon: <EmailIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
+    { title: "What's App", detail: '+221 76 423 1517', icon: <WhatsAppIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
+
 ];
 
 export const Contact = (props) => {

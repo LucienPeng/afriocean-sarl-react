@@ -2,7 +2,7 @@ import { Box, Button, Typography, MenuItem, Menu } from '@mui/material';
 import { NestedMenuItem } from 'mui-nested-menu';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 
@@ -13,13 +13,15 @@ export const NavItems = (props) => {
     const [isLinkActive, setLinkActive] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
+    const navigate = useNavigate();
 
     const handleClose = () => setAnchorEl(null);
     const handleClick = (event, ref, url) => {
-        console.log(navItem);
         setAnchorEl(event.currentTarget);
-        if (ref) {
+        if (ref && url !== '/about') {
             scrollToHandle(event, ref, url);
+        } else if (url === '/about') {
+            navigate('/about');
         };
     };
 
