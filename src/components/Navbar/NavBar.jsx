@@ -50,7 +50,7 @@ export const NavBar = (props) => {
 
     return (
         <AppBar ref={nav} component='nav' position="fixed" className='animate__animated animate__fadeInDown'
-            sx={{ height: 80, bgcolor: isHomePage ? isScrolled ? 'rgba(34, 67, 103, 0.9)' : 'transparent' : 'rgba(34, 67, 103, 0.9)', boxShadow: isScrolled ? 'inset' : 'none', transition: 'ease-out 0.3s all', justifyContent: 'center' }}>
+            sx={{ height: 80, bgcolor: isHomePage ? isScrolled ? 'rgba(34, 67, 103)' : 'transparent' : 'rgba(34, 67, 103, 0.9)', boxShadow: isScrolled ? 'inset' : 'none', transition: 'ease-out 0.3s all', justifyContent: 'center' }}>
             <Toolbar>
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                     <IconButton

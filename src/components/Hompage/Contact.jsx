@@ -19,7 +19,7 @@ export const Contact = (props) => {
     return (
         <Stack component='div' ref={contactRef} minHeight='70vh' sx={{ bgcolor: 'primary.dark' }}>
             <Box alignItems='center' display='flex' flexDirection='column' my={5}>
-                <Typography my={5} variant="h2" fontWeight={700} color='common.white'>Contacts</Typography>
+                <Typography mt={5} variant="h2" fontWeight={700} color='common.white'>Contacts</Typography>
                 <Grid container spacing={5} direction='row' justifyContent='center' alignItems='center'>
                     <Grid item xs={12} md={5} justifyContent='center' alignItems='center'>
                         <Grid flexShrink={1} container spacing={5} my={5} justifyContent='center' alignItems='center'>

@@ -1,34 +1,53 @@
-import { Stack, Typography, Card, CardMedia, CardContent } from "@mui/material";
+import { Stack, Typography, Card, CardMedia, CardContent, Grid } from "@mui/material";
 import { StyledButton } from '../UI/StyledComponents';
 import { useNavigate } from "react-router-dom";
-import Grid from '@mui/material/Grid';
-import ribbonFish from '../../asset/images/fish/ribbonFish.png';
-import littleTunny from '../../asset/images/fish/littleTunny.png';
-import atlanticHorseMackerel from '../../asset/images/fish/atlantic-horse-mackerel.png';
 
+import roundSardinella from '../../asset/images/fish/roundSardinella.png';
+import maeiranSardinella from '../../asset/images/fish/maeiranSardinella.png';
+import commonMackerel from '../../asset/images/fish/commonMackerel.png';
+import atlanticBumper from '../../asset/images/fish/atlanticBumper.png';
+import cuneneHorseMackerel from '../../asset/images/fish/cuneneHorseMackerel.png';
+import atlanticHorseMackerel from '../../asset/images/fish/atlanticHorseMackerel.png';
 
 const PRODUCTS_SECTIONS = [
     {
-        name: "Ceinture",
-        img: ribbonFish,
-        url: 'ribbon-fish',
-        scientificName: "(Trichiurus Lepturus)",
-        description: "Le terme de Liche désigne plusieurs espèces de poissons marins de bonne qualité gustative, appréciés également pour la pêche sportive, de la famille des Carangidae, fréquentant notamment les côtes françaises et méditerranéennes ; le mot vient du provençal lico, liche ou leiche. Ces poissons sont appelés leccia en Italie.",
+        en: "Round Sardinella",
+        scientificName: "Sardinella Aurita",
+        img: roundSardinella,
+        url: "round-sardinella"
     },
     {
-        name: "Thon-Ravil",
-        img: littleTunny,
-        url: 'little-tunny',
-        scientificName: "(Euthynnus allettaratus)",
-        description: "Ce poisson mesure entre 60 et 122 cm de long, pour une moyenne de 80 centimètres. Le poids maximal est de 16,5 kg. Le dos (quart arrière-supérieur) porte des bandes obliques sombres sur un fond métallisé. Entre les nageoires pelvienne et anale, on compte également 3 à 7 taches sombres",
+        en: "Cunene Horse Mackerel",
+        scientificName: "Trachurus Trecae",
+        img: cuneneHorseMackerel,
+        url: "cunene-horse-mackerel"
     },
     {
-        name: "Chinchard-Blanc",
+        en: "Atlantic Bumper",
+        scientificName: "Chloroscombrus Chrysurus",
+        img: atlanticBumper,
+        url: "atlantic-bumper"
+    },
+
+    {
+        en: "Maeiran Sardinella",
+        scientificName: "Sardinella Maderensis",
+        img: maeiranSardinella,
+        url: "maeiran-ardinella"
+    },
+    {
+        en: "Atlantic Horse Mackerel",
+        scientificName: "Decaprterus Rhonchus",
         img: atlanticHorseMackerel,
-        url: 'atlantic-horse-mackerel',
-        scientificName: "(Trachurus trachurus)",
-        description: "Le Chinchard est une espèce de poissons de la famille des Carangidae qui se rencontre dans l'Atlantique est et en Méditerranée et qui mesure jusqu'à 70 cm pour un poids maximal publié de 2 kg1. Son corps est fusiforme et de couleur verdâtre sur le dos.",
+        url: "atlantic-horse-mackerel"
     },
+    {
+        en: "Common Mackerel",
+        scientificName: "Scomber Japonicus",
+        img: commonMackerel,
+        url: "mackerel"
+    },
+
 ];
 
 export const Product = (props) => {
@@ -40,18 +59,20 @@ export const Product = (props) => {
 
 
     return (
-        <Stack component='div' ref={productRef} minHeight="100vh" justifyContent='center' alignItems='center'>
-            <Typography my={5} variant="h2" fontWeight={700} color="text.primary">Products</Typography>
-            <Grid container spacing={10} my={5} justifyContent='center'>
+        <Stack ref={productRef} minHeight='70vh' justifyContent='center' alignItems='center'>
+            <Typography mt={10} variant="h2" fontWeight={700} color="text.primary">Products</Typography>
+            <Grid width='80%' container spacing={5} my={5} justifyContent='center' alignItems='center'>
                 {PRODUCTS_SECTIONS.map((product, index) => (
-                    <Grid key={index} item xs={10} md={3}>
-                        <Card component='div' elevation={0}>
-                            <CardContent data-aos="zoom-in-up">
+                    <Grid key={index} item xs={10} md={4}>
+                        <Card elevation={0} data-aos="zoom-in-up">
+                            <CardContent>
                                 <CardMedia component="img" image={product.img}
                                     sx={{ cursor: 'pointer', "&:hover": { transform: 'scale(1.1)', transition: '0.5s all ease-out' } }}
                                     onClick={redirectHandler.bind(this, product.url)} />
-                                <Typography variant="h6" textAlign='center' fontWeight={700} color="text.primary">{product.name}
-                                    <Typography component='span' variant="h6" color="text.primary"> {product.scientificName}</Typography>
+                                <Typography variant="h6" textAlign='center' fontWeight={700} color="text.primary">{product.en}
+                                    <Typography component='span' variant="h6" color="text.primary" ml={1}>
+                                        {`(${product.scientificName})`}
+                                    </Typography>
                                 </Typography>
                             </CardContent>
                         </Card>

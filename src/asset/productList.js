@@ -1,6 +1,8 @@
 
-import roundSardinella from '../asset/images/fish/round-sardinella.png';
-import atlanticHorseMackerel from '../asset/images/fish/atlantic-horse-mackerel.png';
+import roundSardinella from '../asset/images/fish/roundSardinella.png';
+import maeiranSardinella from '../asset/images/fish/maeiranSardinella.png';
+import atlanticHorseMackerel from '../asset/images/fish/atlanticHorseMackerel.png';
+import cuneneHorseMackerel from '../asset/images/fish/cuneneHorseMackerel.png';
 import commonMackerel from '../asset/images/fish/commonMackerel.png';
 import atlanticBumper from '../asset/images/fish/atlanticBumper.png';
 import bigEyeGrunt from '../asset/images/fish/bigEyeGrunt.png';
@@ -8,8 +10,11 @@ import cassavaCroaker from '../asset/images/fish/cassavaCroaker.png';
 import littleTunny from '../asset/images/fish/littleTunny.png';
 import senegalJack from '../asset/images/fish/senegalJack.png';
 import ribbonFish from '../asset/images/fish/ribbonFish.png';
+import africanLookdown from '../asset/images/fish/africanLookdown.png';
 import senegaleseTonguesole from '../asset/images/fish/senegaleseTonguesole.png';
 import lesserAfricanThreadfin from '../asset/images/fish/lesserAfricanThreadfin.png';
+import smoothmouthSeaCatfish from '../asset/images/fish/smoothmouthSeaCatfish.png';
+import flagfinMojarra from '../asset/images/fish/flagfinMojarra.png';
 import _ from 'lodash';
 import { useMemo } from 'react';
 
@@ -34,7 +39,7 @@ const RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "G(300g+),M(180g-300g),P(170g-200g),PP(150g-170g)",
-        img: "",
+        img: maeiranSardinella,
         url: "maeiran-ardinella"
     },
     {
@@ -80,7 +85,7 @@ const RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "GG(600g+),G(450g-600g),M(300g-450g),P(200g-300g),PP(100g-200g)",
-        img: "",
+        img: cuneneHorseMackerel,
         url: "cunene-horse-mackerel"
     },
     {
@@ -196,7 +201,7 @@ const RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "One size : 150g+",
-        img: "",
+        img: africanLookdown,
         url: "african -lookdown"
     },
     {
@@ -219,7 +224,7 @@ const RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "One size : 70g+",
-        img: "",
+        img: flagfinMojarra,
         url: "flagfin-mojarra"
     },
     {
@@ -242,7 +247,7 @@ const RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "G,M,P,PP",
-        img: "",
+        img: smoothmouthSeaCatfish,
         url: "smoothmouth-sea-catfish"
     },
     {

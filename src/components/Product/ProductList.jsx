@@ -20,7 +20,6 @@ export const ProductList = () => {
             {isMobileView ? <MobileSelector setProductList={setProductList} /> : <Selector setProductList={setProductList} />}
             <ImageList cols={isMobileView ? 1 : 3} sx={{ width: isMobileView ? '80%' : '90%' }} loading="lazy">
                 {productList.map((item) => (
-                    item.img !== "" &&
                     <ImageListItem
                         data-aos="zoom-in-down"
                         key={item.en}
