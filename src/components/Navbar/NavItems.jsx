@@ -2,27 +2,21 @@ import { Box, Button, Typography, MenuItem, Menu } from '@mui/material';
 import { NestedMenuItem } from 'mui-nested-menu';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 
 
 export const NavItems = (props) => {
-    const { navItem, scrollToHandle, activeLink } = props;
+    const { navItem, scrollToHandler, activeLink, setActiveLink } = props;
     const { i18n } = useTranslation();
     const { pathname } = useLocation();
-    const [isLinkActive, setLinkActive] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
-    const navigate = useNavigate();
 
     const handleClose = () => setAnchorEl(null);
     const handleClick = (event, ref, url) => {
         setAnchorEl(event.currentTarget);
-        if (ref && url !== '/about') {
-            scrollToHandle(event, ref, url);
-        } else if (url === '/about') {
-            navigate('/about');
-        };
+        scrollToHandler(event, ref, url);
     };
 
     const menuHandler = (lngCode) => {
@@ -39,12 +33,11 @@ export const NavItems = (props) => {
     };
 
     useEffect(() => {
-        if (pathname === navItem.url || navItem.ref === activeLink) {
-            setLinkActive(true);
-        } else {
-            setLinkActive(false);
+        if (pathname === navItem.url) {
+            setActiveLink(navItem.ref);
         }
-    }, [activeLink, navItem, pathname]);
+    }, [navItem.ref, navItem.url, pathname, setActiveLink]);
+
 
     return (
         <Box id={navItem.title} key={navItem.title}>
@@ -58,7 +51,7 @@ export const NavItems = (props) => {
                 disableRipple
             >
                 <Typography variant="h1" fontSize={18}
-                    sx={{ fontWeight: isLinkActive ? 700 : 400, color: { xs: 'primary.dark', md: isLinkActive ? 'secondary.light' : 'common.white' } }}>
+                    sx={{ fontWeight: activeLink === navItem.ref ? 700 : 400, color: { xs: 'primary.dark', md: activeLink === navItem.ref ? 'secondary.light' : 'common.white' } }}>
                     {navItem.title}
                 </Typography>
             </Button>

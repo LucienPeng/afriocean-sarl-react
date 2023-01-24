@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, IconButton, Link } from "@mui/material";
+import { Stack, Typography, IconButton, Link } from "@mui/material";
 import React from "react";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -14,7 +14,7 @@ export const Footer = () => {
 
     return (
         <Stack>
-            <Stack spacing={1} direction='row' bgcolor='#172E48' minHeight='10vh' alignItems='center' display='flex' justifyContent='flex-end'>
+            <Stack spacing={1} direction='row' bgcolor='#172E48' minHeight='5vh' alignItems='center' display='flex' justifyContent='end'>
                 <Link justifySelf='flex-end' fontWeight={700} textAlign='center' variant="body1" color='common.white'>Privacy policy</Link>
                 <Stack direction='row' justifyContent='flex-end' alignItems='center' mr={6}>
                     {socialMedias.map((socialMedia) => (
@@ -24,7 +24,7 @@ export const Footer = () => {
                     ))}
                 </Stack>
             </Stack>
-            <Stack bgcolor='#097272' direction='row' justifyContent='center' spacing={5}>
+            <Stack bgcolor='#097272' direction='row' justifyContent='center'>
                 <Typography fontWeight={700} textAlign='center' variant="body1" color='common.white'>© Afriocean Sarl 2022 | Tous droits réservés.</Typography>
             </Stack>
         </Stack>

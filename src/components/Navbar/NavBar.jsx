@@ -22,17 +22,11 @@ export const NavBar = (props) => {
     const [isScrolled, setScrolled] = useState(false);
     const [activeLink, setActiveLink] = useState();
 
-    const scrollToHandle = (event, ref, url) => {
-        if (isHomePage) {
-            window.scrollTo({
-                top: ref.current.offsetTop - 100,
-                behavior: 'smooth',
-            });
+    const scrollToHandler = (event, ref, url) => {
+        if (ref) {
             setActiveLink(ref);
-        } else {
-            setActiveLink();
-            navigate(url);
         }
+        navigate(url);
     };
 
     const trigger = useScrollTrigger({
@@ -77,12 +71,12 @@ export const NavBar = (props) => {
                         src='https://i.imgur.com/1UpdxEV.png'
                         alt='logo'
                         height={50}
-                        onClick={(event) => scrollToHandle(event, homeRef, '/')}
+                        onClick={(event) => scrollToHandler(event, homeRef, '/')}
                         sx={{ cursor: 'pointer', flexGrow: 0, display: { xs: 'none', sm: 'block' } }}
                     />
                     <Stack direction='row' alignItems='center' justifyContent='center' spacing={5}>
                         {NAV_ITEMS.map((navItem, index) => (
-                            <NavItems key={index} navItem={navItem} activeLink={activeLink} scrollToHandle={scrollToHandle} />
+                            <NavItems key={index} navItem={navItem} activeLink={activeLink} setActiveLink={setActiveLink} scrollToHandler={scrollToHandler} />
                         ))}
                     </Stack>
                 </Stack >

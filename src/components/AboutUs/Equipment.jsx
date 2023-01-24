@@ -99,7 +99,7 @@ export const Equipment = () => {
                 </Grid>
             </Grid>
 
-            <Grid container display="flex" rowGap={10} xs={12} data-aos="fade-up" direction='row' justifyContent='center' alignItems='center'>
+            <Grid container display="flex" rowGap={10} data-aos="fade-up" direction='row' justifyContent='center' alignItems='center'>
                 <Grid item md={5}>
                     <Stack spacing={2} alignItems='center'>
                         <Typography variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
@@ -143,7 +143,7 @@ export const Equipment = () => {
                 </Grid>
             </Grid>
 
-            <Grid width='100%' container rowGap={10} xs={12} data-aos="fade-up" direction='row' justifyContent='center' alignItems='center'>
+            <Grid width='100%' container rowGap={10} data-aos="fade-up" direction='row' justifyContent='center' alignItems='center'>
                 <Typography mt={10} variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
                     Ligne de production
                 </Typography>
