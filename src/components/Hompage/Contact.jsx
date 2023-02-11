@@ -14,7 +14,7 @@ export const CONTACT_INFO = [
 
 export const Contact = () => {
     return (
-        <Grid mt={5} sx={{ bgcolor: 'primary.dark' }} container spacing={5} justifyContent='center' alignItems='center'>
+        <Grid mt={5} sx={{ bgcolor: 'primary.dark' }} container spacing={5} justifyContent='center'>
             {CONTACT_INFO.map((contact, index) => (
                 <Grid key={index} item xs={10} md={2}>
                     <Card data-aos="zoom-in-down" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', maxWidth: 345, backgroundColor: "transparent" }} elevation={0}>
