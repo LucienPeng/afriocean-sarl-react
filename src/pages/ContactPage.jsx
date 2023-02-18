@@ -3,7 +3,7 @@ import { StyledTextfield, StyledCheckedBox, StyledButton } from '../components/U
 import { CONTACT_INFO } from '../components/Hompage/Contact';
 import EmailIcon from '@mui/icons-material/Email';
 
-const contactPage = () => {
+const ContactPage = () => {
 
     const sendMail = () => {
         window.Email.send({
@@ -159,4 +159,4 @@ const contactPage = () => {
     );
 };
 
-export default contactPage;
+export default ContactPage;

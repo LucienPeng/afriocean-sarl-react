@@ -22,20 +22,19 @@ export const Service = () => {
                     <Grid item key={service.id} md={4}  >
                         <Grid container alignItems='center' justifyContent='center' >
                             <Stack width='100%' alignItems='center' justifyContent='center' direction="row" spacing={5}>
-                                <Grid item xs={6} md={3}>
-                                    {service.icon}
-                                    {/* <Box
-                                    component='img'
-                                    width='100%'
-                                    height='100%'
-                                    src={service.photo}
-                                    borderRadius={2}
-                                    sx={{ opacity: 0.85 }}
-                                /> */}
+                                <Grid item xs={6} md={7}>
+                                    <Box
+                                        component='img'
+                                        width='100%'
+                                        height='100%'
+                                        src={service.photo}
+                                        borderRadius={2}
+                                        sx={{ opacity: 0.85 }}
+                                    />
                                 </Grid>
-                                <Grid item xs={6} md={6}>
+                                <Grid item xs={6} md={4}>
                                     <Typography fontSize={18} letterSpacing={0} variant="h2" fontWeight={700} color="text.primary">{service.service}</Typography>
-                                    <Typography lineHeight={2} variant="body1" color="text.primary">{service.description}</Typography>
+                                    {/* <Typography lineHeight={2} variant="body1" color="text.primary">{service.description}</Typography> */}
                                 </Grid>
                             </Stack>
                         </Grid>

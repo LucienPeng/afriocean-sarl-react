@@ -1,27 +1,30 @@
 {
   "files": {
     "main.css": "/static/css/main.659db156.css",
-    "main.js": "/static/js/main.ae894e9a.js",
-    "static/media/banner.jpg": "/static/media/banner.d1bc7236df770d642530.jpg",
+    "main.js": "/static/js/main.9a69132d.js",
     "static/media/4.jpg": "/static/media/4.be8569c62e7539cac1df.jpg",
     "static/media/6.jpg": "/static/media/6.d624362dae7cd39f3cb5.jpg",
     "static/media/5.jpg": "/static/media/5.16908e595476f2378d1d.jpg",
-    "static/media/heroBanner1.jpg": "/static/media/heroBanner1.e95c7d60a62bf0e2dfc0.jpg",
+    "static/media/heroBanner5.jpg": "/static/media/heroBanner5.e95c7d60a62bf0e2dfc0.jpg",
     "static/media/7.jpg": "/static/media/7.0d53af0049c473787032.jpg",
     "static/media/2.jpg": "/static/media/2.03c73db8adea40c68d97.jpg",
+    "static/media/banner1.jpg": "/static/media/banner1.98961da804459f69e505.jpg",
     "static/media/heroBanner2.jpg": "/static/media/heroBanner2.7722af0b8de4a4f08964.jpg",
     "static/media/intro3.jpg": "/static/media/intro3.b584208da1f53424131b.jpg",
     "static/media/1.jpg": "/static/media/1.205545bd50e2188277e8.jpg",
     "static/media/3.jpg": "/static/media/3.cd4c9842a01f0827fd30.jpg",
-    "static/media/heroBanner3.jpg": "/static/media/heroBanner3.540fa2c153aea681e1b8.jpg",
+    "static/media/heroBanner4.jpg": "/static/media/heroBanner4.540fa2c153aea681e1b8.jpg",
     "static/media/africanLookdown.png": "/static/media/africanLookdown.127f946b98e13df5108b.png",
     "static/media/flagfinMojarra.png": "/static/media/flagfinMojarra.7d3e8fddc4049bce1a3b.png",
     "static/media/ribbonFish.png": "/static/media/ribbonFish.a80f01f4bdc6d1ea3821.png",
-    "static/media/intro1.jpg": "/static/media/intro1.ff42b74b5907c4408ea6.jpg",
+    "static/media/heroBanner1.jpg": "/static/media/heroBanner1.ff42b74b5907c4408ea6.jpg",
     "static/media/cuneneHorseMackerel.png": "/static/media/cuneneHorseMackerel.5e9dd6f65b856bb2cc2d.png",
     "static/media/smoothmouthSeaCatfish.png": "/static/media/smoothmouthSeaCatfish.4f20dc3b652ca0b0a34d.png",
+    "static/media/intro1.jpg": "/static/media/intro1.1e40820c4a12c4463fa6.jpg",
+    "static/media/banner2.jpg": "/static/media/banner2.0397d950a78844c61268.jpg",
     "static/media/senegalJack.png": "/static/media/senegalJack.4de2cfa8345b97890f3e.png",
     "static/media/bigEyeGrunt.png": "/static/media/bigEyeGrunt.4591eca73b9b06ce8130.png",
+    "static/media/heroBanner3.jpg": "/static/media/heroBanner3.79d63027d526e25f0241.jpg",
     "static/media/atlanticHorseMackerel.png": "/static/media/atlanticHorseMackerel.8bc0017befdf9bc84fc7.png",
     "static/media/lesserAfricanThreadfin.png": "/static/media/lesserAfricanThreadfin.cbd63102bdf732f8b2da.png",
     "static/media/atlanticBumper.png": "/static/media/atlanticBumper.67b39fbb84a82e9ab623.png",
@@ -41,10 +44,10 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.659db156.css.map": "/static/css/main.659db156.css.map",
-    "main.ae894e9a.js.map": "/static/js/main.ae894e9a.js.map"
+    "main.9a69132d.js.map": "/static/js/main.9a69132d.js.map"
   },
   "entrypoints": [
     "static/css/main.659db156.css",
-    "static/js/main.ae894e9a.js"
+    "static/js/main.9a69132d.js"
   ]
 }

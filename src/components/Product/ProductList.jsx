@@ -25,6 +25,8 @@ export const ProductList = () => {
                         key={item.en}
                         onClick={() => redirect(item.url)}
                         sx={{
+                            scrollbarWidth: 'none',
+                            msOverflowStyle: 'none',
                             '&:hover': { cursor: 'pointer', bgcolor: 'secondary.light' }
                         }}>
 
@@ -33,6 +35,7 @@ export const ProductList = () => {
                                 className="animate__animated animate__zoomIn animate__delay-1s"
                                 width='100%'
                                 component='img'
+                                loading="lazy"
                                 src={`${item.img}`}
                                 alt={item.en}
                                 sx={{

@@ -1,7 +1,7 @@
 import { Box, Typography, Stack, Grid, Table, TableRow, TableCell, TableBody, Link } from '@mui/material';
 import { StyledButton } from '../UI/StyledComponents';
 import { useNavigate } from 'react-router-dom';
-import banner from '../../asset/images/banner.jpg';
+import banner from '../../asset/images/banner2.jpg';
 
 
 export const ProductItem = (props) => {

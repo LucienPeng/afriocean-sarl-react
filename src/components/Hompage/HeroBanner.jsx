@@ -1,6 +1,9 @@
 import HeroBanner1 from '../../asset/images/heroBanner1.jpg';
 import HeroBanner2 from '../../asset/images/heroBanner2.jpg';
 import HeroBanner3 from '../../asset/images/heroBanner3.jpg';
+import HeroBanner4 from '../../asset/images/heroBanner4.jpg';
+import HeroBanner5 from '../../asset/images/heroBanner5.jpg';
+
 import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { keyframes } from "@emotion/react";
@@ -17,7 +20,9 @@ import "swiper/css/bundle";
 const HEROBANNERS = [
     { title: 'heroBanner1', img: HeroBanner1 },
     { title: 'heroBanner2', img: HeroBanner2 },
-    { title: 'heroBanner3', img: HeroBanner3 }
+    { title: 'heroBanner3', img: HeroBanner3 },
+    { title: 'heroBanner4', img: HeroBanner4 },
+    { title: 'heroBanner5', img: HeroBanner5 }
 ];
 
 const zoomAnimation = keyframes`
