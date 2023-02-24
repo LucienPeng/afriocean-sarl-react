@@ -1,30 +1,16 @@
-import { Card, CardContent, Typography, Stack, Grid, Box, FormControlLabel, Link } from "@mui/material";
-import { StyledTextfield, StyledCheckedBox, StyledButton } from '../components/UI/StyledComponents';
+import { Card, CardContent, Typography, Stack, Grid, Box, Link } from "@mui/material";
 import { CONTACT_INFO } from '../components/Hompage/Contact';
+import { ContactForm } from '../components/Contact/ContactForm';
 import EmailIcon from '@mui/icons-material/Email';
 
 const ContactPage = () => {
-
-    const sendMail = () => {
-        window.Email.send({
-            Host: "smtp.yourisp.com",
-            Username: "username",
-            Password: "password",
-            To: 'them@website.com',
-            From: "you@isp.com",
-            Subject: "This is the subject",
-            Body: "And this is the body"
-        }).then(
-            message => alert(message)
-        );
-    };
 
     return (
         <Stack sx={{ bgcolor: 'primary.dark' }} minHeight='100vh' justifyContent='center' alignItems='center' >
             <Box alignItems='center' justifyContent='center' display='flex' flexDirection='column' my={5}>
                 <Typography my={10} variant="h2" fontWeight={700} color='common.white'>Contacts</Typography>
-                <Grid container direction='row' alignItems='center' justifyContent='center'>
-                    <Grid item xs={11} sm={8} md={9}>
+                <Grid container direction='row' rowSpacing={5} alignItems='center' justifyContent='center'>
+                    <Grid item xs={11} sm={10} md={9}>
                         <Grid container alignItems='center' justifyContent='center'>
                             <Grid item md={12}>
                                 <Grid container my={5} justifyContent='center' rowSpacing={2}>
@@ -88,73 +74,13 @@ const ContactPage = () => {
 
                     </Grid>
 
-                    <Grid data-aos="zoom-in-down" item xs={11} sm={8} md={3} justifyContent='center' alignItems='center'>
-                        <Stack component='form' maxWidth='80%'>
-                            <Stack justifyContent='center' spacing={0.5} height='100%'>
-                                <Grid container spacing={1} >
-                                    <Grid xs={12} sm={6} item>
-                                        <StyledTextfield
-                                            placeholder="Enter first name"
-                                            label="First Name"
-                                            variant="outlined"
-                                            fullWidth
-                                            required
-                                        />
-                                    </Grid>
-                                    <Grid xs={12} sm={6} item>
-                                        <StyledTextfield
-                                            placeholder="Enter last name"
-                                            label="Last Name"
-                                            variant="outlined"
-                                            fullWidth
-                                            required
-                                        />
-                                    </Grid>
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <StyledTextfield
-                                        type="email"
-                                        placeholder="Enter email"
-                                        label="Email"
-                                        variant="outlined"
-                                        fullWidth
-                                        required
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <StyledTextfield
-                                        type="number"
-                                        placeholder="Enter phone number"
-                                        label="Phone"
-                                        variant="outlined"
-                                        fullWidth
-                                        required
-                                    />
-                                </Grid>
-                                <Grid item xs={12}>
-                                    <StyledTextfield
-                                        label="Enter your comment"
-                                        multiline
-                                        rows={4}
-                                        placeholder="Enter your comment"
-                                        variant="outlined"
-                                        fullWidth
-                                    />
-                                </Grid>
-
-                            </Stack>
-                            <Stack mt={2} spacing={3} direction='column' justifyContent='center' alignItems='center'>
-                                <FormControlLabel
-                                    control={<StyledCheckedBox />}
-                                    label={<Typography sx={{ color: 'white' }}>I agree my submitted data is collected and stored</Typography>}
-                                />
-                                <StyledButton onClick={sendMail} alignself='center' variant="contained" color="secondary">Submit</StyledButton>
-                            </Stack>
-                        </Stack>
+                    <Grid data-aos="zoom-in-down" item xs={11} sm={10} md={3} display='flex' justifyContent='center' alignItems='center'>
+                        <ContactForm />
                     </Grid>
+
+
                 </Grid>
             </Box>
-
         </Stack >
     );
 };
