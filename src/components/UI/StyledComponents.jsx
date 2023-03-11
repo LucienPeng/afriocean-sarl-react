@@ -17,9 +17,6 @@ export const StyledTextfield = styled(TextField)({
 
 export const StyledCheckedBox = styled(Checkbox)({
     color: 'white',
-    '&:hover': {
-        color: 'white',
-    }
 });
 
 export const StyledSelect = styled(Select)(() => ({

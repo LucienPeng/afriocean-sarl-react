@@ -15,7 +15,7 @@ const initFeedback = {
     '166946023': '',
     '2113753156': '',
     '1917497005': '',
-    isAgree: false
+    isAgreed: false
 };
 
 const schema = yup.object({
@@ -24,14 +24,14 @@ const schema = yup.object({
     '166946023': yup.string().email().required(),
     '2113753156': yup.number().required(),
     '1917497005': yup.string().required(),
-    isAgree: yup.boolean().required(),
+    isAgreed: yup.boolean().required().isTrue(),
 }).required();
 
 const baseUrl = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSedP6Jw7b-KhqLZS6myoq5nSEPAyeHOYY6gPsMW5exHsr3a3w/formResponse`;
 
 export const ContactForm = () => {
     const { isToggle, setIsToggle } = useToggle();
-    const { handleSubmit, control, reset, formState: { isDirty },
+    const { handleSubmit, control, reset, formState: { isDirty, errors }, getValues,
     } = useForm({
         resolver: yupResolver(schema),
         defaultValues: initFeedback
@@ -39,20 +39,18 @@ export const ContactForm = () => {
     const togglerHandler = () => setIsToggle(false);
 
     const submitForm = (data) => {
-        if (data.isAgree) {
-            const firstName = `entry.1074437902=${data['1074437902']}`;
-            const lastName = `entry.88869021=${data['88869021']}`;
-            const email = `entry.166946023=${data['166946023']}`;
-            const phone = `entry.2113753156=${data['2113753156']}`;
-            const comment = `entry.1917497005=${data['1917497005']}`;
-            const requestUrl = baseUrl + `?${firstName}&${lastName}&${email}&${phone}&${comment}`;
-            jsonp(requestUrl);
-            setIsToggle(true);
-            reset(initFeedback);
-        } else {
-            alert('Agree');
-        }
+        const firstName = `entry.1074437902=${data['1074437902']}`;
+        const lastName = `entry.88869021=${data['88869021']}`;
+        const email = `entry.166946023=${data['166946023']}`;
+        const phone = `entry.2113753156=${data['2113753156']}`;
+        const comment = `entry.1917497005=${data['1917497005']}`;
+        const requestUrl = baseUrl + `?${firstName}&${lastName}&${email}&${phone}&${comment}`;
+        jsonp(requestUrl);
+        setIsToggle(true);
+        reset(initFeedback);
     };
+
+    console.log(getValues());
 
     useEffect(() => {
         if (isDirty) {
@@ -62,8 +60,11 @@ export const ContactForm = () => {
 
     return (
         <Stack component='form' maxWidth='80%' spacing={3} onSubmit={handleSubmit(submitForm)}>
-            <Typography variant="h1" color="common.white" fontWeight={700} fontSize={24} textAlign='center'>
+            <Typography variant="h1" lineHeight={0} color="common.white" fontWeight={700} fontSize={24} textAlign='center'>
                 Feedback
+            </Typography>
+            <Typography variant="body1" color="common.white" textAlign='left' textTransform='none'>
+                For any customized requirements or requests, please fill in the contact form.
             </Typography>
             <Stack spacing={0.5} height='100%'>
                 <Grid container spacing={1} >
@@ -151,18 +152,17 @@ export const ContactForm = () => {
             </Stack>
             <Stack spacing={3} direction='column' justifyContent='center' alignItems='center'>
                 <Controller
-                    name="isAgree"
+                    name="isAgreed"
                     control={control}
                     rules={{ required: true }}
                     render={({ field }) =>
                         <FormControlLabel
                             {...field}
-                            control={<StyledCheckedBox value={field.value.isAgree} />}
-                            label={<Typography sx={{ color: 'white' }}>I agree my submitted data is collected and stored</Typography>}
+                            control={<StyledCheckedBox checked={field.value} sx={{ color: errors.isAgreed ? 'error.main' : '#fff', '&.Mui-checked': { color: '#fff' } }} />}
+                            label={<Typography sx={{ color: errors.isAgreed ? 'error.main' : '#fff' }}>I agree my submitted data is collected and stored.</Typography>}
                         />
                     }
                 />
-
                 <StyledButton type='submit' alignself='center' variant="contained" color="secondary">Submit</StyledButton>
             </Stack>
             <Collapse in={isToggle}>
