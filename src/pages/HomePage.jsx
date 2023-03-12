@@ -5,21 +5,21 @@ import { Product } from "../components/Hompage/Product";
 import { Service } from "../components/Hompage/Service";
 import { Contact } from "../components/Hompage/Contact";
 import { ScrollTop } from '../components/UI/ScrollToTop';
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 
 
 const HomePage = (props) => {
     let { homeRef, aboutRef, productRef, contactRef } = props;
 
     return (
-        <Box width='100%'>
+        <Stack width='100%' alignItems='center' justifyContent='center'>
             <HeroBanner />
             <Introduction aboutRef={aboutRef} />
             <Service />
             <Product productRef={productRef} />
             <Contact contactRef={contactRef} />
             <ScrollTop pageRef={homeRef} />
-        </Box>
+        </Stack>
     );
 };
 

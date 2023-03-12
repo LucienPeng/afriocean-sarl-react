@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography, Stack, Grid, Link } from "@mui/material";
+import { Card, CardContent, Typography, Stack, Grid, Link, Box } from "@mui/material";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
@@ -17,7 +17,7 @@ export const Contact = () => {
         <Grid mt={5} sx={{ bgcolor: 'primary.dark' }} container spacing={5} justifyContent='center'>
             {CONTACT_INFO.map((contact, index) => (
                 <Grid key={index} item xs={10} md={2}>
-                    <Card data-aos="zoom-in-down" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', maxWidth: 345, backgroundColor: "transparent" }} elevation={0}>
+                    <Card data-aos="zoom-in-down" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: "transparent" }} elevation={0}>
                         {contact.icon}
                         <CardContent>
                             <Stack justifyContent='center' alignItems='center' spacing={5}>
@@ -38,7 +38,7 @@ export const Contact = () => {
                 </Grid>
             ))}
             <Grid item xs={10} md={2}>
-                <Card data-aos="zoom-in-down" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', maxWidth: 345, backgroundColor: "transparent" }} elevation={0}>
+                <Card data-aos="zoom-in-down" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: "transparent" }} elevation={0}>
                     <EmailIcon sx={{ color: 'common.white', fontSize: '40px' }} />
                     <CardContent>
                         <Stack justifyContent='center' alignItems='center' spacing={5}>
@@ -47,11 +47,13 @@ export const Contact = () => {
                                     Email
                                 </Typography>
 
-                                <Link href="mailto:sales.afriocean@gmail.com?subject=Quote to AFRIOCEAN" rel="noopener" target="_blank">
-                                    <Typography variant="body1" color="common.white">
-                                        sales.afriocean@gmail.com
-                                    </Typography>
-                                </Link>
+                                <Box sx={{ overflowWrap: 'break-word', width: '8rem' }}>
+                                    <Link href="mailto:sales.afriocean@gmail.com?subject=Quote to AFRIOCEAN" rel="noopener" target="_blank">
+                                        <Typography variant="body1" color="common.white">
+                                            sales.afriocean@gmail.com
+                                        </Typography>
+                                    </Link>
+                                </Box>
                             </Stack>
                         </Stack>
                     </CardContent>

@@ -5,10 +5,13 @@ import { ProductItem } from "./components/Product/ProductItem";
 import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/Navbar/NavBar";
+import { FrozenProduct } from './components/Servs/FrozenProduct';
+import { CustomizedProduct } from './components/Servs/CustomizedProduct';
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutUsPage";
 import ProductListPage from "./pages/ProductListPage";
 import ProductPageLayout from "./pages/ProductPageLayout";
+import ServicePageLayout from './pages/ServicePageLayout';
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./components/NotFoundPage";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -45,24 +48,28 @@ const App = () => {
                         contactRef={contactRef}
                     />}
                 />
+
                 <Route path="/about" element={<AboutPage />} />
-                <Route path="/product/fish/" element={<ProductPageLayout />}>
-                    <Route index element={<ProductListPage data={FISH_PRODUCTS} />} />
-                    {FISH_PRODUCTS.map((item, index) => (
-                        <Route key={index} path={item.url} element={<ProductItem item={item} />} />
-                    ))}
+
+                <Route path="/service" element={<ServicePageLayout />}>
+                    <Route path='frozen-product' element={<FrozenProduct />} />
+                    <Route path='customized-product' element={<CustomizedProduct />} />
                 </Route>
-                <Route path="/product/seafood" element={<ProductPageLayout />}>
-                    <Route index element={<ProductListPage data={SEAFOOD_PRODUCTS} />} />
-                    {SEAFOOD_PRODUCTS.map((item, index) => (
-                        <Route key={index} path={item.url} element={<ProductItem item={item} />} />
-                    ))}
+
+                <Route path="/product" element={<ProductPageLayout />}>
+                    <Route path='/product/fish' element={<ProductListPage data={FISH_PRODUCTS} />} />
+                    {FISH_PRODUCTS.map((item, index) => <Route key={index} path={`/product/fish/${item.url}`} element={<ProductItem item={item} />} />)}
+                    <Route path='/product/seafood' element={<ProductListPage data={SEAFOOD_PRODUCTS} />} />
+                    {SEAFOOD_PRODUCTS.map((item, index) => <Route key={index} path={`/product/seafood/${item.url}`} element={<ProductItem item={item} />} />)}
                 </Route>
+
                 <Route
                     path="/contact"
                     element={<ContactPage banner={banner} setBanner={setBanner} />}
                 />
+
                 <Route path="/*" element={<NotFoundPage />} />
+
             </Routes>
             <Footer />
         </>
