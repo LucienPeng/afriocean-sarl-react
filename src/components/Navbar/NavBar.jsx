@@ -26,7 +26,7 @@ export const NavBar = (props) => {
         if (ref) {
             setActiveLink(ref);
         }
-        navigate(url);
+        if (url !== '#') navigate(url);
     };
 
     const trigger = useScrollTrigger({

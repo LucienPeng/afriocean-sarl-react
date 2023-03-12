@@ -3,7 +3,7 @@ import { StyledButton } from '../UI/StyledComponents';
 import { useNavigate } from "react-router-dom";
 
 import roundSardinella from '../../asset/images/fish/roundSardinella.png';
-import maeiranSardinella from '../../asset/images/fish/maeiranSardinella.png';
+import maseiranSardinella from '../../asset/images/fish/maseiranSardinella.png';
 import commonMackerel from '../../asset/images/fish/commonMackerel.png';
 import atlanticBumper from '../../asset/images/fish/atlanticBumper.png';
 import cuneneHorseMackerel from '../../asset/images/fish/cuneneHorseMackerel.png';
@@ -30,10 +30,10 @@ const PRODUCTS_SECTIONS = [
     },
 
     {
-        en: "Maeiran Sardinella",
+        en: "Maseiran Sardinella",
         scientificName: "Sardinella Maderensis",
-        img: maeiranSardinella,
-        url: "maeiran-ardinella"
+        img: maseiranSardinella,
+        url: "maseiran-sardinella"
     },
     {
         en: "Atlantic Horse Mackerel",

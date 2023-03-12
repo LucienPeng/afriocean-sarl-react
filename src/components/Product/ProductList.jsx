@@ -4,26 +4,24 @@ import { Selector, MobileSelector } from './Selector';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from '@mui/material/styles';
-import { useProductList } from "../../asset/productList";
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-export const ProductList = () => {
-    const { PRODUCTS } = useProductList();
+export const ProductList = (props) => {
     const navigate = useNavigate();
-    const redirect = (url) => navigate(`/product/${url}`);
+    const redirect = (category, url) => navigate(`/product/${category.toLowerCase()}/${url}`);
     const theme = useTheme();
     const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
-    const [productList, setProductList] = useState(PRODUCTS);
+    const [productList, setProductList] = useState(props.data);
 
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-            {isMobileView ? <MobileSelector setProductList={setProductList} /> : <Selector setProductList={setProductList} />}
+            {isMobileView ? <MobileSelector setProductList={setProductList} data={props.data} /> : <Selector setProductList={setProductList} data={props.data} />}
             <ImageList cols={isMobileView ? 1 : 3} sx={{ width: isMobileView ? '80%' : '90%' }} loading="lazy">
                 {productList.map((item) => (
                     <ImageListItem
                         data-aos="zoom-in-down"
                         key={item.en}
-                        onClick={() => redirect(item.url)}
+                        onClick={() => redirect(item.allergens, item.url)}
                         sx={{
                             scrollbarWidth: 'none',
                             msOverflowStyle: 'none',

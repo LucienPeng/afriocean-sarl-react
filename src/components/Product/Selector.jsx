@@ -3,7 +3,6 @@ import { StyledButton, StyledSelect } from '../UI/StyledComponents';
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
-import { useProductList } from "../../asset/productList";
 import { useCallback } from "react";
 
 const TAGS = [
@@ -15,12 +14,11 @@ const TAGS = [
 ];
 
 export const Selector = (props) => {
-    const { setProductList } = props;
-    const { PRODUCTS } = useProductList();
+    const { setProductList, data } = props;
     const [currentTag, setCurrentTag] = useState('All');
     const [searchParams, setSearchParams] = useSearchParams();
-    const filteredCategory = searchParams.get('category');
 
+    const filteredCategory = searchParams.get('category');
     const tagSelectHandler = useCallback((tag) => {
         if (tag === currentTag) {
             return;
@@ -38,19 +36,18 @@ export const Selector = (props) => {
 
     useEffect(() => {
         if (!filteredCategory) {
-            setProductList(PRODUCTS);
-
+            setSearchParams({ category: 'All' });
+            setProductList(data);
+            setCurrentTag('All');
         } else if (filteredCategory === 'All') {
             setCurrentTag('All');
             setSearchParams({ category: 'All' });
-            setProductList(PRODUCTS);
-
+            setProductList(data);
         } else if (filteredCategory !== 'All') {
-
-            setProductList(PRODUCTS.filter((product) => product.tags.includes(filteredCategory)));
+            setProductList(data.filter((product) => product.tags.includes(filteredCategory)));
             setCurrentTag(filteredCategory);
         }
-    }, [filteredCategory, setSearchParams, setProductList, PRODUCTS]);
+    }, [filteredCategory, setSearchParams, setProductList, data]);
 
     return (
         <Stack direction='row' justifyContent='center' alignItems='center' spacing={3} my={5}>
@@ -67,8 +64,7 @@ export const Selector = (props) => {
 };
 
 export const MobileSelector = (props) => {
-    const { setProductList } = props;
-    const { PRODUCTS } = useProductList();
+    const { setProductList, data } = props;
     const [currentTag, setCurrentTag] = useState('All');
     const [searchParams, setSearchParams] = useSearchParams();
     const filteredCategory = searchParams.get('category');
@@ -91,19 +87,20 @@ export const MobileSelector = (props) => {
 
     useEffect(() => {
         if (!filteredCategory) {
-            setProductList(PRODUCTS);
-
+            setSearchParams({ category: 'All' });
+            setProductList(data);
+            setCurrentTag('All');
         } else if (filteredCategory === 'All') {
             setCurrentTag('All');
             setSearchParams({ category: 'All' });
-            setProductList(PRODUCTS);
+            setProductList(data);
 
         } else if (filteredCategory !== 'All') {
 
-            setProductList(PRODUCTS.filter((product) => product.tags.includes(filteredCategory)));
+            setProductList(data.filter((product) => product.tags.includes(filteredCategory)));
             setCurrentTag(filteredCategory);
         }
-    }, [filteredCategory, setSearchParams, setProductList, PRODUCTS]);
+    }, [filteredCategory, setSearchParams, setProductList, data]);
 
     return (
         <Stack direction='row' justifyContent='center' alignItems='center' spacing={3} my={5}>

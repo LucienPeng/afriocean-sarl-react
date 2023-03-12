@@ -9,11 +9,29 @@ export const MobileNavItems = (props) => {
     const navigate = useNavigate();
     const isSubMenu = item.subNavItems ? true : false;
 
-    const clickHandler = (lngCode) => {
+    const clickHandler = (lngCode, item) => {
         if (isSubMenu) {
             subMenuHandler(item.subNavItems);
         } else {
-            item.url ? navigate(item.url) : i18n.changeLanguage(lngCode);
+            switch (true) {
+                case item.url === 'fish': {
+                    navigate('./product/fish');
+                    break;
+                }
+                case item.url === 'seafood': {
+                    navigate('./product/seafood');
+                    break;
+                }
+                case item.url === 'elaborate': {
+                    navigate('./contact');
+                    break;
+                }
+                default: {
+                    item.url ? navigate(item.url) : i18n.changeLanguage(lngCode);
+                    break;
+                }
+            }
+
             toggleHandler();
         }
     };
@@ -21,7 +39,7 @@ export const MobileNavItems = (props) => {
     return (
 
         <ListItem>
-            <ListItemButton onClick={clickHandler.bind(this, item.lang)}>
+            <ListItemButton onClick={clickHandler.bind(this, item.lang, item)}>
                 <ListItemIcon>
                     {item.icon}
                 </ListItemIcon>

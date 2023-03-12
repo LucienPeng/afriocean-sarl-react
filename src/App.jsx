@@ -15,7 +15,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useProductList } from "./asset/productList";
 
 const App = () => {
-    const { PRODUCTS } = useProductList();
+    const { FISH_PRODUCTS, SEAFOOD_PRODUCTS } = useProductList();
     let [banner, setBanner] = useState("");
     const homeRef = useRef();
     const aboutRef = useRef();
@@ -46,9 +46,15 @@ const App = () => {
                     />}
                 />
                 <Route path="/about" element={<AboutPage />} />
-                <Route path="/product" element={<ProductPageLayout />}>
-                    <Route index element={<ProductListPage />} />
-                    {PRODUCTS.map((item, index) => (
+                <Route path="/product/fish/" element={<ProductPageLayout />}>
+                    <Route index element={<ProductListPage data={FISH_PRODUCTS} />} />
+                    {FISH_PRODUCTS.map((item, index) => (
+                        <Route key={index} path={item.url} element={<ProductItem item={item} />} />
+                    ))}
+                </Route>
+                <Route path="/product/seafood" element={<ProductPageLayout />}>
+                    <Route index element={<ProductListPage data={SEAFOOD_PRODUCTS} />} />
+                    {SEAFOOD_PRODUCTS.map((item, index) => (
                         <Route key={index} path={item.url} element={<ProductItem item={item} />} />
                     ))}
                 </Route>

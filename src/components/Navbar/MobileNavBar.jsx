@@ -27,7 +27,6 @@ export const MobileNavBar = (props) => {
         navigate('/');
         toggleHandler();
     };
-
     return (
         <Drawer
             anchor='left'

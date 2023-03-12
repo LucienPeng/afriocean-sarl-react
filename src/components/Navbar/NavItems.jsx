@@ -1,8 +1,7 @@
 import { Box, Button, Typography, MenuItem, Menu } from '@mui/material';
-import { NestedMenuItem } from 'mui-nested-menu';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 
@@ -11,6 +10,7 @@ export const NavItems = (props) => {
     const { i18n } = useTranslation();
     const { pathname } = useLocation();
     const [anchorEl, setAnchorEl] = useState(null);
+    const navigate = useNavigate();
     const open = Boolean(anchorEl);
 
     const handleClose = () => setAnchorEl(null);
@@ -19,14 +19,44 @@ export const NavItems = (props) => {
         scrollToHandler(event, ref, url);
     };
 
-    const menuHandler = (lngCode) => {
+    const menuHandler = (id, lngCode, url) => {
         switch (true) {
-            case lngCode !== undefined: {
-                i18n.changeLanguage(lngCode);
+            case id === 'product': {
+                switch (true) {
+                    case url === 'fish': {
+                        navigate('./product/fish');
+                        break;
+                    }
+                    case url === 'seafood': {
+                        navigate('./product/seafood');
+                        break;
+                    }
+                    case url === 'elaborate': {
+                        navigate('./contact');
+                        break;
+                    }
+                    default: {
+                        console.log("something went wrong");
+                        break;
+                    }
+                }
+                break;
+            }
+            case id === 'language': {
+                switch (true) {
+                    case lngCode !== undefined: {
+                        i18n.changeLanguage(lngCode);
+                        break;
+                    }
+                    default: {
+                        console.log(lngCode);
+                        break;
+                    }
+                }
                 break;
             }
             default: {
-                console.log(lngCode);
+                console.log("something went wrong");
                 break;
             }
         }
@@ -62,22 +92,11 @@ export const NavItems = (props) => {
                     anchorEl={anchorEl}
                     open={open}
                 >
-                    {navItem.subNavItems.map((subNavItem) => (
-                        !subNavItem.descNavItems ?
-                            <MenuItem sx={{ fontSize: '16px' }} key={subNavItem.title} onClick={menuHandler.bind(this, subNavItem.lang)}>{subNavItem.title}</MenuItem>
-                            : <NestedMenuItem
-                                key={subNavItem.title}
-                                label={subNavItem.title}
-                                parentMenuOpen={open}
-                                sx={{ fontSize: '16px' }}
-                            >
-                                {subNavItem.descNavItems.map((descNavItem) => (
-                                    <MenuItem sx={{ fontSize: '16px' }} key={descNavItem.title} onClick={handleClose}>
-                                        {descNavItem.title}
-                                    </MenuItem>
-                                ))}
-                            </NestedMenuItem>
-                    ))}
+                    {navItem.subNavItems.map((subNavItem) =>
+                        <MenuItem sx={{ fontSize: '16px' }} key={subNavItem.title} onClick={menuHandler.bind(this, navItem.id, subNavItem.lang, subNavItem.url)}>
+                            {subNavItem.title}
+                        </MenuItem>)
+                    }
                 </Menu >
             }
         </Box >

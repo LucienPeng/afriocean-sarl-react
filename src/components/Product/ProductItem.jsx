@@ -7,7 +7,7 @@ import banner from '../../asset/images/banner2.jpg';
 export const ProductItem = (props) => {
     const { item } = props;
     const navigate = useNavigate();
-    const redirectHandler = () => navigate('/product');
+    const redirectHandler = () => navigate(`/product/${item.allergens.toLowerCase()}`);
     return (
         <Stack minHeight='100vh' width='100%' direction='column' justifyContent='center' alignItems='center'>
             <Box
