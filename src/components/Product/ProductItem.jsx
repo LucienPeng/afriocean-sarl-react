@@ -208,7 +208,7 @@ export const ProductItem = (props) => {
                                     </TableCell>
                                     <TableCell>
                                         {item.tags.map((tag) => (
-                                            <Link onClick={() => navigate(`/product/?category=${tag}`)} key={tag} color='secondary' sx={{ '&:hover': { cursor: 'pointer' } }} align="left" variant="body1" mr={1}>
+                                            <Link onClick={() => navigate(`/product/${item.allergens.toLowerCase()}/?category=${tag}`)} key={tag} color='secondary' sx={{ '&:hover': { cursor: 'pointer' } }} align="left" variant="body1" mr={1}>
                                                 {tag}
                                             </Link>
                                         ))}
