@@ -1,8 +1,6 @@
 import { Typography, Grid, Stack, CardMedia } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow } from "swiper";
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 
 import equipmemt1 from '../../asset/images/equipment/1.jpg';
 import equipmemt2 from '../../asset/images/equipment/2.jpg';
@@ -24,6 +22,7 @@ import ligne4 from '../../asset/images/ligne de production/4.jpg';
 import ligne5 from '../../asset/images/ligne de production/5.jpg';
 import ligne6 from '../../asset/images/ligne de production/6.jpg';
 import ligne7 from '../../asset/images/ligne de production/7.jpg';
+import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 
 
 const EQUIPMENTS = [
@@ -35,8 +34,7 @@ const LIGNES = [ligne1, ligne2, ligne3, ligne4, ligne5, ligne6, ligne7];
 const LOCAUX = [locaux1, locaux2, locaux3, locaux4, locaux5];
 
 export const Equipment = () => {
-    const theme = useTheme();
-    const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
+    const { isMobileView } = useDeviceMetadata();
 
     return (
         <Stack bgcolor='#E5E5E5' spacing={5} py={10} alignItems='center' justifyContent='center'>

@@ -22,7 +22,7 @@ export const ProductListImageListItem = (props) => {
             }}>
 
             <Stack>
-                {!imageLoaded && <Skeleton sx={{ width: '100%', minHeight: 300, height: '100%' }} />}
+                {!imageLoaded && <Skeleton sx={{ width: '100%', minHeight: 350, height: '100%' }} />}
                 <Box
                     className="animate__animated animate__zoomIn animate__delay-1s"
                     width='100%'

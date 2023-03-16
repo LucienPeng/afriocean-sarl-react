@@ -5,13 +5,13 @@ import { ProductItem } from "./components/Product/ProductItem";
 import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/Navbar/NavBar";
-import { FrozenProduct } from './components/Servs/FrozenProduct';
-import { CustomizedProduct } from './components/Servs/CustomizedProduct';
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutUsPage";
 import ProductListPage from "./pages/ProductListPage";
 import ProductPageLayout from "./pages/ProductPageLayout";
 import ServicePageLayout from './pages/ServicePageLayout';
+import FrozenProductPage from './pages/FrozenProductPage';
+import CustomizedProductPage from './pages/CustomizedProductPage';
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./components/NotFoundPage";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -52,8 +52,8 @@ const App = () => {
                 <Route path="/about" element={<AboutPage />} />
 
                 <Route path="/service" element={<ServicePageLayout />}>
-                    <Route path='frozen-product' element={<FrozenProduct />} />
-                    <Route path='customized-product' element={<CustomizedProduct />} />
+                    <Route path='frozen-product' element={<FrozenProductPage />} />
+                    <Route path='customized-product' element={<CustomizedProductPage />} />
                 </Route>
 
                 <Route path="/product" element={<ProductPageLayout />}>

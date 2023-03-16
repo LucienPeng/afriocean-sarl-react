@@ -3,12 +3,10 @@ import { Box, ImageList } from "@mui/material";
 import { Selector, MobileSelector } from './Selector';
 import { ProductListImageListItem } from './ProductListImageLisItem';
 import { useState } from "react";
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 
 export const ProductList = (props) => {
-    const theme = useTheme();
-    const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
+    const { isMobileView } = useDeviceMetadata();
     const [productList, setProductList] = useState(props.data);
 
     return (
