@@ -1,11 +1,11 @@
 import { Stack, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigation } from "../../utils/useNavigation";
 import { StyledButton } from "../UI/StyledComponents";
 
 export const Introduction = (props) => {
     const { aboutRef } = props;
-    const navigate = useNavigate();
-    const redirectHandle = () => navigate(`/about`);
+    const { navigationHandler } = useNavigation();
+    const redirectHandle = () => navigationHandler(`/about`);
 
     return (
         <Stack p={5} bgcolor='#224267' component='div' ref={aboutRef} maxHeight="75vh" justifyContent='center' alignItems='center' data-aos="fade-in">

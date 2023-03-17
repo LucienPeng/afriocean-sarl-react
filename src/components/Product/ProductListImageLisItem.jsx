@@ -1,13 +1,13 @@
 
 import { Box, ImageListItem, ImageListItemBar, Stack, Skeleton } from "@mui/material";
 import { useCallback, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigation } from "../../utils/useNavigation";
 
 export const ProductListImageListItem = (props) => {
     const { item } = props;
+    const { navigationHandler } = useNavigation();
     const [imageLoaded, setImageLoaded] = useState(false);
-    const navigate = useNavigate();
-    const redirect = (category, url) => navigate(`/product/${category.toLowerCase()}/${url}`);
+    const redirect = (category, url) => navigationHandler(`/product/${category.toLowerCase()}/${url}`);
     const onLoadHandler = useCallback((loaded) => setImageLoaded(loaded), []);
 
     return (

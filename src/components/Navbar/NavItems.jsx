@@ -1,16 +1,18 @@
 import { Box, Button, Typography, MenuItem, Menu } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useLanguage } from '../../utils/useLanguage';
+import { useNavigation } from '../../utils/useNavigation';
 
 
 
 export const NavItems = (props) => {
     const { navItem, scrollToHandler, activeLink, setActiveLink } = props;
-    const { i18n } = useTranslation();
     const { pathname } = useLocation();
+    const { navigationHandler } = useNavigation();
+    const { setSearchParams } = useLanguage();
+
     const [anchorEl, setAnchorEl] = useState(null);
-    const navigate = useNavigate();
     const open = Boolean(anchorEl);
 
     const handleClose = () => setAnchorEl(null);
@@ -24,15 +26,15 @@ export const NavItems = (props) => {
             case id === 'product': {
                 switch (true) {
                     case url === 'fish': {
-                        navigate('./product/fish');
+                        navigationHandler('./product/fish');
                         break;
                     }
                     case url === 'seafood': {
-                        navigate('./product/seafood');
+                        navigationHandler('./product/seafood');
                         break;
                     }
                     case url === 'elaborate': {
-                        navigate('./contact');
+                        navigationHandler('./contact');
                         break;
                     }
                     default: {
@@ -45,7 +47,7 @@ export const NavItems = (props) => {
             case id === 'language': {
                 switch (true) {
                     case lngCode !== undefined: {
-                        i18n.changeLanguage(lngCode);
+                        setSearchParams({ lang: lngCode });
                         break;
                     }
                     default: {

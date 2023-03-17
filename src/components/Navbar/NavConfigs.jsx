@@ -14,7 +14,7 @@ export const useNavConfig = () => {
     ];
 
     const LANGUAGE_NAV_ITEMS = [
-        { title: '中文', lang: 'zh-TW' },
+        { title: '繁體中文', lang: 'zh-TW' },
         { title: 'English', lang: 'en' },
         { title: 'Français', lang: 'fr' },
     ];

@@ -1,12 +1,12 @@
 import { Drawer, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Box } from '@mui/material';
 import { MobileNavItems } from './MobileNavItems';
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import FirstPageIcon from '@mui/icons-material/FirstPage';
+import { useNavigation } from '../../utils/useNavigation';
 
 export const MobileNavBar = (props) => {
     const { NAV_ITEMS, isToggle, setIsToggle } = props;
-    const navigate = useNavigate();
+    const { navigationHandler } = useNavigation();
     const [navList, setNavList] = useState(NAV_ITEMS);
 
     const subMenuHandler = (menu) => setNavList(menu);
@@ -24,7 +24,7 @@ export const MobileNavBar = (props) => {
     };
 
     const backToMainPageHandler = () => {
-        navigate('/');
+        navigationHandler('/');
         toggleHandler();
     };
     return (
@@ -42,7 +42,7 @@ export const MobileNavBar = (props) => {
                     {navList.map((item, index) => (
                         <MobileNavItems
                             key={index}
-                            index={index}
+                            index={index + item.title}
                             item={item}
                             subMenuHandler={subMenuHandler}
                             toggleHandler={toggleHandler}

@@ -1,12 +1,13 @@
 import { ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import { ChevronRight } from '@mui/icons-material';
-import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useNavigation } from '../../utils/useNavigation';
+import { useLanguage } from '../../utils/useLanguage';
 
 export const MobileNavItems = (props) => {
     const { item, subMenuHandler, toggleHandler } = props;
-    const { i18n } = useTranslation();
-    const navigate = useNavigate();
+    // const { i18n } = useTranslation();
+    const { navigationHandler } = useNavigation();
+    const { setSearchParams } = useLanguage();
     const isSubMenu = item.subNavItems ? true : false;
 
     const clickHandler = (lngCode, item) => {
@@ -15,19 +16,24 @@ export const MobileNavItems = (props) => {
         } else {
             switch (true) {
                 case item.url === 'fish': {
-                    navigate('./product/fish');
+                    navigationHandler('./product/fish');
                     break;
                 }
                 case item.url === 'seafood': {
-                    navigate('./product/seafood');
+                    navigationHandler('./product/seafood');
                     break;
                 }
                 case item.url === 'elaborate': {
-                    navigate('./contact');
+                    navigationHandler('./contact');
                     break;
                 }
+                // case item.lang.length !== 0: {
+                //     item.url && navigationHandler(item.url);
+
+                //     break;
+                // }
                 default: {
-                    item.url ? navigate(item.url) : i18n.changeLanguage(lngCode);
+                    setSearchParams({ lang: lngCode });
                     break;
                 }
             }

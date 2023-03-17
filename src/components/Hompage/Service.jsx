@@ -1,5 +1,5 @@
 import { Stack, Typography, Box, Grid } from "@mui/material";
-import { useNavigation } from '../../utils/navigation';
+import { useNavigation } from '../../utils/useNavigation';
 import intro1 from '../../asset/images/intro/intro1.jpg';
 import intro2 from '../../asset/images/intro/intro2.jpg';
 import intro3 from '../../asset/images/intro/intro3.jpg';

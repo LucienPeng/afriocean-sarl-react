@@ -1,13 +1,13 @@
 import { Box, Typography, Stack, Grid, Table, TableRow, TableCell, TableBody, Link } from '@mui/material';
 import { StyledButton } from '../UI/StyledComponents';
-import { useNavigate } from 'react-router-dom';
+import { useNavigation } from '../../utils/useNavigation';
 import banner from '../../asset/images/banner2.jpg';
 
 
 export const ProductItem = (props) => {
     const { item } = props;
-    const navigate = useNavigate();
-    const redirectHandler = () => navigate(`/product/${item.allergens.toLowerCase()}`);
+    const { navigationHandler } = useNavigation();
+    const redirectHandler = () => navigationHandler(`/product/${item.allergens.toLowerCase()}`);
     return (
         <Stack minHeight='100vh' width='100%' direction='column' justifyContent='center' alignItems='center'>
             <Box
@@ -208,7 +208,7 @@ export const ProductItem = (props) => {
                                     </TableCell>
                                     <TableCell>
                                         {item.tags.map((tag) => (
-                                            <Link onClick={() => navigate(`/product/${item.allergens.toLowerCase()}/?category=${tag}`)} key={tag} color='secondary' sx={{ '&:hover': { cursor: 'pointer' } }} align="left" variant="body1" mr={1}>
+                                            <Link onClick={() => navigationHandler(`/product/${item.allergens.toLowerCase()}/?category=${tag}`)} key={tag} color='secondary' sx={{ '&:hover': { cursor: 'pointer' } }} align="left" variant="body1" mr={1}>
                                                 {tag}
                                             </Link>
                                         ))}

@@ -1,6 +1,7 @@
 import "aos/dist/aos.css";
 import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
+import i18n from 'i18next';
 import { ProductItem } from "./components/Product/ProductItem";
 import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -16,10 +17,14 @@ import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./components/NotFoundPage";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useProductList } from "./asset/productList";
+import { useLanguage } from "./utils/useLanguage";
+
 
 const App = () => {
     const { FISH_PRODUCTS, SEAFOOD_PRODUCTS } = useProductList();
-    let [banner, setBanner] = useState("");
+    const { searchParams } = useLanguage();
+    const [banner, setBanner] = useState("");
+
     const homeRef = useRef();
     const aboutRef = useRef();
     const productRef = useRef();
@@ -30,6 +35,13 @@ const App = () => {
         AOS.init();
         AOS.refresh();
     }, [trigger]);
+
+    useEffect(() => {
+        console.log(searchParams.get('lang'))
+        if (searchParams.get('lang')) {
+            i18n.changeLanguage(searchParams.get('lang'));
+        }
+    }, [searchParams]);
 
     return (
         <>

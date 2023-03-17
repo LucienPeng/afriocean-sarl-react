@@ -38,7 +38,6 @@ export const theme = createTheme({
     typography: {
         fontFamily: '\'Oxygen\',\'Roboto\', \'normal\'',
         h1: {
-
             fontFamily: '\'Copperplate\',\'Vollkorn SC\', \'normal\'',
             fontSize: '120px',
         },

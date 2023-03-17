@@ -1,6 +1,6 @@
 import { Stack, Grid, Box, List, ListItemText, Typography } from "@mui/material";
 import { StyledButton } from "../UI/StyledComponents";
-import { useNavigation } from "../../utils/navigation";
+import { useNavigation } from "../../utils/useNavigation";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import placeHoderImage from '../../asset/images/intro/intro4.jpg';
 

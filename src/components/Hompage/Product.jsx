@@ -1,6 +1,5 @@
 import { Stack, Typography, Card, CardMedia, CardContent, Grid } from "@mui/material";
 import { StyledButton } from '../UI/StyledComponents';
-import { useNavigate } from "react-router-dom";
 
 import roundSardinella from '../../asset/images/fish/roundSardinella.png';
 import maseiranSardinella from '../../asset/images/fish/maseiranSardinella.png';
@@ -8,6 +7,7 @@ import commonMackerel from '../../asset/images/fish/commonMackerel.png';
 import atlanticBumper from '../../asset/images/fish/atlanticBumper.png';
 import cuneneHorseMackerel from '../../asset/images/fish/cuneneHorseMackerel.png';
 import atlanticHorseMackerel from '../../asset/images/fish/atlanticHorseMackerel.png';
+import { useNavigation } from "../../utils/useNavigation";
 
 const PRODUCTS_SECTIONS = [
     {
@@ -51,11 +51,11 @@ const PRODUCTS_SECTIONS = [
 ];
 
 export const Product = (props) => {
-    const navigate = useNavigate();
+    const { navigationHandler } = useNavigation();
     let { productRef } = props;
 
-    const redirectHandler = (url) => navigate(`/product/${url}`);
-    const redirectProductPageHandler = () => navigate(`/product`);
+    const redirectHandler = (url) => navigationHandler(`/product/fish/${url}`);
+    const redirectProductPageHandler = () => navigationHandler(`/product`);
 
 
     return (

@@ -8,7 +8,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { ThemeProvider } from '@emotion/react';
 import { I18nextProvider } from 'react-i18next';
 import { BrowserRouter } from "react-router-dom";
-import { ScrollToTop } from './utils/ScrollToTop';
+import { ScrollToTop } from './components/ScrollToTop';
 import { theme } from './styles/themeOptions';
 
 

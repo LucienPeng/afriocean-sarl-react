@@ -1,4 +1,4 @@
-import { Typography, Grid, Stack, Card, CardMedia } from "@mui/material";
+import { Typography, Grid, Stack, Card, CardMedia, ListItemText, List } from "@mui/material";
 
 
 export const Introduction = () => {
@@ -6,7 +6,7 @@ export const Introduction = () => {
         <Grid mb={10} container spacing={10} display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
             <Grid mt={10} item xs={10} sm={12} md={10} data-aos="fade-up">
                 <Grid container spacing={5} alignItems='center' justifyContent='center'>
-                    <Grid item xs={12} sm={6} md={5} justifyContent='center' alignItems='center'>
+                    <Grid item xs={12} sm={5} md={5} justifyContent='center' alignItems='center'>
                         <Card>
                             <CardMedia
                                 sx={{ height: 500, backgroundPosition: 'top' }}
@@ -14,10 +14,10 @@ export const Introduction = () => {
                             />
                         </Card>
                     </Grid>
-                    <Grid item xs={10} sm={6} md={5}>
+                    <Grid item xs={10} sm={5} md={5}>
                         <Stack spacing={2}>
                             <Typography variant="h2" fontWeight={700} letterSpacing={0} color="primary.primary">Qui Sommes-Nous ?</Typography>
-                            <Typography variant="boby1" color="text.primary">
+                            <Typography variant="body1" color="text.primary">
                                 Au Sénégal, une des régions les plus poissonneuses du monde, le
                                 secteur de la pêche, en progression constante, joue un rôle
                                 capital dans l’économie nationale. Avec un taux de captures
@@ -38,9 +38,9 @@ export const Introduction = () => {
                 </Grid>
             </Grid >
 
-            <Grid item xs={10} sm={12} md={10} data-aos="fade-up" justifyContent='center' alignItems='center'>
+            <Grid item xs={10} data-aos="fade-up" justifyContent='center' alignItems='center'>
                 <Stack justifyContent='center' alignItems='center' spacing={2}>
-                    <Typography variant="boby1" color="text.dark">
+                    <Typography variant="body1" color="text.dark">
                         Notre but est de fournir à nos clients des produits de la
                         mer frais et Boxersifiés en fonction de nos marchés. Cela grâce à
                         des techniques de productions de haute qualité, à basse
@@ -50,7 +50,7 @@ export const Introduction = () => {
                         produit de qualité avec une très grande valeur ajoutée et à un
                         prix défiant toute concurrence.
                     </Typography>
-                    <Typography variant="boby1" color="text.dark" fontStyle='italic'>
+                    <Typography variant="body1" color="text.dark" fontStyle='italic'>
                         AFRIOCEAN travaille aussi avec des clients un peu partout
                         dans le monde à savoir : Taiwan, Corée, Chine, Afrique du Sud,
                         Côte d’Ivoire, Guinée, Burkina…
@@ -60,10 +60,10 @@ export const Introduction = () => {
 
             <Grid item xs={10} sm={12} md={10} data-aos="fade-up">
                 <Grid container spacing={15} alignItems='center' justifyContent='center'>
-                    <Grid item xs={11} sm={6} md={5} justifyContent='center' alignItems='center'>
+                    <Grid item xs={11} sm={5} md={5} justifyContent='center' alignItems='center'>
                         <Stack spacing={2}>
                             <Typography variant="h2" letterSpacing={0} fontWeight={700} color="text.primary">Historie</Typography>
-                            <Typography variant="boby1" color="text.primary">
+                            <Typography variant="body1" color="text.primary">
                                 AFRIOCEAN a été créé en 2013 par M. CHEN CHUNG-HSIN (JOHN CHEN).
                                 L’entreprise était située à Yarakh et travaillée en sous traitance
                                 avec une autre entreprise de la place. AFRIOCEAN n’avait que ses
@@ -79,7 +79,7 @@ export const Introduction = () => {
                             </Typography>
                         </Stack>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={5}>
+                    <Grid item xs={12} sm={5} md={5}>
                         <Card>
                             <CardMedia
                                 sx={{ height: 500, backgroundPosition: 'top' }}
@@ -93,7 +93,7 @@ export const Introduction = () => {
             <Grid width='100%' mb={10} item xs={11} sm={12} md={10} data-aos="fade-up">
                 <Grid container spacing={15} alignItems='center' justifyContent='center'>
 
-                    <Grid item xs={12} sm={6} md={5}>
+                    <Grid item xs={12} sm={5} md={5}>
                         <Card>
                             <CardMedia
                                 sx={{ height: 500, width: '100%', backgroundPosition: 'top' }}
@@ -102,18 +102,16 @@ export const Introduction = () => {
                         </Card>
                     </Grid>
 
-                    <Grid item xs={11} sm={6} md={6} justifyContent='center' alignItems='center'>
+                    <Grid item xs={11} sm={5} md={6} justifyContent='center' alignItems='center'>
                         <Typography variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
                             Avantages Compétitifs
                         </Typography>
-                        <Typography variant="boby1" color="text.dark">
-                            <ul>
-                                <li>Vitesse de la congélation (Arêtes des cristaux)</li>
-                                <li>Température</li>
-                                <li>constante Emballage avec haute qualité </li>
-                                <li>Bonne pratique du QHSE</li>
-                            </ul>
-                        </Typography>
+                        <List>
+                            <ListItemText>Vitesse de la congélation (Arêtes des cristaux)</ListItemText>
+                            <ListItemText>Température</ListItemText>
+                            <ListItemText>constante Emballage avec haute qualité</ListItemText>
+                            <ListItemText>Bonne pratique du QHSE</ListItemText>
+                        </List>
                     </Grid>
                 </Grid>
             </Grid>

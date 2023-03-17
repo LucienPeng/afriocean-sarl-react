@@ -1,10 +1,10 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigation } from "../utils/useNavigation";
 import { StyledButton } from "./UI/StyledComponents";
 
 const NotFoundComponent = () => {
-    const navigate = useNavigate();
-    const redirectHandler = () => navigate('/');
+    const { navigationHandler } = useNavigation();
+    const redirectHandler = () => navigationHandler('/');
     return (
         <Stack minHeight='100vh' justifyContent='center' alignItems='center'>
             <Box textAlign='center' mb={5}>

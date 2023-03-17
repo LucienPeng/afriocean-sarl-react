@@ -2,21 +2,22 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Box, Stack, AppBar, Toolbar, IconButton } from '@mui/material';
 import { NavItems } from './NavItems';
 import { useNavConfig } from './NavConfigs';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { MobileNavBar } from './MobileNavBar';
 import { useToggle } from '../../utils/useToggle';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useNavigation } from '../../utils/useNavigation';
 
 
 export const NavBar = (props) => {
     const { NAV_MENU } = useNavConfig();
     const { pathname } = useLocation();
     const { isToggle, setIsToggle, toggleHandler } = useToggle();
+    const { navigationHandler } = useNavigation();
     const { homeRef, aboutRef, productRef, contactRef } = props;
     const isHomePage = pathname === '/';
     const NAV_ITEMS = NAV_MENU(aboutRef, productRef, contactRef);
-    const navigate = useNavigate();
     const nav = useRef('');
 
     const [isScrolled, setScrolled] = useState(false);
@@ -26,7 +27,7 @@ export const NavBar = (props) => {
         if (ref) {
             setActiveLink(ref);
         }
-        if (url !== '#') navigate(url);
+        if (url !== '#') navigationHandler(url);
     };
 
     const trigger = useScrollTrigger({

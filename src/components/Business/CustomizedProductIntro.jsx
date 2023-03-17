@@ -1,6 +1,6 @@
 import { Stack, Grid, Box, List, ListItemText, Typography, ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
 import { StyledButton } from "../UI/StyledComponents";
-import { useNavigation } from "../../utils/navigation";
+import { useNavigation } from "../../utils/useNavigation";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import { CUSTOMIZED_PRODUCTS } from '../../asset/customizedProduct';
 
