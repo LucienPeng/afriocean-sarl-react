@@ -1,5 +1,5 @@
 
-import { ImageListItem, ImageListItemBar, Skeleton, Box } from "@mui/material";
+import { ImageListItem, ImageListItemBar, Skeleton, Box, Stack } from "@mui/material";
 import { useCallback, useState, useRef } from "react";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import { useNavigation } from "../../utils/useNavigation";
@@ -28,28 +28,28 @@ export const ProductListImageListItem = (props) => {
                 '&:hover': { cursor: 'pointer', bgcolor: !isMobileView && 'secondary.light' }
             }}
         >
-            {!imageLoaded && <Skeleton animation="wave" sx={{ width: '100%', height: '300px', }} />}
-            <Box
-                className="animate__animated animate__zoomIn animate__delay-1s"
-                width='100%'
-                component='img'
-                loading="lazy"
-                onLoad={() => onLoadHandler(true)}
-                onError={() => onLoadHandler(false)}
-                src={`${item.img}`}
-                alt={item.en}
-                sx={{
-                    height: '100%',
-                    '&:hover': { transition: 'all 1s ease-out', transform: 'scale(1.1)', }
-                }}
-            />
-            <ImageListItemBar
-                title={item.en}
-                subtitle={item.scientificName}
-                position="bottom"
-            />
-
-
+            <Stack>
+                {!imageLoaded && <Skeleton animation="wave" sx={{ width: '100%', height: '250px' }} />}
+                <Box
+                    className="animate__animated animate__zoomIn animate__delay-1s"
+                    width='100%'
+                    component='img'
+                    loading="lazy"
+                    onLoad={() => onLoadHandler(true)}
+                    onError={() => onLoadHandler(false)}
+                    src={`${item.img}`}
+                    alt={item.en}
+                    sx={{
+                        height: '100%',
+                        '&:hover': { transition: 'all 1s ease-out', transform: 'scale(1.1)', }
+                    }}
+                />
+                <ImageListItemBar
+                    title={item.en}
+                    subtitle={item.scientificName}
+                    position="bottom"
+                />
+            </Stack>
         </ImageListItem>
     );
 };

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import { ProductItem } from "./components/Product/ProductItem";
 import { Footer } from "./components/Footer";
-import { Routes, Route, useSearchParams } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/Navbar/NavBar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutUsPage";
@@ -16,28 +16,23 @@ import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./components/NotFoundPage";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useProductList } from "./asset/productList";
-import { useTranslation } from "react-i18next";
 
 const App = () => {
     const { FISH_PRODUCTS, SEAFOOD_PRODUCTS } = useProductList();
-    const [searchParams, setSearchParams] = useSearchParams();
     const [banner, setBanner] = useState("");
     const homeRef = useRef();
     const aboutRef = useRef();
     const productRef = useRef();
     const contactRef = useRef();
     const trigger = useScrollTrigger({ threshold: 100 });
-    const { i18n } = useTranslation();
-    const languageSearchParam = searchParams.get('lang');
+
 
     useEffect(() => {
         AOS.init();
         AOS.refresh();
     }, [trigger]);
 
-    useEffect(() => {
-        if (languageSearchParam !== i18n.language) setSearchParams({ lang: i18n.language });
-    }, [i18n.language, languageSearchParam, setSearchParams]);
+
 
     return (
         <>
