@@ -1,11 +1,13 @@
 
 import { Box, ImageListItem, ImageListItemBar, Stack, Skeleton } from "@mui/material";
 import { useCallback, useState } from "react";
+import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import { useNavigation } from "../../utils/useNavigation";
 
 export const ProductListImageListItem = (props) => {
     const { item } = props;
     const { navigationHandler } = useNavigation();
+    const { isMobileView } = useDeviceMetadata();
     const [imageLoaded, setImageLoaded] = useState(false);
     const redirect = (category, url) => navigationHandler(`/product/${category.toLowerCase()}/${url}`);
     const onLoadHandler = useCallback((loaded) => setImageLoaded(loaded), []);
@@ -18,11 +20,11 @@ export const ProductListImageListItem = (props) => {
             sx={{
                 scrollbarWidth: 'none',
                 msOverflowStyle: 'none',
-                '&:hover': { cursor: 'pointer', bgcolor: 'secondary.light' }
+                '&:hover': { cursor: 'pointer', bgcolor: !isMobileView && 'secondary.light' }
             }}>
 
             <Stack>
-                {!imageLoaded && <Skeleton sx={{ width: '100%', minHeight: 300, height: '100%' }} />}
+                {!imageLoaded && <Skeleton sx={{ width: '100%', minHeight: isMobileView ? 150 : 300, height: '100%' }} />}
                 <Box
                     className="animate__animated animate__zoomIn animate__delay-1s"
                     width='100%'

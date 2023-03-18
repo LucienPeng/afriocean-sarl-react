@@ -1,7 +1,7 @@
 import { Box, Button, Typography, MenuItem, Menu } from '@mui/material';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
-import { useLanguage } from '../../utils/useLanguage';
 import { useNavigation } from '../../utils/useNavigation';
 
 
@@ -10,7 +10,8 @@ export const NavItems = (props) => {
     const { navItem, scrollToHandler, activeLink, setActiveLink } = props;
     const { pathname } = useLocation();
     const { navigationHandler } = useNavigation();
-    const { setSearchParams } = useLanguage();
+    const { i18n } = useTranslation();
+
 
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
@@ -47,7 +48,7 @@ export const NavItems = (props) => {
             case id === 'language': {
                 switch (true) {
                     case lngCode !== undefined: {
-                        setSearchParams({ lang: lngCode });
+                        i18n.changeLanguage(lngCode);
                         break;
                     }
                     default: {

@@ -8,7 +8,7 @@ export const Introduction = (props) => {
     const redirectHandle = () => navigationHandler(`/about`);
 
     return (
-        <Stack p={5} bgcolor='#224267' component='div' ref={aboutRef} maxHeight="75vh" justifyContent='center' alignItems='center' data-aos="fade-in">
+        <Stack p={5} bgcolor='#224267' component='div' ref={aboutRef} justifyContent='center' alignItems='center' data-aos="fade-in">
             <Stack direction='column' justifyContent='center' alignItems='center' >
                 <Stack direction='column' width='80%' spacing={1.5}>
                     <Typography alignSelf='flex-start' variant="h1" color="common.white" fontSize={70} textAlign='start' >

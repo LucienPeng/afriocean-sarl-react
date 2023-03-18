@@ -1,7 +1,6 @@
 import "aos/dist/aos.css";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import AOS from "aos";
-import i18n from 'i18next';
 import { ProductItem } from "./components/Product/ProductItem";
 import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -18,18 +17,19 @@ import NotFoundPage from "./components/NotFoundPage";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useProductList } from "./asset/productList";
 import { useLanguage } from "./utils/useLanguage";
-
+import { useTranslation } from "react-i18next";
 
 const App = () => {
     const { FISH_PRODUCTS, SEAFOOD_PRODUCTS } = useProductList();
-    const { searchParams } = useLanguage();
+    const { searchParams, setSearchParams } = useLanguage();
     const [banner, setBanner] = useState("");
-
     const homeRef = useRef();
     const aboutRef = useRef();
     const productRef = useRef();
     const contactRef = useRef();
     const trigger = useScrollTrigger({ threshold: 100 });
+    const { i18n } = useTranslation();
+    const changeLanguageHandler = useCallback((lang) => i18n.changeLanguage(lang), [i18n]);
 
     useEffect(() => {
         AOS.init();
@@ -37,11 +37,18 @@ const App = () => {
     }, [trigger]);
 
     useEffect(() => {
-        console.log(searchParams.get('lang'))
-        if (searchParams.get('lang')) {
-            i18n.changeLanguage(searchParams.get('lang'));
+        const languageSearchParam = searchParams.get('lang');
+
+        if (languageSearchParam !== i18n.language) {
+            changeLanguageHandler(languageSearchParam);
         }
-    }, [searchParams]);
+
+        const setLanguageParam = () => {
+            if (languageSearchParam !== i18n.language) setSearchParams({ lang: i18n.language });
+        };
+
+        return () => setLanguageParam();
+    }, [changeLanguageHandler, i18n.language, searchParams, setSearchParams]);
 
     return (
         <>

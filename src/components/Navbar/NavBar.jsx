@@ -13,7 +13,7 @@ import { useNavigation } from '../../utils/useNavigation';
 export const NavBar = (props) => {
     const { NAV_MENU } = useNavConfig();
     const { pathname } = useLocation();
-    const { isToggle, setIsToggle, toggleHandler } = useToggle();
+    const { isToggle, toggleHandler } = useToggle();
     const { navigationHandler } = useNavigation();
     const { homeRef, aboutRef, productRef, contactRef } = props;
     const isHomePage = pathname === '/';
@@ -22,12 +22,18 @@ export const NavBar = (props) => {
 
     const [isScrolled, setScrolled] = useState(false);
     const [activeLink, setActiveLink] = useState();
+    const [mobileNavList, setMobileNavList] = useState(NAV_ITEMS);
 
     const scrollToHandler = (event, ref, url) => {
         if (ref) {
             setActiveLink(ref);
         }
         if (url !== '#') navigationHandler(url);
+    };
+
+    const drawerToggleHandler = () => {
+        setMobileNavList(NAV_ITEMS);
+        toggleHandler();
     };
 
     const trigger = useScrollTrigger({
@@ -50,19 +56,18 @@ export const NavBar = (props) => {
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                     <IconButton
                         size="large"
-                        aria-label="account of current user"
                         aria-controls="menu-appbar"
                         aria-haspopup="true"
-                        onClick={toggleHandler}
+                        onClick={drawerToggleHandler}
                         color="inherit"
                     >
                         <MenuIcon />
                     </IconButton>
                     <MobileNavBar
-                        NAV_ITEMS={NAV_ITEMS}
+                        mobileNavList={mobileNavList}
+                        setMobileNavList={setMobileNavList}
                         isToggle={isToggle}
-                        setIsToggle={setIsToggle}
-                        toggleHandler={toggleHandler}
+                        drawerToggleHandler={drawerToggleHandler}
                     />
                 </Box>
 

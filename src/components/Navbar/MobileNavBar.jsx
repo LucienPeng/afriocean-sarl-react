@@ -1,54 +1,36 @@
 import { Drawer, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Box } from '@mui/material';
 import { MobileNavItems } from './MobileNavItems';
-import { useState } from 'react';
 import FirstPageIcon from '@mui/icons-material/FirstPage';
 import { useNavigation } from '../../utils/useNavigation';
 
 export const MobileNavBar = (props) => {
-    const { NAV_ITEMS, isToggle, setIsToggle } = props;
+    const { isToggle, drawerToggleHandler, mobileNavList, setMobileNavList } = props;
     const { navigationHandler } = useNavigation();
-    const [navList, setNavList] = useState(NAV_ITEMS);
 
-    const subMenuHandler = (menu) => setNavList(menu);
-
-    const toggleDrawer = (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
-        }
-        toggleHandler();
-    };
-
-    const toggleHandler = () => {
-        setNavList(NAV_ITEMS);
-        setIsToggle(!isToggle);
-    };
+    const subMenuHandler = (menu) => setMobileNavList(menu);
 
     const backToMainPageHandler = () => {
         navigationHandler('/');
-        toggleHandler();
+        drawerToggleHandler();
     };
+
     return (
         <Drawer
             anchor='left'
             open={isToggle}
-            onClose={toggleDrawer}
+            onClose={drawerToggleHandler}
         >
-            <Box
-                width={250}
-                role="presentation"
-                onKeyDown={toggleDrawer}
-            >
+            <Box width={250}>
                 <List>
-                    {navList.map((item, index) => (
+                    {mobileNavList.map((item, index) => (
                         <MobileNavItems
                             key={index}
                             index={index + item.title}
                             item={item}
                             subMenuHandler={subMenuHandler}
-                            toggleHandler={toggleHandler}
+                            drawerToggleHandler={drawerToggleHandler}
                         />
                     ))}
-
                     <ListItem sx={{ mt: '50%' }}>
                         <ListItemButton onClick={backToMainPageHandler} >
                             <ListItemIcon>

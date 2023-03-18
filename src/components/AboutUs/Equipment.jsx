@@ -1,6 +1,7 @@
-import { Typography, Grid, Stack, CardMedia } from "@mui/material";
+import { Typography, Grid, Stack, CardMedia, List, ListItemText } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow } from "swiper";
+import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 
 import equipmemt1 from '../../asset/images/equipment/1.jpg';
 import equipmemt2 from '../../asset/images/equipment/2.jpg';
@@ -22,7 +23,6 @@ import ligne4 from '../../asset/images/ligne de production/4.jpg';
 import ligne5 from '../../asset/images/ligne de production/5.jpg';
 import ligne6 from '../../asset/images/ligne de production/6.jpg';
 import ligne7 from '../../asset/images/ligne de production/7.jpg';
-import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 
 
 const EQUIPMENTS = [
@@ -38,12 +38,12 @@ export const Equipment = () => {
 
     return (
         <Stack bgcolor='#E5E5E5' spacing={5} py={10} alignItems='center' justifyContent='center'>
-            <Grid container rowGap={5} rowSpacing={5} spacing={5} data-aos="fade-up" justifyContent='center' alignItems='center' direction='row'>
+            <Grid container rowGap={3} spacing={5} data-aos="fade-up" justifyContent='center' alignItems='center' direction='row'>
                 <Grid item xs={11} md={5} justifyContent='center'>
                     <Typography variant="h2" lineHeight={2} fontWeight={700} letterSpacing={0} color="primary.primary">
                         Équipements
                     </Typography>
-                    <Typography variant="boby1" color="text.dark">
+                    <Typography variant="body1" color="text.dark">
                         Pour la bonne exécution du process de production, AFRIOCEAN a investi
                         dans des équipements ultra modernes pour la qualité de son service.
                         Une zone 3 a également été développé pour la ligne de production des
@@ -53,23 +53,19 @@ export const Equipment = () => {
                         cuisson des coquillages.
                     </Typography>
                 </Grid>
-                <Grid item xs={11} md={6} justifyContent='center'>
-                    <Typography variant="boby1" color="text.dark">
-                        <ul>
-                            <li> 2 tunnels de congélation de 8t.</li>
-                            <li>2 tunnels de congélation de 4t.</li>
-                            <li>
-                                2 chambres froides avec la capacité de stockage en total de
-                                1000T. <br />
-                                (Pallet emballé avec film.)
-                                <br /> (-20℃ maintenu, maximum -50℃.)
-                            </li>
-                            <li>
-                                1 chambre de SAS pour protéger les produits. BITZER
-                                compresseurs adaptés.
-                            </li>
-                        </ul>
-                    </Typography>
+                <Grid item xs={11} md={5} justifyContent='center'>
+                    <List>
+                        <ListItemText>&#9210; 2 tunnels de congélation de 8t.</ListItemText>
+                        <ListItemText>&#9210; 2 tunnels de congélation de 4t.</ListItemText>
+                        <ListItemText>&#9210; 2 chambres froides avec la capacité de stockage en total de
+                            1000T. <br />
+                            (Pallet emballé avec film.)
+                            <br /> (-20℃ maintenu, maximum -50℃.)
+                        </ListItemText>
+                        <ListItemText>&#9210; 1 chambre de SAS pour protéger les produits. BITZER
+                            compresseurs adaptés.
+                        </ListItemText>
+                    </List>
                 </Grid>
             </Grid>
 
@@ -103,22 +99,18 @@ export const Equipment = () => {
                         <Typography variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
                             Locaux Productions
                         </Typography>
-                        <Typography variant="boby1" color="text.dark">
-                            <ul>
-                                <li>2 Salles de production pour poisson afrique.</li>
-                                <li>1 salle de fabrique de glace</li>
-                                <li>
-                                    1 salle de production pour produit élaboré
-                                    <br /> (Conforme aux régles HSQE de l’UE)
-                                    <br /> (Chariots tous en inox.)
-                                </li>
-                                <li>
-                                    1 salles de production pour la cuisson
-                                    <br /> (Equipement de cuisson en vapeur)
-                                </li>
-
-                            </ul>
-                        </Typography>
+                        <List>
+                            <ListItemText>&#9210; Salles de production pour poisson afrique.</ListItemText>
+                            <ListItemText>&#9210; 1 salle de fabrique de glace.</ListItemText>
+                            <ListItemText>
+                                &#9210; 1 salle de production pour produit élaboré
+                                <br /> (Conforme aux régles HSQE de l’UE)
+                                <br /> (Chariots tous en inox.)
+                            </ListItemText>
+                            <ListItemText>&#9210; 1 salles de production pour la cuisson
+                                <br /> (Equipement de cuisson en vapeur)
+                            </ListItemText>
+                        </List>
                     </Stack>
                 </Grid>
                 <Grid item md={4} xs={12}>

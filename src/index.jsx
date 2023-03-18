@@ -10,13 +10,19 @@ import { I18nextProvider } from 'react-i18next';
 import { BrowserRouter } from "react-router-dom";
 import { ScrollToTop } from './components/ScrollToTop';
 import { theme } from './styles/themeOptions';
+import { Stack } from "@mui/material";
 
-
-
+const FallBackComponent = () => {
+    return (
+        <Stack width='100vw' heigh='100vh' justifyContent='center' alignItems='center'>
+            <CircularProgress />
+        </Stack>
+    );
+};
 
 ReactDOM.render(
     <React.StrictMode>
-        <Suspense fallback={<CircularProgress />}>
+        <Suspense fallback={<FallBackComponent />}>
             <I18nextProvider i18n={i18n}>
                 <BrowserRouter>
                     <ThemeProvider theme={theme}>
@@ -26,6 +32,6 @@ ReactDOM.render(
                 </BrowserRouter>
             </I18nextProvider>
         </Suspense>
-    </React.StrictMode>,
+    </React.StrictMode >,
     document.getElementById("root")
 );
