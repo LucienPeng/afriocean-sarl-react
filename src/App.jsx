@@ -1,9 +1,9 @@
 import "aos/dist/aos.css";
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import { ProductItem } from "./components/Product/ProductItem";
 import { Footer } from "./components/Footer";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useSearchParams } from "react-router-dom";
 import { NavBar } from "./components/Navbar/NavBar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutUsPage";
@@ -16,12 +16,11 @@ import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./components/NotFoundPage";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useProductList } from "./asset/productList";
-import { useLanguage } from "./utils/useLanguage";
 import { useTranslation } from "react-i18next";
 
 const App = () => {
     const { FISH_PRODUCTS, SEAFOOD_PRODUCTS } = useProductList();
-    const { searchParams, setSearchParams } = useLanguage();
+    const [searchParams, setSearchParams] = useSearchParams();
     const [banner, setBanner] = useState("");
     const homeRef = useRef();
     const aboutRef = useRef();
@@ -29,7 +28,7 @@ const App = () => {
     const contactRef = useRef();
     const trigger = useScrollTrigger({ threshold: 100 });
     const { i18n } = useTranslation();
-    const changeLanguageHandler = useCallback((lang) => i18n.changeLanguage(lang), [i18n]);
+    const languageSearchParam = searchParams.get('lang');
 
     useEffect(() => {
         AOS.init();
@@ -37,18 +36,8 @@ const App = () => {
     }, [trigger]);
 
     useEffect(() => {
-        const languageSearchParam = searchParams.get('lang');
-
-        if (languageSearchParam !== i18n.language) {
-            changeLanguageHandler(languageSearchParam);
-        }
-
-        const setLanguageParam = () => {
-            if (languageSearchParam !== i18n.language) setSearchParams({ lang: i18n.language });
-        };
-
-        return () => setLanguageParam();
-    }, [changeLanguageHandler, i18n.language, searchParams, setSearchParams]);
+        if (languageSearchParam !== i18n.language) setSearchParams({ lang: i18n.language });
+    }, [i18n.language, languageSearchParam, setSearchParams]);
 
     return (
         <>

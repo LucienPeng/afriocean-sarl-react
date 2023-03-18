@@ -7,11 +7,10 @@ import { useNavigation } from '../../utils/useNavigation';
 
 
 export const NavItems = (props) => {
-    const { navItem, scrollToHandler, activeLink, setActiveLink } = props;
+    const { navItem, navHandler, activeLink, setActiveLink } = props;
     const { pathname } = useLocation();
     const { navigationHandler } = useNavigation();
     const { i18n } = useTranslation();
-
 
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
@@ -19,7 +18,7 @@ export const NavItems = (props) => {
     const handleClose = () => setAnchorEl(null);
     const handleClick = (event, ref, url) => {
         setAnchorEl(event.currentTarget);
-        scrollToHandler(event, ref, url);
+        navHandler(ref, url);
     };
 
     const menuHandler = (id, lngCode, url) => {

@@ -24,7 +24,7 @@ export const NavBar = (props) => {
     const [activeLink, setActiveLink] = useState();
     const [mobileNavList, setMobileNavList] = useState(NAV_ITEMS);
 
-    const scrollToHandler = (event, ref, url) => {
+    const navHandler = (ref, url) => {
         if (ref) {
             setActiveLink(ref);
         }
@@ -77,12 +77,12 @@ export const NavBar = (props) => {
                         src='https://i.imgur.com/1UpdxEV.png'
                         alt='logo'
                         height={50}
-                        onClick={(event) => scrollToHandler(event, homeRef, '/')}
+                        onClick={() => navHandler(homeRef, '/')}
                         sx={{ cursor: 'pointer', flexGrow: 0, display: { xs: 'none', sm: 'block' } }}
                     />
                     <Stack direction='row' alignItems='center' justifyContent='center' spacing={5}>
                         {NAV_ITEMS.map((navItem, index) => (
-                            <NavItems key={index} navItem={navItem} activeLink={activeLink} setActiveLink={setActiveLink} scrollToHandler={scrollToHandler} />
+                            <NavItems key={index} navItem={navItem} activeLink={activeLink} setActiveLink={setActiveLink} navHandler={navHandler} />
                         ))}
                     </Stack>
                 </Stack >

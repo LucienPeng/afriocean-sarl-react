@@ -14,8 +14,8 @@ import { Stack } from "@mui/material";
 
 const FallBackComponent = () => {
     return (
-        <Stack width='100vw' heigh='100vh' justifyContent='center' alignItems='center'>
-            <CircularProgress />
+        <Stack width='100vw' minHeight='100vh' justifyContent='center' alignItems='center'>
+            <CircularProgress sx={{ top: '50%' }} />
         </Stack>
     );
 };

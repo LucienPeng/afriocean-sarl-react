@@ -26,28 +26,31 @@ export const Selector = (props) => {
             setCurrentTag(tag);
             if (tag === 'All') {
                 setProductList([]);
-                setSearchParams({ category: 'All' });
+                searchParams.set('category', 'All');
             } else {
                 setProductList([]);
+                searchParams.set('category', tag);
                 setSearchParams({ category: tag });
             }
+            setSearchParams(searchParams);
         }
-    }, [currentTag, setProductList, setSearchParams]);
+    }, [currentTag, searchParams, setProductList, setSearchParams]);
 
     useEffect(() => {
         if (!filteredCategory) {
-            setSearchParams({ category: 'All' });
+            searchParams.set('category', 'All');
             setProductList(data);
             setCurrentTag('All');
         } else if (filteredCategory === 'All') {
             setCurrentTag('All');
-            setSearchParams({ category: 'All' });
+            searchParams.set('category', 'All');
             setProductList(data);
         } else if (filteredCategory !== 'All') {
             setProductList(data.filter((product) => product.tags.includes(filteredCategory)));
             setCurrentTag(filteredCategory);
         }
-    }, [filteredCategory, setSearchParams, setProductList, data]);
+        setSearchParams(searchParams);
+    }, [filteredCategory, setSearchParams, setProductList, data, searchParams]);
 
     return (
         <Stack direction='row' justifyContent='center' alignItems='center' spacing={3} my={5}>
@@ -77,30 +80,30 @@ export const MobileSelector = (props) => {
             setCurrentTag(event.target.value);
             if (event.target.value === 'All') {
                 setProductList([]);
-                setSearchParams({ category: 'All' });
+                searchParams.set('category', 'All');
             } else {
                 setProductList([]);
-                setSearchParams({ category: event.target.value });
+                searchParams.set('category', event.target.value);
             }
+            setSearchParams(searchParams);
         }
-    }, [currentTag, setProductList, setSearchParams]);
+    }, [currentTag, searchParams, setProductList, setSearchParams]);
 
     useEffect(() => {
         if (!filteredCategory) {
-            setSearchParams({ category: 'All' });
+            searchParams.set('category', 'All');
             setProductList(data);
             setCurrentTag('All');
         } else if (filteredCategory === 'All') {
             setCurrentTag('All');
-            setSearchParams({ category: 'All' });
+            searchParams.set('category', 'All');
             setProductList(data);
-
         } else if (filteredCategory !== 'All') {
-
             setProductList(data.filter((product) => product.tags.includes(filteredCategory)));
             setCurrentTag(filteredCategory);
         }
-    }, [filteredCategory, setSearchParams, setProductList, data]);
+        setSearchParams(searchParams);
+    }, [filteredCategory, setSearchParams, setProductList, data, searchParams]);
 
     return (
         <Stack direction='row' justifyContent='center' alignItems='center' spacing={3} my={5}>
