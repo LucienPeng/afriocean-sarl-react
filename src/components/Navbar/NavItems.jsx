@@ -82,7 +82,7 @@ export const NavItems = (props) => {
                 aria-expanded={open ? 'true' : undefined}
                 disableRipple
             >
-                <Typography variant="h1" fontSize={18}
+                <Typography variant="h3" fontSize={18}
                     sx={{ fontWeight: activeLink === navItem.ref ? 700 : 400, color: { xs: 'primary.dark', md: activeLink === navItem.ref ? 'secondary.light' : 'common.white' } }}>
                     {navItem.title}
                 </Typography>

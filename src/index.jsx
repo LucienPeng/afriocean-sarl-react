@@ -5,11 +5,9 @@ import ReactDOM from "react-dom";
 import i18n from './i18n/i18n';
 import App from "./App";
 import CircularProgress from '@mui/material/CircularProgress';
-import { ThemeProvider } from '@emotion/react';
 import { I18nextProvider } from 'react-i18next';
 import { BrowserRouter } from "react-router-dom";
 import { ScrollToTop } from './components/ScrollToTop';
-import { theme } from './styles/themeOptions';
 import { Stack } from "@mui/material";
 
 const FallBackComponent = () => {
@@ -25,10 +23,8 @@ ReactDOM.render(
         <Suspense fallback={<FallBackComponent />}>
             <I18nextProvider i18n={i18n}>
                 <BrowserRouter>
-                    <ThemeProvider theme={theme}>
-                        <ScrollToTop />
-                        <App />
-                    </ThemeProvider>
+                    <ScrollToTop />
+                    <App />
                 </BrowserRouter>
             </I18nextProvider>
         </Suspense>

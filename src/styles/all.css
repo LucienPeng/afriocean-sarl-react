@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'YuPearl';
+  src: url("../asset/fonts/YuPearl.woff");
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;

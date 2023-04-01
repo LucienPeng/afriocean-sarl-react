@@ -10,13 +10,12 @@ export const Introduction = (props) => {
     const redirectHandle = () => navigationHandler(`/about`);
 
     return (
-        <Stack p={5} bgcolor='#224267' component='div' ref={aboutRef} justifyContent='center' alignItems='center' data-aos="fade-in">
+        <Stack p={5} bgcolor='#224267' width='100%' component='div' ref={aboutRef} justifyContent='center' alignItems='center' data-aos="fade-in">
             <Stack direction='column' justifyContent='center' alignItems='center' >
                 <Stack direction='column' width='80%' spacing={1.5}>
                     <Typography alignSelf='flex-start' variant="h1" color="common.white" fontSize={70} textAlign='start' >
                         “
                     </Typography>
-
                     <Typography component='span' variant="body1" color="common.white" textAlign='start' >
                         {t('founderState.paragraph1')}
                     </Typography>
@@ -26,7 +25,7 @@ export const Introduction = (props) => {
                     <Typography component='span' variant="body1" color="common.white" textAlign='start' >
                         {t('founderState.paragraph3')}
                     </Typography>
-                    <Typography fontWeight={700} variant="h6" color="common.white" textAlign='end' mt={2}>
+                    <Typography fontWeight={700} variant="body1" color="common.white" textAlign='end' mt={2}>
                         {t('founderState.paragraph4')}
                     </Typography>
                     <Typography alignSelf='flex-end' variant="h1" color="common.white" fontSize={70} textAlign='end'>

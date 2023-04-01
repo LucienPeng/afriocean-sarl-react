@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.659db156.css",
-    "main.js": "/static/js/main.fd29a8a3.js",
+    "main.css": "/static/css/main.b79cfd0f.css",
+    "main.js": "/static/js/main.9760fe2a.js",
     "static/media/atlanticPomfret.png": "/static/media/atlanticPomfret.e120a7ead9c776b5d5ad.png",
     "static/media/5.jpg": "/static/media/5.16908e595476f2378d1d.jpg",
     "static/media/4.jpg": "/static/media/4.0f6375cf2f29d99ad8f6.jpg",
+    "static/media/YuPearl.woff": "/static/media/YuPearl.b5351c014804d7bfa00b.woff",
     "static/media/whiteTuna.png": "/static/media/whiteTuna.f655dc3407aad63b83db.png",
     "static/media/heroBanner5.jpg": "/static/media/heroBanner5.e95c7d60a62bf0e2dfc0.jpg",
     "static/media/6.jpg": "/static/media/6.d624362dae7cd39f3cb5.jpg",
@@ -60,11 +61,11 @@
     "static/media/locaux3.jpeg": "/static/media/locaux3.3a3f372197815d452ed6.jpeg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.659db156.css.map": "/static/css/main.659db156.css.map",
-    "main.fd29a8a3.js.map": "/static/js/main.fd29a8a3.js.map"
+    "main.b79cfd0f.css.map": "/static/css/main.b79cfd0f.css.map",
+    "main.9760fe2a.js.map": "/static/js/main.9760fe2a.js.map"
   },
   "entrypoints": [
-    "static/css/main.659db156.css",
-    "static/js/main.fd29a8a3.js"
+    "static/css/main.b79cfd0f.css",
+    "static/js/main.9760fe2a.js"
   ]
 }

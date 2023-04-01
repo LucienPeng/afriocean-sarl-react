@@ -1,5 +1,5 @@
 import "aos/dist/aos.css";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import AOS from "aos";
 import { ProductItem } from "./components/Product/ProductItem";
 import { Footer } from "./components/Footer";
@@ -16,9 +16,13 @@ import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./components/NotFoundPage";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useProductList } from "./asset/productList";
+import { useTranslation } from "react-i18next";
+import { ThemeProvider } from '@emotion/react';
+import { defaultTheme, taiwanessTheme } from './styles/themeOptions';
 
 const App = () => {
     const { FISH_PRODUCTS, SEAFOOD_PRODUCTS } = useProductList();
+    const { i18n } = useTranslation();
     const [banner, setBanner] = useState("");
     const homeRef = useRef();
     const aboutRef = useRef();
@@ -26,21 +30,27 @@ const App = () => {
     const contactRef = useRef();
     const trigger = useScrollTrigger({ threshold: 100 });
 
+    const currentTheme = useMemo(() => {
+        if (i18n.language !== 'zh-TW') {
+            return defaultTheme;
+        } else {
+            return taiwanessTheme;
+        }
+    }, [i18n.language]);
 
     useEffect(() => {
         AOS.init();
         AOS.refresh();
     }, [trigger]);
 
-
-
     return (
-        <>
+        <ThemeProvider theme={currentTheme}>
             <NavBar
                 homeRef={homeRef}
                 aboutRef={aboutRef}
                 productRef={productRef}
-                contactRef={contactRef} />
+                contactRef={contactRef}
+            />
             <Routes>
                 <Route
                     path="/"
@@ -70,12 +80,10 @@ const App = () => {
                     path="/contact"
                     element={<ContactPage banner={banner} setBanner={setBanner} />}
                 />
-
                 <Route path="/*" element={<NotFoundPage />} />
-
             </Routes>
             <Footer />
-        </>
+        </ThemeProvider>
     );
 };
 

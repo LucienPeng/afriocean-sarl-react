@@ -25,7 +25,7 @@ export const Contact = () => {
                         <CardContent>
                             <Stack justifyContent='center' alignItems='center' spacing={5}>
                                 <Stack justifyContent='center' alignItems='center' textAlign='center'>
-                                    <Typography variant="h1" color="common.white" fontWeight={700} fontSize={18}>
+                                    <Typography variant="h3" color="common.white" fontWeight={700} fontSize={18}>
                                         {t(`contacts.contact${index + 1}`)}
                                     </Typography>
                                     <Typography variant="body1" color="common.white">
@@ -46,7 +46,7 @@ export const Contact = () => {
                     <CardContent>
                         <Stack justifyContent='center' alignItems='center' spacing={5}>
                             <Stack justifyContent='center' alignItems='center' textAlign='center'>
-                                <Typography variant="h1" color="common.white" fontWeight={700} fontSize={18}>
+                                <Typography variant="h3" color="common.white" fontWeight={700} fontSize={18}>
                                     {t('contacts.email')}
                                 </Typography>
 
