@@ -1,10 +1,12 @@
 import { Stack, Typography } from "@mui/material";
 import { useNavigation } from "../../utils/useNavigation";
 import { StyledButton } from "../UI/StyledComponents";
+import { useHomePageTranslation } from "../../i18n/useTranslations";
 
 export const Introduction = (props) => {
     const { aboutRef } = props;
     const { navigationHandler } = useNavigation();
+    const { t } = useHomePageTranslation();
     const redirectHandle = () => navigationHandler(`/about`);
 
     return (
@@ -14,25 +16,18 @@ export const Introduction = (props) => {
                     <Typography alignSelf='flex-start' variant="h1" color="common.white" fontSize={70} textAlign='start' >
                         “
                     </Typography>
+
                     <Typography component='span' variant="body1" color="common.white" textAlign='start' >
-                        AFRIOCAEN is a team dedicated itself to adding value to local natural
-                        resources, especially the ones out of the ocean.
-                        With this target, both the suppliers and clients will be satisfied, and the team
-                        will have a great sense of achievement.
-                        We hope this virtuous cycle turns eventually socially and environmentally.
+                        {t('founderState.paragraph1')}
                     </Typography>
                     <Typography component='span' variant="body1" color="common.white" textAlign='start' >
-                        AFRIOCAEN vows to make things better, here a better place and everyone
-                        conncerned better off.
-                        And most of all, we work hard to provide our customers with the best
-                        quality and lowest costs products.
+                        {t('founderState.paragraph2')}
                     </Typography>
                     <Typography component='span' variant="body1" color="common.white" textAlign='start' >
-                        We invite you to be part of this, no matter who you are, where you come
-                        from.
+                        {t('founderState.paragraph3')}
                     </Typography>
                     <Typography fontWeight={700} variant="h6" color="common.white" textAlign='end' mt={2}>
-                        2023/1/13 Diamniadio, Senegal
+                        {t('founderState.paragraph4')}
                     </Typography>
                     <Typography alignSelf='flex-end' variant="h1" color="common.white" fontSize={70} textAlign='end'>
                         ”
@@ -40,7 +35,7 @@ export const Introduction = (props) => {
 
                 </Stack>
                 <StyledButton onClick={redirectHandle} variant="contained" color="secondary">
-                    Know about us
+                    {t('actionButtons.knowMore')}
                 </StyledButton>
             </Stack>
         </Stack >

@@ -4,6 +4,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { useHomePageTranslation } from "../../i18n/useTranslations";
 
 export const CONTACT_INFO = [
     { title: 'Business Hour', detail: 'Monday – Friday', surplusDetail: '09h-17h', icon: <AccessTimeIcon sx={{ color: 'common.white', fontSize: '40px' }} /> },
@@ -13,6 +14,8 @@ export const CONTACT_INFO = [
 ];
 
 export const Contact = () => {
+    const { t } = useHomePageTranslation();
+
     return (
         <Grid mt={5} sx={{ bgcolor: 'primary.dark' }} container spacing={5} justifyContent='center'>
             {CONTACT_INFO.map((contact, index) => (
@@ -23,7 +26,7 @@ export const Contact = () => {
                             <Stack justifyContent='center' alignItems='center' spacing={5}>
                                 <Stack justifyContent='center' alignItems='center' textAlign='center'>
                                     <Typography variant="h1" color="common.white" fontWeight={700} fontSize={18}>
-                                        {contact.title}
+                                        {t(`contacts.contact${index + 1}`)}
                                     </Typography>
                                     <Typography variant="body1" color="common.white">
                                         {contact.detail}
@@ -44,7 +47,7 @@ export const Contact = () => {
                         <Stack justifyContent='center' alignItems='center' spacing={5}>
                             <Stack justifyContent='center' alignItems='center' textAlign='center'>
                                 <Typography variant="h1" color="common.white" fontWeight={700} fontSize={18}>
-                                    Email
+                                    {t('contacts.email')}
                                 </Typography>
 
                                 <Box sx={{ overflowWrap: 'break-word', width: '8rem' }}>

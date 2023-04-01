@@ -7,5 +7,41 @@
         "product": "Produits",
         "contact": "Contacts",
         "language": "Langues"
+    },
+    "founderState": {
+        "paragraph1": "AFRIOCAEN est une équipe dédiée à ajouter de la valeur aux ressources naturelles locales, en particulier celles provenant de l'océan. Dans cet objectif, à la fois les fournisseurs et les clients seront satisfaits, et l'équipe aura un grand sentiment d'accomplissement. Nous espérons que ce cercle vertueux deviendra finalement social et environnemental.",
+        "paragraph2": "AFRIOCAEN s'engage à améliorer les choses, à créer un monde meilleur et à rendre tout le monde concerné meilleur. Et surtout, nous travaillons dur pour fournir à nos clients des produits de la meilleure qualité et à des coûts les plus bas.",
+        "paragraph3": "Nous vous invitons à faire partie de cela, peu importe qui vous êtes, d'où vous venez.",
+        "paragraph4": "2023/1/13 Diamniadio, Senegal"
+    },
+    "business": {
+        "title": "Qu'est-ce que  nous faissons",
+        "services": {
+            "service1": "Produits congelés",
+            "service2": "Produits elaborés",
+            "service3": "Produits personnalisés"
+        }
+    },
+    "products": {
+        "title": "Produits",
+        "productList": {
+            "product1": "Sardinelle Ronde",
+            "product2": "Chinchard Noir",
+            "product3": "Lagna-Lagna",
+            "product4": "Sardinelle Plate",
+            "product5": "Chinchard Blanc",
+            "product6": "Maquereau Common"
+        }
+    },
+    "contacts": {
+        "contact1": "Horaire",
+        "contact2": "Adress",
+        "contact3": "Numéro téléphone",
+        "contact4": "What's App",
+        "email": "Email"
+    },
+    "actionButtons": {
+        "knowMore": "En savoir plus",
+        "seeMore": "En voir plus"
     }
 }

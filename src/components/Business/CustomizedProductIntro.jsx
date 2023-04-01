@@ -3,9 +3,11 @@ import { StyledButton } from "../UI/StyledComponents";
 import { useNavigation } from "../../utils/useNavigation";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import { CUSTOMIZED_PRODUCTS } from '../../asset/customizedProduct';
+import { useBusinessPagesTranslation } from "../../i18n/useTranslations";
 
 const ProductMasonryImageList = () => {
     const { isMobileView } = useDeviceMetadata();
+    const { t } = useBusinessPagesTranslation();
     return (
         <Box sx={{ width: '100%', height: '100%', overflowY: 'scroll' }}>
             <ImageList variant="masonry" cols={isMobileView ? 2 : 4} gap={10}>
@@ -20,7 +22,7 @@ const ProductMasonryImageList = () => {
                             loading="lazy"
                             sx={{ opacity: 0.9, "&:hover": { transform: 'scale(1.1)', transition: '0.5s all ease-out' } }}
                         />
-                        <ImageListItemBar position="below" title={item.title} sx={{ textAlign: 'center' }} />
+                        <ImageListItemBar position="below" title={t(`elaboratedProduct.products.product${index+1}`)} sx={{ textAlign: 'center' }} />
                     </ImageListItem>
                 ))}
             </ImageList>
@@ -31,6 +33,8 @@ const ProductMasonryImageList = () => {
 export const CustomizedProductIntro = () => {
     const { navigationHandler } = useNavigation();
     const { isMobileView } = useDeviceMetadata();
+    const { t } = useBusinessPagesTranslation();
+
 
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center' minHeight='100vh' spacing={10} mt={isMobileView && '50px'}>
@@ -39,28 +43,28 @@ export const CustomizedProductIntro = () => {
 
                     <Stack spacing={3}>
                         <Typography variant="h1" color="initial" fontSize='28px'>
-                            Frozen Fish & Seafood Processing
+                            {t('elaboratedProduct.resume')}
                         </Typography>
                         <Typography variant="body1" color="initial">
-                            Our factory is qualified with European standards hygienic control. In order to ensure the hygiene and the quality, HACCP is also applied and complied to the daily routine. On top of that we build up a highly qualified and well-trained worker team for fish processing.
+                            {t('elaboratedProduct.description')}
                         </Typography>
                     </Stack>
                     <Stack spacing={2}>
                         <Typography variant="h1" color="initial" fontSize='28px'>
-                            What We Provide
+                            {t('elaboratedProduct.subTitle')}
                         </Typography>
                         <List>
-                            <ListItemText>Whole fish</ListItemText>
-                            <ListItemText>Gutted whole fish (Drawn fish)</ListItemText>
-                            <ListItemText>Scaled, gutted and ready-to-cook fish (Dressed fish)</ListItemText>
-                            <ListItemText>Fish fillets / Butterfly fillets / Steaks / Loins</ListItemText>
-                            <ListItemText>Fish sticks</ListItemText>
-                            <ListItemText>Shucked and cooked shellfish meat</ListItemText>
-                            <ListItemText>Fish roe</ListItemText>
+                            <ListItemText> {t('elaboratedProduct.products.product1')}</ListItemText>
+                            <ListItemText> {t('elaboratedProduct.products.product2')}</ListItemText>
+                            <ListItemText> {t('elaboratedProduct.products.product3')}</ListItemText>
+                            <ListItemText> {t('elaboratedProduct.products.product4')}</ListItemText>
+                            <ListItemText> {t('elaboratedProduct.products.product5')}</ListItemText>
+                            <ListItemText> {t('elaboratedProduct.products.product6')}</ListItemText>
+                            <ListItemText> {t('elaboratedProduct.products.product7')}</ListItemText>
                         </List>
                     </Stack>
 
-                    <StyledButton variant="contained" sx={{ alignSelf: 'center' }} onClick={() => navigationHandler('/')}>Back to home page</StyledButton>
+                    <StyledButton variant="contained" sx={{ alignSelf: 'center' }} onClick={() => navigationHandler('/')}>{t('redirect')}</StyledButton>
                 </Stack>
 
             </Grid>

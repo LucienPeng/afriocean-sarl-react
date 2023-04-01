@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { keyframes } from "@emotion/react";
 import { useTheme } from "@mui/material/styles";
-import { useHomepageTranslation } from "../../i18n/useTranslations";
+import { useHomePageTranslation } from "../../i18n/useTranslations";
 import SwiperCore, { Autoplay, Pagination, EffectFade, Zoom } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -36,7 +36,7 @@ const zoomAnimation = keyframes`
 
 export const HeroBanner = () => {
     const [isActiveIndex, setActiveIndex] = useState(0);
-    const { t } = useHomepageTranslation();
+    const { t } = useHomePageTranslation();
     const theme = useTheme();
     const zoomHandler = (e) => setActiveIndex(e.activeIndex);
     SwiperCore.use([EffectFade]);

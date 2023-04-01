@@ -1,7 +1,10 @@
 import { Typography, Grid, Stack, Card, CardMedia, ListItemText, List } from "@mui/material";
+import { useAboutUsPageTranslation } from "../../i18n/useTranslations";
+import personnel from '../../asset/images/intro/intro5.jpg';
 
 
 export const Introduction = () => {
+    const { t } = useAboutUsPageTranslation();
     return (
         <Grid mb={10} container spacing={10} display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
             <Grid mt={10} item xs={10} sm={12} md={10} data-aos="fade-up">
@@ -9,29 +12,19 @@ export const Introduction = () => {
                     <Grid item xs={12} sm={5} md={5} justifyContent='center' alignItems='center'>
                         <Card>
                             <CardMedia
-                                sx={{ height: 500, backgroundPosition: 'top' }}
-                                image="https://i.imgur.com/a2usFiI.jpg"
+                                sx={{ height: 500, width: '100%', backgroundPosition: 'top' }}
+                                image={personnel}
                             />
                         </Card>
                     </Grid>
                     <Grid item xs={10} sm={5} md={5}>
                         <Stack spacing={2}>
-                            <Typography variant="h2" fontWeight={700} letterSpacing={0} color="primary.primary">Qui Sommes-Nous ?</Typography>
+                            <Typography variant="h2" fontWeight={700} letterSpacing={0} color="primary.primary">{t('subTitle1')}</Typography>
                             <Typography variant="body1" color="text.primary">
-                                Au Sénégal, une des régions les plus poissonneuses du monde, le
-                                secteur de la pêche, en progression constante, joue un rôle
-                                capital dans l’économie nationale. Avec un taux de captures
-                                annuelles de 450 000 tonnes l’an, le Sénégal est le deuxième pays
-                                producteur de la sous région, derrière le Nigéria (530 000 t). La
-                                pêche est aussi la première branche exportatrice du pays. Le
-                                principal produit halieutique exporté est le poisson frais (79 %),
-                                suivi par les conserves (5 %), les produits transformés (4 %).
+                                {t('section1.paragraph1')}
                                 <br />
                                 <br />
-                                C’est dans cette logique que AFRIOCEAN, une entreprise franche
-                                d’exportation de produits halieutiques a été créé en 2013. Afin
-                                d’entrer dans la politique économique dans laquelle est lancé le
-                                SENEGAL.
+                                {t('section1.paragraph2')}
                             </Typography>
                         </Stack>
                     </Grid>
@@ -41,19 +34,10 @@ export const Introduction = () => {
             <Grid item xs={10} data-aos="fade-up" justifyContent='center' alignItems='center'>
                 <Stack justifyContent='center' alignItems='center' spacing={2}>
                     <Typography variant="body1" color="text.dark">
-                        Notre but est de fournir à nos clients des produits de la
-                        mer frais et Boxersifiés en fonction de nos marchés. Cela grâce à
-                        des techniques de productions de haute qualité, à basse
-                        température pour préserver la bonne qualité et une chaîne de froid
-                        maitrisée. Nous essayons toujours d’améliorer nos produits pour
-                        atteindre plus de segments du marché. Nous leur proposons un
-                        produit de qualité avec une très grande valeur ajoutée et à un
-                        prix défiant toute concurrence.
+                        {t('section1.paragraph3')}
                     </Typography>
                     <Typography variant="body1" color="text.dark" fontStyle='italic'>
-                        AFRIOCEAN travaille aussi avec des clients un peu partout
-                        dans le monde à savoir : Taiwan, Corée, Chine, Afrique du Sud,
-                        Côte d’Ivoire, Guinée, Burkina…
+                        {t('section1.paragraph4')}
                     </Typography>
                 </Stack>
             </Grid>
@@ -62,20 +46,12 @@ export const Introduction = () => {
                 <Grid container spacing={15} alignItems='center' justifyContent='center'>
                     <Grid item xs={11} sm={5} md={5} justifyContent='center' alignItems='center'>
                         <Stack spacing={2}>
-                            <Typography variant="h2" letterSpacing={0} fontWeight={700} color="text.primary">Historie</Typography>
+                            <Typography variant="h2" letterSpacing={0} fontWeight={700} color="text.primary">{t('subTitle2')}</Typography>
                             <Typography variant="body1" color="text.primary">
-                                AFRIOCEAN a été créé en 2013 par M. CHEN CHUNG-HSIN (JOHN CHEN).
-                                L’entreprise était située à Yarakh et travaillée en sous traitance
-                                avec une autre entreprise de la place. AFRIOCEAN n’avait que ses
-                                bureaux commerciaux pour la vente et l’expédition de ses produits
-                                un peu partout dans le monde.
+                                {t('section2.paragraph1')}
                                 <br />
                                 <br />
-                                Dans un souci d’expansion, AFRIOCEAN entame la construction d’une
-                                usine de transformations de produits halieutiques dans le pôle
-                                urbain en plein essor de DIAMNIADIO en 2017. L’usine a été
-                                inaugurée le 10 Février 2018 avec toutes les autorités compétentes
-                                qui évoluent dans ce secteur d’activité.
+                                {t('section2.paragraph2')}
                             </Typography>
                         </Stack>
                     </Grid>
@@ -104,18 +80,18 @@ export const Introduction = () => {
 
                     <Grid item xs={11} sm={5} md={6} justifyContent='center' alignItems='center'>
                         <Typography variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
-                            Avantages Compétitifs
+                            {t('subTitle3')}
                         </Typography>
                         <List>
-                            <ListItemText>Vitesse de la congélation (Arêtes des cristaux)</ListItemText>
-                            <ListItemText>Température</ListItemText>
-                            <ListItemText>constante Emballage avec haute qualité</ListItemText>
-                            <ListItemText>Bonne pratique du QHSE</ListItemText>
+                            <ListItemText>{t('section3.paragraph1')}</ListItemText>
+                            <ListItemText>{t('section3.paragraph2')}</ListItemText>
+                            <ListItemText>{t('section3.paragraph3')}</ListItemText>
+                            <ListItemText>{t('section3.paragraph4')}</ListItemText>
+                            <ListItemText>{t('section3.paragraph5')}</ListItemText>
                         </List>
                     </Grid>
                 </Grid>
             </Grid>
-
         </Grid >
     );
 };

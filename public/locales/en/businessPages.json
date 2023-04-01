@@ -1,0 +1,28 @@
+{
+    "frozenProduct": {
+        "resume": "AFRIOCEAN’s location is in one of the world’s most important fishing ports so that allows us to offer a wide variety of products.",
+        "description": "To provide the highest quality, a consistent and optimal product flow from capture to freezing is what we are committed to. We supply various kinds of frozen fish and seafood :",
+        "products": {
+            "product1": "Wild Fish (White Fish / Blue Fish)",
+            "product2": "Cephalopods",
+            "product3": "Cymbium",
+            "product4": "Baits",
+            "product5": "Processed Products"
+        }
+    },
+    "elaboratedProduct": {
+        "resume": "Frozen Fish & Seafood Processing",
+        "description": "Our factory is qualified with European standards hygienic control. In order to ensure the hygiene and the quality, HACCP is also applied and complied to the daily routine. On top of that we build up a highly qualified and well-trained worker team for fish processing.",
+        "subTitle": "What We Provide",
+        "products": {
+            "product1": "Whole fish",
+            "product2": "Gutted whole fish (Drawn fish)",
+            "product3": "Scaled, gutted and ready-to-cook fish (Dressed fish)",
+            "product4": "Fish fillets / Butterfly fillets / Steaks / Loins",
+            "product5": "Fish sticks",
+            "product6": "Shucked and cooked shellfish meat",
+            "product7": "Fish roll"
+        }
+    },
+    "redirect": "Back to home page"
+}

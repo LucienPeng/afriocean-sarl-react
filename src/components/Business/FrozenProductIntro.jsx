@@ -2,12 +2,13 @@ import { Stack, Grid, Box, List, ListItemText, Typography } from "@mui/material"
 import { StyledButton } from "../UI/StyledComponents";
 import { useNavigation } from "../../utils/useNavigation";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
+import { useBusinessPagesTranslation } from "../../i18n/useTranslations";
 import placeHoderImage from '../../asset/images/intro/intro4.jpg';
 
 export const FrozenProductIntro = () => {
     const { navigationHandler } = useNavigation();
     const { isMobileView } = useDeviceMetadata();
-
+    const { t } = useBusinessPagesTranslation();
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center' minHeight='100vh' spacing={10} mt={isMobileView && '50px'}>
             <Grid item xs={11} sm={6} md={5}>
@@ -15,23 +16,24 @@ export const FrozenProductIntro = () => {
                     <Box>
                         <Stack spacing={5}>
                             <Typography variant="h1" color="initial" fontSize='28px'>
-                                <Typography variant="h1" fontSize='32px' color="initial" component='span'>AFRIOCEAN’s </Typography>
-                                location is in one of the world’s most important fishing ports so that allows us to offer a wide variety of products.
+                                <Typography variant="h1" fontSize='32px' color="initial" component='span'>
+                                    AFRIOCEAN’s
+                                </Typography>
+                                {t('frozenProduct.resume')}
                             </Typography>
-                            <Typography variant="body1" color="initial">
-                                To provide the highest quality, a consistent and optimal product flow from capture to freezing is what we are committed to.
-                                We supply various kinds of frozen fish and seafood
+                            <Typography variant="body1" color="initial" fontWeight={400}>
+                                {t('frozenProduct.description')}
                             </Typography>
                         </Stack>
                         <List>
-                            <ListItemText>Wild Fish (White Fish / Blue Fish)</ListItemText>
-                            <ListItemText>Cephalopods</ListItemText>
-                            <ListItemText>Cymbium</ListItemText>
-                            <ListItemText>Baits</ListItemText>
-                            <ListItemText>Processed Products</ListItemText>
+                            <ListItemText>{t('frozenProduct.products.product1')}</ListItemText>
+                            <ListItemText>{t('frozenProduct.products.product2')}</ListItemText>
+                            <ListItemText>{t('frozenProduct.products.product3')}</ListItemText>
+                            <ListItemText>{t('frozenProduct.products.product4')}</ListItemText>
+                            <ListItemText>{t('frozenProduct.products.product5')}</ListItemText>
                         </List>
                     </Box>
-                    <StyledButton variant="contained" sx={{ alignSelf: 'center' }} onClick={() => navigationHandler('/')}>Back to home page</StyledButton>
+                    <StyledButton variant="contained" sx={{ alignSelf: 'center' }} onClick={() => navigationHandler('/')}>{t('redirect')}</StyledButton>
                 </Stack>
 
             </Grid>

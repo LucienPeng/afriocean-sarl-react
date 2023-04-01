@@ -10,7 +10,6 @@ import equipmemt4 from '../../asset/images/equipment/4.jpg';
 import equipmemt5 from '../../asset/images/equipment/5.jpg';
 import equipmemt6 from '../../asset/images/equipment/6.jpg';
 import equipmemt7 from '../../asset/images/equipment/7.jpg';
-import equipmemt8 from '../../asset/images/equipment/8.jpg';
 import locaux1 from '../../asset/images/locaux/locaux1.jpg';
 import locaux2 from '../../asset/images/locaux/locaux2.jpeg';
 import locaux3 from '../../asset/images/locaux/locaux3.jpeg';
@@ -22,15 +21,10 @@ import ligne3 from '../../asset/images/ligne de production/3.jpg';
 import ligne4 from '../../asset/images/ligne de production/4.jpg';
 import ligne5 from '../../asset/images/ligne de production/5.jpg';
 import ligne6 from '../../asset/images/ligne de production/6.jpg';
-import ligne7 from '../../asset/images/ligne de production/7.jpg';
 
 
-const EQUIPMENTS = [
-    equipmemt1, equipmemt2, equipmemt3, equipmemt4, equipmemt5, equipmemt6, equipmemt7, equipmemt8
-];
-
-const LIGNES = [ligne1, ligne2, ligne3, ligne4, ligne5, ligne6, ligne7];
-
+const EQUIPMENTS = [equipmemt1, equipmemt2, equipmemt3, equipmemt4, equipmemt5, equipmemt6, equipmemt7];
+const LIGNES = [ligne1, ligne2, ligne3, ligne4, ligne5, ligne6];
 const LOCAUX = [locaux1, locaux2, locaux3, locaux4, locaux5];
 
 export const Equipment = () => {

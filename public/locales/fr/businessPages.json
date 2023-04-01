@@ -1,0 +1,28 @@
+{
+    "frozenProduct": {
+        "resume": "AFRIOCEAN’s location is in one of the world’s most important fishing ports so that allows us to offer a wide variety of products.",
+        "description": "To provide the highest quality, a consistent and optimal product flow from capture to freezing is what we are committed to. We supply various kinds of frozen fish and seafood:",
+        "products": {
+            "product1": "Poissons sauvages (poissons blancs / poissons bleus)",
+            "product2": "Céphalopodes",
+            "product3": "Cymbium",
+            "product4": "Appâts",
+            "product5": "Produits transformés"
+        }
+    },
+    "elaboratedProduct": {
+        "resume": "Traitement de poissons et fruits de mer surgelés",
+        "description": "Notre usine est qualifiée selon les normes européennes de contrôle d'hygiène. Afin de garantir l'hygiène et la qualité, nous appliquons également le HACCP à notre routine quotidienne. De plus, nous avons constitué une équipe de travailleurs hautement qualifiés et bien formés pour le traitement des poissons.",
+        "subTitle": "Ce que nous proposons",
+        "products": {
+            "product1": "Poissons entiers",
+            "product2": "Poissons vidés (poissons éviscérés)",
+            "product3": "Poissons écailles enlevées, vidés et prêts à cuire",
+            "product4": "Filets de poisson / filets papillon / tranches / darnes",
+            "product5": "Bâtonnets de poisson",
+            "product6": "Chair de coquillages décortiquée et cuite",
+            "product7": "Rouleau de poisson"
+        }
+    },
+    "redirect": "Retourne à la home"
+}

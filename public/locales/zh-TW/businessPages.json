@@ -1,0 +1,28 @@
+{
+    "frozenProduct": {
+        "resume": "AFRIOCEAN 的地理位置位於世界上最重要的漁獲產地之一，這使我們能夠提供各種各樣的海鮮產品。",
+        "description": "從捕獲到冷凍，我們致力於提供最優質、最穩定和最優化的產品流程。我們供應各種類型的冷凍魚類和海鮮：",
+        "products": {
+            "product1": "野生魚類",
+            "product2": "頭足類",
+            "product3": "螺貝類",
+            "product4": "餌料",
+            "product5": "水產加工產品"
+        }
+    },
+    "elaboratedProduct": {
+        "resume": "冷凍魚類及海鮮加工",
+        "description": "我們的工廠符合歐洲標準的衛生控制要求。為了確保衛生和品質，每天的工作日常更是遵循 HACCP 標準。此外，我們更建立了一個經過良好培訓的高效率加工團隊。",
+        "subTitle": "我們提供的產品包括：",
+        "products": {
+            "product1": "全魚",
+            "product2": "去內臟",
+            "product3": "三去(去鱗、去鰓、去內臟)",
+            "product4": "魚片 / 蝴蝶魚片 / 魚排 / 魚柳",
+            "product5": "魚條",
+            "product6": "去殼並煮熟的螺肉",
+            "product7": "魚卷"
+        }
+    },
+    "redirect": "回到首頁"
+}

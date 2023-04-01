@@ -1,11 +1,11 @@
-import { useHomepageTranslation } from "../../i18n/useTranslations";
+import { useHomePageTranslation } from "../../i18n/useTranslations";
 import TranslateIcon from '@mui/icons-material/Translate';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import SetMealIcon from '@mui/icons-material/SetMeal';
 import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 
 export const useNavConfig = () => {
-    const { t } = useHomepageTranslation();
+    const { t } = useHomePageTranslation();
 
     const PRODUCT_NAV_ITEMS = [
         { title: 'Fish', url: 'fish' },

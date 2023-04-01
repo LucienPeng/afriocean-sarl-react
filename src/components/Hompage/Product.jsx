@@ -1,13 +1,14 @@
 import { Stack, Typography, Card, CardMedia, CardContent, Grid } from "@mui/material";
 import { StyledButton } from '../UI/StyledComponents';
-
+import { useNavigation } from "../../utils/useNavigation";
+import { useHomePageTranslation } from "../../i18n/useTranslations";
 import roundSardinella from '../../asset/images/fish/roundSardinella.png';
 import maseiranSardinella from '../../asset/images/fish/maseiranSardinella.png';
 import commonMackerel from '../../asset/images/fish/commonMackerel.png';
 import atlanticBumper from '../../asset/images/fish/atlanticBumper.png';
 import cuneneHorseMackerel from '../../asset/images/fish/cuneneHorseMackerel.png';
 import atlanticHorseMackerel from '../../asset/images/fish/atlanticHorseMackerel.png';
-import { useNavigation } from "../../utils/useNavigation";
+
 
 const PRODUCTS_SECTIONS = [
     {
@@ -52,15 +53,15 @@ const PRODUCTS_SECTIONS = [
 
 export const Product = (props) => {
     const { navigationHandler } = useNavigation();
-    let { productRef } = props;
-
+    const { productRef } = props;
+    const { t } = useHomePageTranslation();
     const redirectHandler = (url) => navigationHandler(`/product/fish/${url}`);
     const redirectProductPageHandler = () => navigationHandler(`/product`);
 
 
     return (
         <Stack ref={productRef} minHeight='70vh' justifyContent='center' alignItems='center'>
-            <Typography mt={10} variant="h2" fontWeight={700} color="text.primary">Products</Typography>
+            <Typography mt={10} variant="h2" fontWeight={700} color="text.primary">{t('products.title')}</Typography>
             <Grid width='80%' container spacing={5} my={5} justifyContent='center' alignItems='center'>
                 {PRODUCTS_SECTIONS.map((product, index) => (
                     <Grid key={index} item xs={10} md={4}>
@@ -69,7 +70,7 @@ export const Product = (props) => {
                                 <CardMedia component="img" image={product.img}
                                     sx={{ cursor: 'pointer', "&:hover": { transform: 'scale(1.1)', transition: '0.5s all ease-out' } }}
                                     onClick={redirectHandler.bind(this, product.url)} />
-                                <Typography variant="h6" textAlign='center' fontWeight={700} color="text.primary">{product.en}
+                                <Typography variant="h6" textAlign='center' fontWeight={700} color="text.primary">{t(`products.productList.product${index + 1}`)}
                                     <Typography component='span' variant="h6" color="text.primary" ml={1}>
                                         {`(${product.scientificName})`}
                                     </Typography>
@@ -79,7 +80,7 @@ export const Product = (props) => {
                     </Grid>
                 ))}
             </Grid>
-            <StyledButton onClick={redirectProductPageHandler} sx={{ my: 5 }} variant="contained" color="secondary">See more</StyledButton>
+            <StyledButton onClick={redirectProductPageHandler} sx={{ my: 5 }} variant="contained" color="secondary">{t('actionButtons.seeMore')}</StyledButton>
         </Stack >
     );
 };

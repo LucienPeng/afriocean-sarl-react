@@ -7,5 +7,41 @@
         "product": "Products",
         "contact": "Contacts",
         "language": "Languages"
+    },
+    "founderState": {
+        "paragraph1": "AFRIOCAEN is a team dedicated itself to adding value to local natural resources, especially the ones out of the ocean. With this target, both the suppliers and clients will be satisfied, and the team will have a great sense of achievement. We hope this virtuous cycle turns eventually socially and environmentally.",
+        "paragraph2": "AFRIOCAEN vows to make things better, here a better place and everyone conncerned better off. And most of all, we work hard to provide our customers with the best quality and lowest costs products.",
+        "paragraph3": "We invite you to be part of this, no matter who you are, where you come from.",
+        "paragraph4": "2023/1/13 Diamniadio, Senegal"
+    },
+    "business": {
+        "title": "What we do",
+        "services": {
+            "service1": "Frozen Product",
+            "service2": "Elaborated Product",
+            "service3": "CustomizedProduct"
+        }
+    },
+    "products": {
+        "title": "Products",
+        "productList": {
+            "product1": "Round Sardinella",
+            "product2": "Cunene Horse Mackerel",
+            "product3": "Atlantic Bumper",
+            "product4": "Maseiran Sardinella",
+            "product5": "Atlantic Horse Mackerel",
+            "product6": "Common Mackerel"
+        }
+    },
+    "contacts": {
+        "contact1": "Business Hour",
+        "contact2": "Adress",
+        "contact3": "Telephone Number",
+        "contact4": "What's App",
+        "email": "Email"
+    },
+    "actionButtons": {
+        "knowMore": "Know about us",
+        "seeMore": "See more"
     }
 }

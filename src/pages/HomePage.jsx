@@ -2,7 +2,7 @@ import React from "react";
 import { HeroBanner } from "../components/Hompage/HeroBanner";
 import { Introduction } from "../components/Hompage/Introduction";
 import { Product } from "../components/Hompage/Product";
-import { Service } from "../components/Hompage/Service";
+import { Business } from "../components/Hompage/Business";
 import { Contact } from "../components/Hompage/Contact";
 import { ScrollTop } from '../components/UI/ScrollToTop';
 import { Stack } from "@mui/material";
@@ -15,7 +15,7 @@ const HomePage = (props) => {
         <Stack width='100%' alignItems='center' justifyContent='center'>
             <HeroBanner />
             <Introduction aboutRef={aboutRef} />
-            <Service />
+            <Business />
             <Product productRef={productRef} />
             <Contact contactRef={contactRef} />
             <ScrollTop pageRef={homeRef} />

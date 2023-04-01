@@ -7,5 +7,41 @@
         "product": "產品介紹",
         "contact": "聯絡我們",
         "language": "語言"
+    },
+    "founderState": {
+        "paragraph1": "AFRIOCAEN 是一個致力於為當地自然資源增添價值的團隊，尤其是那些來自海洋的資源。在這個目標下，供應商和客戶都能得到滿足，而團隊也能夠獲得巨大的成就感。我們希望這種良性迴圈最終能夠對社會和環境產生積極正向的影響。",
+        "paragraph2": "AFRIOCAEN 承諾讓事情變得更好，讓這個世界變得更美好，讓每一個相關的人都得到更好的回報。最重要的是，我們努力為客戶提供最高品質、最低成本的產品。",
+        "paragraph3": "我們邀請您成為其中的一份子，無論您是誰，來自哪裡。",
+        "paragraph4": "2023/1/13 Diamniadio, Senegal"
+    },
+    "business": {
+        "title": "我們的業務",
+        "services": {
+            "service1": "冷凍水產品",
+            "service2": "精加工水產品",
+            "service3": "客製化水產品"
+        }
+    },
+    "products": {
+        "title": "熱賣品項",
+        "productList": {
+            "product1": "圓沙丁",
+            "product2": "黑竹筴",
+            "product3": "樹葉鯧",
+            "product4": "扁沙丁",
+            "product5": "白竹筴",
+            "product6": "鯖魚"
+        }
+    },
+    "contacts": {
+        "contact1": "營業時間",
+        "contact2": "營業地址",
+        "contact3": "聯絡電話",
+        "contact4": "What's App",
+        "email": "電子信箱"
+    },
+    "actionButtons": {
+        "knowMore": "瞭解更多",
+        "seeMore": "看更多品項"
     }
 }

@@ -1,5 +1,6 @@
 {
   "name": "afriocean-sarl",
+  "homepage": "https://www.afriocean.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
