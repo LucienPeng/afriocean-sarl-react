@@ -6,7 +6,23 @@
         "service": "Services",
         "product": "Products",
         "contact": "Contacts",
-        "language": "Languages"
+        "language": "Languages",
+        "serviceNavs": {
+            "frozenProduct": "Frozen Product",
+            "elaboratedProduct": "Elaborated Product",
+            "customizedProduct": "Customized Product"
+        },
+        "productNavs": {
+            "fish": "Fish",
+            "seafood": "Seafood",
+            "elaborate": "Elaborate"
+        },
+        "introNavs": {
+            "history": "History",
+            "vision": "Vision",
+            "factory": "Factory",
+            "quality": "Quality"
+        }
     },
     "founderState": {
         "paragraph1": "AFRIOCAEN is a team dedicated itself to adding value to local natural resources, especially the ones out of the ocean. With this target, both the suppliers and clients will be satisfied, and the team will have a great sense of achievement. We hope this virtuous cycle turns eventually socially and environmentally.",

@@ -10,12 +10,12 @@ body {
   font-size: 16px;
 }
 
-span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #FFFFFF;
-  opacity: 1;
-}
-
 .swiper {
   --swiper-theme-color: #fff;
+}
+
+.swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #3EB6B6;
+  opacity: 1;
 }
 /*# sourceMappingURL=all.css.map */

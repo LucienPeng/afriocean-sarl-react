@@ -1,5 +1,5 @@
 
-import { ImageListItem, ImageListItemBar, Skeleton, Box, Stack } from "@mui/material";
+import { ImageListItem, ImageListItemBar, Box, Stack, LinearProgress } from "@mui/material";
 import { useCallback, useState, useRef } from "react";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import { useNavigation } from "../../utils/useNavigation";
@@ -10,8 +10,9 @@ export const ProductListImageListItem = (props) => {
     const { isMobileView } = useDeviceMetadata();
     const [imageLoaded, setImageLoaded] = useState(false);
     const redirect = (category, url) => navigationHandler(`/product/${category.toLowerCase()}/${url}`);
-    const onLoadHandler = useCallback((loaded) => setImageLoaded(loaded), []);
+    const onLoadHandler = useCallback(() => setImageLoaded(true), []);
     const imageListItemRef = useRef();
+    const imageRef = useRef();
 
     return (
         <ImageListItem
@@ -29,14 +30,14 @@ export const ProductListImageListItem = (props) => {
             }}
         >
             <Stack>
-                {!imageLoaded && <Skeleton animation="wave" sx={{ width: '100%', height: '250px' }} />}
+                {!imageLoaded && <LinearProgress animation="wave" sx={{ width: '100%' }} />}
                 <Box
+                    ref={imageRef}
                     className="animate__animated animate__zoomIn animate__delay-1s"
                     width='100%'
                     component='img'
                     loading="lazy"
-                    onLoad={() => onLoadHandler(true)}
-                    onError={() => onLoadHandler(false)}
+                    onLoad={onLoadHandler}
                     src={`${item.img}`}
                     alt={item.en}
                     sx={{
@@ -44,11 +45,12 @@ export const ProductListImageListItem = (props) => {
                         '&:hover': { transition: 'all 1s ease-out', transform: 'scale(1.1)', }
                     }}
                 />
-                <ImageListItemBar
-                    title={item.en}
-                    subtitle={item.scientificName}
-                    position="bottom"
-                />
+                {imageLoaded && <ImageListItemBar
+                        title={item.en}
+                        subtitle={item.scientificName}
+                        position="bottom"
+                    />
+                }
             </Stack>
         </ImageListItem>
     );

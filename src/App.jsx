@@ -6,12 +6,16 @@ import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/Navbar/NavBar";
 import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutUsPage";
-import ProductListPage from "./pages/ProductListPage";
-import ProductPageLayout from "./pages/ProductPageLayout";
+import AboutUsPageLayout from "./pages/AboutUs/AboutUsPageLayout";
+import HistoryPage from './pages/AboutUs/HistoryPage';
+import FactoryPage from './pages/AboutUs/FactoryPage';
+import VisionPage from './pages/AboutUs/VisionPage';
+import QualityPage from './pages/AboutUs/QualityPage';
+import ProductListPage from "./pages/Product/ProductListPage";
+import ProductPageLayout from "./pages/Product/ProductPageLayout";
 import ServicePageLayout from './pages/ServicePageLayout';
-import FrozenProductPage from './pages/FrozenProductPage';
-import CustomizedProductPage from './pages/CustomizedProductPage';
+import FrozenProductIntroPage from './pages/Business/FrozenProductIntroPage';
+import ElaboratedProductIntroPage from './pages/Business/ElaboratedProductIntroPage';
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./components/NotFoundPage";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -26,6 +30,7 @@ const App = () => {
     const [banner, setBanner] = useState("");
     const homeRef = useRef();
     const aboutRef = useRef();
+    const serviceRef = useRef();
     const productRef = useRef();
     const contactRef = useRef();
     const trigger = useScrollTrigger({ threshold: 100 });
@@ -48,6 +53,7 @@ const App = () => {
             <NavBar
                 homeRef={homeRef}
                 aboutRef={aboutRef}
+                serviceRef={serviceRef}
                 productRef={productRef}
                 contactRef={contactRef}
             />
@@ -57,16 +63,22 @@ const App = () => {
                     element={<HomePage
                         homeRef={homeRef}
                         aboutRef={aboutRef}
+                        serviceRef={serviceRef}
                         productRef={productRef}
                         contactRef={contactRef}
                     />}
                 />
 
-                <Route path="/about" element={<AboutPage />} />
+                <Route path="/about" element={<AboutUsPageLayout />}>
+                    <Route path='/about/history' element={<HistoryPage />} />
+                    <Route path='/about/vision' element={<VisionPage />} />
+                    <Route path='/about/factory' element={<FactoryPage />} />
+                    <Route path='/about/quality' element={<QualityPage />} />
+                </Route>
 
                 <Route path="/service" element={<ServicePageLayout />}>
-                    <Route path='frozen-product' element={<FrozenProductPage />} />
-                    <Route path='customized-product' element={<CustomizedProductPage />} />
+                    <Route path='frozen-product' element={<FrozenProductIntroPage />} />
+                    <Route path='elaborated-product' element={<ElaboratedProductIntroPage />} />
                 </Route>
 
                 <Route path="/product" element={<ProductPageLayout />}>

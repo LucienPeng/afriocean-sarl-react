@@ -52,10 +52,12 @@ export const HeroBanner = () => {
             pagination={{
                 clickable: true
             }}
+            loop={true}
             fadeEffect={{ crossFade: true }}
             effect={"fade"}
+            draggable={true}
             modules={[Autoplay, Pagination, EffectFade, Zoom]}
-            allowTouchMove={false}
+            allowTouchMove={true}
             onActiveIndexChange={zoomHandler}
             onInit={zoomHandler}
             className="mySwiper"

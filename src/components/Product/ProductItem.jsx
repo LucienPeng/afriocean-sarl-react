@@ -1,27 +1,13 @@
 import { Box, Typography, Stack, Grid, Table, TableRow, TableCell, TableBody, Link } from '@mui/material';
 import { StyledButton } from '../UI/StyledComponents';
 import { useNavigation } from '../../utils/useNavigation';
-import banner from '../../asset/images/banner2.jpg';
-
 
 export const ProductItem = (props) => {
     const { item } = props;
     const { navigationHandler } = useNavigation();
     const redirectHandler = () => navigationHandler(`/product/${item.allergens.toLowerCase()}`);
     return (
-        <Stack minHeight='100vh' width='100%' direction='column' justifyContent='center' alignItems='center'>
-            <Box
-                sx={{
-                    width: '100%',
-                    minHeight: '20vh',
-                    backgroundImage: `url(${banner})`,
-                    backgroundSize: 'cover',
-                    backgroundRepeated: false,
-                    backgroundPosition: 'center',
-                }}
-                component='img'
-
-            />
+        <Stack minHeight='100vh' width='100%' direction='column' justifyContent='center' alignItems='center' mt={'60px'}>
             <Stack py={5} direction='row' justifyContent='center' alignItems='center'>
                 <Grid container justifyContent='center' alignItems='center' spacing={{ xs: 0, md: 5 }}>
                     <Grid item xs={12} sm={10} md={6}>

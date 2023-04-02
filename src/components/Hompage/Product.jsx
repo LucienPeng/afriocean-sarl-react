@@ -56,11 +56,11 @@ export const Product = (props) => {
     const { productRef } = props;
     const { t } = useHomePageTranslation();
     const redirectHandler = (url) => navigationHandler(`/product/fish/${url}`);
-    const redirectProductPageHandler = () => navigationHandler(`/product`);
+    const redirectProductPageHandler = () => navigationHandler(`/product/fish`);
 
 
     return (
-        <Stack ref={productRef} minHeight='70vh' justifyContent='center' alignItems='center'>
+        <Stack ref={productRef} minHeight='70vh' width='100%' justifyContent='center' alignItems='center'>
             <Typography mt={10} variant="h2" fontWeight={700} color="text.primary">{t('products.title')}</Typography>
             <Grid width='80%' container spacing={5} my={5} justifyContent='center' alignItems='center'>
                 {PRODUCTS_SECTIONS.map((product, index) => (
@@ -70,11 +70,14 @@ export const Product = (props) => {
                                 <CardMedia component="img" image={product.img}
                                     sx={{ cursor: 'pointer', "&:hover": { transform: 'scale(1.1)', transition: '0.5s all ease-out' } }}
                                     onClick={redirectHandler.bind(this, product.url)} />
-                                <Typography variant="h6" textAlign='center' fontWeight={700} color="text.primary">{t(`products.productList.product${index + 1}`)}
-                                    <Typography component='span' variant="h6" color="text.primary" ml={1}>
+                                <Stack direction='column' justifyContent='center' alignItems='center'>
+                                    <Typography variant="h6" textAlign='center' fontWeight={700} color="text.primary">
+                                        {t(`products.productList.product${index + 1}`)}
+                                    </Typography>
+                                    <Typography variant="body1" color="text.primary" ml={1}>
                                         {`(${product.scientificName})`}
                                     </Typography>
-                                </Typography>
+                                </Stack>
                             </CardContent>
                         </Card>
                     </Grid>

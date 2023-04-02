@@ -27,7 +27,7 @@ const EQUIPMENTS = [equipmemt1, equipmemt2, equipmemt3, equipmemt4, equipmemt5, 
 const LIGNES = [ligne1, ligne2, ligne3, ligne4, ligne5, ligne6];
 const LOCAUX = [locaux1, locaux2, locaux3, locaux4, locaux5];
 
-export const Equipment = () => {
+const FactoryPage = () => {
     const { isMobileView } = useDeviceMetadata();
 
     return (
@@ -161,3 +161,5 @@ export const Equipment = () => {
         </Stack>
     );
 };
+
+export default FactoryPage;

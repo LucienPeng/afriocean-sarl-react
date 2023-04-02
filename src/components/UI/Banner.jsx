@@ -7,7 +7,7 @@ import bannerUrl2 from '../../asset/images/banner2.jpg';
 export const Banner = () => {
     const { pathname } = useLocation();
     const bannerUrl = useMemo(() => {
-        if (pathname === '/about') {
+        if (pathname.includes('/about')) {
             return bannerUrl1;
         } else {
             return bannerUrl2;
@@ -18,11 +18,14 @@ export const Banner = () => {
         <Box
             sx={{
                 width: '100%',
-                minHeight: '50vh',
+                minHeight: '35vh',
+                backgroundColor: 'rgba(0, 0, 0, .5)',
+                backgroundBlendMode: 'multiply',
                 backgroundImage: `url(${bannerUrl})`,
                 backgroundSize: 'cover',
                 backgroundRepeated: false,
                 backgroundPosition: 'center',
+
             }}
             component='img'
         />

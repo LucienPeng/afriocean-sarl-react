@@ -23,6 +23,52 @@ export const NavItems = (props) => {
 
     const menuHandler = (id, lngCode, url) => {
         switch (true) {
+            case id === 'service': {
+                switch (true) {
+                    case url === 'frozen-product': {
+                        navigationHandler('./service/frozen-product');
+                        break;
+                    }
+                    case url === 'elaborated-product': {
+                        navigationHandler('./service/elaborated-product');
+                        break;
+                    }
+                    case url === 'customizedProduct': {
+                        navigationHandler('./contact');
+                        break;
+                    }
+                    default: {
+                        console.log("something went wrong with nav service");
+                        break;
+                    }
+                }
+                break;
+            }
+            case id === 'about': {
+                switch (true) {
+                    case url === 'history': {
+                        navigationHandler('./about/history');
+                        break;
+                    }
+                    case url === 'factory': {
+                        navigationHandler('./about/factory');
+                        break;
+                    }
+                    case url === 'vision': {
+                        navigationHandler('./about/vision');
+                        break;
+                    }
+                    case url === 'quality': {
+                        navigationHandler('./about/quality');
+                        break;
+                    }
+                    default: {
+                        console.log("something went wrong with nav about");
+                        break;
+                    }
+                }
+                break;
+            }
             case id === 'product': {
                 switch (true) {
                     case url === 'fish': {
@@ -38,7 +84,7 @@ export const NavItems = (props) => {
                         break;
                     }
                     default: {
-                        console.log("something went wrong");
+                        console.log("something went wrong with nav product");
                         break;
                     }
                 }
@@ -58,7 +104,7 @@ export const NavItems = (props) => {
                 break;
             }
             default: {
-                console.log("something went wrong");
+                console.log("something went wrong with language");
                 break;
             }
         }
@@ -83,7 +129,10 @@ export const NavItems = (props) => {
                 disableRipple
             >
                 <Typography variant="h3" fontSize={18}
-                    sx={{ fontWeight: activeLink === navItem.ref ? 700 : 400, color: { xs: 'primary.dark', md: activeLink === navItem.ref ? 'secondary.light' : 'common.white' } }}>
+                    sx={{
+                        fontWeight: activeLink === navItem.ref ? 700 : 400, color: { xs: 'primary.dark', md: activeLink === navItem.ref ? 'secondary.light' : 'common.white' },
+                        "&:hover": { color: 'secondary.light' }
+                    }}>
                     {navItem.title}
                 </Typography>
             </Button>

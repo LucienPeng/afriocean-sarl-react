@@ -6,7 +6,23 @@
         "service": "服務介紹",
         "product": "產品介紹",
         "contact": "聯絡我們",
-        "language": "語言"
+        "language": "語言",
+        "serviceNavs": {
+            "frozenProduct": "冷凍水產品",
+            "elaboratedProduct": "精加工水產品",
+            "customizedProduct": "客製化水產品"
+        },
+        "productNavs": {
+            "fish": "鮮魚",
+            "seafood": "海鮮",
+            "elaborate": "精加工水產品"
+        },
+        "introNavs": {
+            "history": "創建沿革",
+            "vision": "經營理念",
+            "factory": "廠房設備",
+            "quality": "品質管理"
+        }
     },
     "founderState": {
         "paragraph1": "AFRIOCAEN 是一個致力於為當地自然資源增添價值的團隊，尤其是那些來自海洋的資源。在這個目標下，供應商和客戶都能得到滿足，而團隊也能夠獲得巨大的成就感。我們希望這種良性迴圈最終能夠對社會和環境產生積極正向的影響。",

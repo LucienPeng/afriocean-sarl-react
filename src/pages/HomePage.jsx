@@ -9,13 +9,13 @@ import { Stack } from "@mui/material";
 
 
 const HomePage = (props) => {
-    let { homeRef, aboutRef, productRef, contactRef } = props;
+    let { homeRef, aboutRef, productRef, contactRef, serviceRef } = props;
 
     return (
         <Stack width='100%' alignItems='center' justifyContent='center'>
             <HeroBanner />
             <Introduction aboutRef={aboutRef} />
-            <Business />
+            <Business serviceRef={serviceRef} />
             <Product productRef={productRef} />
             <Contact contactRef={contactRef} />
             <ScrollTop pageRef={homeRef} />

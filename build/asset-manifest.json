@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b79cfd0f.css",
-    "main.js": "/static/js/main.9760fe2a.js",
+    "main.css": "/static/css/main.930f1583.css",
+    "main.js": "/static/js/main.9ab3c560.js",
     "static/media/atlanticPomfret.png": "/static/media/atlanticPomfret.e120a7ead9c776b5d5ad.png",
     "static/media/5.jpg": "/static/media/5.16908e595476f2378d1d.jpg",
     "static/media/4.jpg": "/static/media/4.0f6375cf2f29d99ad8f6.jpg",
@@ -61,11 +61,11 @@
     "static/media/locaux3.jpeg": "/static/media/locaux3.3a3f372197815d452ed6.jpeg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.b79cfd0f.css.map": "/static/css/main.b79cfd0f.css.map",
-    "main.9760fe2a.js.map": "/static/js/main.9760fe2a.js.map"
+    "main.930f1583.css.map": "/static/css/main.930f1583.css.map",
+    "main.9ab3c560.js.map": "/static/js/main.9ab3c560.js.map"
   },
   "entrypoints": [
-    "static/css/main.b79cfd0f.css",
-    "static/js/main.9760fe2a.js"
+    "static/css/main.930f1583.css",
+    "static/js/main.9ab3c560.js"
   ]
 }

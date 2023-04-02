@@ -1,32 +1,34 @@
 {
-    "subTitle1": "Qui Sommes-Nous ?",
-    "section1": {
-        "paragraph1": "Au Sénégal, une des régions les plus poissonneuses du monde, le secteur de la pêche, en progression constante, joue un rôle capital dans l’économie nationale. Avec un taux de captures annuelles de 450 000 tonnes l’an, le Sénégal est le deuxième pays producteur de la sous région, derrière le Nigéria (530 000 t). La pêche est aussi la première branche exportatrice du pays. Le principal produit halieutique exporté est le poisson frais (79 %), suivi par les conserves (5 %), les produits transformés (4 %).",
-        "paragraph2": "C’est dans cette logique que AFRIOCEAN, une entreprise franche d’exportation de produits halieutiques a été créé en 2013. Afin d’entrer dans la politique économique dans laquelle est lancé le SENEGAL.",
-        "paragraph3": "Notre but est de fournir à nos clients des produits de la mer frais et Boxersifiés en fonction de nos marchés. Cela grâce à des techniques de productions de haute qualité, à basse température pour préserver la bonne qualité et une chaîne de froid maitrisée. Nous essayons toujours d’améliorer nos produits pour atteindre plus de segments du marché. Nous leur proposons un produit de qualité avec une très grande valeur ajoutée et à un prix défiant toute concurrence.",
-        "paragraph4": "Jusqu'à présent, AFRIOCEAN travaille avec des clients un peu partout dans le monde à savoir : Taiwan, Corée, Chine, Afrique du Sud, Côte d’Ivoire, Mali, Guinée Conakry et Burkina Faso…"
+    "history": {
+        "subTitle1": "Qui Sommes-Nous ?",
+        "section1": {
+            "paragraph1": "Au Sénégal, une des régions les plus poissonneuses du monde, le secteur de la pêche, en progression constante, joue un rôle capital dans l’économie nationale. Avec un taux de captures annuelles de 450 000 tonnes l’an, le Sénégal est le deuxième pays producteur de la sous région, derrière le Nigéria (530 000 t). La pêche est aussi la première branche exportatrice du pays. Le principal produit halieutique exporté est le poisson frais (79 %), suivi par les conserves (5 %), les produits transformés (4 %).",
+            "paragraph2": "C’est dans cette logique que AFRIOCEAN, une entreprise franche d’exportation de produits halieutiques a été créé en 2013. Afin d’entrer dans la politique économique dans laquelle est lancé le SENEGAL.",
+            "paragraph3": "Notre but est de fournir à nos clients des produits de la mer frais et Boxersifiés en fonction de nos marchés. Cela grâce à des techniques de productions de haute qualité, à basse température pour préserver la bonne qualité et une chaîne de froid maitrisée. Nous essayons toujours d’améliorer nos produits pour atteindre plus de segments du marché. Nous leur proposons un produit de qualité avec une très grande valeur ajoutée et à un prix défiant toute concurrence.",
+            "paragraph4": "Jusqu'à présent, AFRIOCEAN travaille avec des clients un peu partout dans le monde à savoir : Taiwan, Corée, Chine, Afrique du Sud, Côte d’Ivoire, Mali, Guinée Conakry et Burkina Faso…"
+        },
+        "subTitle2": "Historie",
+        "section2": {
+            "paragraph1": "AFRIOCEAN a été créé en 2013 par M. CHEN CHUNG-HSIN (JOHN CHEN). L’entreprise était située à Yarakh et travaillée en sous traitance avec une autre entreprise de la place. AFRIOCEAN n’avait que ses bureaux commerciaux pour la vente et l’expédition de ses produits un peu partout dans le monde.",
+            "paragraph2": "Dans un souci d’expansion, AFRIOCEAN entame la construction d’une usine de transformations de produits halieutiques dans le pôle urbain en plein essor de DIAMNIADIO en 2017. L’usine a été inaugurée le 10 Février 2018 avec toutes les autorités compétentes qui évoluent dans ce secteur d’activité."
+        },
+        "subTitle3": "Avantages Compétitifs",
+        "section3": {
+            "paragraph1": "Vitesse de la congélation (le temps de Cristallisation le plus courte)",
+            "paragraph2": "Fiabilité de la Chaîne du froid",
+            "paragraph3": "Emballage avec haute qualité",
+            "paragraph4": "Bonne pratique du QHSE",
+            "paragraph5": "Petits prix et produits diversifiés"
+        }
     },
-    "subTitle2": "Historie",
-    "section2": {
-        "paragraph1": "AFRIOCEAN a été créé en 2013 par M. CHEN CHUNG-HSIN (JOHN CHEN). L’entreprise était située à Yarakh et travaillée en sous traitance avec une autre entreprise de la place. AFRIOCEAN n’avait que ses bureaux commerciaux pour la vente et l’expédition de ses produits un peu partout dans le monde.",
-        "paragraph2": "Dans un souci d’expansion, AFRIOCEAN entame la construction d’une usine de transformations de produits halieutiques dans le pôle urbain en plein essor de DIAMNIADIO en 2017. L’usine a été inaugurée le 10 Février 2018 avec toutes les autorités compétentes qui évoluent dans ce secteur d’activité."
-    },
-    "subTitle3": "Avantages Compétitifs",
-    "section3": {
-        "paragraph1": "Vitesse de la congélation (le temps de Cristallisation le plus courte)",
-        "paragraph2": "Fiabilité de la Chaîne du froid",
-        "paragraph3": "Emballage avec haute qualité",
-        "paragraph4": "Bonne pratique du QHSE",
-        "paragraph5": "Petits prix et produits diversifiés",
-        "paragraph": ""
-    },
-    "subTitle4": "Équipements",
-    "section4": {
-        "paragraph1": "Vitesse de la congélation (le temps de Cristallisation le plus courte)",
-        "paragraph2": "Fiabilité de la Chaîne du froid",
-        "paragraph3": "Emballage avec haute qualité",
-        "paragraph4": "Bonne pratique du QHSE",
-        "paragraph5": "Petits prix et produits diversifiés",
-        "paragraph": ""
+    "factory": {
+        "subTitle4": "Équipements",
+        "section4": {
+            "paragraph1": "Vitesse de la congélation (le temps de Cristallisation le plus courte)",
+            "paragraph2": "Fiabilité de la Chaîne du froid",
+            "paragraph3": "Emballage avec haute qualité",
+            "paragraph4": "Bonne pratique du QHSE",
+            "paragraph5": "Petits prix et produits diversifiés"
+        }
     }
 }

@@ -1,25 +1,25 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Box, Stack, AppBar, Toolbar, IconButton } from '@mui/material';
 import { NavItems } from './NavItems';
-import { useNavConfig } from './NavConfigs';
-import { useLocation } from 'react-router-dom';
 import { MobileNavBar } from './MobileNavBar';
+import { useNavConfig } from './NavConfigs';
+import { useNavigation } from '../../utils/useNavigation';
 import { useToggle } from '../../utils/useToggle';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import MenuIcon from '@mui/icons-material/Menu';
-import { useNavigation } from '../../utils/useNavigation';
+import { useLocation } from 'react-router-dom';
 
 
 export const NavBar = (props) => {
     const { NAV_MENU } = useNavConfig();
-    const { pathname } = useLocation();
     const { isToggle, toggleHandler } = useToggle();
     const { navigationHandler } = useNavigation();
-    const { homeRef, aboutRef, productRef, contactRef } = props;
-    const isHomePage = pathname === '/';
-    const NAV_ITEMS = NAV_MENU(aboutRef, productRef, contactRef);
+    const { homeRef, aboutRef, productRef, contactRef, serviceRef } = props;
+    const NAV_ITEMS = NAV_MENU(aboutRef, productRef, contactRef, serviceRef);
     const nav = useRef('');
-
+    const location = useLocation();
+    const isServicePage = useMemo(() => location.pathname.includes('service') ? true : false, [location.pathname]);
+    const isProductPage = useMemo(() => location.pathname.includes('fish') || location.pathname.includes('seafood') ? true : false, [location.pathname]);
     const [isScrolled, setScrolled] = useState(false);
     const [activeLink, setActiveLink] = useState();
     const [mobileNavList, setMobileNavList] = useState(NAV_ITEMS);
@@ -38,11 +38,11 @@ export const NavBar = (props) => {
 
     const trigger = useScrollTrigger({
         disableHysteresis: true,
-        threshold: 10,
+        threshold: 150,
     });
 
     useEffect(() => {
-        if (window.scrollY > 10) {
+        if (window.scrollY > 150) {
             setScrolled(true);
         } else {
             setScrolled(false);
@@ -51,7 +51,14 @@ export const NavBar = (props) => {
 
     return (
         <AppBar ref={nav} component='nav' position="fixed" className='animate__animated animate__fadeInDown'
-            sx={{ height: 80, bgcolor: isHomePage ? isScrolled ? 'rgba(34, 67, 103)' : 'transparent' : 'rgba(34, 67, 103, 0.9)', boxShadow: isScrolled ? 'inset' : 'none', transition: 'ease-out 0.3s all', justifyContent: 'center' }}>
+            sx={{
+                height: 80,
+                bgcolor: (isScrolled || isServicePage || isProductPage) ? 'rgba(34, 67, 103)' : 'transparent',
+                boxShadow: isScrolled ? 'inset' : 'none',
+                transition: 'ease-out 0.3s all',
+                justifyContent: 'center',
+                "&:hover": { bgcolor: 'rgba(34, 67, 103)' }
+            }}>
             <Toolbar>
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                     <IconButton

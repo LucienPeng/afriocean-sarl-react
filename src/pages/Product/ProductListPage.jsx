@@ -1,6 +1,6 @@
-import { ProductList } from "../components/Product/ProductList";
+import { ProductList } from "../../components/Product/ProductList";
 import { Box } from "@mui/material";
-import { Banner } from '../components/UI/Banner';
+import { Banner } from '../../components/UI/Banner';
 
 
 const ProductListPage = (props) => {

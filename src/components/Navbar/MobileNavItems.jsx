@@ -15,9 +15,25 @@ export const MobileNavItems = (props) => {
             subMenuHandler(item.subNavItems);
         } else {
             switch (true) {
-                case item.id === 'about' || item.id === 'contact': {
+                case item.id === 'contact': {
                     navigationHandler(item.url);
                     drawerToggleHandler();
+                    break;
+                }
+                case item.url === 'history': {
+                    navigationHandler('./about/history');
+                    break;
+                }
+                case item.url === 'factory': {
+                    navigationHandler('./about/factory');
+                    break;
+                }
+                case item.url === 'vision': {
+                    navigationHandler('./about/vision');
+                    break;
+                }
+                case item.url === 'quality': {
+                    navigationHandler('./about/quality');
                     break;
                 }
                 case item.url === 'fish': {
@@ -28,7 +44,15 @@ export const MobileNavItems = (props) => {
                     navigationHandler('./product/seafood');
                     break;
                 }
-                case item.url === 'elaborate': {
+                case item.url === 'frozen-product': {
+                    navigationHandler('./service/frozen-product');
+                    break;
+                }
+                case item.url === 'elaborated-product': {
+                    navigationHandler('./service/elaborated-product');
+                    break;
+                }
+                case item.url === 'customizedProduct': {
                     navigationHandler('./contact');
                     break;
                 }

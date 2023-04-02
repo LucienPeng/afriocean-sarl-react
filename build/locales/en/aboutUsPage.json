@@ -1,23 +1,60 @@
 {
-    "subTitle1": "Who are we ?",
-    "section1": {
-        "paragraph1": "In Senegal, one of the most fish-rich regions in the world, the fishing sector, which is constantly growing, plays a crucial role in the national economy. With an annual catch rate of 450,000 tons, Senegal is the second largest producer in the sub-region, behind Nigeria (530,000 t). Fishing is also the country's top export sector. The main fishery product exported is fresh fish (79%), followed by canned fish (5%) and processed products (4%).",
-        "paragraph2": "It is in this context that AFRIOCEAN, an export company of fishery products, was created in 2013. The aim was to participate in the economic policy being implemented in SENEGAL.",
-        "paragraph3": "Our goal is to provide our customers with fresh and diversified seafood products according to our markets. This is achieved through high-quality production techniques, low-temperature preservation to maintain good quality, and a controlled cold chain. We always strive to improve our products to reach more market segments. We offer them a high-quality product with great added value and at a price that defies all competition.",
-        "paragraph4": "Now, AFRIOCEAN works with clients all over the world, including Taiwan, Korea, China, South Africa, Côte d'Ivoire, Mali, Guinea Conakry, and Burkina Faso."
+    "history": {
+        "subTitle1": "Who are we ?",
+        "section1": {
+            "paragraph1": "In Senegal, one of the most fish-rich regions in the world, the fishing sector, which is constantly growing, plays a crucial role in the national economy. With an annual catch rate of 450,000 tons, Senegal is the second largest producer in the sub-region, behind Nigeria (530,000 t). Fishing is also the country's top export sector. The main fishery product exported is fresh fish (79%), followed by canned fish (5%) and processed products (4%).",
+            "paragraph2": "It is in this context that AFRIOCEAN, an export company of fishery products, was created in 2013. The aim was to participate in the economic policy being implemented in SENEGAL.",
+            "paragraph3": "Our goal is to provide our customers with fresh and diversified seafood products according to our markets. This is achieved through high-quality production techniques, low-temperature preservation to maintain good quality, and a controlled cold chain. We always strive to improve our products to reach more market segments. We offer them a high-quality product with great added value and at a price that defies all competition.",
+            "paragraph4": "Now, AFRIOCEAN works with clients all over the world, including Taiwan, Korea, China, South Africa, Côte d'Ivoire, Mali, Guinea Conakry, and Burkina Faso."
+        },
+        "subTitle2": "History",
+        "section2": {
+            "paragraph1": "AFRIOCEAN was founded in 2013 by Mr. CHEN CHUNG-HSIN (JOHN CHEN). The company was located in Yarakh and worked as a subcontractor with another local company. AFRIOCEAN only had commercial offices for the sale and shipment of its products around the world.",
+            "paragraph2": "In order to expand, AFRIOCEAN began building a fish processing plant in the rapidly developing urban hub of DIAMNIADIO in 2017. The factory was inaugurated on February 10, 2018, with all the competent authorities operating in this sector of activity."
+        },
+        "subTitle3": "Competitive Advantages",
+        "section3": {
+            "paragraph1": "Quick Freezing Speed (Shortest Crystallization time)",
+            "paragraph2": "Reliable cold chain",
+            "paragraph3": "High-Quality Packaging",
+            "paragraph4": "Good QHSE Practices",
+            "paragraph5": "Low price and diversified products"
+        }
     },
-    "subTitle2": "History",
-    "section2": {
-        "paragraph1": "AFRIOCEAN was founded in 2013 by Mr. CHEN CHUNG-HSIN (JOHN CHEN). The company was located in Yarakh and worked as a subcontractor with another local company. AFRIOCEAN only had commercial offices for the sale and shipment of its products around the world.",
-        "paragraph2": "In order to expand, AFRIOCEAN began building a fish processing plant in the rapidly developing urban hub of DIAMNIADIO in 2017. The factory was inaugurated on February 10, 2018, with all the competent authorities operating in this sector of activity."
+    "factory": {
+        "subTitle": "Équipements",
+        "section": {
+            "paragraph1": "Vitesse de la congélation (le temps de Cristallisation le plus courte)",
+            "paragraph2": "Fiabilité de la Chaîne du froid",
+            "paragraph3": "Emballage avec haute qualité",
+            "paragraph4": "Bonne pratique du QHSE",
+            "paragraph5": "Petits prix et produits diversifiés"
+        }
     },
-    "subTitle3": "Competitive Advantages",
-    "section3": {
-        "paragraph1": "Quick Freezing Speed (Shortest Crystallization time)",
-        "paragraph2": "Reliable cold chain",
-        "paragraph3": "High-Quality Packaging",
-        "paragraph4": "Good QHSE Practices",
-        "paragraph5": "Low price and diversified products",
-        "paragraph": ""
+    "vision": {
+        "title": "Values",
+        "section": {
+            "paragraph1": "Our goal is to provide our customers with fresh and diversified seafood products according to our markets. This is achieved through high-quality production techniques, low-temperature preservation to maintain good quality, and a controlled cold chain.",
+            "paragraph2": "We always strive to improve our products to reach more market segments.",
+            "paragraph3": "We offer them a quality product with a high added value and at a price that defies all competition.",
+            "paragraph4": "The success of a company does not only depend on its good management and the quality of its products and services, but also on something very decisive: ITS VALUES. That is why AFRIOCEAN identifies with certain values that are essential to establish its business, namely: "
+        },
+        "subTitle1": "PROFESSIONALISM",
+        "subParagraph1": "Competence, efficiency, and responsiveness are a guiding principle in which our team invests in their daily work in order to best meet the demands of the market and, more particularly, of our clients.",
+        "subTitle2": "QUALITY",
+        "subParagraph2": "Quality is essential to AFRIOCEAN as we operate in a sensitive sector, which is food. AFRIOCEAN rigorously follows all procedures from the arrival of raw materials to the delivery of the final product to the end customer. A QSHE team is established to ensure compliance with all standards governed in this sector.",
+        "subTitle3": "RELIABILITY",
+        "subParagraph3": "We strive to adhere to the rules of our profession. Quality is at the heart of our daily concerns. The reliability of the company is based on recognized skills and constant adaptation to any present situation in order to react accordingly for the satisfaction of our customers.",
+        "subTitle4": "Caring",
+        "subParagraph4": "We listen to our customers. The customer is the reason for the existence of the company. AFRIOCEAN places great importance on the needs and suggestions of its customers in order to provide them with a product or service beyond their expectations. AFRIOCEAN strives to create strong relationships based on trust with its customers.",
+        "subTitle5": "AMBITION",
+        "subParagraph5": "'Big results require big ambitions.' AFRIOCEAN sets high but achievable goals to give each staff member the desire to exceed expectations. It is in this logic that we constantly strive to improve our various established systems to increase the chances of achieving our set goals."
+    },
+    "quality": {
+        "title": "Certification And Procedures",
+        "paragraph": "As a guiding principle, we have committed ourselves to comply with all QHSE standards with the help of various competent services such as the Fisheries Department (DITP, DPSP, DIC), Customs, municipal services, etc. And We follow the instruction of following procedures: (The acronym QHSE stands for Quality, Hygiene, Safety, Environment.)",
+        "item1": "HACCP Manual",
+        "item2": "Hygiene and Environmental Standards",
+        "item3": "Production Processes all have their own SOP (Standard Operating Procedures)."
     }
 }
