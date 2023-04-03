@@ -1,7 +1,9 @@
-import { Typography, Grid, Stack, CardMedia, List, ListItemText } from "@mui/material";
+import { Typography, Grid, Stack, CardMedia, List, ListItemText, ListItemIcon, ListItem } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow } from "swiper";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
+import { useAboutUsPageTranslation } from "../../i18n/useTranslations";
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 import equipmemt1 from '../../asset/images/equipment/1.jpg';
 import equipmemt2 from '../../asset/images/equipment/2.jpg';
@@ -29,36 +31,63 @@ const LOCAUX = [locaux1, locaux2, locaux3, locaux4, locaux5];
 
 const FactoryPage = () => {
     const { isMobileView } = useDeviceMetadata();
+    const { t } = useAboutUsPageTranslation();
 
     return (
         <Stack bgcolor='#E5E5E5' spacing={5} py={10} alignItems='center' justifyContent='center'>
             <Grid container rowGap={3} spacing={5} data-aos="fade-up" justifyContent='center' alignItems='center' direction='row'>
                 <Grid item xs={11} md={5} justifyContent='center'>
                     <Typography variant="h2" lineHeight={2} fontWeight={700} letterSpacing={0} color="primary.primary">
-                        Équipements
+                        {t('factory.subTitle1')}
                     </Typography>
                     <Typography variant="body1" color="text.dark">
-                        Pour la bonne exécution du process de production, AFRIOCEAN a investi
-                        dans des équipements ultra modernes pour la qualité de son service.
-                        Une zone 3 a également été développé pour la ligne de production des
-                        produits élaborés et la ligne de production des gastéropodes /
-                        céphalopodes. Pour les produits élaborés il s’agit des poissons en
-                        filet et pour les des gastéropodes / céphalopodes il s’agit de la
-                        cuisson des coquillages.
+                        {t('factory.description1')}
                     </Typography>
                 </Grid>
                 <Grid item xs={11} md={5} justifyContent='center'>
                     <List>
-                        <ListItemText>&#9210; 2 tunnels de congélation de 8t.</ListItemText>
-                        <ListItemText>&#9210; 2 tunnels de congélation de 4t.</ListItemText>
-                        <ListItemText>&#9210; 2 chambres froides avec la capacité de stockage en total de
-                            1000T. <br />
-                            (Pallet emballé avec film.)
-                            <br /> (-20℃ maintenu, maximum -50℃.)
-                        </ListItemText>
-                        <ListItemText>&#9210; 1 chambre de SAS pour protéger les produits. BITZER
-                            compresseurs adaptés.
-                        </ListItemText>
+                        <ListItem>
+                            <ListItemIcon>
+                                <ArrowRightIcon />
+                            </ListItemIcon>
+                            <ListItemText>
+                                <ListItemText>{t('factory.section1.paragraph1')}</ListItemText>
+                            </ListItemText>
+                        </ListItem>
+                        <ListItem>
+                            <ListItemIcon>
+                                <ArrowRightIcon />
+                            </ListItemIcon>
+                            <ListItemText>
+                                <ListItemText>{t('factory.section1.paragraph2')}</ListItemText>
+                            </ListItemText>
+                        </ListItem>
+                        <ListItem>
+                            <ListItemIcon>
+                                <ArrowRightIcon />
+                            </ListItemIcon>
+                            <ListItemText>
+                                <ListItemText>{t('factory.section1.paragraph3')}</ListItemText>
+                                <ListItemText>{t('factory.section1.paragraph4')}</ListItemText>
+                                <ListItemText>{t('factory.section1.paragraph5')}</ListItemText>
+                            </ListItemText>
+                        </ListItem>
+                        <ListItem>
+                            <ListItemIcon>
+                                <ArrowRightIcon />
+                            </ListItemIcon>
+                            <ListItemText>
+                                <ListItemText>{t('factory.section1.paragraph6')}</ListItemText>
+                            </ListItemText>
+                        </ListItem>
+                        <ListItem>
+                            <ListItemIcon>
+                                <ArrowRightIcon />
+                            </ListItemIcon>
+                            <ListItemText>
+                                <ListItemText>{t('factory.section1.paragraph7')}</ListItemText>
+                            </ListItemText>
+                        </ListItem>
                     </List>
                 </Grid>
             </Grid>
@@ -91,19 +120,44 @@ const FactoryPage = () => {
                 <Grid item md={5}>
                     <Stack spacing={2} alignItems='center'>
                         <Typography variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
-                            Locaux Productions
+                            {t('factory.subTitle2')}
                         </Typography>
                         <List>
-                            <ListItemText>&#9210; Salles de production pour poisson afrique.</ListItemText>
-                            <ListItemText>&#9210; 1 salle de fabrique de glace.</ListItemText>
-                            <ListItemText>
-                                &#9210; 1 salle de production pour produit élaboré
-                                <br /> (Conforme aux régles HSQE de l’UE)
-                                <br /> (Chariots tous en inox.)
-                            </ListItemText>
-                            <ListItemText>&#9210; 1 salles de production pour la cuisson
-                                <br /> (Equipement de cuisson en vapeur)
-                            </ListItemText>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <ArrowRightIcon />
+                                </ListItemIcon>
+                                <ListItemText>
+                                    <ListItemText>{t('factory.section2.paragraph1')}</ListItemText>
+                                </ListItemText>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <ArrowRightIcon />
+                                </ListItemIcon>
+                                <ListItemText>
+                                    <ListItemText>{t('factory.section2.paragraph2')}</ListItemText>
+                                </ListItemText>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <ArrowRightIcon />
+                                </ListItemIcon>
+                                <ListItemText>
+                                    <ListItemText>{t('factory.section2.paragraph3')}</ListItemText>
+                                    <ListItemText>{t('factory.section2.paragraph4')}</ListItemText>
+                                    <ListItemText>{t('factory.section2.paragraph5')}</ListItemText>
+                                </ListItemText>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <ArrowRightIcon />
+                                </ListItemIcon>
+                                <ListItemText>
+                                    <ListItemText>{t('factory.section2.paragraph6')}</ListItemText>
+                                    <ListItemText>{t('factory.section2.paragraph7')}</ListItemText>
+                                </ListItemText>
+                            </ListItem>
                         </List>
                     </Stack>
                 </Grid>
@@ -129,7 +183,7 @@ const FactoryPage = () => {
 
             <Grid width='100%' container rowGap={10} data-aos="fade-up" direction='row' justifyContent='center' alignItems='center'>
                 <Typography mt={10} variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
-                    Ligne de production
+                    {t('factory.subTitle3')}
                 </Typography>
                 <Swiper
                     loop={true}

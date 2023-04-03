@@ -19,7 +19,9 @@ const HistoryPage = () => {
                     </Grid>
                     <Grid item xs={12} sm={5} md={6}>
                         <Stack spacing={2}>
-                            <Typography variant="h2" fontWeight={700} letterSpacing={0} color="primary.primary">{t('history.subTitle1')}</Typography>
+                            <Typography variant="h2" fontWeight={700} letterSpacing={0} color="primary.primary">
+                                {t('history.subTitle1')}
+                            </Typography>
                             <Typography variant="body1" color="text.primary">
                                 {t('history.section1.paragraph1')}
                             </Typography>

@@ -22,22 +22,35 @@
         }
     },
     "factory": {
-        "subTitle": "Équipements",
-        "section": {
-            "paragraph1": "Vitesse de la congélation (le temps de Cristallisation le plus courte)",
-            "paragraph2": "Fiabilité de la Chaîne du froid",
-            "paragraph3": "Emballage avec haute qualité",
-            "paragraph4": "Bonne pratique du QHSE",
-            "paragraph5": "Petits prix et produits diversifiés"
-        }
+        "subTitle1": "Equipment",
+        "description1": "To ensure the proper execution of the production process, AFRIOCEAN has invested in state-of-the-art equipment for the quality of its service. A cooking zone has also been developed for the production line of elaborated products and the production line of gastropods/cephalopods. For the elaborated products, it concerns fileted fish and for the gastropods/cephalopods, it concerns the cooking of shellfish.",
+        "section1": {
+            "paragraph1": "2 tunnels with a freezing capacity of 8 tons each.",
+            "paragraph2": "2 tunnels with a freezing capacity of 4 tons each.",
+            "paragraph3": "2 cold rooms with a total storage capacity of 1,000 tons.",
+            "paragraph4": "(Pallets are wrapped with film.)",
+            "paragraph5": "(24/7 -20℃ maintained.)",
+            "paragraph6": "1 SAS room to protect the products.",
+            "paragraph7": "All BITZER compressors adapted."
+        },
+        "subTitle2": "Manufacturing Premises",
+        "section2": {
+            "paragraph1": "Production rooms for whole-round fish.",
+            "paragraph2": "1 ice-making room.",
+            "paragraph3": "1 production room for processed products",
+            "paragraph4": "(Compliant with EU HSQE regulations)",
+            "paragraph5": "(All trolleys are made of stainless steel.)",
+            "paragraph6": "1 production room for cooking",
+            "paragraph7": "(Steam cooking equipment)"
+        },
+        "subTitle3": "Production Line"
     },
     "vision": {
         "title": "Values",
         "section": {
             "paragraph1": "Our goal is to provide our customers with fresh and diversified seafood products according to our markets. This is achieved through high-quality production techniques, low-temperature preservation to maintain good quality, and a controlled cold chain.",
             "paragraph2": "We always strive to improve our products to reach more market segments.",
-            "paragraph3": "We offer them a quality product with a high added value and at a price that defies all competition.",
-            "paragraph4": "The success of a company does not only depend on its good management and the quality of its products and services, but also on something very decisive: ITS VALUES. That is why AFRIOCEAN identifies with certain values that are essential to establish its business, namely: "
+            "paragraph3": "We offer them a quality product with a high added value and at a price that defies all competition. The success of a company does not only depend on its good management and the quality of its products and services, but also on something very decisive: ITS VALUES. That is why AFRIOCEAN identifies with certain values that are essential to establish its business, namely: "
         },
         "subTitle1": "PROFESSIONALISM",
         "subParagraph1": "Competence, efficiency, and responsiveness are a guiding principle in which our team invests in their daily work in order to best meet the demands of the market and, more particularly, of our clients.",
@@ -45,7 +58,7 @@
         "subParagraph2": "Quality is essential to AFRIOCEAN as we operate in a sensitive sector, which is food. AFRIOCEAN rigorously follows all procedures from the arrival of raw materials to the delivery of the final product to the end customer. A QSHE team is established to ensure compliance with all standards governed in this sector.",
         "subTitle3": "RELIABILITY",
         "subParagraph3": "We strive to adhere to the rules of our profession. Quality is at the heart of our daily concerns. The reliability of the company is based on recognized skills and constant adaptation to any present situation in order to react accordingly for the satisfaction of our customers.",
-        "subTitle4": "Caring",
+        "subTitle4": "CARING",
         "subParagraph4": "We listen to our customers. The customer is the reason for the existence of the company. AFRIOCEAN places great importance on the needs and suggestions of its customers in order to provide them with a product or service beyond their expectations. AFRIOCEAN strives to create strong relationships based on trust with its customers.",
         "subTitle5": "AMBITION",
         "subParagraph5": "'Big results require big ambitions.' AFRIOCEAN sets high but achievable goals to give each staff member the desire to exceed expectations. It is in this logic that we constantly strive to improve our various established systems to increase the chances of achieving our set goals."

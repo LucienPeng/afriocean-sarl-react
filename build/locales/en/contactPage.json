@@ -1,0 +1,21 @@
+{
+    "title": "Contacts",
+    "form": {
+        "title": "Feedback",
+        "formDescription": "For any customized requirements or requests, please fill in the contact form.",
+        "isTermAgreed": "I agree my submitted data is collected and stored.",
+        "alert": " We have received your feedback and will reply to you soon!",
+        "firstName": "First name",
+        "lastname": "Last name",
+        "phone": "Phone number",
+        "comment": "Enter your comment",
+        "submit": "Submit"
+    },
+    "contacts": {
+        "contact1": "Business Hour",
+        "contact2": "Adress",
+        "contact3": "Telephone Number",
+        "contact4": "What's App",
+        "email": "Email"
+    }
+}

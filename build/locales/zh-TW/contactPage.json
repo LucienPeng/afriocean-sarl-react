@@ -1,0 +1,21 @@
+{
+    "title": "聯絡資訊",
+    "form": {
+        "title": "意見回饋",
+        "formDescription": "若有任何的需求或意見，請填下列表單聯絡我們。",
+        "isTermAgreed": "我同意我所提交的資訊會將被儲存使用。",
+        "alert": "我們已經收到您的意見回饋，將會在第一時間回覆您！",
+        "firstName": "名字",
+        "lastname": "姓氏",
+        "phone": "電話號碼",
+        "comment": "請填入意見回饋",
+        "submit": "提交"
+    },
+    "contacts": {
+        "contact1": "營業時間",
+        "contact2": "營業地址",
+        "contact3": "聯絡電話",
+        "contact4": "What's App",
+        "email": "電子信箱"
+    }
+}

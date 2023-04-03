@@ -22,13 +22,52 @@
         }
     },
     "factory": {
-        "subTitle4": "Équipements",
-        "section4": {
-            "paragraph1": "Vitesse de la congélation (le temps de Cristallisation le plus courte)",
-            "paragraph2": "Fiabilité de la Chaîne du froid",
-            "paragraph3": "Emballage avec haute qualité",
-            "paragraph4": "Bonne pratique du QHSE",
-            "paragraph5": "Petits prix et produits diversifiés"
-        }
+        "subTitle1": "Équipements",
+        "description1": "Pour la bonne exécution du process de production, AFRIOCEAN a investi dans des équipements ultra modernes pour la qualité de son service. Une cuisson a également été développé pour la ligne de production des produits élaborés et la ligne de production des gastéropodes / céphalopodes. Pour les produits élaborés il s’agit des poissons en filet et pour les des gastéropodes / céphalopodes il s’agit de la cuisson des coquillages.",
+        "section1": {
+            "paragraph1": "2 tunnels de congélation de 8t.",
+            "paragraph2": "2 tunnels de congélation de 4t.",
+            "paragraph3": "2 chambres froides avec la capacité de stockage en total de 1,000T. ",
+            "paragraph4": "(Pallet emballé avec film.)",
+            "paragraph5": "(24/7 -20℃ maintenu.)",
+            "paragraph6": "1 chambre de SAS pour protéger les produits.",
+            "paragraph7": "Tous BITZER compresseurs adaptés."
+        },
+        "subTitle2": "Locaux Productions",
+        "section2": {
+            "paragraph1": "Salles de production pour poisson entier.",
+            "paragraph2": "1 salle de fabrique de glace.",
+            "paragraph3": "1 salle de production pour produit élaboré",
+            "paragraph4": "(Conforme aux régles HSQE de l’UE)",
+            "paragraph5": "(Chariots tous en inox.)",
+            "paragraph6": "1 salles de production pour la cuisson",
+            "paragraph7": "(Equipement de cuisson en vapeur)"
+        },
+        "subTitle3": "Ligne de production"
+    },
+    "vision": {
+        "title": "Valeurs",
+        "section": {
+            "paragraph1": "Notre but est de fournir à nos clients des produits de la mer frais et diversifiés en fonction de nos marchés. Cela grâce à des techniques de production de haute qualité, à basse température pour préserver la bonne qualité et une chaîne de froid maîtrisée.",
+            "paragraph2": "Nous essayons toujours d’améliorer nos produits pour atteindre plus de segments du marché. Nous leur proposons un produit de qualité avec une très grande valeur ajoutée et à un prix défiant toute concurrence.",
+            "paragraph3": "La réussite d’une société ne relève pas seulement de sa bonne gestion et la qualité de ses produits et services, elle passe également par quelque chose de très déterminant : SES VALEURS. C’est pour cela que AFRIOCEAN s’identifie à certaines valeurs non négligeable pour bien asseoir son business à savoir :"
+        },
+        "subTitle1": "PROFESSIONNALISME",
+        "subParagraph1": "Compétences, efficacité, réactivité sont une ligne de conduite dans laquelle notre équipe s’investit dans leur travail quotidien dans le but de répondre au mieux aux exigences du marché et plus particulièrement des clients.",
+        "subTitle2": "QUALITÉ",
+        "subParagraph2": "la production de l’arrivée de la matière première jusqu’à la livraison au client final du produit fini. Une équipe QSHE est établie pour veiller au respect de toutes les normes qui sont régies dans ce secteur.",
+        "subTitle3": "FIABILITÉ",
+        "subParagraph3": "Nous nous efforçons à respecter les règles de notre profession. La qualité est au cœur de nos préoccupations quotidiennes. La fiabilité de l’entreprise prend appui sur des compétences reconnues et une constante adaptation à toute situation présente pour ainsi réagir en conséquence pour la satisfaction de nos clients.",
+        "subTitle4": "ON ÉCOUTE",
+        "subParagraph4": "Le client est la raison d’être de l’entreprise. AFRIOCEAN ainsi porté une importance capitale aux besoins et suggestions de ses clients pour pouvoir leur fournir un produit ou service au-delà de leur attente. AFRIOCEAN s’attèle à créer des liens solides basés sur la confiance avec ses clients.",
+        "subTitle5": "AMBITION",
+        "subParagraph5": "« Big results require big ambitions (Les grands résultats nécessitent de grandes ambitions) », AFRIOCEAN se fixe des objectifs élevés mais atteignables pour donner à chaque membre du personnel l’envie de se surpasser. C’est dans cette logique que s’inscrit la recherche constante d’amélioration des différents systèmes établis pour pouvoir accroître les chances d’atteindre les objectifs fixés."
+    },
+    "quality": {
+        "title": "Certifications Et Procédures",
+        "paragraph": "Nous nous sommes lancé comme ligne de conduite de respecter toutes les normes QHSE avec l’aide des différents services compétents comme le service des pêches (DITP, DPSP, DIC), la Douane, les services municipaux…Et nous suivons les instructions des procédures suivantes : (L'acronyme QHSE signifie Qualité, Hygiène, Sécurité, Environnement)",
+        "item1": "Manuel HACCP",
+        "item2": "Normes Hygiène et Environnementales",
+        "item3": "Processus de production"
     }
 }

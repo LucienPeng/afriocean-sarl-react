@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { Typography, Stack, Grid, FormControlLabel, Alert, Collapse } from "@mui/material";
 import { StyledTextfield, StyledCheckedBox, StyledButton } from '../UI/StyledComponents';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useContactPageTranslation } from "../../i18n/useTranslations";
 import { useToggle } from '../../utils/useToggle';
 import { useForm, Controller } from "react-hook-form";
 import jsonp from 'jsonp';
@@ -30,8 +31,9 @@ const schema = yup.object({
 const baseUrl = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSedP6Jw7b-KhqLZS6myoq5nSEPAyeHOYY6gPsMW5exHsr3a3w/formResponse`;
 
 export const ContactForm = () => {
+    const { t } = useContactPageTranslation();
     const { isToggle, setIsToggle } = useToggle();
-    const { handleSubmit, control, reset, formState: { isDirty, errors }, getValues,
+    const { handleSubmit, control, reset, formState: { isDirty, errors },
     } = useForm({
         resolver: yupResolver(schema),
         defaultValues: initFeedback
@@ -50,8 +52,6 @@ export const ContactForm = () => {
         reset(initFeedback);
     };
 
-    console.log(getValues());
-
     useEffect(() => {
         if (isDirty) {
             setIsToggle(false);
@@ -61,10 +61,10 @@ export const ContactForm = () => {
     return (
         <Stack component='form' maxWidth='80%' spacing={3} onSubmit={handleSubmit(submitForm)}>
             <Typography variant="h1" lineHeight={0} color="common.white" fontWeight={700} fontSize={24} textAlign='center'>
-                Feedback
+                {t('form.title')}
             </Typography>
             <Typography variant="body1" color="common.white" textAlign='left' textTransform='none'>
-                For any customized requirements or requests, please fill in the contact form.
+                {t('form.formDescription')}
             </Typography>
             <Stack spacing={0.5} height='100%'>
                 <Grid container spacing={1} >
@@ -76,7 +76,7 @@ export const ContactForm = () => {
                             render={({ field }) =>
                                 <StyledTextfield {...field}
                                     placeholder="Enter first name"
-                                    label="First Name"
+                                    label={t('form.firstName')}
                                     variant="outlined"
                                     fullWidth
                                     required
@@ -91,7 +91,7 @@ export const ContactForm = () => {
                             render={({ field }) =>
                                 <StyledTextfield {...field}
                                     placeholder="Enter last name"
-                                    label="Last Name"
+                                    label={t('form.lastname')}
                                     variant="outlined"
                                     fullWidth
                                     required
@@ -124,7 +124,7 @@ export const ContactForm = () => {
                             <StyledTextfield {...field}
                                 type="number"
                                 placeholder="Enter phone number"
-                                label="Phone"
+                                label={t('form.phone')}
                                 variant="outlined"
                                 fullWidth
                                 required
@@ -138,7 +138,7 @@ export const ContactForm = () => {
                         rules={{ required: true }}
                         render={({ field }) =>
                             <StyledTextfield {...field}
-                                label="Enter your comment"
+                                label={t('form.comment')}
                                 multiline
                                 rows={4}
                                 placeholder="Enter your comment"
@@ -159,15 +159,15 @@ export const ContactForm = () => {
                         <FormControlLabel
                             {...field}
                             control={<StyledCheckedBox checked={field.value} sx={{ color: errors.isAgreed ? 'error.main' : '#fff', '&.Mui-checked': { color: '#fff' } }} />}
-                            label={<Typography sx={{ color: errors.isAgreed ? 'error.main' : '#fff' }}>I agree my submitted data is collected and stored.</Typography>}
+                            label={<Typography sx={{ color: errors.isAgreed ? 'error.main' : '#fff' }}>{t('form.isTermAgreed')}</Typography>}
                         />
                     }
                 />
-                <StyledButton type='submit' alignself='center' variant="contained" color="secondary">Submit</StyledButton>
+                <StyledButton type='submit' alignself='center' variant="contained" color="secondary">{t('form.submit')}</StyledButton>
             </Stack>
             <Collapse in={isToggle}>
                 <Alert severity="success" onClose={togglerHandler}>
-                    We have received your feedback and will reply to you soon!
+                    {t('form.alert')}
                 </Alert>
             </Collapse>
         </Stack>

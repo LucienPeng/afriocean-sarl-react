@@ -1,9 +1,11 @@
 import { Fade, Fab, Box } from '@mui/material';
+import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 
 export const ScrollTop = (props) => {
+    const { isMobileView } = useDeviceMetadata();
     const { pageRef } = props;
     const trigger = useScrollTrigger({
         disableHysteresis: true,
@@ -22,7 +24,7 @@ export const ScrollTop = (props) => {
             <Box
                 onClick={handleClick}
                 role="presentation"
-                sx={{ position: 'fixed', bottom: 100, right: 30, zIndex: 1 }}
+                sx={{ position: 'fixed', bottom: isMobileView ? 80 : 30, right: 30, zIndex: 1 }}
             >
                 <Fab size="small" aria-label="scroll back to top">
                     <KeyboardArrowUpIcon />

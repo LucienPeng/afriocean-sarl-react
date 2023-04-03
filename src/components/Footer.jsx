@@ -1,4 +1,4 @@
-import { Stack, Typography, Link, Button, Divider, Box } from "@mui/material";
+import { Stack, Typography, Button, Divider, Box } from "@mui/material";
 import { useDeviceMetadata } from "../utils/useDeviceMetadata";
 import React from "react";
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -6,6 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PolicyIcon from '@mui/icons-material/Policy';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import { useTranslation } from "react-i18next";
 
 const SOCIL_MEDIAS = [
     { id: "Facebook", icon: <FacebookIcon />, url: 'https://www.facebook.com/AFRIOCEAN' },
@@ -28,7 +29,7 @@ const MobileFooter = () => {
                 ))}
             </BottomNavigation>
             <Stack bgcolor='#097272' direction='row' justifyContent='center'>
-                <Typography fontWeight={700} textAlign='center' variant="body1" color='common.white'>© Afriocean Sarl 2022 | Tous droits réservés.</Typography>
+                <Typography fontWeight={700} textAlign='center' variant="body1" color='common.white'>© Afriocean Sarl 2023</Typography>
             </Stack>
         </Box>
     );
@@ -38,6 +39,7 @@ const MobileFooter = () => {
 export const Footer = () => {
     const redirection = (url) => window.open(url, '_blank');
     const { isMobileView } = useDeviceMetadata();
+    const { t } = useTranslation();
 
     return (
         <Stack bgcolor='primary.dark'>
@@ -49,9 +51,9 @@ export const Footer = () => {
                                 mx: !isMobileView && 2.5,
                             },
                         }}>
-                        <Typography fontWeight={700} textAlign='center' variant="body1" color='common.white'>© Afriocean Sarl 2022</Typography>
+                        <Typography fontWeight={700} textAlign='center' variant="body1" color='common.white'>© Afriocean Sarl 2023</Typography>
                         <Divider orientation="vertical" variant="middle" flexItem color='white' />
-                        <Typography fontWeight={700} textAlign='center' variant="body1" color='common.white'>Tous droits réservés.</Typography>
+                        <Typography fontWeight={700} textAlign='center' variant="body1" color='common.white'>{t('footer.copyRight')}</Typography>
                         {SOCIL_MEDIAS.map((socialMedia) => (
                             <Stack key={socialMedia.id} onClick={() => redirection(socialMedia.url)} direction='row' alignItems='center' justifyContent='center'>
                                 <Divider orientation="vertical" variant="middle" flexItem color='white' />

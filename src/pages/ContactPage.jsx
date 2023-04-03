@@ -1,14 +1,17 @@
 import { Card, CardContent, Typography, Stack, Grid, Box, Link } from "@mui/material";
 import { CONTACT_INFO } from '../components/Hompage/Contact';
 import { ContactForm } from '../components/Contact/ContactForm';
+import { useContactPageTranslation } from "../i18n/useTranslations";
 import EmailIcon from '@mui/icons-material/Email';
 
 const ContactPage = () => {
-
+    const { t } = useContactPageTranslation();
     return (
         <Stack sx={{ bgcolor: 'primary.dark' }} minHeight='100vh' justifyContent='center' alignItems='center' >
             <Box width='100%' alignItems='center' justifyContent='center' display='flex' flexDirection='column' my={5}>
-                <Typography my={10} variant="h2" fontWeight={700} color='common.white'>Contacts</Typography>
+                <Typography my={10} variant="h2" fontWeight={700} color='common.white'>
+                    {t('title')}
+                </Typography>
                 <Grid width='100%' container direction='column' rowSpacing={5} alignItems='center' justifyContent='center'>
                     <Grid item xs={11} width='100%'>
                         <Grid container alignItems='center' justifyContent='center' direction='row' rowSpacing={5}>
@@ -38,8 +41,8 @@ const ContactPage = () => {
                                         <CardContent>
                                             <Stack justifyContent='center' alignItems='center' spacing={5}>
                                                 <Stack justifyContent='center' alignItems='center' textAlign='center'>
-                                                    <Typography variant="h1" color="common.white" fontWeight={700} fontSize={18}>
-                                                        {contact.title}
+                                                    <Typography variant="h3" color="common.white" fontWeight={700} fontSize={20}>
+                                                        {t(`contacts.contact${index + 1}`)}
                                                     </Typography>
                                                     <Typography variant="body1" color="common.white">
                                                         {contact.detail}
@@ -59,7 +62,7 @@ const ContactPage = () => {
                                     <CardContent>
                                         <Stack justifyContent='center' alignItems='center' spacing={5}>
                                             <Stack justifyContent='center' alignItems='center' textAlign='center'>
-                                                <Typography variant="h1" color="common.white" fontWeight={700} fontSize={18}>
+                                                <Typography variant="h2" color="common.white" fontWeight={700} fontSize={18}>
                                                     Email
                                                 </Typography>
                                                 <Box sx={{ overflowWrap: 'break-word', width: '8rem' }}>

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.930f1583.css",
-    "main.js": "/static/js/main.9ab3c560.js",
+    "main.js": "/static/js/main.4a461056.js",
     "static/media/atlanticPomfret.png": "/static/media/atlanticPomfret.e120a7ead9c776b5d5ad.png",
     "static/media/5.jpg": "/static/media/5.16908e595476f2378d1d.jpg",
     "static/media/4.jpg": "/static/media/4.0f6375cf2f29d99ad8f6.jpg",
@@ -15,9 +15,13 @@
     "static/media/intro2.jpg": "/static/media/intro2.b584208da1f53424131b.jpg",
     "static/media/1.jpg": "/static/media/1.205545bd50e2188277e8.jpg",
     "static/media/3.jpg": "/static/media/3.cd4c9842a01f0827fd30.jpg",
+    "static/media/sticks.png": "/static/media/sticks.a56ef9e726b725239083.png",
     "static/media/heroBanner4.jpg": "/static/media/heroBanner4.540fa2c153aea681e1b8.jpg",
     "static/media/octopus.png": "/static/media/octopus.1ad3c7409ff0169a6218.png",
+    "static/media/wholeFish.png": "/static/media/wholeFish.c6d3e0428ae80ca69da7.png",
+    "static/media/shellfish.png": "/static/media/shellfish.8d41e8216f16d9b2c03e.png",
     "static/media/cymbium.png": "/static/media/cymbium.a0733c3cfd09cabb766f.png",
+    "static/media/drawnfish.png": "/static/media/drawnfish.73dc4793cf3f844157df.png",
     "static/media/ribbonFish.png": "/static/media/ribbonFish.a80f01f4bdc6d1ea3821.png",
     "static/media/africanLookdown.png": "/static/media/africanLookdown.50b486180b0c812df606.png",
     "static/media/bigEyeGrunt.png": "/static/media/bigEyeGrunt.fb4a5bfa157c4cdc825a.png",
@@ -26,13 +30,10 @@
     "static/media/cymbiumPepo.png": "/static/media/cymbiumPepo.d3d4b424a6811fa566d1.png",
     "static/media/intro3.jpg": "/static/media/intro3.1e40820c4a12c4463fa6.jpg",
     "static/media/flagfinMojarra.png": "/static/media/flagfinMojarra.75cc3ced9a95944ac3e2.png",
-    "static/media/dressedFish.png": "/static/media/dressedFish.ecdf59e9600985955375.png",
     "static/media/banner2.jpg": "/static/media/banner2.0397d950a78844c61268.jpg",
     "static/media/senegalJack.png": "/static/media/senegalJack.4de2cfa8345b97890f3e.png",
     "static/media/heroBanner3.jpg": "/static/media/heroBanner3.79d63027d526e25f0241.jpg",
-    "static/media/fillets.png": "/static/media/fillets.9289e77eb4c991211d78.png",
     "static/media/maseiranSardinella.png": "/static/media/maseiranSardinella.c539d217359da5c65576.png",
-    "static/media/fishRoe.png": "/static/media/fishRoe.b58cdc001330160b68bc.png",
     "static/media/atlanticHorseMackerel.png": "/static/media/atlanticHorseMackerel.8bc0017befdf9bc84fc7.png",
     "static/media/smoothmouthSeaCatfish.png": "/static/media/smoothmouthSeaCatfish.9f8688d8d39a0ee44322.png",
     "static/media/lesserAfricanThreadfin.png": "/static/media/lesserAfricanThreadfin.cbd63102bdf732f8b2da.png",
@@ -41,18 +42,17 @@
     "static/media/cuttlefish.png": "/static/media/cuttlefish.65205f4c8dc23a3a69b2.png",
     "static/media/cassavaCroaker.png": "/static/media/cassavaCroaker.672994ba573522a125ad.png",
     "static/media/littleTunny.png": "/static/media/littleTunny.7e4ec0c63723a182ebb6.png",
+    "static/media/fishRoe.png": "/static/media/fishRoe.d914364d833b8e4f45a3.png",
     "static/media/beardedBrotula.png": "/static/media/beardedBrotula.50f655dc8ab812f69153.png",
     "static/media/cuneneHorseMackerel.png": "/static/media/cuneneHorseMackerel.57649f117087a5a242f0.png",
-    "static/media/drawnfish.jpg": "/static/media/drawnfish.9b25fdf0950165eff0d6.jpg",
+    "static/media/dressedFish.png": "/static/media/dressedFish.7b352f1a4221e1e63859.png",
+    "static/media/fillets.png": "/static/media/fillets.9c1d8b7d875f67041efd.png",
     "static/media/intro1.jpg": "/static/media/intro1.1e3b177210ee2580c33a.jpg",
     "static/media/7.jpg": "/static/media/7.0d53af0049c473787032.jpg",
     "static/media/intro4.jpg": "/static/media/intro4.e4446fba648f6e191280.jpg",
     "static/media/curemaMullet.png": "/static/media/curemaMullet.3edb4e2101a6f9e47e44.png",
-    "static/media/sticks.JPG": "/static/media/sticks.c1357bdc76e41dbe6ea5.JPG",
     "static/media/murex.png": "/static/media/murex.4b03abe4223f2a4ee686.png",
-    "static/media/shellfish.JPG": "/static/media/shellfish.6c95b48753d4d74ce6c2.JPG",
     "static/media/intro5.jpg": "/static/media/intro5.f988568496e21d4fc05a.jpg",
-    "static/media/wholeFish.JPG": "/static/media/wholeFish.b8a9bc93fccc806b78ec.JPG",
     "static/media/locaux1.jpg": "/static/media/locaux1.06409603543edd299767.jpg",
     "static/media/locaux5.jpeg": "/static/media/locaux5.fd35feed6c2e545d300a.jpeg",
     "static/media/locaux2.jpeg": "/static/media/locaux2.7e8a2d7b8228bf46186a.jpeg",
@@ -62,10 +62,10 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.930f1583.css.map": "/static/css/main.930f1583.css.map",
-    "main.9ab3c560.js.map": "/static/js/main.9ab3c560.js.map"
+    "main.4a461056.js.map": "/static/js/main.4a461056.js.map"
   },
   "entrypoints": [
     "static/css/main.930f1583.css",
-    "static/js/main.9ab3c560.js"
+    "static/js/main.4a461056.js"
   ]
 }

@@ -1,3 +1,6 @@
 {
-    "welcome": "Bienvenue"
+    "footer": {
+        "copyRight": "Afriocean tous droits réservés",
+        "privacyPolicy": "Règles de confidentialité"
+    }
 }

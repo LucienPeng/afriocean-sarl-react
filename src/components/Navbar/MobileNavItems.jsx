@@ -17,7 +17,6 @@ export const MobileNavItems = (props) => {
             switch (true) {
                 case item.id === 'contact': {
                     navigationHandler(item.url);
-                    drawerToggleHandler();
                     break;
                 }
                 case item.url === 'history': {

@@ -9,8 +9,6 @@ import { EffectFlip, Pagination, Navigation } from "swiper";
 import { useRef } from "react";
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
-const ELABORATED_PRODUCTS = ['Whole fish', "Drawn fish", "Dressed fish", "Fish fillets", "Fish sticks", "Shucked and cooked shellfish meat", "Fish roll"];
-
 const ProductMasonryImageList = (props) => {
     return (
         <Box sx={{ width: '100%', height: '100%', overflowY: 'scroll' }}>
@@ -55,7 +53,7 @@ const ElaboratedProductIntroPage = () => {
 
 
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center' minHeight='100vh' spacing={isMobileView ? 5 : 10} mt={'50px'}>
+        <Grid container direction='row' justifyContent='center' alignItems='center' minHeight='100vh' spacing={isMobileView ? 5 : 10} my={'50px'}>
             <Grid item xs={11} sm={10} md={5}>
                 <Stack spacing={5}>
                     <Stack spacing={3}>
@@ -71,7 +69,7 @@ const ElaboratedProductIntroPage = () => {
                             {t('elaboratedProduct.subTitle')}
                         </Typography>
                         <List>
-                            {ELABORATED_PRODUCTS.map((elaboratedProduct, index) => (
+                            {CUSTOMIZED_PRODUCTS.map((elaboratedProduct, index) => (
                                 <ListItemButton key={index} onClick={() => {
                                     swipeHandler(index);
                                 }}>

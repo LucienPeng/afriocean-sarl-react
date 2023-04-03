@@ -4,8 +4,8 @@ import { useAboutUsPageTranslation } from "../../i18n/useTranslations";
 const VisionPage = () => {
     const { t } = useAboutUsPageTranslation();
     return (
-        <Grid my={10} container spacing={10} alignItems='center' justifyContent='center' flexDirection='row'>
-            <Grid itemxs={10} sm={12} md={10}>
+        <Grid my={10} container gap={10} alignItems='center' justifyContent='center' flexDirection='row'>
+            <Grid item xs={10}>
                 <Stack spacing={2}>
                     <Typography variant="h2" fontWeight={700} letterSpacing={0} color="primary.primary">{t('vision.title')}</Typography>
                     <Typography variant="body1" color="text.primary">
@@ -17,14 +17,10 @@ const VisionPage = () => {
                     <Typography variant="body1" color="text.primary">
                         {t('vision.section.paragraph3')}
                     </Typography>
-                    <Typography variant="body1" color="text.primary">
-                        {t('vision.section.paragraph4')}
-                    </Typography>
-
                 </Stack>
             </Grid >
             <Grid container item justifyContent='center' spacing={5}>
-                <Grid item xs={10} sm={6} md={4} data-aos="fade-up">
+                <Grid item xs={10} sm={10} md={3} data-aos="fade-up">
                     <Card>
                         <CardContent>
                             <Typography gutterBottom variant="h3" component="div">
@@ -34,7 +30,7 @@ const VisionPage = () => {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={10} sm={6} md={3} data-aos="fade-up">
+                <Grid item xs={10} sm={10} md={3} data-aos="fade-up">
                     <Card>
                         <CardContent>
                             <Typography gutterBottom variant="h3" component="div">
@@ -44,7 +40,7 @@ const VisionPage = () => {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={10} sm={6} md={3} data-aos="fade-up">
+                <Grid item xs={10} sm={10} md={3} data-aos="fade-up">
                     <Card>
                         <CardContent>
                             <Typography gutterBottom variant="h3" component="div">
@@ -54,7 +50,7 @@ const VisionPage = () => {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={10} sm={6} md={3} data-aos="fade-up">
+                <Grid item xs={10} sm={10} md={4} data-aos="fade-up">
                     <Card>
                         <CardContent>
                             <Typography gutterBottom variant="h3" component="div">
@@ -64,7 +60,7 @@ const VisionPage = () => {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={10} sm={6} md={3} data-aos="fade-up">
+                <Grid item xs={10} sm={10} md={4} data-aos="fade-up">
                     <Card>
                         <CardContent>
                             <Typography gutterBottom variant="h3" component="div">
