@@ -7,7 +7,7 @@ export const Introduction = (props) => {
     const { aboutRef } = props;
     const { navigationHandler } = useNavigation();
     const { t } = useHomePageTranslation();
-    const redirectHandle = () => navigationHandler(`/about`);
+    const redirectHandle = () => navigationHandler(`/about/history`);
 
     return (
         <Stack p={5} bgcolor='#224267' component='div' ref={aboutRef} justifyContent='center' alignItems='center' data-aos="fade-in">
