@@ -1,4 +1,4 @@
-import { Button, TextField, Checkbox, Select } from "@mui/material";
+import { Button, TextField, Checkbox, Select, ListItemText } from "@mui/material";
 import { styled } from '@mui/material/styles';
 
 export const StyledButton = styled(Button)({
@@ -30,4 +30,8 @@ export const StyledSelect = styled(Select)(() => ({
             borderColor: "#3EB6B6"
         }
     }
+}));
+
+export const StyledListItemText = styled(ListItemText)(() => ({
+    color: '#172E48',
 }));

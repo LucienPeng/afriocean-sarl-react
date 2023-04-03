@@ -1,5 +1,5 @@
-import { Stack, Grid, Box, List, ListItemText, Typography, ListItemIcon, ListItem } from "@mui/material";
-import { StyledButton } from "../../components/UI/StyledComponents";
+import { Stack, Grid, Box, List, Typography, ListItemIcon, ListItem } from "@mui/material";
+import { StyledButton, StyledListItemText } from "../../components/UI/StyledComponents";
 import { useNavigation } from "../../utils/useNavigation";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import { useBusinessPagesTranslation } from "../../i18n/useTranslations";
@@ -31,9 +31,9 @@ const FrozenProductIntroPage = () => {
                                     <ListItemIcon>
                                         <ArrowRightIcon />
                                     </ListItemIcon>
-                                    <ListItemText>
+                                    <StyledListItemText>
                                         {t(`frozenProduct.products.product${index + 1}`)}
-                                    </ListItemText>
+                                    </StyledListItemText>
                                 </ListItem>
                             ))}
                         </List>

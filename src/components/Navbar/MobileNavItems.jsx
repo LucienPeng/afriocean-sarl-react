@@ -55,6 +55,10 @@ export const MobileNavItems = (props) => {
                     navigationHandler('./contact');
                     break;
                 }
+                case item.url === 'elaborate': {
+                    navigationHandler('./contact');
+                    break;
+                }
                 case item.lang === 'en' || item.lang === 'fr' || item.lang === 'zh-TW': {
                     i18n.changeLanguage(item.lang);
                     break;

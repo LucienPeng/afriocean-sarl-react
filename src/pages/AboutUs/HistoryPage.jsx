@@ -1,5 +1,6 @@
-import { Typography, Grid, Stack, Card, CardMedia, ListItemText, List } from "@mui/material";
+import { Typography, Grid, Stack, Card, CardMedia, List } from "@mui/material";
 import { useAboutUsPageTranslation } from "../../i18n/useTranslations";
+import { StyledListItemText } from '../../components/UI/StyledComponents';
 import personnel from '../../asset/images/intro/intro5.jpg';
 
 
@@ -84,11 +85,11 @@ const HistoryPage = () => {
                             {t('history.subTitle3')}
                         </Typography>
                         <List>
-                            <ListItemText>{t('history.section3.paragraph1')}</ListItemText>
-                            <ListItemText>{t('history.section3.paragraph2')}</ListItemText>
-                            <ListItemText>{t('history.section3.paragraph3')}</ListItemText>
-                            <ListItemText>{t('history.section3.paragraph4')}</ListItemText>
-                            <ListItemText>{t('history.section3.paragraph5')}</ListItemText>
+                            <StyledListItemText>{t('history.section3.paragraph1')}</StyledListItemText>
+                            <StyledListItemText>{t('history.section3.paragraph2')}</StyledListItemText>
+                            <StyledListItemText>{t('history.section3.paragraph3')}</StyledListItemText>
+                            <StyledListItemText>{t('history.section3.paragraph4')}</StyledListItemText>
+                            <StyledListItemText>{t('history.section3.paragraph5')}</StyledListItemText>
                         </List>
                     </Grid>
                 </Grid>

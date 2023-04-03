@@ -1,4 +1,4 @@
-import { Stack, Grid, Box, List, ListItemText, ListItemButton, ListItemIcon, Typography } from "@mui/material";
+import { Stack, Grid, Box, List, ListItemButton, ListItemIcon, Typography } from "@mui/material";
 import { StyledButton } from "../../components/UI/StyledComponents";
 import { useNavigation } from "../../utils/useNavigation";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
@@ -6,6 +6,7 @@ import { CUSTOMIZED_PRODUCTS } from '../../asset/customizedProduct';
 import { useBusinessPagesTranslation } from "../../i18n/useTranslations";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFlip, Pagination, Navigation } from "swiper";
+import { StyledListItemText } from '../../components/UI/StyledComponents';
 import { useRef } from "react";
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
@@ -76,9 +77,9 @@ const ElaboratedProductIntroPage = () => {
                                     <ListItemIcon>
                                         <ArrowRightIcon />
                                     </ListItemIcon>
-                                    <ListItemText variant="text">
+                                    <StyledListItemText variant="text">
                                         {t(`elaboratedProduct.products.product${index + 1}`)}
-                                    </ListItemText>
+                                    </StyledListItemText>
                                 </ListItemButton>
                             ))}
                         </List>

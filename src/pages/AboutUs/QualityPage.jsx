@@ -1,5 +1,6 @@
-import { Typography, Grid, Stack, ListItemText, ListItemIcon, ListItem } from "@mui/material";
+import { Typography, Grid, Stack, ListItemIcon, ListItem } from "@mui/material";
 import { useAboutUsPageTranslation } from "../../i18n/useTranslations";
+import { StyledListItemText } from '../../components/UI/StyledComponents';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const QualityPage = () => {
@@ -9,7 +10,7 @@ const QualityPage = () => {
         <Grid container my={10} alignItems='center' justifyContent='center' flexDirection='row'>
             <Grid item xs={10}>
                 <Stack spacing={2}>
-                    <Typography variant="h2" fontWeight={700} letterSpacing={0} color="primary.primary">{t('quality.title')}</Typography>
+                    <Typography variant="h2" fontWeight={700} letterSpacing={0} color="text.primary">{t('quality.title')}</Typography>
                     <Typography variant="body1" color="text.primary">
                         {t('quality.paragraph')}
                     </Typography>
@@ -17,24 +18,24 @@ const QualityPage = () => {
                         <ListItemIcon>
                             <ArrowRightIcon />
                         </ListItemIcon>
-                        <ListItemText>
+                        <StyledListItemText>
                             {t('quality.item1')}
-                        </ListItemText>
+                        </StyledListItemText>
                     </ListItem>
                     <ListItem>
                         <ListItemIcon>
                             <ArrowRightIcon />
                         </ListItemIcon>
-                        <ListItemText>
+                        <StyledListItemText>
                             {t('quality.item2')}
-                        </ListItemText>
+                        </StyledListItemText>
                     </ListItem><ListItem>
                         <ListItemIcon>
                             <ArrowRightIcon />
                         </ListItemIcon>
-                        <ListItemText>
+                        <StyledListItemText>
                             {t('quality.item3')}
-                        </ListItemText>
+                        </StyledListItemText>
                     </ListItem>
                 </Stack>
             </Grid >

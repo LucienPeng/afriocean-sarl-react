@@ -1,8 +1,9 @@
-import { Typography, Grid, Stack, CardMedia, List, ListItemText, ListItemIcon, ListItem } from "@mui/material";
+import { Typography, Grid, Stack, CardMedia, List, ListItemIcon, ListItem } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow } from "swiper";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import { useAboutUsPageTranslation } from "../../i18n/useTranslations";
+import { StyledListItemText } from '../../components/UI/StyledComponents';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 import equipmemt1 from '../../asset/images/equipment/1.jpg';
@@ -50,43 +51,43 @@ const FactoryPage = () => {
                             <ListItemIcon>
                                 <ArrowRightIcon />
                             </ListItemIcon>
-                            <ListItemText>
-                                <ListItemText>{t('factory.section1.paragraph1')}</ListItemText>
-                            </ListItemText>
+                            <StyledListItemText>
+                                <StyledListItemText>{t('factory.section1.paragraph1')}</StyledListItemText>
+                            </StyledListItemText>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
                                 <ArrowRightIcon />
                             </ListItemIcon>
-                            <ListItemText>
-                                <ListItemText>{t('factory.section1.paragraph2')}</ListItemText>
-                            </ListItemText>
+                            <StyledListItemText>
+                                <StyledListItemText>{t('factory.section1.paragraph2')}</StyledListItemText>
+                            </StyledListItemText>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
                                 <ArrowRightIcon />
                             </ListItemIcon>
-                            <ListItemText>
-                                <ListItemText>{t('factory.section1.paragraph3')}</ListItemText>
-                                <ListItemText>{t('factory.section1.paragraph4')}</ListItemText>
-                                <ListItemText>{t('factory.section1.paragraph5')}</ListItemText>
-                            </ListItemText>
+                            <StyledListItemText>
+                                <StyledListItemText>{t('factory.section1.paragraph3')}</StyledListItemText>
+                                <StyledListItemText>{t('factory.section1.paragraph4')}</StyledListItemText>
+                                <StyledListItemText>{t('factory.section1.paragraph5')}</StyledListItemText>
+                            </StyledListItemText>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
                                 <ArrowRightIcon />
                             </ListItemIcon>
-                            <ListItemText>
-                                <ListItemText>{t('factory.section1.paragraph6')}</ListItemText>
-                            </ListItemText>
+                            <StyledListItemText>
+                                <StyledListItemText>{t('factory.section1.paragraph6')}</StyledListItemText>
+                            </StyledListItemText>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
                                 <ArrowRightIcon />
                             </ListItemIcon>
-                            <ListItemText>
-                                <ListItemText>{t('factory.section1.paragraph7')}</ListItemText>
-                            </ListItemText>
+                            <StyledListItemText>
+                                <StyledListItemText>{t('factory.section1.paragraph7')}</StyledListItemText>
+                            </StyledListItemText>
                         </ListItem>
                     </List>
                 </Grid>
@@ -127,36 +128,36 @@ const FactoryPage = () => {
                                 <ListItemIcon>
                                     <ArrowRightIcon />
                                 </ListItemIcon>
-                                <ListItemText>
-                                    <ListItemText>{t('factory.section2.paragraph1')}</ListItemText>
-                                </ListItemText>
+                                <StyledListItemText>
+                                    <StyledListItemText>{t('factory.section2.paragraph1')}</StyledListItemText>
+                                </StyledListItemText>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
                                     <ArrowRightIcon />
                                 </ListItemIcon>
-                                <ListItemText>
-                                    <ListItemText>{t('factory.section2.paragraph2')}</ListItemText>
-                                </ListItemText>
+                                <StyledListItemText>
+                                    <StyledListItemText>{t('factory.section2.paragraph2')}</StyledListItemText>
+                                </StyledListItemText>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
                                     <ArrowRightIcon />
                                 </ListItemIcon>
-                                <ListItemText>
-                                    <ListItemText>{t('factory.section2.paragraph3')}</ListItemText>
-                                    <ListItemText>{t('factory.section2.paragraph4')}</ListItemText>
-                                    <ListItemText>{t('factory.section2.paragraph5')}</ListItemText>
-                                </ListItemText>
+                                <StyledListItemText>
+                                    <StyledListItemText>{t('factory.section2.paragraph3')}</StyledListItemText>
+                                    <StyledListItemText>{t('factory.section2.paragraph4')}</StyledListItemText>
+                                    <StyledListItemText>{t('factory.section2.paragraph5')}</StyledListItemText>
+                                </StyledListItemText>
                             </ListItem>
                             <ListItem>
                                 <ListItemIcon>
                                     <ArrowRightIcon />
                                 </ListItemIcon>
-                                <ListItemText>
-                                    <ListItemText>{t('factory.section2.paragraph6')}</ListItemText>
-                                    <ListItemText>{t('factory.section2.paragraph7')}</ListItemText>
-                                </ListItemText>
+                                <StyledListItemText>
+                                    <StyledListItemText>{t('factory.section2.paragraph6')}</StyledListItemText>
+                                    <StyledListItemText>{t('factory.section2.paragraph7')}</StyledListItemText>
+                                </StyledListItemText>
                             </ListItem>
                         </List>
                     </Stack>
