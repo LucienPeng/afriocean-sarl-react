@@ -20,7 +20,7 @@ const HistoryPage = () => {
                     </Grid>
                     <Grid item xs={12} sm={5} md={6}>
                         <Stack spacing={2}>
-                            <Typography variant="h2" fontWeight={700} letterSpacing={0} color="primary.primary">
+                            <Typography variant="h2" fontWeight={700} letterSpacing={0} color="text.primary">
                                 {t('history.subTitle1')}
                             </Typography>
                             <Typography variant="body1" color="text.primary">
@@ -36,10 +36,10 @@ const HistoryPage = () => {
 
             <Grid item xs={10} data-aos="fade-up" justifyContent='center' alignItems='center'>
                 <Stack justifyContent='center' alignItems='center' spacing={2}>
-                    <Typography variant="body1" color="text.dark">
+                    <Typography variant="body1" color="text.primary">
                         {t('history.section1.paragraph3')}
                     </Typography>
-                    <Typography variant="body1" color="text.dark" fontStyle='italic'>
+                    <Typography variant="body1" color="text.primary" fontStyle='italic'>
                         {t('history.section1.paragraph4')}
                     </Typography>
                 </Stack>
@@ -81,7 +81,7 @@ const HistoryPage = () => {
                     </Grid>
 
                     <Grid item xs={12} sm={5} md={6} justifyContent='center' alignItems='center'>
-                        <Typography variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
+                        <Typography variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="text.primary">
                             {t('history.subTitle3')}
                         </Typography>
                         <List>

@@ -17,7 +17,6 @@ export const Selector = (props) => {
     const { setProductList, data } = props;
     const [currentTag, setCurrentTag] = useState('All');
     const [searchParams, setSearchParams] = useSearchParams();
-
     const filteredCategory = searchParams.get('category');
     const tagSelectHandler = useCallback((tag) => {
         if (tag === currentTag) {
@@ -43,7 +42,6 @@ export const Selector = (props) => {
             setCurrentTag('All');
         } else if (filteredCategory === 'All') {
             setCurrentTag('All');
-            searchParams.set('category', 'All');
             setProductList(data);
         } else if (filteredCategory !== 'All') {
             setProductList(data.filter((product) => product.tags.includes(filteredCategory)));
@@ -96,7 +94,6 @@ export const MobileSelector = (props) => {
             setCurrentTag('All');
         } else if (filteredCategory === 'All') {
             setCurrentTag('All');
-            searchParams.set('category', 'All');
             setProductList(data);
         } else if (filteredCategory !== 'All') {
             setProductList(data.filter((product) => product.tags.includes(filteredCategory)));

@@ -35,13 +35,13 @@ const FactoryPage = () => {
     const { t } = useAboutUsPageTranslation();
 
     return (
-        <Stack bgcolor='#E5E5E5' spacing={5} py={10} alignItems='center' justifyContent='center'>
+        <Stack bgcolor='#E5E5E5' spacing={5} py={10}>
             <Grid container rowGap={3} spacing={5} data-aos="fade-up" justifyContent='center' alignItems='center' direction='row'>
                 <Grid item xs={11} md={5} justifyContent='center'>
-                    <Typography variant="h2" lineHeight={2} fontWeight={700} letterSpacing={0} color="primary.primary">
+                    <Typography variant="h2" lineHeight={2} fontWeight={700} letterSpacing={0} color="text.primary">
                         {t('factory.subTitle1')}
                     </Typography>
-                    <Typography variant="body1" color="text.dark">
+                    <Typography variant="body1" color="text.primary">
                         {t('factory.description1')}
                     </Typography>
                 </Grid>
@@ -120,7 +120,7 @@ const FactoryPage = () => {
             <Grid container display="flex" rowGap={10} data-aos="fade-up" direction='row' justifyContent='center' alignItems='center'>
                 <Grid item md={5}>
                     <Stack spacing={2} alignItems='center'>
-                        <Typography variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
+                        <Typography variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="text.primary">
                             {t('factory.subTitle2')}
                         </Typography>
                         <List>
@@ -183,7 +183,7 @@ const FactoryPage = () => {
             </Grid>
 
             <Grid width='100%' container rowGap={10} data-aos="fade-up" direction='row' justifyContent='center' alignItems='center'>
-                <Typography mt={10} variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="primary.primary">
+                <Typography mt={10} variant="h2" fontSize='22px' fontWeight={700} letterSpacing={0} color="text.primary">
                     {t('factory.subTitle3')}
                 </Typography>
                 <Swiper
@@ -212,7 +212,6 @@ const FactoryPage = () => {
                     ))}
                 </Swiper>
             </Grid>
-
         </Stack>
     );
 };

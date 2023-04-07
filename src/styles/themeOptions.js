@@ -36,13 +36,14 @@ export const defaultTheme = createTheme({
 
     },
     typography: {
-        fontFamily: '\'Oxygen\', \'Roboto\', , \'normal\'',
+        fontFamily: '\'Kanit\', \'Oxygen\', \'Roboto\'',
         button: {
             fontFamily: '\'Copperplate\',\'Vollkorn SC\', \'normal\'',
         },
         h1: {
             fontFamily: '\'Copperplate\',\'Vollkorn SC\', \'normal\'',
             fontSize: '120px',
+            fontWeight: 500
         },
         h2: {
             fontFamily: '\'Copperplate\',\'Vollkorn SC\', \'normal\'',
@@ -107,12 +108,12 @@ export const taiwanessTheme = createTheme({
         fontFamily: '\'YuPearl\',\'Vollkorn SC\', \'normal\'',
         h1: {
             fontSize: '120px',
-            lineHeight: '100px',
-            letterSpacing: 10,
+            letterSpacing: 15,
         },
         h2: {
             fontSize: '26px',
             letterSpacing: 5,
+            lineHeight: '50px'
         },
         h3: {
             fontSize: '24px',

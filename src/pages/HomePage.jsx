@@ -12,7 +12,7 @@ const HomePage = (props) => {
     let { homeRef, aboutRef, productRef, contactRef, serviceRef } = props;
 
     return (
-        <Stack width='100%' alignItems='center' justifyContent='center'>
+        <Stack direction='column' alignItems='center' justifyContent='center'>
             <HeroBanner />
             <Introduction aboutRef={aboutRef} />
             <Business serviceRef={serviceRef} />

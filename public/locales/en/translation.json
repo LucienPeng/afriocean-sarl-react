@@ -2,5 +2,12 @@
     "footer": {
         "copyRight": "Afriocean all rights reserved.",
         "privacyPolicy": "Privacy Policy "
+    },
+    "404": {
+        "title": "OOPS !",
+        "paragraph1": "Somthing went wrong. We're currently working ont it.",
+        "paragraph2": "The page will be redirected to the homepage in",
+        "paragraph3": "seconds.",
+        "redirect": "Back to home page"
     }
 }

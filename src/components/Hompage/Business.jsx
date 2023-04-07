@@ -9,7 +9,7 @@ import intro3 from '../../asset/images/intro/intro3.jpg';
 const SERVICES = [
     { id: 1, service: 'Frozen product', photo: intro1, pathname: '/service/frozen-product' },
     { id: 2, service: 'Elaborated Product', photo: intro2, pathname: '/service/elaborated-product' },
-    { id: 3, service: 'Customized Product', photo: intro3, pathname: '/customizedProduct' }
+    { id: 3, service: 'Customized Product', photo: intro3, pathname: '/contact' }
 ];
 
 export const Business = (props) => {
@@ -42,7 +42,7 @@ export const Business = (props) => {
                                 </Grid>
                                 <Grid item xs={6} sm={6} md={12}>
                                     <Stack direction='row' alignItems='center' spacing={2} onClick={() => navigationHandler(service.pathname)}>
-                                        <Typography fontSize={18} textAlign='center' letterSpacing={0} variant="h2" color="text.primary">
+                                        <Typography fontSize={18} fontWeight={400} textAlign='center' letterSpacing={0} variant="h2" color="text.primary">
                                             {t(`business.services.service${index + 1}`)}
                                         </Typography>
                                         <KeyboardDoubleArrowRightIcon className="animate__animated animate__flash animate__slower animate__infinite" />

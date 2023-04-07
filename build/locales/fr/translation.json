@@ -2,5 +2,12 @@
     "footer": {
         "copyRight": "Afriocean tous droits réservés",
         "privacyPolicy": "Règles de confidentialité"
+    },
+    "404": {
+        "title": "Oh là là !",
+        "paragraph1": "Quelques problèmes inconnus nous arrivent. Nous y sommes dessus !",
+        "paragraph2": "Vous allez dirigé vers la page d'accueil dans",
+        "paragraph4": "seconds.",
+        "redirect": "Retourne la page d'accueil"
     }
 }

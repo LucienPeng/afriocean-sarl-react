@@ -1,7 +1,6 @@
 import "aos/dist/aos.css";
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import AOS from "aos";
-import ReactGA from 'react-ga';
 import { ProductItem } from "./components/Product/ProductItem";
 import { Footer } from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -22,10 +21,10 @@ import NotFoundPage from "./components/NotFoundPage";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useProductList } from "./asset/productList";
 import { useTranslation } from "react-i18next";
+import { useTracking } from './utils/useTracking';
 import { ThemeProvider } from '@emotion/react';
 import { defaultTheme, taiwanessTheme } from './styles/themeOptions';
 
-const GOOGLE_TRACKING_ID = "G-5XR4YQW6Q3";
 
 const App = () => {
     const { FISH_PRODUCTS, SEAFOOD_PRODUCTS } = useProductList();
@@ -38,11 +37,7 @@ const App = () => {
     const contactRef = useRef();
     const trigger = useScrollTrigger({ threshold: 100 });
 
-    ReactGA.initialize(GOOGLE_TRACKING_ID);
-
-    useEffect(() => {
-        ReactGA.pageview(window.location.pathname + window.location.search);
-    }, []);
+    useTracking();
 
     const currentTheme = useMemo(() => {
         if (i18n.language !== 'zh-TW') {
@@ -56,6 +51,10 @@ const App = () => {
         AOS.init();
         AOS.refresh();
     }, [trigger]);
+
+    useEffect(() => {
+        console.log(i18n.language);
+    }, [i18n.language]);
 
     return (
         <ThemeProvider theme={currentTheme}>

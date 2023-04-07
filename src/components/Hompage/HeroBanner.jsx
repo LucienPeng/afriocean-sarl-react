@@ -5,7 +5,7 @@ import HeroBanner4 from '../../asset/images/heroBanner4.jpg';
 import HeroBanner5 from '../../asset/images/heroBanner5.jpg';
 
 import React, { useState } from "react";
-import { Box, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { keyframes } from "@emotion/react";
 import { useTheme } from "@mui/material/styles";
 import { useHomePageTranslation } from "../../i18n/useTranslations";
@@ -65,12 +65,12 @@ export const HeroBanner = () => {
             {
                 HEROBANNERS.map((heroBanner, index) => (
                     <SwiperSlide key={heroBanner.title}>
-                        <Box
+                        <Stack
                             textAlign='center'
-                            display='flex'
-                            flexDirection='column'
+                            direction='column'
                             alignItems='center'
                             justifyContent='center'
+                            spacing={1}
                             sx={{
                                 minHeight: '100vh',
                                 height: '100%',
@@ -95,11 +95,11 @@ export const HeroBanner = () => {
                             <Typography
                                 color='common.white'
                                 fontSize={{ xs: '16px', md: '28px' }}
-                                variant="h1"
+                                variant="h2"
                                 className="animate__animated animate__slideInUp">
                                 {t('subIntro')}
                             </Typography>
-                        </Box>
+                        </Stack>
                     </SwiperSlide>
                 ))
             };
