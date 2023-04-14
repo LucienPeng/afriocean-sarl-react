@@ -13,7 +13,7 @@ import VisionPage from './pages/AboutUs/VisionPage';
 import QualityPage from './pages/AboutUs/QualityPage';
 import ProductListPage from "./pages/Product/ProductListPage";
 import ProductPageLayout from "./pages/Product/ProductPageLayout";
-import ServicePageLayout from './pages/ServicePageLayout';
+import ServicePageLayout from './pages/Business/ServicePageLayout';
 import FrozenProductIntroPage from './pages/Business/FrozenProductIntroPage';
 import ElaboratedProductIntroPage from './pages/Business/ElaboratedProductIntroPage';
 import ContactPage from "./pages/ContactPage";

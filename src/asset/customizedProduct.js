@@ -1,10 +1,11 @@
-import wholeFish from '../asset/images/customizedProducts/wholeFish.png';
-import drawnfish from '../asset/images/customizedProducts/drawnfish.png';
-import dressedFish from '../asset/images/customizedProducts/dressedFish.png';
-import fishFillets from '../asset/images/customizedProducts/fillets.png';
-import fishSticks from '../asset/images/customizedProducts/sticks.png';
-import shellfish from '../asset/images/customizedProducts/shellfish.png';
-import fishRoe from '../asset/images/customizedProducts/fishRoe.png';
+import wholeFish from '../asset/images/customizedProducts/wholeFish.jpg';
+import guttedFish from '../asset/images/customizedProducts/guttedFish.jpg';
+import dressedFish from '../asset/images/customizedProducts/dressedFish.jpg';
+import fishFillets from '../asset/images/customizedProducts/fillets.jpg';
+import butterflyFillets from '../asset/images/customizedProducts/butterfly.jpg';
+import fishSticks from '../asset/images/customizedProducts/sticks.jpg';
+import shellfish from '../asset/images/customizedProducts/shellfish.jpg';
+import fishRoe from '../asset/images/customizedProducts/fishRoll.jpg';
 
 
 export const CUSTOMIZED_PRODUCTS = [
@@ -13,8 +14,8 @@ export const CUSTOMIZED_PRODUCTS = [
         title: "Whole fish"
     },
     {
-        img: drawnfish,
-        title: "Drawn fish"
+        img: guttedFish,
+        title: "Gutted fish"
     },
     {
         img: dressedFish,
@@ -23,6 +24,10 @@ export const CUSTOMIZED_PRODUCTS = [
     {
         img: fishFillets,
         title: "Fish fillets"
+    },
+    {
+        img: butterflyFillets,
+        title: "Butterfly fillets"
     },
     {
         img: fishSticks,
@@ -34,7 +39,7 @@ export const CUSTOMIZED_PRODUCTS = [
     },
     {
         img: fishRoe,
-        title: "Fish roe"
+        title: "Fish roll"
     },
 
 ];

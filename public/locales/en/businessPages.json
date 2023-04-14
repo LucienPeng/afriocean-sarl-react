@@ -18,10 +18,11 @@
             "product1": "Whole fish",
             "product2": "Gutted whole fish (Drawn fish)",
             "product3": "Scaled, gutted and ready-to-cook fish (Dressed fish)",
-            "product4": "Fish fillets / Butterfly fillets / Steaks / Loins",
-            "product5": "Fish sticks",
-            "product6": "Shucked and cooked shellfish meat",
-            "product7": "Fish roll"
+            "product4": "Fish fillets",
+            "product5": "Butterfly fillets",
+            "product6": "Fish sticks / Steaks / Loins",
+            "product7": "Shucked and cooked shellfish meat",
+            "product8": "Fish roll"
         }
     },
     "redirect": "Back to home page"

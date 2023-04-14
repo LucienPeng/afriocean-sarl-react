@@ -1,7 +1,8 @@
-import { Typography, Grid, Stack, Card, CardMedia, List } from "@mui/material";
+import { Typography, Grid, Stack, Card, CardMedia, List, ListItemIcon, ListItem } from "@mui/material";
 import { useAboutUsPageTranslation } from "../../i18n/useTranslations";
 import { StyledListItemText } from '../../components/UI/StyledComponents';
 import personnel from '../../asset/images/intro/intro5.jpg';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 
 const HistoryPage = () => {
@@ -85,11 +86,41 @@ const HistoryPage = () => {
                             {t('history.subTitle3')}
                         </Typography>
                         <List>
-                            <StyledListItemText>{t('history.section3.paragraph1')}</StyledListItemText>
-                            <StyledListItemText>{t('history.section3.paragraph2')}</StyledListItemText>
-                            <StyledListItemText>{t('history.section3.paragraph3')}</StyledListItemText>
-                            <StyledListItemText>{t('history.section3.paragraph4')}</StyledListItemText>
-                            <StyledListItemText>{t('history.section3.paragraph5')}</StyledListItemText>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <ArrowRightIcon />
+                                </ListItemIcon>
+                                <StyledListItemText>{t('history.section3.paragraph1')}</StyledListItemText>
+                            </ListItem>
+
+                            <ListItem>
+                                <ListItemIcon>
+                                    <ArrowRightIcon />
+                                </ListItemIcon>
+                                <StyledListItemText>{t('history.section3.paragraph2')}</StyledListItemText>
+                            </ListItem>
+
+                            <ListItem>
+                                <ListItemIcon>
+                                    <ArrowRightIcon />
+                                </ListItemIcon>
+                                <StyledListItemText>{t('history.section3.paragraph3')}</StyledListItemText>
+                            </ListItem>
+
+                            <ListItem>
+                                <ListItemIcon>
+                                    <ArrowRightIcon />
+                                </ListItemIcon>
+                                <StyledListItemText>{t('history.section3.paragraph4')}</StyledListItemText>
+                            </ListItem>
+
+                            <ListItem>
+                                <ListItemIcon>
+                                    <ArrowRightIcon />
+                                </ListItemIcon>
+                                <StyledListItemText>{t('history.section3.paragraph5')}</StyledListItemText>
+                            </ListItem>
+
                         </List>
                     </Grid>
                 </Grid>

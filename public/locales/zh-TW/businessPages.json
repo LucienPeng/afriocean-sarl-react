@@ -18,10 +18,11 @@
             "product1": "全魚",
             "product2": "去內臟",
             "product3": "三去(去鱗、去鰓、去內臟)",
-            "product4": "魚片 / 蝴蝶魚片 / 魚排 / 魚柳",
-            "product5": "魚條",
-            "product6": "去殼並煮熟的螺肉",
-            "product7": "魚卷"
+            "product4": "魚片",
+            "product5": "蝴蝶魚片",
+            "product6": "魚條  / 魚排 / 魚柳",
+            "product7": "去殼並煮熟的螺肉",
+            "product8": "魚卷"
         }
     },
     "redirect": "回到首頁"

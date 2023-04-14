@@ -18,10 +18,11 @@
             "product1": "Poissons entiers",
             "product2": "Poissons vidés (poissons éviscérés)",
             "product3": "Poissons écailles enlevées, vidés et prêts à cuire",
-            "product4": "Filets de poisson / filets papillon / tranches / darnes",
-            "product5": "Bâtonnets de poisson",
-            "product6": "Chair de coquillages décortiquée et cuite",
-            "product7": "Rouleau de poisson"
+            "product4": "Filets de poisson",
+            "product5": "filets papillon",
+            "product6": "Bâtonnets de poisson / tranches / darnes",
+            "product7": "Chair de coquillages décortiquée et cuite",
+            "product8": "Rouleau de poisson"
         }
     },
     "redirect": "Retourne à la page d'accueil"

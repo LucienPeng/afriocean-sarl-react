@@ -12,7 +12,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const ProductMasonryImageList = (props) => {
     return (
-        <Box sx={{ width: '100%', height: '100%', overflowY: 'scroll' }}>
+        <Box sx={{ width: '100%', overflowY: 'scroll' }}>
             <Swiper
                 ref={props.swiperRef}
                 effect={"flip"}
@@ -54,7 +54,7 @@ const ElaboratedProductIntroPage = () => {
 
 
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center' minHeight='100vh' spacing={isMobileView ? 5 : 10} my={'50px'}>
+        <Grid container direction='row' justifyContent='center' alignItems='center' minHeight='80vh' spacing={isMobileView ? 5 : 10} my={'10px'}>
             <Grid item xs={11} sm={10} md={5}>
                 <Stack spacing={5}>
                     <Stack spacing={3}>

@@ -1,6 +1,7 @@
-import { Stack, Typography, Box, Grid } from "@mui/material";
+import { Stack, Typography, Box, ImageList, ImageListItem, ImageListItemBar, IconButton } from "@mui/material";
 import { useNavigation } from '../../utils/useNavigation';
 import { useHomePageTranslation } from "../../i18n/useTranslations";
+import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import intro1 from '../../asset/images/intro/intro1.jpg';
 import intro2 from '../../asset/images/intro/intro2.jpg';
@@ -16,13 +17,48 @@ export const Business = (props) => {
     const { serviceRef } = props;
     const { navigationHandler } = useNavigation();
     const { t } = useHomePageTranslation();
+    const { isMobileView } = useDeviceMetadata();
 
     return (
         <Stack ref={serviceRef} mb={10} minHeight='50vh' width='100%' justifyContent='center' alignItems='center'>
             <Typography my={10} variant="h2" fontWeight={700} color="text.primary">
                 {t('business.title')}
             </Typography>
-            <Grid width="90%" container spacing={10} justifyContent='center' alignItems='center' direction="row" >
+
+            <ImageList sx={{ width: isMobileView ? '70%' : "90%", overflow: 'hidden' }} gap={isMobileView ? 30 : 10} cols={isMobileView ? 1 : 3} >
+                {SERVICES.map((service, index) => (
+                    <ImageListItem key={service.id} data-aos="zoom-in-down"
+                        onClick={() => navigationHandler(service.pathname)}
+                        sx={{ overflow: 'hidden' }}
+                    >
+                        <Box
+                            loading="lazy"
+                            component='img'
+                            width='100%'
+                            height='100%'
+                            src={service.photo}
+                            sx={{
+                                opacity: 1,
+                                "&:hover": { opacity: 0.9, cursor: 'pointer', transform: 'scale(1.1)', transition: '0.5s all ease-out' }
+                            }}
+                        />
+                        <ImageListItemBar
+                            title={t(`business.services.service${index + 1}`)}
+                            actionIcon={
+                                <IconButton sx={{ color: '#ffffff' }} >
+                                    <KeyboardDoubleArrowRightIcon className="animate__animated animate__flash animate__slower animate__infinite" />
+                                </IconButton>
+                            }
+                        />
+                    </ImageListItem>
+                ))}
+
+            </ImageList>
+
+
+
+
+            {/* <Grid width="90%" container spacing={10} justifyContent='center' alignItems='center' direction="row" >
                 {SERVICES.map((service, index) => (
                     <Grid item key={service.id} md={4} data-aos="zoom-in-down">
                         <Grid container alignItems='center' justifyContent='center' >
@@ -52,7 +88,7 @@ export const Business = (props) => {
                         </Grid>
                     </Grid>
                 ))}
-            </Grid>
+            </Grid> */}
         </Stack >
     );
 };

@@ -1,17 +1,32 @@
 import { Stack, Typography } from "@mui/material";
-import { useNavigation } from "../../utils/useNavigation";
 import { StyledButton } from "../UI/StyledComponents";
+import { useNavigation } from "../../utils/useNavigation";
 import { useHomePageTranslation } from "../../i18n/useTranslations";
+import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
+import introBackground from '../../asset/images/banner5.jpg';
 
 export const Introduction = (props) => {
     const { aboutRef } = props;
+    const { isMobileView } = useDeviceMetadata();
     const { navigationHandler } = useNavigation();
     const { t } = useHomePageTranslation();
     const redirectHandle = () => navigationHandler(`/about/history`);
 
     return (
-        <Stack py={5} direction='column' bgcolor='#224267' width='100%'ref={aboutRef} justifyContent='center' alignItems='center' data-aos="fade-in">
-            <Stack direction='column' maxWidth='80%' spacing={1.5}>
+        <Stack
+            ref={aboutRef}
+            sx={isMobileView ? { backgroundColor: '#224267' } : {
+                backgroundColor: 'rgba(0, 0, 0, .4)',
+                backgroundImage: `url(${introBackground})`,
+                backgroundBlendMode: 'multiply',
+                backgroundAttachment: 'fixed',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition:'bottom',
+                backgroundSize: 'cover',
+                minHeight: '50vh'
+            }}
+            py={5} spacing={2} direction='column' width='100%' justifyContent='center' alignItems='center' data-aos={isMobileView && "fade-in"}>
+            <Stack direction='column' maxWidth='80%' spacing={1.5} bgcolor={!isMobileView && '#ffffff20'} px={5} pv={2} data-aos={!isMobileView && "fade-in"}>
                 <Typography alignSelf='flex-start' variant="h1" color="common.white" fontSize={70} textAlign='start' >
                     “
                 </Typography>

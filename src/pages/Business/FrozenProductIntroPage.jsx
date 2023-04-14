@@ -13,7 +13,7 @@ const FrozenProductIntroPage = () => {
     const { isMobileView } = useDeviceMetadata();
     const { t } = useBusinessPagesTranslation();
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center' minHeight='100vh' spacing={10} mt={'50px'}>
+        <Grid container direction='row' justifyContent='center' alignItems='center' minHeight='80vh' spacing={10}>
             <Grid item xs={11} sm={10} md={6}>
                 <Stack spacing={5}>
                     <Box>
