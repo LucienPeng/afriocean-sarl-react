@@ -3,7 +3,7 @@ import { StyledButton } from "../UI/StyledComponents";
 import { useNavigation } from "../../utils/useNavigation";
 import { useHomePageTranslation } from "../../i18n/useTranslations";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
-import introBackground from '../../asset/images/banner5.jpg';
+import introBackground from '../../asset/images/banner1.jpg';
 
 export const Introduction = (props) => {
     const { aboutRef } = props;
@@ -16,12 +16,12 @@ export const Introduction = (props) => {
         <Stack
             ref={aboutRef}
             sx={isMobileView ? { backgroundColor: '#224267' } : {
-                backgroundColor: 'rgba(0, 0, 0, .4)',
+                backgroundColor: '#225599',
                 backgroundImage: `url(${introBackground})`,
                 backgroundBlendMode: 'multiply',
                 backgroundAttachment: 'fixed',
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition:'bottom',
+                backgroundPosition:'center',
                 backgroundSize: 'cover',
                 minHeight: '50vh'
             }}

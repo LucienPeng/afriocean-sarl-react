@@ -1,28 +1,43 @@
 import { Box, Typography, Stack, Grid, Table, TableRow, TableCell, TableBody, Link } from '@mui/material';
 import { StyledButton } from '../UI/StyledComponents';
 import { useNavigation } from '../../utils/useNavigation';
+import { useProductPageTranslation } from "../../i18n/useTranslations";
+import { useTranslation } from 'react-i18next';
+import { useMemo } from 'react';
 
 export const ProductItem = (props) => {
     const { item } = props;
     const { navigationHandler } = useNavigation();
+    const { t } = useProductPageTranslation();
+    const { i18n } = useTranslation();
     const redirectHandler = () => navigationHandler(`/product/${item.allergens.toLowerCase()}`);
+    const productName = useMemo(() => {
+        if (i18n.language === 'zh-TW') {
+            return item.cn;
+        } else if (i18n.language === 'en') {
+            return item.en;
+        } else if (i18n.language === 'fr') {
+            return item.fr;
+        }
+    }, [i18n.language, item.cn, item.en, item.fr]);
+
     return (
-        <Stack minHeight='100vh' width='100%' direction='column' justifyContent='center' alignItems='center' mt={'60px'}>
+        <Stack minHeight='100vh' width='100%' direction='column' justifyContent='center' alignItems='center' mt={'30px'}>
             <Stack py={5} direction='row' justifyContent='center' alignItems='center'>
                 <Grid container justifyContent='center' alignItems='center' spacing={{ xs: 0, md: 5 }}>
                     <Grid item xs={12} sm={10} md={6}>
                         <Box
                             component='img'
                             src={item.img}
-                            alt={item.En}
+                            alt={item.en}
                             className='animate__animated animate__rubberBand'
                             width='100%'
                         />
                     </Grid>
                     <Grid item xs={10} sm={10} md={5}>
-                        <Stack direction={{ xs: 'column', md: 'row' }} alignItems='center' justifyContent='center' spacing={{ xs: 0, md: 5 }} mb={5}>
-                            <Typography variant="h2" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                {item.en}
+                        <Stack direction='column' alignItems='center' justifyContent='center'>
+                            <Typography noWrap variant="h2" letterSpacing={0} fontWeight={700} color="primary.dark">
+                                {productName}
                             </Typography>
                             <Typography variant="h2" letterSpacing={0} color="text.primary" fontSize='16px'>
                                 {item.scientificName}
@@ -33,7 +48,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            En. name
+                                            {t('en')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell align="left">
@@ -45,7 +60,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Fr. name
+                                            {t('fr')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -57,7 +72,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Sp. name
+                                            {t('sp')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -69,7 +84,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Sn. name
+                                            {t('sn')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -81,7 +96,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Cn. name
+                                            {t('cn')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -93,7 +108,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Origin
+                                            {t('origin')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -105,7 +120,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Production Method
+                                            {t('method')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -117,7 +132,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Season
+                                            {t('season')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -129,7 +144,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            FAO
+                                            {t('FAO')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -141,7 +156,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Glaze
+                                            {t('glaze')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -153,7 +168,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Packing
+                                            {t('packing')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -165,7 +180,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Allergens
+                                            {t('allergens')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -177,7 +192,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Calibrage
+                                            {t('calibrage')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -189,7 +204,7 @@ export const ProductItem = (props) => {
                                 <TableRow>
                                     <TableCell>
                                         <Typography variant="body1" letterSpacing={0} fontWeight={700} color="primary.dark">
-                                            Tags
+                                            {t('tags')}
                                         </Typography>
                                     </TableCell>
                                     <TableCell>
@@ -205,7 +220,7 @@ export const ProductItem = (props) => {
                     </Grid>
                 </Grid>
             </Stack >
-            <StyledButton onClick={redirectHandler} sx={{ mb: 3 }} alignself='center' variant="contained" color="secondary">Back To List</StyledButton>
+            <StyledButton onClick={redirectHandler} sx={{ mb: 3 }} alignself='center' variant="contained" color="secondary">{t('backToList')}</StyledButton>
         </Stack >
     );
 };

@@ -54,7 +54,7 @@ const ElaboratedProductIntroPage = () => {
 
 
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center' minHeight='80vh' spacing={isMobileView ? 5 : 10} my={'10px'}>
+        <Grid container my={10} gap={{ xs: 0, sm: 5, md: 10 }} display='flex' justifyContent='center' alignItems={{ xs: 'center', lg: 'flex-start' }} flexDirection='row'>
             <Grid item xs={11} sm={10} md={5}>
                 <Stack spacing={5}>
                     <Stack spacing={3}>
@@ -93,7 +93,7 @@ const ElaboratedProductIntroPage = () => {
             </Grid>
 
             {isMobileView &&
-                <Grid xs={12} mb={5} item display='flex' justifyContent='center' alignItems='center'>
+                <Grid xs={12} my={5} item display='flex' justifyContent='center' alignItems='center'>
                     <StyledButton variant="contained" onClick={() => navigationHandler('/')}>
                         {t('redirect')}
                     </StyledButton>

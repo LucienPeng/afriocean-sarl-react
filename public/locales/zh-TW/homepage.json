@@ -59,5 +59,6 @@
     "actionButtons": {
         "knowMore": "瞭解更多",
         "seeMore": "看更多品項"
-    }
+    },
+    "redirect": "回到首頁"
 }

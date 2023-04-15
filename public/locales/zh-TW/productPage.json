@@ -1,0 +1,23 @@
+{
+    "en": "英文",
+    "fr": "法文",
+    "sp": "西文",
+    "sn": "塞文",
+    "cn": "中文",
+    "origin": "來源",
+    "method": "捕撈方法",
+    "season": "產季",
+    "FAO": "FAO漁區",
+    "glaze": "冷凍",
+    "packing": "包裝",
+    "allergens": "分類",
+    "calibrage": "規格",
+    "tags": "標籤",
+    "category": "品項",
+    "all": "全部",
+    "w/r": "整尾",
+    "permanent": "全年性",
+    "seasonal": "季節性",
+    "elaborate": "精加工",
+    "backToList": "回到清單"
+}

@@ -184,7 +184,7 @@ const FISH_RAW_PRODUCTS = [
         tags: [
             "Permanent",
             "W/R",
-            "Elabore"
+            "Elaborate"
         ],
         calibrage: "One size : 70g+",
         img: bigEyeGrunt,
@@ -369,7 +369,7 @@ const FISH_RAW_PRODUCTS = [
         tags: [
             "Seasonal",
             "W/R",
-            "Elabore"
+            "Elaborate"
         ],
         calibrage: "100g-200g, 200g-300g, 300g-500g, 500g-700g, 700g-900g, 900g+",
         img: ribbonFish,
@@ -511,7 +511,7 @@ const SEAFOOD_RAW_PRODUCTS = [
         tags: [
             "Seasonal",
             "W/R",
-            "Elabore"
+            "Elaborate"
         ],
         calibrage: "MIX, 10/30, 30/50, 50/100, 100/150, 150/200, 200/300, 300/400, 400+",
         img: cymbium,
@@ -535,7 +535,7 @@ const SEAFOOD_RAW_PRODUCTS = [
         tags: [
             "Seasonal",
             "W/R",
-            "Elabore"
+            "Elaborate"
         ],
         calibrage: "MIX, 100/400, 400/600, 600/800, 800/1000, 1000+",
         img: cymbiumPepo,
@@ -559,7 +559,7 @@ const SEAFOOD_RAW_PRODUCTS = [
         tags: [
             "Seasonal",
             "W/R",
-            "Elabore"
+            "Elaborate"
         ],
         calibrage: "MIX, 5/10, 10/20, 20/30, 30/50, 50/80, 80/100, 100+",
         img: murex,
@@ -583,7 +583,7 @@ const SEAFOOD_RAW_PRODUCTS = [
         tags: [
             "Permanent",
             "W/R",
-            "Elabore"
+            "Elaborate"
         ],
         calibrage: "100/200, 200/400, 400/600, 600/800, 800/1000, 1000+",
         img: cuttlefish,
@@ -607,7 +607,7 @@ const SEAFOOD_RAW_PRODUCTS = [
         tags: [
             "Seasonal",
             "W/R",
-            "Elabore"
+            "Elaborate"
         ],
         calibrage: "N/A",
         img: octopus,

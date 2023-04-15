@@ -59,5 +59,6 @@
     "actionButtons": {
         "knowMore": "Know about us",
         "seeMore": "See more"
-    }
+    },
+    "redirect": "Back to home page"
 }

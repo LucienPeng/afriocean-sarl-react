@@ -1,23 +1,36 @@
 
 import { ImageListItem, ImageListItemBar, Box, Stack, LinearProgress } from "@mui/material";
-import { useCallback, useState, useRef } from "react";
+import { useCallback, useState, useRef, useMemo } from "react";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import { useNavigation } from "../../utils/useNavigation";
+import { useTranslation } from 'react-i18next';
 
 export const ProductListImageListItem = (props) => {
     const { item } = props;
     const { navigationHandler } = useNavigation();
     const { isMobileView } = useDeviceMetadata();
+    const { i18n } = useTranslation();
     const [imageLoaded, setImageLoaded] = useState(false);
     const redirect = (category, url) => navigationHandler(`/product/${category.toLowerCase()}/${url}`);
     const onLoadHandler = useCallback(() => setImageLoaded(true), []);
     const imageListItemRef = useRef();
     const imageRef = useRef();
 
+    const productName = useMemo(() => {
+        if (i18n.language === 'zh-TW') {
+            return item.cn;
+        } else if (i18n.language === 'en') {
+            return item.en;
+        } else if (i18n.language === 'fr') {
+            return item.fr;
+        }
+    }, [i18n.language, item.cn, item.en, item.fr]);
+
+
     return (
         <ImageListItem
             ref={imageListItemRef}
-            data-aos="zoom-in-down"
+            data-aos="zoom-in"
             key={item.en}
             onClick={() => redirect(item.allergens, item.url)}
             sx={{
@@ -30,7 +43,7 @@ export const ProductListImageListItem = (props) => {
             }}
         >
             <Stack>
-                {!imageLoaded && <LinearProgress animation="wave" sx={{ width: '100%' }} />}
+                {!imageLoaded && <LinearProgress animation="wave" />}
                 <Box
                     ref={imageRef}
                     className="animate__animated animate__zoomIn animate__delay-1s"
@@ -40,16 +53,12 @@ export const ProductListImageListItem = (props) => {
                     onLoad={onLoadHandler}
                     src={`${item.img}`}
                     alt={item.en}
-                    sx={{
-                        height: '100%',
-                        '&:hover': { transition: 'all 1s ease-out', transform: 'scale(1.1)', }
-                    }}
                 />
                 {imageLoaded && <ImageListItemBar
-                        title={item.en}
-                        subtitle={item.scientificName}
-                        position="bottom"
-                    />
+                    title={productName}
+                    subtitle={item.scientificName}
+                    position="bottom"
+                />
                 }
             </Stack>
         </ImageListItem>

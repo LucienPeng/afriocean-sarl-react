@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.930f1583.css",
-    "main.js": "/static/js/main.8a390a80.js",
+    "main.js": "/static/js/main.acdef27c.js",
     "static/media/fillets.jpg": "/static/media/fillets.a212028399a416ba3a23.jpg",
     "static/media/dressedFish.jpg": "/static/media/dressedFish.8a02485c64bd470e8361.jpg",
     "static/media/wholeFish.jpg": "/static/media/wholeFish.d2030b5b1e7f356b15f5.jpg",
     "static/media/YuPearl.woff": "/static/media/YuPearl.b5351c014804d7bfa00b.woff",
-    "static/media/banner5.jpg": "/static/media/banner5.92f87f9065a9bae0b1ec.jpg",
     "static/media/atlanticPomfret.png": "/static/media/atlanticPomfret.2536e3b358ed4cc05454.png",
     "static/media/fishRoll.jpg": "/static/media/fishRoll.0d0364ec0779d7679b79.jpg",
     "static/media/ribbonFish.png": "/static/media/ribbonFish.5404c92b65817faaa9bf.png",
@@ -65,10 +64,10 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.930f1583.css.map": "/static/css/main.930f1583.css.map",
-    "main.8a390a80.js.map": "/static/js/main.8a390a80.js.map"
+    "main.acdef27c.js.map": "/static/js/main.acdef27c.js.map"
   },
   "entrypoints": [
     "static/css/main.930f1583.css",
-    "static/js/main.8a390a80.js"
+    "static/js/main.acdef27c.js"
   ]
 }

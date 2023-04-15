@@ -1,11 +1,13 @@
 import { Drawer, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Box } from '@mui/material';
 import { MobileNavItems } from './MobileNavItems';
-import FirstPageIcon from '@mui/icons-material/FirstPage';
 import { useNavigation } from '../../utils/useNavigation';
+import FirstPageIcon from '@mui/icons-material/FirstPage';
+import { useHomePageTranslation } from '../../i18n/useTranslations';
 
 export const MobileNavBar = (props) => {
     const { isToggle, drawerToggleHandler, mobileNavList, setMobileNavList } = props;
     const { navigationHandler } = useNavigation();
+    const { t } = useHomePageTranslation();
 
     const subMenuHandler = (menu) => setMobileNavList(menu);
 
@@ -36,7 +38,7 @@ export const MobileNavBar = (props) => {
                             <ListItemIcon>
                                 <FirstPageIcon />
                             </ListItemIcon>
-                            <ListItemText primary={'Back to homepage'} />
+                            <ListItemText primary={t('redirect')} />
                         </ListItemButton>
                     </ListItem>
                 </List>

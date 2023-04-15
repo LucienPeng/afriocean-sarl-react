@@ -1,0 +1,23 @@
+{
+    "en": "En. name",
+    "fr": "Fr. name",
+    "sp": "Sp. name",
+    "sn": "Sn. name",
+    "cn": "Cn. name",
+    "origin": "Origin",
+    "method": "Production Method",
+    "season": "Season",
+    "FAO": "FAO",
+    "glaze": "Glaze",
+    "packing": "Packing",
+    "allergens": "Allergens",
+    "calibrage": "calibrage",
+    "tags": "tags",
+    "category": "Category",
+    "all": "All",
+    "w/r": "W/R",
+    "permanent": "Permanent",
+    "seasonal": "Seasonal",
+    "elaborate": "Elaborate",
+    "backToList": "Back To List"
+}
