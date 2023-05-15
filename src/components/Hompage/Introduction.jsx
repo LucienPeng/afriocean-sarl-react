@@ -3,7 +3,6 @@ import { StyledButton } from "../UI/StyledComponents";
 import { useNavigation } from "../../utils/useNavigation";
 import { useHomePageTranslation } from "../../i18n/useTranslations";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
-import introBackground from '../../asset/images/banner1.jpg';
 
 export const Introduction = (props) => {
     const { aboutRef } = props;
@@ -11,17 +10,15 @@ export const Introduction = (props) => {
     const { navigationHandler } = useNavigation();
     const { t } = useHomePageTranslation();
     const redirectHandle = () => navigationHandler(`/about/history`);
-
     return (
         <Stack
             ref={aboutRef}
-            sx={isMobileView ? { backgroundColor: '#224267' } : {
-                backgroundColor: '#225599',
-                backgroundImage: `url(${introBackground})`,
+            sx={{
+                backgroundImage: `linear-gradient(150deg, rgba(0, 119, 182, 1) 3.6%, #172E48 87.6% )`,
                 backgroundBlendMode: 'multiply',
                 backgroundAttachment: 'fixed',
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition:'center',
+                backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 minHeight: '50vh'
             }}

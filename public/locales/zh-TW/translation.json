@@ -6,8 +6,6 @@
     "404": {
         "title": "哎呀",
         "paragraph1": "發生了一些問題，我們正在盡快處理。",
-        "paragraph2": "您將於",
-        "paragraph3": "秒後跳轉至首頁。",
         "redirect": "回到首頁"
     }
 }
