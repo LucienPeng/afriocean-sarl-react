@@ -1,5 +1,4 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { StyledButton } from "./UI/StyledComponents";
 import { useTranslation } from "react-i18next";
 
 const NotFoundComponent = () => {
@@ -18,7 +17,6 @@ const NotFoundComponent = () => {
                 <Typography color='#fff' mb={3} variant="h2" fontSize='40px' fontWeight={700}>{t('404.title')}</Typography>
                 <Typography color='#fff' variant="h6">{t('404.paragraph1')}</Typography>
             </Box>
-            <StyledButton variant="contained" color="secondary">{t('404.redirect')}</StyledButton>
         </Stack>
     );
 };
