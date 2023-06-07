@@ -1,9 +1,3 @@
-import HeroBanner1 from '../../asset/images/heroBanner1.jpg';
-import HeroBanner2 from '../../asset/images/heroBanner2.jpg';
-import HeroBanner3 from '../../asset/images/heroBanner3.jpg';
-import HeroBanner4 from '../../asset/images/heroBanner4.jpg';
-import HeroBanner5 from '../../asset/images/heroBanner5.jpg';
-
 import React, { useState } from "react";
 import { Stack, Typography } from "@mui/material";
 import { keyframes } from "@emotion/react";
@@ -18,11 +12,11 @@ import "swiper/css/navigation";
 import "swiper/css/bundle";
 
 const HEROBANNERS = [
-    { title: 'heroBanner1', img: HeroBanner1 },
-    { title: 'heroBanner2', img: HeroBanner2 },
-    { title: 'heroBanner3', img: HeroBanner3 },
-    { title: 'heroBanner4', img: HeroBanner4 },
-    { title: 'heroBanner5', img: HeroBanner5 }
+    { title: 'heroBanner1', img: 'https://www.afriocean.com/images/hero-banners/heroBanner1.jpg' },
+    { title: 'heroBanner2', img: 'https://www.afriocean.com/images/hero-banners/heroBanner2.jpg' },
+    { title: 'heroBanner3', img: 'https://www.afriocean.com/images/hero-banners/heroBanner3.jpg' },
+    { title: 'heroBanner4', img: 'https://www.afriocean.com/images/hero-banners/heroBanner4.jpg' },
+    { title: 'heroBanner5', img: 'https://www.afriocean.com/images/hero-banners/heroBanner5.jpg' }
 ];
 
 const zoomAnimation = keyframes`
@@ -60,7 +54,7 @@ export const HeroBanner = () => {
             allowTouchMove={true}
             onActiveIndexChange={zoomHandler}
             onInit={zoomHandler}
-            className="mySwiper"
+            className="hero-banner-swiper"
         >
             {
                 HEROBANNERS.map((heroBanner, index) => (

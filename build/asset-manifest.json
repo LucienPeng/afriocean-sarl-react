@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.930f1583.css",
-    "main.js": "/static/js/main.d9e84909.js",
+    "main.css": "/static/css/main.4f5ba0f2.css",
+    "main.js": "/static/js/main.03a48da7.js",
     "static/media/wholeFish.jpg": "/static/media/wholeFish.d2030b5b1e7f356b15f5.jpg",
     "static/media/YuPearl.woff": "/static/media/YuPearl.b5351c014804d7bfa00b.woff",
     "static/media/atlanticPomfret.png": "/static/media/atlanticPomfret.2536e3b358ed4cc05454.png",
@@ -14,9 +14,7 @@
     "static/media/senegalJack.png": "/static/media/senegalJack.08153a69017e5d40e23a.png",
     "static/media/atlanticBumper.png": "/static/media/atlanticBumper.e97b1589668f3c720558.png",
     "static/media/whiteTuna.png": "/static/media/whiteTuna.04549e3abceb6ec1af64.png",
-    "static/media/heroBanner2.jpg": "/static/media/heroBanner2.b7e6b1577a512e5995a4.jpg",
     "static/media/cymbiumPepo.png": "/static/media/cymbiumPepo.84903049f2c0de4ac283.png",
-    "static/media/heroBanner4.jpg": "/static/media/heroBanner4.a23d5133b20f9b076a6f.jpg",
     "static/media/flagfinMojarra.png": "/static/media/flagfinMojarra.1818bb4624e97a7e403a.png",
     "static/media/atlanticHorseMackerel.png": "/static/media/atlanticHorseMackerel.8e9a5bb6c98de6ce9567.png",
     "static/media/lesserAfricanThreadfin.png": "/static/media/lesserAfricanThreadfin.21608d66bb6a2cd7ede5.png",
@@ -28,7 +26,6 @@
     "static/media/littleTunny.png": "/static/media/littleTunny.c706ddddf7083a092043.png",
     "static/media/2.jpg": "/static/media/2.5253cc1a1fc604a10f35.jpg",
     "static/media/maseiranSardinella.png": "/static/media/maseiranSardinella.a8174b4f83a971304361.png",
-    "static/media/heroBanner5.jpg": "/static/media/heroBanner5.42ca8d8c40c84b58f5f4.jpg",
     "static/media/smoothmouthSeaCatfish.png": "/static/media/smoothmouthSeaCatfish.6aa95ffa5613960e998a.png",
     "static/media/1.jpg": "/static/media/1.8f5c4005e5fb8ccf1f26.jpg",
     "static/media/roundSardinella.png": "/static/media/roundSardinella.d005e8db92f0b114e97c.png",
@@ -39,9 +36,7 @@
     "static/media/6.jpg": "/static/media/6.1b7afd4f729d63b16e80.jpg",
     "static/media/cuneneHorseMackerel.png": "/static/media/cuneneHorseMackerel.0576c3c80f63d10137ce.png",
     "static/media/fillets.jpg": "/static/media/fillets.4bf5b160f8bbc8ffff49.jpg",
-    "static/media/heroBanner1.jpg": "/static/media/heroBanner1.0d96691c5687b111e8b0.jpg",
     "static/media/butterfly.jpg": "/static/media/butterfly.19f17e9e270d51311886.jpg",
-    "static/media/heroBanner3.jpg": "/static/media/heroBanner3.592c0712ebdff560f2ce.jpg",
     "static/media/sticks.jpg": "/static/media/sticks.17a9f1b11bc2709496b2.jpg",
     "static/media/banner2.jpg": "/static/media/banner2.9e49fbcc758be058a4f0.jpg",
     "static/media/guttedFish.jpg": "/static/media/guttedFish.4a4ef88764f4b47f503e.jpg",
@@ -63,11 +58,11 @@
     "static/media/locaux3.jpeg": "/static/media/locaux3.81dd2f79c77b44c37624.jpeg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.930f1583.css.map": "/static/css/main.930f1583.css.map",
-    "main.d9e84909.js.map": "/static/js/main.d9e84909.js.map"
+    "main.4f5ba0f2.css.map": "/static/css/main.4f5ba0f2.css.map",
+    "main.03a48da7.js.map": "/static/js/main.03a48da7.js.map"
   },
   "entrypoints": [
-    "static/css/main.930f1583.css",
-    "static/js/main.d9e84909.js"
+    "static/css/main.4f5ba0f2.css",
+    "static/js/main.03a48da7.js"
   ]
 }

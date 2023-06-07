@@ -1,4 +1,3 @@
-import "aos/dist/aos.css";
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import AOS from "aos";
 import { ProductItem } from "./components/Product/ProductItem";
@@ -18,13 +17,11 @@ import FrozenProductIntroPage from './pages/Business/FrozenProductIntroPage';
 import ElaboratedProductIntroPage from './pages/Business/ElaboratedProductIntroPage';
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./components/NotFoundPage";
-import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { useProductList } from "./asset/productList";
 import { useTranslation } from "react-i18next";
 import { useTracking } from './utils/useTracking';
 import { ThemeProvider } from '@emotion/react';
 import { defaultTheme, taiwanessTheme } from './styles/themeOptions';
-
 
 const App = () => {
     const { FISH_PRODUCTS, SEAFOOD_PRODUCTS } = useProductList();
@@ -35,9 +32,6 @@ const App = () => {
     const serviceRef = useRef();
     const productRef = useRef();
     const contactRef = useRef();
-    const trigger = useScrollTrigger({ threshold: 100 });
-
-    useTracking();
 
     const currentTheme = useMemo(() => {
         if (i18n.language !== 'zh-TW') {
@@ -47,14 +41,12 @@ const App = () => {
         }
     }, [i18n.language]);
 
+    useTracking();
+
     useEffect(() => {
         AOS.init();
         AOS.refresh();
-    }, [trigger]);
-
-    useEffect(() => {
-        console.log(i18n.language);
-    }, [i18n.language]);
+    }, []);
 
     return (
         <ThemeProvider theme={currentTheme}>

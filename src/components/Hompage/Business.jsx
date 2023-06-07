@@ -27,7 +27,7 @@ export const Business = (props) => {
 
             <ImageList sx={{ width: isMobileView ? '70%' : "90%", overflow: 'hidden' }} gap={isMobileView ? 30 : 10} cols={isMobileView ? 1 : 3} >
                 {SERVICES.map((service, index) => (
-                    <ImageListItem key={service.id} data-aos="zoom-in-down"
+                    <ImageListItem key={service.id} data-aos="zoom-in"
                         onClick={() => navigationHandler(service.pathname)}
                         sx={{ overflow: 'hidden' }}
                     >

@@ -1,5 +1,6 @@
 import "./styles/all.css";
 import "animate.css";
+import "aos/dist/aos.css";
 import React, { Suspense } from 'react';
 import ReactDOM from "react-dom";
 import i18n from './i18n/i18n';

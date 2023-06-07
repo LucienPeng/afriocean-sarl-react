@@ -7,7 +7,6 @@ import { Contact } from "../components/Hompage/Contact";
 import { ScrollTop } from '../components/UI/ScrollToTop';
 import { Stack } from "@mui/material";
 
-
 const HomePage = (props) => {
     let { homeRef, aboutRef, productRef, contactRef, serviceRef } = props;
 

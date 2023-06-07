@@ -9,9 +9,9 @@ export const defaultTheme = createTheme({
             contrastText: '#F2F2F2',
         },
         secondary: {
-            main: '#3EB6B6',
-            dark: '#097272',
-            light: '#3EB6B6',
+            main: '#146C94',
+            dark: '#144272',
+            light: '#AFD3E2',
             contrastText: '#F2F2F2',
         },
         error: {
@@ -78,9 +78,9 @@ export const taiwanessTheme = createTheme({
             contrastText: '#F2F2F2',
         },
         secondary: {
-            main: '#3EB6B6',
-            dark: '#097272',
-            light: '#3EB6B6',
+            main: '#146C94',
+            dark: '#144272',
+            light: '#AFD3E2',
             contrastText: '#F2F2F2',
         },
         error: {
