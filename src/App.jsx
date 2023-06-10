@@ -22,6 +22,7 @@ import { useTranslation } from "react-i18next";
 import { useTracking } from './utils/useTracking';
 import { ThemeProvider } from '@emotion/react';
 import { defaultTheme, taiwanessTheme } from './styles/themeOptions';
+import { Stack } from "@mui/material";
 
 const App = () => {
     const { FISH_PRODUCTS, SEAFOOD_PRODUCTS } = useProductList();
@@ -50,6 +51,7 @@ const App = () => {
 
     return (
         <ThemeProvider theme={currentTheme}>
+
             <NavBar
                 homeRef={homeRef}
                 aboutRef={aboutRef}
@@ -57,43 +59,45 @@ const App = () => {
                 productRef={productRef}
                 contactRef={contactRef}
             />
-            <Routes>
-                <Route
-                    path="/"
-                    element={<HomePage
-                        homeRef={homeRef}
-                        aboutRef={aboutRef}
-                        serviceRef={serviceRef}
-                        productRef={productRef}
-                        contactRef={contactRef}
-                    />}
-                />
+            <Stack minHeight='100vh'>
+                <Routes>
+                    <Route
+                        path="/"
+                        element={<HomePage
+                            homeRef={homeRef}
+                            aboutRef={aboutRef}
+                            serviceRef={serviceRef}
+                            productRef={productRef}
+                            contactRef={contactRef}
+                        />}
+                    />
 
-                <Route path="/about" element={<AboutUsPageLayout />}>
-                    <Route path='/about/history' element={<HistoryPage />} />
-                    <Route path='/about/vision' element={<VisionPage />} />
-                    <Route path='/about/factory' element={<FactoryPage />} />
-                    <Route path='/about/quality' element={<QualityPage />} />
-                </Route>
+                    <Route path="/about" element={<AboutUsPageLayout />}>
+                        <Route path='/about/history' element={<HistoryPage />} />
+                        <Route path='/about/vision' element={<VisionPage />} />
+                        <Route path='/about/factory' element={<FactoryPage />} />
+                        <Route path='/about/quality' element={<QualityPage />} />
+                    </Route>
 
-                <Route path="/service" element={<ServicePageLayout />}>
-                    <Route path='frozen-product' element={<FrozenProductIntroPage />} />
-                    <Route path='elaborated-product' element={<ElaboratedProductIntroPage />} />
-                </Route>
+                    <Route path="/service" element={<ServicePageLayout />}>
+                        <Route path='frozen-product' element={<FrozenProductIntroPage />} />
+                        <Route path='elaborated-product' element={<ElaboratedProductIntroPage />} />
+                    </Route>
 
-                <Route path="/product" element={<ProductPageLayout />}>
-                    <Route path='/product/fish' element={<ProductListPage data={FISH_PRODUCTS} />} />
-                    {FISH_PRODUCTS.map((item, index) => <Route key={index} path={`/product/fish/${item.url}`} element={<ProductItem item={item} />} />)}
-                    <Route path='/product/seafood' element={<ProductListPage data={SEAFOOD_PRODUCTS} />} />
-                    {SEAFOOD_PRODUCTS.map((item, index) => <Route key={index} path={`/product/seafood/${item.url}`} element={<ProductItem item={item} />} />)}
-                </Route>
+                    <Route path="/product" element={<ProductPageLayout />}>
+                        <Route path='/product/fish' element={<ProductListPage data={FISH_PRODUCTS} />} />
+                        {FISH_PRODUCTS.map((item, index) => <Route key={index} path={`/product/fish/${item.url}`} element={<ProductItem item={item} />} />)}
+                        <Route path='/product/seafood' element={<ProductListPage data={SEAFOOD_PRODUCTS} />} />
+                        {SEAFOOD_PRODUCTS.map((item, index) => <Route key={index} path={`/product/seafood/${item.url}`} element={<ProductItem item={item} />} />)}
+                    </Route>
 
-                <Route
-                    path="/contact"
-                    element={<ContactPage banner={banner} setBanner={setBanner} />}
-                />
-                <Route path="/*" element={<NotFoundPage />} />
-            </Routes>
+                    <Route
+                        path="/contact"
+                        element={<ContactPage banner={banner} setBanner={setBanner} />}
+                    />
+                    <Route path="/*" element={<NotFoundPage />} />
+                </Routes>
+            </Stack>
             <Footer />
         </ThemeProvider>
     );

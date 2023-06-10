@@ -22,7 +22,7 @@ export const ProductItem = (props) => {
     }, [i18n.language, item.cn, item.en, item.fr]);
 
     return (
-        <Stack minHeight='100vh' width='100%' direction='column' justifyContent='center' alignItems='center' mt={'30px'}>
+        <Stack minHeight='100vh'  direction='column' justifyContent='center' alignItems='center' mt={'30px'}>
             <Stack py={5} direction='row' justifyContent='center' alignItems='center'>
                 <Grid container justifyContent='center' alignItems='center' spacing={{ xs: 0, md: 5 }}>
                     <Grid item xs={12} sm={10} md={6}>
@@ -35,7 +35,7 @@ export const ProductItem = (props) => {
                         />
                     </Grid>
                     <Grid item xs={10} sm={10} md={5}>
-                        <Stack direction='column' alignItems='center' justifyContent='center'>
+                        <Stack my={3} direction='column' alignItems='center' justifyContent='center'>
                             <Typography noWrap variant="h2" letterSpacing={0} fontWeight={700} color="primary.dark">
                                 {productName}
                             </Typography>

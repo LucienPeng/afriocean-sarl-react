@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, Box } from "@mui/material";
 import { keyframes } from "@emotion/react";
 import { useTheme } from "@mui/material/styles";
 import { useHomePageTranslation } from "../../i18n/useTranslations";
@@ -19,20 +19,24 @@ const HEROBANNERS = [
     { title: 'heroBanner5', img: 'https://www.afriocean.com/images/hero-banners/heroBanner5.jpg' }
 ];
 
-const zoomAnimation = keyframes`
+const ZOOM_ANIMATION = keyframes`
   0% {
-    opacity: 0.5;
+    opacity: 0.8;
+    scale: 1;
   }
   100% {
-    opacity: 0.85;
+    opacity: 0.9;
+    scale: 1.1;
   }
 `;
 
+const ANIMATION_DURATION = '4500ms';
+
 export const HeroBanner = () => {
-    const [isActiveIndex, setActiveIndex] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(1);
     const { t } = useHomePageTranslation();
     const theme = useTheme();
-    const zoomHandler = (e) => setActiveIndex(e.activeIndex);
+    const zoomHandler = (e) => setActiveIndex(e.realIndex);
     SwiperCore.use([EffectFade]);
 
     return (
@@ -53,13 +57,12 @@ export const HeroBanner = () => {
             modules={[Autoplay, Pagination, EffectFade, Zoom]}
             allowTouchMove={true}
             onActiveIndexChange={zoomHandler}
-            onInit={zoomHandler}
             className="hero-banner-swiper"
         >
             {
                 HEROBANNERS.map((heroBanner, index) => (
-                    <SwiperSlide key={heroBanner.title}>
-                        <Stack
+                    <SwiperSlide key={heroBanner.title} style={{ position: 'relative' }}>
+                        <Box
                             textAlign='center'
                             direction='column'
                             alignItems='center'
@@ -74,15 +77,23 @@ export const HeroBanner = () => {
                                 backgroundSize: { xs: 'cover', md: 'cover' },
                                 backgroundRepeated: false,
                                 backgroundPosition: 'top',
-                                opacity: 0.85,
-                                animation: isActiveIndex === index ? `${zoomAnimation} 3000ms ${theme.transitions.easing.easeOut}` : ''
+                                opacity: activeIndex !== index + 1 ? 0.9 : 1,
+                                scale: activeIndex === index + 1 ? 1.1 : 1,
+                                animation: activeIndex === index ? `${ZOOM_ANIMATION} ${ANIMATION_DURATION} ${theme.transitions.easing.easeOut}` : ''
                             }}>
+                        </Box>
+                        <Stack sx={{
+                            position: 'absolute',
+                            top: '50%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                            textAlign: 'center',
+                        }}>
                             <Typography
                                 fontSize={{ xs: '70px', md: '150px' }}
                                 color='common.white' variant="h1"
                                 className="animate__animated animate__zoomIn"
                                 sx={{ textShadow: 'rgb(0, 0, 0) 1px 10px 10px' }}
-                                lineHeight={0.8}
                             >
                                 {t('company')}
                             </Typography>

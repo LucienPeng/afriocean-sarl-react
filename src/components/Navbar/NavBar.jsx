@@ -9,7 +9,6 @@ import { useLocation, useSearchParams } from 'react-router-dom';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import MenuIcon from '@mui/icons-material/Menu';
 
-
 export const NavBar = (props) => {
     const { NAV_MENU } = useNavConfig();
     const { isToggle, toggleHandler } = useToggle();

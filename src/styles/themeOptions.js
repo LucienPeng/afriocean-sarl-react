@@ -105,7 +105,7 @@ export const taiwanessTheme = createTheme({
 
     },
     typography: {
-        fontFamily: '\'YuPearl\',\'Vollkorn SC\', \'normal\'',
+        fontFamily: '\'Klee One\',\'Vollkorn SC\', \'normal\'',
         h1: {
             fontSize: '120px',
             letterSpacing: 15,
@@ -113,7 +113,6 @@ export const taiwanessTheme = createTheme({
         h2: {
             fontSize: '26px',
             letterSpacing: 5,
-            lineHeight: '50px'
         },
         h3: {
             fontSize: '24px',

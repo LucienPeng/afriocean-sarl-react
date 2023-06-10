@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.948b89b2.css",
-    "main.js": "/static/js/main.03a48da7.js",
+    "main.css": "/static/css/main.87885a5f.css",
+    "main.js": "/static/js/main.404b2581.js",
     "static/media/wholeFish.jpg": "/static/media/wholeFish.d2030b5b1e7f356b15f5.jpg",
     "static/media/atlanticPomfret.png": "/static/media/atlanticPomfret.2536e3b358ed4cc05454.png",
     "static/media/fishRoll.jpg": "/static/media/fishRoll.0d0364ec0779d7679b79.jpg",
@@ -57,11 +57,11 @@
     "static/media/locaux3.jpeg": "/static/media/locaux3.81dd2f79c77b44c37624.jpeg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.948b89b2.css.map": "/static/css/main.948b89b2.css.map",
-    "main.03a48da7.js.map": "/static/js/main.03a48da7.js.map"
+    "main.87885a5f.css.map": "/static/css/main.87885a5f.css.map",
+    "main.404b2581.js.map": "/static/js/main.404b2581.js.map"
   },
   "entrypoints": [
-    "static/css/main.948b89b2.css",
-    "static/js/main.03a48da7.js"
+    "static/css/main.87885a5f.css",
+    "static/js/main.404b2581.js"
   ]
 }
