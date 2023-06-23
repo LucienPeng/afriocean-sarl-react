@@ -10,7 +10,7 @@ export const ProductList = (props) => {
     const [productList, setProductList] = useState(props.data);
 
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', my: 25 }}>
             {isMobileView ? <MobileSelector setProductList={setProductList} data={props.data} /> : <Selector setProductList={setProductList} data={props.data} />}
             <ImageList cols={isMobileView ? 1 : 3} sx={{ width: isMobileView ? '80%' : '90%' }} loading="lazy">
                 {productList.map((item) => (

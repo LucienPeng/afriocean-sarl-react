@@ -1,29 +1,3 @@
-
-import roundSardinella from '../asset/images/fish/roundSardinella.png';
-import maseiranSardinella from '../asset/images/fish/maseiranSardinella.png';
-import atlanticHorseMackerel from '../asset/images/fish/atlanticHorseMackerel.png';
-import cuneneHorseMackerel from '../asset/images/fish/cuneneHorseMackerel.png';
-import commonMackerel from '../asset/images/fish/commonMackerel.png';
-import atlanticBumper from '../asset/images/fish/atlanticBumper.png';
-import bigEyeGrunt from '../asset/images/fish/bigEyeGrunt.png';
-import cassavaCroaker from '../asset/images/fish/cassavaCroaker.png';
-import littleTunny from '../asset/images/fish/littleTunny.png';
-import senegalJack from '../asset/images/fish/senegalJack.png';
-import ribbonFish from '../asset/images/fish/ribbonFish.png';
-import africanLookdown from '../asset/images/fish/africanLookdown.png';
-import senegaleseTonguesole from '../asset/images/fish/senegaleseTonguesole.png';
-import lesserAfricanThreadfin from '../asset/images/fish/lesserAfricanThreadfin.png';
-import smoothmouthSeaCatfish from '../asset/images/fish/smoothmouthSeaCatfish.png';
-import flagfinMojarra from '../asset/images/fish/flagfinMojarra.png';
-import atlanticPomfret from '../asset/images/fish/atlanticPomfret.png';
-import beardedBrotula from '../asset/images/fish/beardedBrotula.png';
-import curemaMullet from '../asset/images/fish/curemaMullet.png';
-import whiteTuna from '../asset/images/fish/whiteTuna.png';
-import cymbium from '../asset/images/fish/cymbium.png';
-import cymbiumPepo from '../asset/images/fish/cymbiumPepo.png';
-import murex from '../asset/images/fish/murex.png';
-import cuttlefish from '../asset/images/fish/cuttlefish.png';
-import octopus from '../asset/images/fish/octopus.png';
 import _ from 'lodash';
 import { useMemo } from 'react';
 
@@ -48,7 +22,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "G (300g+), M (180g-300g), P (170g-200g), PP (150g-170g)",
-        img: maseiranSardinella,
+        img: 'https://www.afriocean.com/images/fish/maseiranSardinella.png',
         url: "maseiran-sardinella"
     },
     {
@@ -71,7 +45,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "G (280g+), M (180g-280g), P (160g-180g), PP (130g-160g)",
-        img: roundSardinella,
+        img: 'https://www.afriocean.com/images/fish/roundSardinella.png',
         url: "round-sardinella"
     },
     {
@@ -94,7 +68,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "GG (600g+), G (450g-600g), M (300g-450g), P (200g-300g), PP (100g-200g)",
-        img: cuneneHorseMackerel,
+        img: 'https://www.afriocean.com/images/fish/cuneneHorseMackerel.png',
         url: "cunene-horse-mackerel"
     },
     {
@@ -117,7 +91,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "GG (500g+), G (400g-500g), M (300g-400g), P (200g-300g), PP (100g-200g)",
-        img: atlanticHorseMackerel,
+        img: 'https://www.afriocean.com/images/fish/atlanticHorseMackerel.png',
         url: "atlantic-horse-mackerel"
     },
     {
@@ -140,7 +114,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "GG (800g+), G (600g-800g), M (400g-600g), P (200g-400g), PP (100g-200g)",
-        img: commonMackerel,
+        img: 'https://www.afriocean.com/images/fish/commonMackerel.png',
         url: "mackerel"
     },
     {
@@ -163,7 +137,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "One size : 70g+",
-        img: atlanticBumper,
+        img: 'https://www.afriocean.com/images/fish/atlanticBumper.png',
         url: "atlantic-bumper"
     },
     {
@@ -187,7 +161,7 @@ const FISH_RAW_PRODUCTS = [
             "Elaborate"
         ],
         calibrage: "One size : 70g+",
-        img: bigEyeGrunt,
+        img: 'https://www.afriocean.com/images/fish/bigEyeGrunt.png',
         url: "big-eye-grunt"
     },
     {
@@ -210,7 +184,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "One size : 150g+",
-        img: africanLookdown,
+        img: 'https://www.afriocean.com/images/fish/africanLookdown.png',
         url: "african-lookdown"
     },
     {
@@ -233,7 +207,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "One size : 70g+",
-        img: flagfinMojarra,
+        img: 'https://www.afriocean.com/images/fish/flagfinMojarra.png',
         url: "flagfin-mojarra"
     },
     {
@@ -256,7 +230,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "G, M, P, PP",
-        img: smoothmouthSeaCatfish,
+        img: 'https://www.afriocean.com/images/fish/smoothmouthSeaCatfish.png',
         url: "smoothmouth-sea-catfish"
     },
     {
@@ -279,7 +253,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "GG, G, M, P, PP",
-        img: cassavaCroaker,
+        img: 'https://www.afriocean.com/images/fish/cassavaCroaker.png',
         url: "cassava-croaker"
     },
     {
@@ -302,7 +276,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "GG (800g+), G (500g-800g), M (300g-500g), P (200g-300g), PP (150g-200g)",
-        img: littleTunny,
+        img: 'https://www.afriocean.com/images/fish/littleTunny.png',
         url: "little-tunny"
     },
     {
@@ -325,7 +299,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "TV",
-        img: senegalJack,
+        img: 'https://www.afriocean.com/images/fish/senegalJack.png',
         url: "senegal-jack"
     },
     {
@@ -348,7 +322,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "GG, G, M, P, PP",
-        img: lesserAfricanThreadfin,
+        img: 'https://www.afriocean.com/images/fish/lesserAfricanThreadfin.png',
         url: "lesser-african-threadfin"
     },
     {
@@ -372,7 +346,7 @@ const FISH_RAW_PRODUCTS = [
             "Elaborate"
         ],
         calibrage: "100g-200g, 200g-300g, 300g-500g, 500g-700g, 700g-900g, 900g+",
-        img: ribbonFish,
+        img: 'https://www.afriocean.com/images/fish/ribbonFish.png',
         url: "ribbon-fish"
     },
     {
@@ -395,7 +369,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "200g-300g, 300g-400g, 400g-500g, 500g-600g, 600g-700g, 700g-800g, 800g-900g, 900g-1000g, 1KG+",
-        img: senegaleseTonguesole,
+        img: 'https://www.afriocean.com/images/fish/senegaleseTonguesole.png',
         url: "senegalese-tonguesole"
     },
     {
@@ -418,7 +392,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "TV",
-        img: atlanticPomfret,
+        img: 'https://www.afriocean.com/images/fish/atlanticPomfret.png',
         url: "atlantic-pomfret"
     },
     {
@@ -441,7 +415,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "-",
-        img: beardedBrotula,
+        img: 'https://www.afriocean.com/images/fish/beardedBrotula.png',
         url: "bearded-brotula"
     },
     {
@@ -464,7 +438,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "GG (700g+), G (500-700g), M (300-500g), P (200-300g), PP (150g-200g)",
-        img: curemaMullet,
+        img: 'https://www.afriocean.com/images/fish/curemaMullet.png',
         url: "curema-mullet"
     },
     {
@@ -487,7 +461,7 @@ const FISH_RAW_PRODUCTS = [
             "W/R"
         ],
         calibrage: "GG (800g+), G (500g-800g), M (300g-500g), P (200g-300g), PP (150g-200g)",
-        img: whiteTuna,
+        img: 'https://www.afriocean.com/images/fish/whiteTuna.png',
         url: "white-tuna"
     }
 ];
@@ -514,7 +488,7 @@ const SEAFOOD_RAW_PRODUCTS = [
             "Elaborate"
         ],
         calibrage: "MIX, 10/30, 30/50, 50/100, 100/150, 150/200, 200/300, 300/400, 400+",
-        img: cymbium,
+        img: 'https://www.afriocean.com/images/fish/cymbium.png',
         url: "cymbium"
     },
     {
@@ -538,7 +512,7 @@ const SEAFOOD_RAW_PRODUCTS = [
             "Elaborate"
         ],
         calibrage: "MIX, 100/400, 400/600, 600/800, 800/1000, 1000+",
-        img: cymbiumPepo,
+        img: 'https://www.afriocean.com/images/fish/cymbiumPepo.png',
         url: "cymbium-pepo"
     },
     {
@@ -562,7 +536,7 @@ const SEAFOOD_RAW_PRODUCTS = [
             "Elaborate"
         ],
         calibrage: "MIX, 5/10, 10/20, 20/30, 30/50, 50/80, 80/100, 100+",
-        img: murex,
+        img: 'https://www.afriocean.com/images/fish/murex.png',
         url: "murex"
     },
     {
@@ -586,7 +560,7 @@ const SEAFOOD_RAW_PRODUCTS = [
             "Elaborate"
         ],
         calibrage: "100/200, 200/400, 400/600, 600/800, 800/1000, 1000+",
-        img: cuttlefish,
+        img: 'https://www.afriocean.com/images/fish/cuttlefish.png',
         url: 'cuttlefish'
     },
     {
@@ -610,7 +584,7 @@ const SEAFOOD_RAW_PRODUCTS = [
             "Elaborate"
         ],
         calibrage: "N/A",
-        img: octopus,
+        img: 'https://www.afriocean.com/images/fish/octopus.png',
         url: 'octopus'
     },
 
@@ -619,7 +593,6 @@ const SEAFOOD_RAW_PRODUCTS = [
 export const useProductList = () => {
     const FISH_PRODUCTS = useMemo(() => _.orderBy(FISH_RAW_PRODUCTS, [product => product.en.toLowerCase()], ['asc']), []);
     const SEAFOOD_PRODUCTS = useMemo(() => _.orderBy(SEAFOOD_RAW_PRODUCTS, [product => product.en.toLowerCase()], ['asc']), []);
-
     return { FISH_PRODUCTS, SEAFOOD_PRODUCTS };
 };
 

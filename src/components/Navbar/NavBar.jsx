@@ -5,7 +5,7 @@ import { MobileNavBar } from './MobileNavBar';
 import { useNavConfig } from './NavConfigs';
 import { useNavigation } from '../../utils/useNavigation';
 import { useToggle } from '../../utils/useToggle';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -16,13 +16,11 @@ export const NavBar = (props) => {
     const { homeRef, aboutRef, productRef, contactRef, serviceRef } = props;
     const NAV_ITEMS = NAV_MENU(aboutRef, productRef, contactRef, serviceRef);
     const nav = useRef('');
-    const [searchParam] = useSearchParams();
     const [isScrolled, setScrolled] = useState(false);
     const [activeLink, setActiveLink] = useState();
     const [mobileNavList, setMobileNavList] = useState(NAV_ITEMS);
     const location = useLocation();
-    const param = searchParam.get('category');
-    const isProductPage = useMemo(() => (location.pathname.includes('fish') && !param) || (location.pathname.includes('seafood') || !param) ? true : false, [location.pathname, param]);
+    const shouldShowBackground = useMemo(() => (location.pathname.includes('product') || location.pathname.includes('about')), [location.pathname]);
 
     const navHandler = (ref, url) => {
         if (ref) {
@@ -53,7 +51,7 @@ export const NavBar = (props) => {
         <AppBar ref={nav} component='nav' position="fixed" className='animate__animated animate__fadeInDown'
             sx={{
                 height: 80,
-                bgcolor: (isScrolled || isProductPage) ? 'rgba(34, 67, 103)' : 'transparent',
+                bgcolor: (isScrolled || shouldShowBackground) ? 'rgba(34, 67, 103)' : 'transparent',
                 boxShadow: isScrolled ? 'inset' : 'none',
                 transition: 'ease-out 0.3s all',
                 justifyContent: 'center',

@@ -9,7 +9,7 @@ import AddReactionIcon from '@mui/icons-material/AddReaction';
 const VisionPage = () => {
     const { t } = useAboutUsPageTranslation();
     return (
-        <Grid my={10} container gap={10} alignItems='center' justifyContent='center' flexDirection='row'>
+        <Grid my={25} container gap={10} alignItems='center' justifyContent='center' flexDirection='row'>
             <Grid item xs={10}>
                 <Stack spacing={2}>
                     <Typography variant="h2" fontWeight={700} letterSpacing={0} color="text.primary">{t('vision.title')}</Typography>

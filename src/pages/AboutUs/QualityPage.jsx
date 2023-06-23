@@ -7,7 +7,7 @@ const QualityPage = () => {
     const { t } = useAboutUsPageTranslation();
 
     return (
-        <Grid container my={10} alignItems='center' justifyContent='center' flexDirection='row'>
+        <Grid container my={25} alignItems='center' justifyContent='center' flexDirection='row'>
             <Grid item xs={10}>
                 <Stack spacing={2}>
                     <Typography variant="h2" fontWeight={700} letterSpacing={0} color="text.primary">{t('quality.title')}</Typography>

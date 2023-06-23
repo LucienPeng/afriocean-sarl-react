@@ -6,29 +6,32 @@ import { useAboutUsPageTranslation } from "../../i18n/useTranslations";
 import { StyledListItemText } from '../../components/UI/StyledComponents';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
-import equipmemt1 from '../../asset/images/equipment/1.jpg';
-import equipmemt2 from '../../asset/images/equipment/2.jpg';
-import equipmemt3 from '../../asset/images/equipment/3.jpg';
-import equipmemt4 from '../../asset/images/equipment/4.jpg';
-import equipmemt5 from '../../asset/images/equipment/5.jpg';
-import equipmemt6 from '../../asset/images/equipment/6.jpg';
-import equipmemt7 from '../../asset/images/equipment/7.jpg';
-import locaux1 from '../../asset/images/locaux/locaux1.jpg';
-import locaux2 from '../../asset/images/locaux/locaux2.jpeg';
-import locaux3 from '../../asset/images/locaux/locaux3.jpeg';
-import locaux4 from '../../asset/images/locaux/locaux4.jpeg';
-import locaux5 from '../../asset/images/locaux/locaux5.jpeg';
-import ligne1 from '../../asset/images/ligne de production/1.jpg';
-import ligne2 from '../../asset/images/ligne de production/2.jpg';
-import ligne3 from '../../asset/images/ligne de production/3.jpg';
-import ligne4 from '../../asset/images/ligne de production/4.jpg';
-import ligne5 from '../../asset/images/ligne de production/5.jpg';
-import ligne6 from '../../asset/images/ligne de production/6.jpg';
+const EQUIPMENTS = [
+    'https://www.afriocean.com/images/equipment/1.jpg',
+    'https://www.afriocean.com/images/equipment/2.jpg',
+    'https://www.afriocean.com/images/equipment/3.jpg',
+    'https://www.afriocean.com/images/equipment/4.jpg',
+    'https://www.afriocean.com/images/equipment/5.jpg',
+    'https://www.afriocean.com/images/equipment/6.jpg',
+    'https://www.afriocean.com/images/equipment/7.jpg'
+];
 
+const LIGNES = [
+    'https://www.afriocean.com/images/ligne de production/1.jpg',
+    'https://www.afriocean.com/images/ligne de production/2.jpg',
+    'https://www.afriocean.com/images/ligne de production/3.jpg',
+    'https://www.afriocean.com/images/ligne de production/4.jpg',
+    'https://www.afriocean.com/images/ligne de production/5.jpg',
+    'https://www.afriocean.com/images/ligne de production/6.jpg'
+];
 
-const EQUIPMENTS = [equipmemt1, equipmemt2, equipmemt3, equipmemt4, equipmemt5, equipmemt6, equipmemt7];
-const LIGNES = [ligne1, ligne2, ligne3, ligne4, ligne5, ligne6];
-const LOCAUX = [locaux1, locaux2, locaux3, locaux4, locaux5];
+const LOCAUX = [
+    'https://www.afriocean.com/images/locaux/locaux1.jpg',
+    'https://www.afriocean.com/images/locaux/locaux2.jpeg',
+    'https://www.afriocean.com/images/locaux/locaux3.jpeg',
+    'https://www.afriocean.com/images/locaux/locaux4.jpeg',
+    'https://www.afriocean.com/images/locaux/locaux5.jpeg',
+];
 
 const FactoryPage = () => {
     const { isMobileView } = useDeviceMetadata();

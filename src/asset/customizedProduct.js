@@ -1,44 +1,34 @@
-import wholeFish from '../asset/images/customizedProducts/wholeFish.jpg';
-import guttedFish from '../asset/images/customizedProducts/guttedFish.jpg';
-import dressedFish from '../asset/images/customizedProducts/dressedFish.jpg';
-import fishFillets from '../asset/images/customizedProducts/fillets.jpg';
-import butterflyFillets from '../asset/images/customizedProducts/butterfly.jpg';
-import fishSticks from '../asset/images/customizedProducts/sticks.jpg';
-import shellfish from '../asset/images/customizedProducts/shellfish.jpg';
-import fishRoe from '../asset/images/customizedProducts/fishRoll.jpg';
-
-
 export const CUSTOMIZED_PRODUCTS = [
     {
-        img: wholeFish,
+        img: 'https://www.afriocean.com/images//customizedProducts/wholeFish.jpg',
         title: "Whole fish"
     },
     {
-        img: guttedFish,
+        img: 'https://www.afriocean.com/images//customizedProducts/guttedFish.jpg',
         title: "Gutted fish"
     },
     {
-        img: dressedFish,
+        img: 'https://www.afriocean.com/images//customizedProducts/dressedFish.jpg',
         title: "Dressed fish"
     },
     {
-        img: fishFillets,
+        img: 'https://www.afriocean.com/images//customizedProducts/fillets.jpg',
         title: "Fish fillets"
     },
     {
-        img: butterflyFillets,
+        img: 'https://www.afriocean.com/images//customizedProducts/butterfly.jpg',
         title: "Butterfly fillets"
     },
     {
-        img: fishSticks,
+        img: 'https://www.afriocean.com/images//customizedProducts/sticks.jpg',
         title: "Fish sticks"
     },
     {
-        img: shellfish,
+        img: 'https://www.afriocean.com/images//customizedProducts/shellfish.jpg',
         title: "Shucked and cooked shellfish meat"
     },
     {
-        img: fishRoe,
+        img: 'https://www.afriocean.com/images//customizedProducts/fishRoll.jpg',
         title: "Fish roll"
     },
 

@@ -2,50 +2,43 @@ import { Stack, Typography, Card, CardMedia, CardContent, Grid } from "@mui/mate
 import { StyledButton } from '../UI/StyledComponents';
 import { useNavigation } from "../../utils/useNavigation";
 import { useHomePageTranslation } from "../../i18n/useTranslations";
-import roundSardinella from '../../asset/images/fish/roundSardinella.png';
-import maseiranSardinella from '../../asset/images/fish/maseiranSardinella.png';
-import commonMackerel from '../../asset/images/fish/commonMackerel.png';
-import atlanticBumper from '../../asset/images/fish/atlanticBumper.png';
-import cuneneHorseMackerel from '../../asset/images/fish/cuneneHorseMackerel.png';
-import atlanticHorseMackerel from '../../asset/images/fish/atlanticHorseMackerel.png';
-
 
 const PRODUCTS_SECTIONS = [
     {
         en: "Round Sardinella",
         scientificName: "Sardinella Aurita",
-        img: roundSardinella,
+        img: 'https://www.afriocean.com/images/fish/roundSardinella.png',
         url: "round-sardinella"
     },
     {
         en: "Cunene Horse Mackerel",
         scientificName: "Trachurus Trecae",
-        img: cuneneHorseMackerel,
+        img: 'https://www.afriocean.com/images/fish/cuneneHorseMackerel.png',
         url: "cunene-horse-mackerel"
     },
     {
         en: "Atlantic Bumper",
         scientificName: "Chloroscombrus Chrysurus",
-        img: atlanticBumper,
+        img: 'https://www.afriocean.com/images/fish/atlanticBumper.png',
         url: "atlantic-bumper"
     },
 
     {
         en: "Maseiran Sardinella",
         scientificName: "Sardinella Maderensis",
-        img: maseiranSardinella,
+        img: 'https://www.afriocean.com/images/fish/maseiranSardinella.png',
         url: "maseiran-sardinella"
     },
     {
         en: "Atlantic Horse Mackerel",
         scientificName: "Decaprterus Rhonchus",
-        img: atlanticHorseMackerel,
+        img: 'https://www.afriocean.com/images/fish/atlanticHorseMackerel.png',
         url: "atlantic-horse-mackerel"
     },
     {
         en: "Common Mackerel",
         scientificName: "Scomber Japonicus",
-        img: commonMackerel,
+        img: 'https://www.afriocean.com/images/fish/commonMackerel.png',
         url: "mackerel"
     },
 
@@ -57,7 +50,6 @@ export const Product = (props) => {
     const { t } = useHomePageTranslation();
     const redirectHandler = (url) => navigationHandler(`/product/fish/${url}`);
     const redirectProductPageHandler = () => navigationHandler(`/product/fish`);
-
 
     return (
         <Stack ref={productRef} minHeight='70vh' width='100%' justifyContent='center' alignItems='center'>

@@ -3,7 +3,6 @@ import { StyledButton, StyledListItemText } from "../../components/UI/StyledComp
 import { useNavigation } from "../../utils/useNavigation";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import { useBusinessPagesTranslation } from "../../i18n/useTranslations";
-import placeHoderImage from '../../asset/images/intro/intro4.jpg';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const FROZEN_PRODUCTS = ['Wild Fish', "Cephalopods", "Cymbium", "Baits", "Processed Products"];
@@ -13,7 +12,7 @@ const FrozenProductIntroPage = () => {
     const { isMobileView } = useDeviceMetadata();
     const { t } = useBusinessPagesTranslation();
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center' my={10} gap={10}>
+        <Grid container direction='row' justifyContent='center' alignItems='center' my={25} gap={10}>
             <Grid item xs={11} sm={10} md={6}>
                 <Stack spacing={5}>
                     <Box>
@@ -48,7 +47,7 @@ const FrozenProductIntroPage = () => {
                     component='img'
                     width='100%'
                     height='100%'
-                    src={placeHoderImage}
+                    src='https://www.afriocean.com/images/intro/intro4.jpg'
                     borderRadius={!isMobileView && 2}
                     sx={{ opacity: 0.9 }}
                 />

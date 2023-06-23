@@ -16,8 +16,6 @@ const useTags = () => {
     return { TAGS };
 };
 
-
-
 export const Selector = (props) => {
     const { setProductList, data } = props;
     const { TAGS } = useTags();

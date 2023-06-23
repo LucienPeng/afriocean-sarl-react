@@ -3,21 +3,18 @@ import { useNavigation } from '../../utils/useNavigation';
 import { useHomePageTranslation } from "../../i18n/useTranslations";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import intro1 from '../../asset/images/intro/intro1.jpg';
-import intro2 from '../../asset/images/intro/intro2.jpg';
-import intro3 from '../../asset/images/intro/intro3.jpg';
 
 const SERVICES = [
-    { id: 1, service: 'Frozen product', photo: intro1, pathname: '/service/frozen-product' },
-    { id: 2, service: 'Elaborated Product', photo: intro2, pathname: '/service/elaborated-product' },
-    { id: 3, service: 'Customized Product', photo: intro3, pathname: '/contact' }
+    { id: 1, service: 'Frozen product', photo: 'https://www.afriocean.com/images/intro/intro1.jpg', pathname: '/service/frozen-product' },
+    { id: 2, service: 'Elaborated Product', photo: 'https://www.afriocean.com/images/intro/intro2.jpg', pathname: '/service/elaborated-product' },
+    { id: 3, service: 'Customized Product', photo: 'https://www.afriocean.com/images/intro/intro3.jpg', pathname: '/contact' }
 ];
 
 export const Business = (props) => {
     const { serviceRef } = props;
     const { navigationHandler } = useNavigation();
-    const { t } = useHomePageTranslation();
     const { isMobileView } = useDeviceMetadata();
+    const { t } = useHomePageTranslation();
 
     return (
         <Stack ref={serviceRef} mb={10} minHeight='50vh' width='100%' justifyContent='center' alignItems='center'>

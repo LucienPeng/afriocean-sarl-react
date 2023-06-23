@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom";
 const ProductPageLayout = () => {
 
     return (
-        <Box>
+        <Box minHeight='100vh'>
             <Outlet />
         </Box>
     );

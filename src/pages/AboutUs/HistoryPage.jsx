@@ -1,21 +1,20 @@
 import { Typography, Grid, Stack, Card, CardMedia, List, ListItemIcon, ListItem } from "@mui/material";
 import { useAboutUsPageTranslation } from "../../i18n/useTranslations";
 import { StyledListItemText } from '../../components/UI/StyledComponents';
-import personnel from '../../asset/images/intro/intro5.jpg';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 
 const HistoryPage = () => {
     const { t } = useAboutUsPageTranslation();
     return (
-        <Grid mb={10} container spacing={10} display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
+        <Grid mb={10} my={10} container spacing={10} display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
             <Grid mt={10} item xs={10} sm={12} md={10} data-aos="fade-up">
                 <Grid container spacing={5} alignItems='center' justifyContent='center'>
                     <Grid item xs={12} sm={5} md={6} justifyContent='center' alignItems='center'>
                         <Card>
                             <CardMedia
                                 sx={{ height: 500, width: '100%', backgroundPosition: 'top' }}
-                                image={personnel}
+                                image='https://www.afriocean.com/images/intro/intro5.jpg'
                             />
                         </Card>
                     </Grid>

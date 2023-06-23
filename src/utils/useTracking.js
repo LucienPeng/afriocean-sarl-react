@@ -16,7 +16,6 @@ export const useTracking = () => {
     useEffect(() => {
         if (initialized) {
             ReactGA.pageview(location.pathname + location.search);
-            console.log(location.pathname + location.search);
         };
     }, [initialized, location]);
 };

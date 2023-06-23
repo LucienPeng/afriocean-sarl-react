@@ -54,7 +54,7 @@ const ElaboratedProductIntroPage = () => {
 
 
     return (
-        <Grid container my={10} gap={{ xs: 0, sm: 5, md: 10 }} display='flex' justifyContent='center' alignItems={{ xs: 'center', lg: 'flex-start' }} flexDirection='row'>
+        <Grid container my={25} gap={{ xs: 0, sm: 5, md: 10 }} display='flex' justifyContent='center' alignItems={{ xs: 'center', lg: 'flex-start' }} flexDirection='row'>
             <Grid item xs={11} sm={10} md={5}>
                 <Stack spacing={5}>
                     <Stack spacing={3}>
