@@ -1,6 +1,6 @@
 
 import { ImageListItem, ImageListItemBar, Box, Stack, LinearProgress } from "@mui/material";
-import { useCallback, useState, useRef, useMemo } from "react";
+import { useCallback, useState, useMemo } from "react";
 import { useDeviceMetadata } from "../../utils/useDeviceMetadata";
 import { useNavigation } from "../../utils/useNavigation";
 import { useTranslation } from 'react-i18next';
@@ -13,8 +13,6 @@ export const ProductListImageListItem = (props) => {
     const [imageLoaded, setImageLoaded] = useState(false);
     const redirect = (category, url) => navigationHandler(`/product/${category.toLowerCase()}/${url}`);
     const onLoadHandler = useCallback(() => setImageLoaded(true), []);
-    const imageListItemRef = useRef();
-    const imageRef = useRef();
 
     const productName = useMemo(() => {
         if (i18n.language === 'zh-TW') {
@@ -29,7 +27,6 @@ export const ProductListImageListItem = (props) => {
 
     return (
         <ImageListItem
-            ref={imageListItemRef}
             data-aos="zoom-in"
             key={item.en}
             onClick={() => redirect(item.allergens, item.url)}
@@ -42,10 +39,8 @@ export const ProductListImageListItem = (props) => {
                 '&:hover': { cursor: 'pointer', bgcolor: !isMobileView && 'secondary.light' }
             }}
         >
-            <Stack>
-                {!imageLoaded && <LinearProgress animation="wave" />}
+            <Stack sx={{ minHeight: '25vh' }}>
                 <Box
-                    ref={imageRef}
                     className="animate__animated animate__zoomIn animate__delay-1s"
                     width='100%'
                     component='img'
@@ -54,12 +49,12 @@ export const ProductListImageListItem = (props) => {
                     src={`${item.img}`}
                     alt={item.en}
                 />
+                {!imageLoaded && <LinearProgress animation="wave" />}
                 {imageLoaded && <ImageListItemBar
                     title={productName}
                     subtitle={item.scientificName}
                     position="bottom"
-                />
-                }
+                />}
             </Stack>
         </ImageListItem>
     );

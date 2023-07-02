@@ -21,7 +21,7 @@ const FISH_RAW_PRODUCTS = [
             "Permanent",
             "W/R"
         ],
-        calibrage: "G (300g+), M (180g-300g), P (170g-200g), PP (150g-170g)",
+        calibrage: "G (250g+), M (200g-250g), P (150g-200g), PP (100g-150g)",
         img: 'https://www.afriocean.com/images/fish/maseiranSardinella.png',
         url: "maseiran-sardinella"
     },
@@ -44,7 +44,7 @@ const FISH_RAW_PRODUCTS = [
             "Permanent",
             "W/R"
         ],
-        calibrage: "G (280g+), M (180g-280g), P (160g-180g), PP (130g-160g)",
+        calibrage: "G (250g+), M (200g-250g), P (150g-200g), PP (100g-150g)",
         img: 'https://www.afriocean.com/images/fish/roundSardinella.png',
         url: "round-sardinella"
     },
@@ -67,7 +67,7 @@ const FISH_RAW_PRODUCTS = [
             "Permanent",
             "W/R"
         ],
-        calibrage: "GG (600g+), G (450g-600g), M (300g-450g), P (200g-300g), PP (100g-200g)",
+        calibrage: "G (400g+), M (300g-400g), P (200g-300g), PP (150g-200g), 2P+ (100g-150g)",
         img: 'https://www.afriocean.com/images/fish/cuneneHorseMackerel.png',
         url: "cunene-horse-mackerel"
     },
@@ -90,7 +90,7 @@ const FISH_RAW_PRODUCTS = [
             "Seasonal",
             "W/R"
         ],
-        calibrage: "GG (500g+), G (400g-500g), M (300g-400g), P (200g-300g), PP (100g-200g)",
+        calibrage: "G (400g+), M (300g-400g), P (200g-300g), PP (150g-200g), 2P+ (100g-150g)",
         img: 'https://www.afriocean.com/images/fish/atlanticHorseMackerel.png',
         url: "atlantic-horse-mackerel"
     },
@@ -113,7 +113,7 @@ const FISH_RAW_PRODUCTS = [
             "Seasonal",
             "W/R"
         ],
-        calibrage: "GG (800g+), G (600g-800g), M (400g-600g), P (200g-400g), PP (100g-200g)",
+        calibrage: "GG (700g+), G (500g-700g), M (300g-500g), P (200g-300g), PP (150g-200g), 2p+ (100g-150g)",
         img: 'https://www.afriocean.com/images/fish/commonMackerel.png',
         url: "mackerel"
     },
@@ -136,7 +136,7 @@ const FISH_RAW_PRODUCTS = [
             "Permanent",
             "W/R"
         ],
-        calibrage: "One size : 70g+",
+        calibrage: "M (70g+), P (45g-70g)",
         img: 'https://www.afriocean.com/images/fish/atlanticBumper.png',
         url: "atlantic-bumper"
     },
@@ -437,7 +437,7 @@ const FISH_RAW_PRODUCTS = [
             "Seasonal",
             "W/R"
         ],
-        calibrage: "GG (700g+), G (500-700g), M (300-500g), P (200-300g), PP (150g-200g)",
+        calibrage: "TG (1000g+), GG (700g-1000g), G (500-700g), M (300-500g), P (200-300g), PP (150g-200g)",
         img: 'https://www.afriocean.com/images/fish/curemaMullet.png',
         url: "curema-mullet"
     },

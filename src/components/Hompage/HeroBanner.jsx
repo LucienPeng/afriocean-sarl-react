@@ -91,13 +91,15 @@ export const HeroBanner = () => {
                         }}>
                             <Typography
                                 fontSize={{ xs: '70px', md: '150px' }}
-                                color='common.white' variant="h1"
+                                color='common.white'
+                                variant="h1"
                                 className="animate__animated animate__zoomIn"
-                                sx={{ textShadow: 'rgb(0, 0, 0) 1px 10px 10px' }}
+                                sx={{ textShadow: 'rgb(0, 0, 0) 1px 10px 10px', wordBreak: 'keep-all' }}
                             >
                                 {t('company')}
                             </Typography>
                             <Typography
+                                sx={{ wordBreak: 'keep-all' }}
                                 color='common.white'
                                 fontSize={{ xs: '16px', md: '28px' }}
                                 variant="h2"

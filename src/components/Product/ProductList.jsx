@@ -12,10 +12,8 @@ export const ProductList = (props) => {
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', my: 25 }}>
             {isMobileView ? <MobileSelector setProductList={setProductList} data={props.data} /> : <Selector setProductList={setProductList} data={props.data} />}
-            <ImageList cols={isMobileView ? 1 : 3} sx={{ width: isMobileView ? '80%' : '90%' }} loading="lazy">
-                {productList.map((item) => (
-                    <ProductListImageListItem item={item} key={item.en} />
-                ))}
+            <ImageList cols={isMobileView ? 1 : 3} sx={{ width: isMobileView ? '80%' : '90%' }}>
+                {productList.map((item) => (<ProductListImageListItem item={item} key={item.en} />))}
             </ImageList>
         </Box >
     );

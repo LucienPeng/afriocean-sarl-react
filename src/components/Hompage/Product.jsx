@@ -57,7 +57,7 @@ export const Product = (props) => {
             <Grid width='80%' container spacing={5} my={5} justifyContent='center' alignItems='center'>
                 {PRODUCTS_SECTIONS.map((product, index) => (
                     <Grid key={index} item xs={10} md={4}>
-                        <Card elevation={0} data-aos="zoom-in-up">
+                        <Card elevation={0}>
                             <CardContent>
                                 <CardMedia component="img" image={product.img}
                                     sx={{ cursor: 'pointer', "&:hover": { transform: 'scale(1.1)', transition: '0.5s all ease-out' } }}
