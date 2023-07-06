@@ -78,7 +78,7 @@ export const Introduction = () => {
                         sx={{ overflow: 'hidden' }}
                     >
                         {menuOption.map((option) => (
-                            <Grid item container sm={3} md={5} sx={menuStyle} justifyContent='center' alignItems='center' onClick={() => redirectHandle(option.link)}>
+                            <Grid key={option.name} item container sm={3} md={5} sx={menuStyle} justifyContent='center' alignItems='center' onClick={() => redirectHandle(option.link)}>
                                 <Stack direction='column' justifyContent='center' alignItems='center'>
                                     {option.icon}
                                     <Typography variant="h6"

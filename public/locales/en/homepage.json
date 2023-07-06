@@ -1,6 +1,10 @@
 {
     "company": "Afriocean",
     "subIntro": "— Fresh seafood with quality —",
+    "tags": {
+        "title": "AFRIOCEAN SARL  |  Fresh seafood with quality",
+        "description": "Seadfood factory founded in Dakar, Senegal, specialized in all kinds of frozen seafood and exportation. Our goal is to provide our customers with fresh and diversified seafood products according to our markets. This is achieved through high-quality production techniques, low-temperature preservation to maintain good quality, and a controlled cold chain. We always strive to improve our products to reach more market segments. We offer them a high-quality product with great added value and at a price that defies all competition."
+    },
     "nav": {
         "intro": "Introduction",
         "service": "Services",

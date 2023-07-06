@@ -1,6 +1,10 @@
 {
     "company": "Afriocean Sarl",
     "subIntro": "— Produits Halieutiques De La Qualité —",
+    "tags": {
+        "title": "AFRIOCEAN SARL  |  Produits Halieutiques De La Qualité",
+        "description": "AFRIOCEAN entame la construction d’une usine de transformations de produits halieutiques dans le pôle urbain en plein essor de DIAMNIADIO en 2017."
+    },
     "nav": {
         "intro": "Introduction",
         "service": "Services",
